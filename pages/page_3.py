@@ -1,12 +1,13 @@
-from dash import html, callback, Output, Input
+from dash import html, callback, Output, Input, dcc
 import dash_bootstrap_components as dbc
+import json
 from pages.navbar import create_navbar
 
 def create_layout():
 
     # nav buttons
-    prev_button = dbc.Button("PREV", id="open", n_clicks=0, href='/page-2')
-    next_button = dbc.Button("NEXT", id="open", n_clicks=0, href='/page-4')
+    prev_button = dbc.Button("PREV", href='/page-2')
+    next_button = dbc.Button("NEXT", href='/page-4')
     button_bar = html.Div([prev_button, next_button], className="d-flex justify-content-between container")
 
     layout = html.Div([
@@ -22,20 +23,38 @@ def create_layout():
                     {"label": "NGFS Hot House World scenario", "value": "NGFS Hot House World scenario"},
                 ],
                 value="All relevant scenarios",
-                id="scneario-input",
+                id="scenario-input",
             ),
             html.Br(), 
-            html.P(id="scenario-checklist-output"),
+            # html.P(id="scenario-checklist-output"),
+            html.P(id="print-storage"),
         ], className="mx-auto py-3 container"),
         button_bar
     ])
     return layout
 
+# print selected option
+# @callback(
+#     Output("scenario-checklist-output", "children"),
+#     Input("scenario-input", "value"),
+# )
+# def on_form_change(radio_items_value):
+#     template = "you have selected {}."
+#     output_string = template.format(radio_items_value)
+#     return output_string
+
+# store value using dcc.Store
 @callback(
-    Output("scenario-checklist-output", "children"),
-    Input("scneario-input", "value"),
+    Output('storage-scenario', 'data'), 
+    Input('scenario-input', 'value')
 )
-def on_form_change(radio_items_value):
-    template = "you have selected {}."
-    output_string = template.format(radio_items_value)
-    return output_string
+def store_scenario(value):
+    return value
+
+# print value in storage
+@callback(
+    Output('print-storage', 'children'), 
+    Input('storage-scenario', 'data')
+)
+def print_store_scenario(value):
+    return f'Storage: {value}'

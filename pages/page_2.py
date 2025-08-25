@@ -15,8 +15,8 @@ def create_layout():
     contents = [header1, text1, header2, text2, header3, text3]
 
     # nav buttons
-    prev_button = dbc.Button("PREV", id="open", n_clicks=0, href='/')
-    next_button = dbc.Button("NEXT", id="open", n_clicks=0, href='/page-3')
+    prev_button = dbc.Button("PREV", href='/')
+    next_button = dbc.Button("NEXT", href='/page-3')
     button_bar = html.Div([prev_button, next_button], className="d-flex justify-content-between container")
 
     layout = html.Div([

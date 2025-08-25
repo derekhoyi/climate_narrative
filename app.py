@@ -6,6 +6,7 @@ from pages import home
 from pages import page_2
 from pages import page_3
 from pages import page_4
+from pages import page_5
 from pages import page_11
 from pages import page_12
 from pages import page_13
@@ -16,7 +17,10 @@ app.config.suppress_callback_exceptions = True
 
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
-    html.Div(id='page-content')
+    html.Div(id='page-content'), 
+
+    # dcc.Store to store user input
+    dcc.Store(id='storage-scenario', storage_type='session')
 ])
 
 
@@ -29,6 +33,8 @@ def display_page(pathname):
         return page_3.create_layout()
     if pathname == '/page-4':
         return page_4.create_layout()
+    if pathname == '/page-5':
+        return page_5.create_layout()
     if pathname == '/page-11':
         return page_11.create_layout()
     if pathname == '/page-12':
