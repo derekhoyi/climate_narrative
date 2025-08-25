@@ -1,7 +1,7 @@
 import dash_bootstrap_components as dbc
 
 def create_navbar():
-    # Create the Navbar using Dash Bootstrap Components
+
     navbar = dbc.NavbarSimple(
         children=[
             dbc.NavItem(dbc.NavLink("Home", href="/")),
@@ -25,7 +25,6 @@ def create_navbar():
         sticky="top",  
         color="dark",  
         dark=True,
-        # fluid = True  
     )
 
     return navbar

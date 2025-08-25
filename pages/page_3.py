@@ -20,7 +20,7 @@ def layout():
                 {"label": "Aviation", "value": "Aviation"},
             ],
             value="Agricuture",
-            id="scenario-input",
+            id="sector-input",
             persistence=True,
             persistence_type='memory'
         ),
@@ -44,9 +44,9 @@ def layout():
 # store value using dcc.Store
 @callback(
     Output('storage-sector', 'data'), 
-    Input('scenario-input', 'value')
+    Input('sector-input', 'value')
 )
-def store_scenario(value):
+def add_to_storege(value):
     return value
 
 # print value in storage
@@ -54,5 +54,5 @@ def store_scenario(value):
     Output('print-storage', 'children'), 
     Input('storage-sector', 'data')
 )
-def print_store_scenario(value):
+def print_stored_value(value):
     return f'Storage: {value}'

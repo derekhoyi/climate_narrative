@@ -9,7 +9,7 @@ app = Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[db
 app.config.suppress_callback_exceptions = True
 
 app.layout = html.Div([
-    dcc.Location(id='url', refresh=False),
+    # dcc.Location(id='url', refresh=False),
     create_navbar(),
     dash.page_container,
 

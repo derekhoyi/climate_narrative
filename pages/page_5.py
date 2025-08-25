@@ -10,19 +10,21 @@ def layout():
         html.H3('Welcome to page 5'), 
         html.P(id="print-storage-page5"),
         dbc.Button("GENERATE REPORT", id='generate_report_button', n_clicks=0),
+        html.Hr(),
         html.Div(id='report-contents'),
         html.Div(dbc.Button("PREV", href='/page-4'), className="text-left") 
     ], className="mx-auto py-3 container")
     return layout
 
-# print value in storage
+# print data in storage
 @callback(
     Output('print-storage-page5', 'children'), 
     Input('storage-sector', 'data')
 )
-def print_store_scenario2(value):
+def print_stored_value(value):
     return f'Storage: {value}'
 
+# generate report
 @callback(
     Output('report-contents', 'children'), 
     Input('generate_report_button', 'n_clicks'),
