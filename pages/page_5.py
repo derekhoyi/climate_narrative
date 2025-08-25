@@ -2,8 +2,11 @@ import dash
 from dash import html, callback, Output, Input, dcc, State
 import dash_bootstrap_components as dbc
 import yaml
+import pathlib
 
 dash.register_page(__name__, path='/page-5')
+PATH = pathlib.Path(__file__).parent
+DATA_PATH = PATH.joinpath("../data").resolve()
 
 def layout():
     layout = html.Div([
@@ -35,7 +38,7 @@ def generate_report(n_clicks, sector):
     if n_clicks:
 
         # open yaml 
-        with open('data/exposure_class/agriculture.yml') as f:
+        with open(DATA_PATH.joinpath("exposure_class/agriculture.yml")) as f:
             dict = yaml.safe_load(f)    
 
         # parse yaml
