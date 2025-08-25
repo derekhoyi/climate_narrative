@@ -2,15 +2,13 @@ from dash import Dash, html, dash_table, dcc, callback, Output, Input
 import pandas as pd
 import plotly.express as px
 import dash_bootstrap_components as dbc
-from pages.navbar import create_navbar
 
 # Incorporate data
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv')
 
 def create_layout():
     layout = html.Div([
-        create_navbar(),
-        html.Div(html.H3('Welcome to page 11!'), className="mx-auto py-3 container"),
+        html.H3('Welcome to page 11!'),
         dbc.Container([
             dbc.Row([
                 html.Div('My First App with Data, Graph, and Controls', className="text-primary text-center fs-3")
@@ -32,12 +30,11 @@ def create_layout():
                     dcc.Graph(figure={}, id='my-first-graph-final')
                 ], width=6),
             ]),
-
             ], 
             fluid=True, 
             className="mx-auto py-3 container"
         )
-    ])
+    ], className="mx-auto py-3 container")
     return layout
 
 # Add controls to build the interaction

@@ -1,8 +1,6 @@
 from dash import html
 import dash_bootstrap_components as dbc
 
-from pages.navbar import create_navbar
-
 def create_layout():
 
     # contents
@@ -17,11 +15,10 @@ def create_layout():
     # nav buttons
     prev_button = dbc.Button("PREV", href='/')
     next_button = dbc.Button("NEXT", href='/page-3')
-    button_bar = html.Div([prev_button, next_button], className="d-flex justify-content-between container")
+    button_bar = html.Div([prev_button, next_button], className="d-flex justify-content-between")
 
     layout = html.Div([
-        create_navbar(),
-        html.Div(contents, className="mx-auto py-3 container"), 
+        html.Div(contents), 
         button_bar
-    ])
+    ], className="mx-auto py-3 container")
     return layout

@@ -1,36 +1,31 @@
 from dash import html, callback, Output, Input, dcc
 import dash_bootstrap_components as dbc
-import json
-from pages.navbar import create_navbar
 
 def create_layout():
 
     # nav buttons
     prev_button = dbc.Button("PREV", href='/page-2')
     next_button = dbc.Button("NEXT", href='/page-4')
-    button_bar = html.Div([prev_button, next_button], className="d-flex justify-content-between container")
+    button_bar = html.Div([prev_button, next_button], className="d-flex justify-content-between")
 
     layout = html.Div([
-        create_navbar(),
-        html.Div([
-            html.H3('Welcome to page 3!'),
-            dbc.Label("Select the scenario to show"),
-            dbc.RadioItems(
-                options=[
-                    {"label": "All relevant scenarios", "value": "All relevant scenarios"},
-                    {"label": "NGFS Orderly Scenarios", "value": "NGFS Orderly Scenarios"},
-                    {"label": "NGFS Disorderly Scenarios", "value": "NGFS Disorderly Scenarios"},
-                    {"label": "NGFS Hot House World scenario", "value": "NGFS Hot House World scenario"},
-                ],
-                value="All relevant scenarios",
-                id="scenario-input",
-            ),
-            html.Br(), 
-            # html.P(id="scenario-checklist-output"),
-            html.P(id="print-storage"),
-        ], className="mx-auto py-3 container"),
+        html.H3('Welcome to page 3!'),
+        dbc.Label("Select the scenario to show"),
+        dbc.RadioItems(
+            options=[
+                {"label": "All relevant scenarios", "value": "All relevant scenarios"},
+                {"label": "NGFS Orderly Scenarios", "value": "NGFS Orderly Scenarios"},
+                {"label": "NGFS Disorderly Scenarios", "value": "NGFS Disorderly Scenarios"},
+                {"label": "NGFS Hot House World scenario", "value": "NGFS Hot House World scenario"},
+            ],
+            value="All relevant scenarios",
+            id="scenario-input",
+        ),
+        html.Br(), 
+        # html.P(id="scenario-checklist-output"),
+        html.P(id="print-storage"),
         button_bar
-    ])
+    ], className="mx-auto py-3 container")
     return layout
 
 # print selected option

@@ -2,6 +2,7 @@ import dash_bootstrap_components as dbc
 from dash import html, dcc, Dash
 from dash.dependencies import Input, Output, State
 
+from pages.navbar import create_navbar
 from pages import home
 from pages import page_2
 from pages import page_3
@@ -17,6 +18,7 @@ app.config.suppress_callback_exceptions = True
 
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
+    create_navbar(),
     html.Div(id='page-content'), 
 
     # dcc.Store to store user input
