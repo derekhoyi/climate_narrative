@@ -22,7 +22,7 @@ app.layout = html.Div([
     html.Div(id='page-content'), 
 
     # dcc.Store to store user input
-    dcc.Store(id='storage-scenario', storage_type='session')
+    dcc.Store(id='storage-sector', storage_type='session')
 ])
 
 
@@ -49,5 +49,3 @@ def display_page(pathname):
 if __name__ == '__main__':
     app.run(debug=True)
 
-
-# https://medium.com/@mcmanus_data_works/how-to-create-a-multipage-dash-app-75c2ddb79315

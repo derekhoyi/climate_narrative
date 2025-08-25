@@ -10,15 +10,13 @@ def create_layout():
 
     layout = html.Div([
         html.H3('Welcome to page 3!'),
-        dbc.Label("Select the scenario to show"),
+        dbc.Label("Select one option: "),
         dbc.RadioItems(
             options=[
-                {"label": "All relevant scenarios", "value": "All relevant scenarios"},
-                {"label": "NGFS Orderly Scenarios", "value": "NGFS Orderly Scenarios"},
-                {"label": "NGFS Disorderly Scenarios", "value": "NGFS Disorderly Scenarios"},
-                {"label": "NGFS Hot House World scenario", "value": "NGFS Hot House World scenario"},
+                {"label": "Agricuture", "value": "Agricuture"},
+                {"label": "Aviation", "value": "Aviation"},
             ],
-            value="All relevant scenarios",
+            value="Agricuture",
             id="scenario-input",
         ),
         html.Br(), 
@@ -40,7 +38,7 @@ def create_layout():
 
 # store value using dcc.Store
 @callback(
-    Output('storage-scenario', 'data'), 
+    Output('storage-sector', 'data'), 
     Input('scenario-input', 'value')
 )
 def store_scenario(value):
@@ -49,7 +47,7 @@ def store_scenario(value):
 # print value in storage
 @callback(
     Output('print-storage', 'children'), 
-    Input('storage-scenario', 'data')
+    Input('storage-sector', 'data')
 )
 def print_store_scenario(value):
     return f'Storage: {value}'

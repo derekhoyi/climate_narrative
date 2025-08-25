@@ -5,7 +5,7 @@ def create_layout():
 
     # nav buttons
     prev_button = dbc.Button("PREV", href='/page-3')
-    next_button = dbc.Button("GENERATE REPORT", href='/page-5')
+    next_button = dbc.Button("NEXT", href='/page-5')
     button_bar = html.Div([prev_button, next_button], className="d-flex justify-content-between")
 
     layout = html.Div([
