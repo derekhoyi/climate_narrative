@@ -1,7 +1,10 @@
+import dash
 from dash import html
 import dash_bootstrap_components as dbc
 
-def create_layout():
+dash.register_page(__name__, path='/page-2')
+
+def layout():
 
     # contents
     header1 = html.H3('Introduction to the Tool')

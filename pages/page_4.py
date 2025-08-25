@@ -1,7 +1,10 @@
+import dash
 from dash import html
 import dash_bootstrap_components as dbc
 
-def create_layout():
+dash.register_page(__name__, path='/page-4')
+
+def layout():
 
     # nav buttons
     prev_button = dbc.Button("PREV", href='/page-3')

@@ -1,7 +1,10 @@
+import dash
 from dash import html, callback, Output, Input, dcc
 import dash_bootstrap_components as dbc
 
-def create_layout():
+dash.register_page(__name__, path='/page-3')
+
+def layout():
 
     # nav buttons
     prev_button = dbc.Button("PREV", href='/page-2')
@@ -18,6 +21,8 @@ def create_layout():
             ],
             value="Agricuture",
             id="scenario-input",
+            persistence=True,
+            persistence_type='memory'
         ),
         html.Br(), 
         # html.P(id="scenario-checklist-output"),

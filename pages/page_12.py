@@ -1,12 +1,15 @@
+import dash
 from dash import Dash, html, dash_table, dcc, callback, Output, Input
 import pandas as pd
 import plotly.express as px
 import dash_bootstrap_components as dbc
 
+dash.register_page(__name__, path='/page-12')
+
 # Incorporate data
 df = pd.read_csv('https://plotly.github.io/datasets/country_indicators.csv')
 
-def create_layout():
+def layout():
     layout = html.Div([
         html.H3('Welcome to page 12!'),
         html.Div([

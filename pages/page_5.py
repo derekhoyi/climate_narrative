@@ -1,8 +1,11 @@
+import dash
 from dash import html, callback, Output, Input, dcc, State
 import dash_bootstrap_components as dbc
 import yaml
 
-def create_layout():
+dash.register_page(__name__, path='/page-5')
+
+def layout():
     layout = html.Div([
         html.H3('Welcome to page 5'), 
         html.P(id="print-storage-page5"),
@@ -38,7 +41,7 @@ def generate_report(n_clicks, sector):
         transition_high = dict['transition']['high']['always']
         physical_low = dict['physical']['low']['always']
 
-        # create reprot layout
+        # create report layout
         report_div = [
             html.H4('Description'),
             dcc.Markdown(desc), 
