@@ -24,5 +24,5 @@ def layout():
     layout = html.Div([
         dcc.Markdown(yml['description']),
         dbc.Button("Generate report", href='/reports/generate-report')
-    ], className="mx-auto py-3 container")
+    ], className="container")
     return layout

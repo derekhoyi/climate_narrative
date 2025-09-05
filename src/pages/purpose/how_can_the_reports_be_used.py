@@ -22,5 +22,5 @@ def layout():
     # create layout
     layout = html.Div([
         dcc.Markdown(yml['description'])
-    ], className="mx-auto py-3 container")
+    ], className="container")
     return layout

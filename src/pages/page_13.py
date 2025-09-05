@@ -34,5 +34,5 @@ def layout():
             dbc.Tab(tab1_content, label="Tab 1"),
             dbc.Tab(tab2_content, label="Tab 2"),
         ])    
-    ], className="mx-auto py-3 container")
+    ], className="container")
     return layout

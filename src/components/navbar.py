@@ -62,6 +62,7 @@ def create_navbar():
         dark=True,
         expand='xl',
         links_left=True,
+        class_name="mb-4",
     )
 
     return navbar

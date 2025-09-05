@@ -28,7 +28,7 @@ def layout():
         # html.P(id="scenario-checklist-output"),
         html.P(id="print-storage"),
         button_bar
-    ], className="mx-auto py-3 container")
+    ], className="container")
     return layout
 
 # print selected option
