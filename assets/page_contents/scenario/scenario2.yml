@@ -1,0 +1,211 @@
+name: NGFS Disorderly Scenarios
+position: 2
+transition: high
+physical: low
+exec_short: transition
+exec_description: |
+  The NGFS Disorderly transition scenarios assume the introduction of effective policy change 
+  is delayed across countries and sectors. In the Delayed transition scenario, CO2 emissions do 
+  not decrease until 2030, and a steep increase in the carbon price is required thereafter to 
+  compensate for this inaction. 
+  
+  In the Delayed transition scenario, the global mean temperatures are projected to increase across the 
+  world by 1.5°C by 2030 to 1.8°C by 2050, above pre-industrial levels, giving rise to moderately high 
+  physical risk (with land warming faster than oceans and high latitudes experiencing higher warming).
+  
+  The total cumulative GDP impact from chronic physical and transition effects relative to a baseline 
+  with no transition or physical risks is estimated to be just under -5.2% by 2030 and -13% by 2050.
+  
+  The Delayed transition scenario could lead to chronic changes in living conditions affecting health, 
+  labour productivity (due to the reduced capacity of the human body to perform physical labour under 
+  hot and humid climate conditions), agriculture, ecosystems, and sea-level rise. It can also further 
+  change the frequency and severity of weather events such as heatwaves, droughts, wildfires, cyclones, and flooding. 
+  
+  The total cumulative GDP impact from chronic physical and transition effects relative to a baseline 
+  with no transition or physical risks is estimated to be just under -5.2% by 2030 and -13% by 2050.  
+  In the Delayed transition risk scenario, physical risks have a larger impact on global GDP than transition 
+  risks. There is no impact of transition risk in 2030. The NGFS estimate that global GDP impact in the 
+  Delayed transition scenario will be around -13% by 2050.
+
+  ![NGFS scenarios Features](NGFS_scenarios_Features_Disorderly.png)
+
+  **Source:**
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"} 
+  
+  Note: The NGFS Delayed transition scenario has some limitations that 
+  should be carefully considered, as they could lead to uncertainties in the projections. For example: 
+
+   - Simplified assumptions about future policies, technologies, and economic developments.
+   - Incomplete coverage of physical impacts like tipping points and compound risks.
+   - Limited consideration of societal impacts, such as climate-induced migration.
+   - Uncertainty about future technology and government policy changes, namely the scenarios 
+   account for political and economic conditions becoming increasingly disorderly, which in 
+   turn has an impact on future transition pathways.
+   - Incomplete capture of financial sector dynamics and responses.
+
+   NGFS risk assessments may require complementary assessments to align with users’ specific objectives. 
+   Understanding these limitations is important to better manage and mitigate climate-related risks. 
+   Despite these limitations, the NGFS Delayed transition scenario provide valuable insights into the 
+   potential risks and challenges of a delayed or inconsistent approach to climate policy.
+
+
+
+description: |
+  Disorderly transition scenarios explore higher transition risks due to policies being delayed or 
+  divergent level of actions across countries and sectors based on currently implemented policies. 
+  For example, carbon prices are typically higher for a given temperature outcome.
+
+  ![NGFS scenarios Framework](NGFS_scenarios_Framework_Disorderly.png)
+
+  **Source:**
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"} 
+
+  The NGFS have provided one Disorderly scenario:
+
+  - **Delayed transition** assumes that global annual emissions do not decrease and 
+  there is no additional climate policies implemented until 2030. Strong policies are 
+  needed to limit warming to below 2°C. Negative emissions are limited.
+
+  ### Key assumptions and parameters{.unlisted .unnumbered}
+
+  In the Delayed transition scenario, late policy action results in higher emissions 
+  (by ~0.5%) until 2030. Policies drive a sharp decrease in CO<sub>2</sub> emissions after 2030 
+  to compensate for the inaction beforehand causing a drop in emissions by ~84% by 2050.
+
+  ![CO2 emissions](scenarios_disorderly_emissions_co2.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+
+  In the Delayed transition scenario, late policy reaction means that a ‘Business-as-Usual’ 
+  approach to decarbonisation occurs between now and 2030, followed by a sharp increase in 
+  policy aggression, resulting in the carbon price increase to 320 USD per tonne CO<sub>2</sub> by 2050 
+  based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs). The delayed policy 
+  ambition reduces the initial dis-incentivisation against fossil fuels, only to more 
+  aggressively penalise and thus risk stranding fossil fuel assets beyond 2030. In this 
+  scenario, disorderly policy action results in increased transition risks.
+
+  ![Carbon price](scenarios_disorderly_price_carbon.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Carbon prices are weighted global averages.
+
+  Government revenues from carbon tax increase in line with the carbon price, until 2035 
+  when emissions are reduced to a degree that this offsets carbon price increase. In the 
+  Delayed transition risk scenario, revenues remain fairly flat at ~380 billion USD in 2030 
+  and peak at ~3.2 trillion USD per year around 2035. By 2050, revenues drop by 43% 
+  (~1.8 trillion USD per year).
+  
+  ![Carbon tax revenue](scenarios_disorderly_revenue.png)
+  
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+
+  In many countries, the implementation of carbon prices in the transition scenarios 
+  tends to raise energy costs in the short-term, initially weighing down on prices 
+  (as lower demand and financial market losses hit outputs). Rising carbon prices 
+  subsequently feed through to modest increases in inflation and unemployment before 
+  returning to prior trends. In some countries and time periods the offsetting positive 
+  growth effects from carbon revenue recycling leads to a reduction in unemployment. 
+  Long-term interest rates tend to increase in the transition scenarios (i.e., no change 
+  relative to baseline in 2030 and 0.5% higher than baseline in 2050), reflecting the 
+  inflationary pressure created by carbon prices, as well as the increased investment 
+  demand that the transition spurs on. In the disorderly scenarios policy uncertainty 
+  leads to a higher investment premium. This trend remains until 2050 in all the scenarios.
+
+  ![Inflation rate](scenarios_disorderly_inflation.png)
+  
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
+  
+  ![Unemployment rate](scenarios_disorderly_unemployment.png)
+  
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
+  
+  ![Interest rate](scenarios_disorderly_interest.png)
+  
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
+  
+  The investments in energy efficiency and low carbon technologies are projected to 
+  increase in the Delayed transition scenario. Overall, firms could be required to 
+  re-adjust their capital expenditure in line with these trends, developing more efficient 
+  and less carbon-intensive products and services in order to adhere to carbon pricing policies. 
+  The technologies that result from these investments could also adjust asset valuations of 
+  relatively older technology. In delayed transition scenario, annual investment in energy 
+  efficiency increases from around 240 billion USD (inflation adjusted to 2010 baseline) 
+  in 2025 to a mere 250 billion USD by 2030, accelerating to ~536 billion USD by 2050, 
+  whilst annual investment in low carbon increases from ~1 trillion USD (2025) to ~1.4 
+  trillion USD in 2030, and further to ~3 trillion USD by 2050. 
+  
+  ![Energy Efficiency Investment](scenarios_disorderly_investment_energy_efficiency.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  
+  ![Low Carbon Investment](scenarios_disorderly_investment_low_carbon.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}  
+  
+  Observed climate change has already increased global mean temperatures above 1.1&deg;C, 
+  compared to pre-industrial levels, and both the global land area and the global 
+  population annually exposed to river flood, crop failure, cyclones, wildfire, 
+  drought and heatwaves has already more than doubled (See Lange, S. et al. (2020)). 
+  The increasing concentrations of carbon dioxide, methane and nitrous oxide in the 
+  atmosphere are unprecedented in at least the last 800,000 years and are extremely 
+  likely to have been the dominant cause of warming since the mid-20th century. 
+  In these scenarios global mean temperatures are projected to increase across 
+  the world by 1.5&deg;C by 2030 to 1.8&deg;C by 2050, above pre-industrial levels, 
+  giving rise to moderately high physical risk (with land warming faster 
+  than oceans and high latitudes experiencing higher warming).
+
+  ![Global mean temp rise](scenarios_disorderly_temperature.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  
+  These changes could lead to chronic changes in living conditions affecting health, 
+  labour productivity, agriculture, ecosystems, and sea-level rise. It can also further 
+  change the frequency and severity of weather events such as heatwaves, droughts, wildfires, 
+  cyclones, and flooding. For example, in the delayed transition risk scenario we could see the following:
+  
+  * A decrease in labour productivity to circa -1.7% in 2030 and circa -2.2% in 2050 
+  due to the reduced capacity of the human body to perform physical labour under hot 
+  and humid climate conditions. Although this will depend on location, and in the UK 
+  this decrease may be relatively subdued.
+  
+  ![Labour Productivity](scenarios_disorderly_labour.png)
+
+  **Source:** 
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  
+  * The annual economic damages from cyclones are also projected to increase, 
+  but to a lesser extent; peaking at ~8% in 2030 and ~16% in 2050 which is 
+  above reference period levels of 1986-2006.
+  
+  ![Tropical Cyclone Damage](scenarios_disorderly_damages_cyclones.png)
+
+  **Source:** 
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  
+  In this scenario the total cumulative GDP impact from chronic physical and 
+  transition effects relative to a baseline with no transition or physical risks 
+  is estimated to be just under -5.2% by 2030 and -13% by 2050. World GDP losses 
+  from physical risks vary in line with different temperatures projected for each 
+  scenario. World GDP impacts from delayed transition risks are negative as the speed 
+  of the transition combines with investment uncertainty and affects consumption and 
+  investment. In this scenario, there is a large mix of physical and transition risks 
+  in 2050. In the Delayed transition risk scenario, physical risks have a larger impact 
+  on global GDP than transition risks. There is no impact of transition risk in 2030. 
+  The NGFS estimate that global GDP impact in the Delayed transition scenario will be around -13% by 2050.
+  
+  ![GDP](scenarios_disorderly_gdp.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  NiGEM NGFS v1.24.2 is not available for Low Demand scenario; Only chronic physical data available (not acute physical).
+
+  Overall, the Delayed transition scenario leaves a limited timeframe for countries, 
+  companies and the population to adapt to climate change.

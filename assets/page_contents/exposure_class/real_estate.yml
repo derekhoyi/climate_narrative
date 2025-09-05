@@ -1,0 +1,461 @@
+name: Real Estate Sector
+test_report_position: 8
+description: |
+  The real estate sector encompasses a wide range of activities and services 
+  related to real estate incorporating both commercial & residential real estate. 
+  This sector includes companies primarily engaged in renting or leasing real estate 
+  to others, managing real estate for others, selling or buying real estate for others, 
+  and providing various real estate related services, such as appraisal services.
+
+  This sector includes equity Real Estate Investment Trusts (REITs) that are
+  primarily engaged in leasing buildings, dwellings, or other real estate
+  property to others. They play a significant role in providing residential and 
+  commercial spaces. This sector also includes firms involved in:
+
+  - Acting as lessors of buildings that are both used and not used as residences
+    or dwellings, such as single-family homes, apartment buildings, and town
+    homes:
+
+    - Firms acting as lessors of buildings that are used as residences or
+      dwellings, including owner-lessors and establishments renting real estate and
+      then acting as lessors in subleasing it to others.
+
+    - Firms acting as lessors of buildings that are not used as residences or
+      dwellings, including owner-lessors of non-residential buildings, establishments 
+      renting real estate and then acting as lessors in subleasing it to others, and 
+      establishments providing full-service office space, whether on a lease or 
+      service contract basis.
+
+  - Renting or leasing space to others for self-storage. These establishments
+    provide secure space (i.e., rooms, compartments, lockers, containers, or
+    outdoor space) where clients can store and retrieve their goods;
+
+  - Acting as lessors of real estate (except buildings), such as manufactured
+    home (i.e., mobile home) sites, vacant lots, and grazing land;
+
+  - Providing real estate services (except lessors of real estate and offices of
+    real estate agents and brokers). Included in this industry group are
+    establishments primarily engaged in activities, such as managing real estate
+    for others and appraising real estate.
+
+transition:
+  high:
+    exec_description: |
+      In the Delayed Tansition scenario, the real estate sector could be impacted by 
+      an increase in carbon price and through the cost of complying with “lower 
+      carbon/green” building criteria which in turn could affect the profitability 
+      in this sector. In these scenarios a limited relative reduction in GDP growth 
+      will also impact the sector.
+
+    always: |
+      In the Delayed Tansition scenario, the demand for real estate is likely to increase. 
+      While the real estate sector could continue to play a role in meeting customer demand 
+      for the coming years, the late policy action under the Delayed transition scenario 
+      beyond 2030 could lead to a relative reduction in GDP growth. This could partially 
+      offset any growth in demand. 
+
+    high_materiality: |
+      The transition changes could translate into financial impacts:
+
+      - **Increased revenues**: for "lower carbon / green" buildings meeting demand
+        as companies have to decarbonise their own operations;
+
+      - **Decreased revenues**: from, and stranding of, assets that fail to meet
+        customer criteria and/or government regulations on energy efficiency,
+        use and HVAC (heating, ventilation and air conditioning) technologies;
+
+      - **Changes or disruption to revenues**: due to changing customer base from
+        transition exposure (can reduce or increase revenues depending upon net
+        exposure);
+
+      - **Increase in repair, refurbishment and operating costs**: due to
+        government regulations, taxation and meeting customer criteria;
+
+      - **Increased revenues**: from retrofits and conversions to lower carbon /
+        energy efficient buildings.
+
+      In the Delayed Transition scenario, buildings increase their use of electricity 
+      over time from 54 exajoules (EJ) in 2025 to 93 EJ in 2050, while natural gas 
+      consumption decreases from 29 EJ in 2025 to 6 EJ in 2050.
+      
+      ![Energy Consumption](real_estate_disorderly_energy_cons.png)
+      
+      **Source:**
+      [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      In the Delayed Transition scenario, as carbon price increases, carbon 
+      tax paid from buildings’ emissions peaks at ~$365 billion around 2035. 
+      The carbon tax paid begins to decrease thereafter as improvements are 
+      made to buildings’ emissions intensities.
+      
+      ![Government Tax Revenue](real_estate_disorderly_gov_revenue.png)
+      
+      **Source:**
+      [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      The materiality of the exposures is very granular dependent upon the attributes of 
+      the property and the vibrancy of both the local and global economies. Where local 
+      economies are particularly exposed to revenues (directly or indirectly) from high 
+      transition risk industries, such as coal, oil & gas extraction, or from industries 
+      with transition risks arising from their supply chains, such as deforestation-related 
+      reputational risks in the supply chains companies, then knock-on effects would be 
+      expected to revenues and occupancy.
+      
+      Real estate companies can mitigate risks in a delayed transition world by diversifying 
+      their client base to reduce dependency on any single sector, supporting local initiatives 
+      to introduce new business lines in high-risk areas, and strategically divesting stranded 
+      assets that may lose value due to delayed transition efforts. Investing in energy-efficient 
+      technologies and renewable energy sources to decarbonise assets, obtaining sustainable 
+      building certifications, and proactively adapting to regulatory changes are also crucial. 
+      Monitoring market trends, embracing smart building technologies, and maintaining robust 
+      climate risk management frameworks, along with effective communication of sustainability 
+      efforts, can enhance their reputation and build stakeholder trust.
+
+  low:
+    exec_description: |
+      In Orderly Transition scenarios, the real estate sector could be impacted by an 
+      increase in carbon prices and the cost of complying with “lower carbon/green” 
+      building criteria, which in turn could affect the profitability in this sector. 
+      In these scenarios a limited relative reduction in GDP growth will also impact 
+      the sector. 
+
+    always: |
+      In Orderly transition scenarios, the demand for the real estate is likely to increase. 
+      While the real estate sector could continue to play a role in meeting customer demand 
+      for the coming years, the changing patterns in energy generation in these scenarios, 
+      driven by immediate policy reaction, societal change, national energy strategies, and 
+      carbon legislation, could lead to an immediate and smooth reduction in CO<sub>2</sub> 
+      emissions by 2050.
+      
+      The increase in the carbon price as well as a change to the demand in the quality of 
+      the real estate product (e.g. emissions from the construction and fabric of the building, 
+      energy efficiency performance and use of lower carbon technology (especially heating and 
+      cooling)) is likely to influence the profitability of this sector. The Orderly transition 
+      scenarios could also lead to a limited relative reduction in GDP growth. This could 
+      partially offset growth in demand for the Real Estate sector.
+
+    high_materiality: |
+      The changes in carbon pricing, societal preference, energy prices and
+      energy mix could potentially impact the real estate sector as a result 
+      in one or more of the following impacts:
+
+      - **Increased revenues**: this could occur for "lower carbon/green" buildings 
+        meeting demand as companies have to decarbonise their own operations;
+
+      - **Decreased revenues of assets**: this could occur for assets that fail to 
+        meet customer criteria and/or government regulations on energy efficiency, 
+        use and HVAC (heating, ventilation and air conditioning) technologies;
+
+      - **Changes or disruption to revenues**: this could occur due to changing customer 
+        base from transition exposure (can reduce or increase revenues depending upon net
+        exposure);
+
+      - **Increase in repair and refurbishment costs**: this could occur in order to meet 
+        government regulations, taxation and customer criteria;
+
+      - **Increased revenues**: this could occur from retrofits and conversions to lower carbon /
+        energy efficient buildings.
+      
+      In Orderly Transition scenarios, buildings increase their use of electricity over time 
+      from between 50 to 60 exajoules (EJ) in 2025 to between 90 EJ and 102 EJ in 2050, 
+      while natural gas consumption decreases from between 28 to 31 EJ in 2025 to 15 and 
+      below EJ in 2050.
+      
+      ![Energy Consumption](real_estate_NZ2050_energy_cons.png)
+      
+      ![Energy Consumption](real_estate_below2deg_energy_cons.png)
+      
+      ![Energy Consumption](real_estate_lowdemand_energy_cons.png)
+      
+      **Source:**
+      [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+
+      In Orderly Transition scenarios, as carbon price increases, carbon tax paid from 
+      buildings' emissions peaks at ~$443 billion (inflation adjusted to 2010 baseline) 
+      around 2035 in the Net Zero 2050 scenario, and below ~$151 billion around 2035 in 
+      the Below 2&deg;C scenario. Carbon tax paid begins to decrease thereafter as 
+      improvements are made to buildings’ emissions intensities in both Net Zero 2050 and 
+      Low Demand scenarios to be below ~$100 billion, however, it continues to increase 
+      in the below 2&deg;C scenario to be around ~$200 billion.
+      
+      ![Government Tax Revenue](real_estate_orderly_gov_revenue.png)
+      
+      **Source:**
+      [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      The materiality of the exposures is very granular dependent upon the attributes of the 
+      property and the vibrancy of both the local and global economies. Where local economies 
+      are particularly exposed to revenues (directly or indirectly) from high transition risk 
+      industries, such as coal, oil & gas extraction, or from industries with transition risks 
+      arising from their supply chains, such as deforestation-related reputational risks in the 
+      supply chains of companies, then knock-on effects would be expected to revenues and occupancy. 
+      This is likely to be less severe in the short term under Orderly transition scenarios and 
+      could occur more smoothly over time, albeit with certain regions where costs to extract 
+      are high likely to be impacted first.
+      
+      Real estate companies can mitigate risks in an orderly transition with the highest transition 
+      risk by diversifying their client base to reduce dependency on any single sector, supporting 
+      local initiatives to introduce new business lines in high-risk areas, and strategically 
+      divesting stranded assets that may lose value due to transition efforts. Investing in 
+      energy-efficient technologies and renewable energy sources to decarbonise assets, obtaining 
+      sustainable building certifications, and proactively adapting to regulatory changes are crucial. 
+      Monitoring market trends, embracing smart building technologies, and maintaining robust 
+      climate risk management frameworks, along with effective communication of sustainability 
+      efforts, can enhance their reputation and build stakeholder trust.
+
+physical:
+  high:
+    exec_description: |
+      As the real estate sector is highly reliant on revenues attached to assets at fixed locations, 
+      this means that it is particularly exposed to the physical impacts of climate change. 
+      In addition to direct damage, extreme temperatures can materially impact the revenues of 
+      assets that are not adapted to these changes as this could potentially affect the productivity 
+      of assets and labour.
+
+    always: |
+      As the real estate sector is highly reliant on revenues attached to assets at fixed locations, 
+      this means that it is particularly exposed to the physical impacts of climate change: these 
+      include chronic effects (e.g. raised sea-levels) and acute effects due to changes to frequency 
+      and severity of weather events such as heatwaves, droughts, wildfires, cyclones and flooding.
+      
+      Floods, storms and extreme temperatures damage buildings, with the former particularly acute 
+      for assets on flood plains or located in low-lying coastal areas. In addition to direct damage, 
+      extreme temperatures can materially impact the revenues of assets that are not adapted to these 
+      changes as this could potentially affect the productivity of assets and labour.
+
+    high_materiality: |
+      Property values themselves may be impacted by the occurrence, or risk of
+      occurrence, of climate-related events from both acute and chronic impacts 
+      as outlined below:
+
+      **Acute impacts**
+
+      - **Cyclones or storms**: Cyclones and storms are likely to have a significant effect on real estate. 
+        For example, residential and commercial properties can be severely damaged, leading to decreased 
+        property values. 
+      
+      - **Coastal and river flooding**: Rising sea levels and changes in precipitation patterns could pose 
+        flooding risks to real estate with real estate in coastal areas being particularly vulnerable. 
+        For example, Miami and New York are projected to experience significant declines in property 
+        values due to rising sea levels.
+
+      **Chronic impacts**
+
+      - **Raised Sea Levels**: Coastal properties are particularly vulnerable to raised sea levels, 
+        which can lead to flooding and erosion, significantly impacting property values.
+
+      - **Extreme Temperatures**: Increased temperatures can affect the structural integrity of buildings 
+        and increase maintenance costs. For example, higher temperatures can lead to more frequent use 
+        of HVAC systems, increasing operational costs.
+
+      - **Drought**: Drought conditions can lead to greater competition for scarce water resources, 
+        impacting the viability of properties in affected areas. This can also lead to increased 
+        costs for water usage and management.
+
+      - **Wildfires**: Areas prone to wildfires can see significant declines in property values 
+        due to the risk of destruction and increased insurance premiums.
+      
+      The above impacts can manifest in the following areas:
+
+      - **Property prices**: Historically, property price declines after climate events have 
+        generally been modest and short-lived in locations where there is strong awareness of, 
+        and experience with, extreme weather-related events (particularly flooding and exposure 
+        to hurricanes/cyclones). However, recent evidence suggests that certain events can lead 
+        to a long-lasting decline in prices or liquidity in geographies that have been relatively 
+        unexposed to extreme weather or climate events, or where intensity and frequency have 
+        appreciably increased.
+
+      - **Liquidity**: Trading volumes or time on market may provide early signals of how 
+        markets are reacting to climate events and risks through lower liquidity that could 
+        ultimately feed into prices.
+
+      - **Higher risk premiums**: Commercial owners/investors in some geographies are placing a 
+        higher risk premium on all properties in metro areas affected by climate events, regardless 
+        of whether their individual properties have been directly affected.
+
+      - **Short-term value drops**: For areas affected by wildfires, floods and storms, property 
+        prices can drop significantly in the short term. However, these drops might be partially 
+        balanced by the value of amenities in the area. Additionally, although there are a few 
+        commercial studies on this topic, they suggest that the benefits of being in a city 
+        (i.e. urban agglomeration) tend to persist and can offset the perceived risks from 
+        climate events.
+
+      - **Access to information**: Better information in risks and mitigation measures leads to 
+        greater awareness, belief acceptance and integration of climate impacts on prices achieved.
+
+      Consideration should be made on whether changes to climatic patterns occur - for instance 
+      we are already experiencing the slowing down of jet streams that lead to previously 
+      short-lived extreme events now prolonging. This could also extend to previously regions 
+      of stable weather / climatic systems experiencing new extreme weather events. Valuation 
+      practices, which are largely driven by lagging indicators, suffer from a paucity of 
+      climate risk-related evidence and available data. As shown below, the labour productivity 
+      steadily reduces in both the current policies and NDCs scenarios eventually reaching a 
+      low of between -2.5% to -2.7% in 2050. This could have a knock-on impact on the revenue 
+      of the assets linked to the reduced productivity.
+
+      ![Heat Stress Damages](real_estate_hothouse_productivity_heat_stress.png)
+      
+      **Source:**
+      [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+
+      Real estate companies can mitigate physical risks in a high-risk climate scenario by 
+      enhancing building resilience through infrastructure upgrades, implementing flood defence 
+      systems, and using climate-resilient landscaping. They should focus on investing in 
+      energy-efficient technologies and renewable energy sources to decarbonise assets, 
+      obtain sustainable building certifications where possible, and proactively adapt to 
+      regulatory changes. Monitoring market trends and embracing smart building technologies 
+      can help them stay competitive. Robust climate risk management frameworks and effective 
+      communication of sustainability efforts can enhance their reputation and build stakeholder 
+      trust. These actions collectively position real estate companies for long-term success 
+      despite the challenges posed by climate change.
+
+transition_physical:
+  high:
+    exec_description: |
+      As the real estate sector is highly reliant on revenues attached to assets at fixed 
+      locations, this means that it is particularly exposed to the physical impacts of climate 
+      change. In addition to direct damage, extreme temperatures can materially impact the 
+      revenues of assets that are not adapted to these changes as this could potentially 
+      affect the productivity of assets and labour. Furthermore, transition risks such as 
+      stringent regulations, shifts in market preferences towards sustainable buildings, 
+      and increased costs for retrofitting properties to meet new standards can significantly 
+      impact the sector's profitability and asset values.
+
+    always: |
+      As the real estate sector is highly reliant on revenues attached to assets at fixed 
+      locations, this means that it is particularly exposed to the physical impacts of climate 
+      change: these include chronic effects (e.g. raised sea-levels) and acute effects due to 
+      changes to frequency and severity of weather events such as heatwaves, droughts, wildfires, 
+      cyclones and flooding. Floods, storms and extreme temperatures damage buildings, with the 
+      former particularly acute for assets on flood plains or located in low-lying coastal areas. 
+      In addition to direct damage, extreme temperatures can materially impact the revenues of 
+      assets that are not adapted to these changes as this could potentially affect the productivity 
+      of assets and labour.
+      
+      Transition risks involve regulatory changes, where stricter building codes and energy 
+      efficiency standards increase costs for retrofitting and developing properties. Market 
+      preferences are shifting towards sustainable and energy-efficient buildings, reducing 
+      demand for older, less efficient properties. Rapid advancements in green building technologies 
+      can render existing properties obsolete, and failure to address climate-related risks can 
+      damage a firm's reputation, affecting market position and investor confidence.
+
+    high_materiality: |
+      There would both high physical and transition risks from a too-little-too-late scenario 
+      as a result of the delayed (“too late”) implementation and ultimately diverging in their 
+      mitigation stringency, thus rendering the overall efforts insufficient to reach net zero 
+      (“too little”). Countries with net zero targets achieve these only partially, while other 
+      countries follow current policies leading to increased inequality which would exacerbate 
+      regional tensions as well as the physical impacts.
+      
+      Property values themselves may be impacted by the occurrence, or risk of occurrence, of 
+      physical climate-related events from both acute and chronic impacts as outlined below: 
+
+      **Acute impacts**
+
+      - **Cyclones or storms**: Cyclones and storms are likely to have a significant effect on real estate. 
+        For example, residential and commercial properties can be severely damaged, leading to decreased 
+        property values. 
+      
+      - **Coastal and river flooding**: Rising sea levels and changes in precipitation patterns could pose 
+        flooding risks to real estate with real estate in coastal areas being particularly vulnerable. 
+        For example, Miami and New York are projected to experience significant declines in property 
+        values due to rising sea levels.
+
+      **Chronic impacts**
+
+      - **Raised Sea Levels**: Coastal properties are particularly vulnerable to raised sea levels, 
+        which can lead to flooding and erosion, significantly impacting property values.
+
+      - **Extreme Temperatures**: Increased temperatures can affect the structural integrity of buildings 
+        and increase maintenance costs. For example, higher temperatures can lead to more frequent use 
+        of HVAC systems, increasing operational costs.
+
+      - **Drought**: Drought conditions can lead to greater competition for scarce water resources, 
+        impacting the viability of properties in affected areas. This can also lead to increased 
+        costs for water usage and management.
+
+      - **Wildfires**: Areas prone to wildfires can see significant declines in property values 
+        due to the risk of destruction and increased insurance premiums.
+      
+      The above impacts can manifest in the following areas:
+
+      - **Property prices**: Historically, property price declines after climate events have 
+        generally been modest and short-lived in locations where there is strong awareness of, 
+        and experience with, extreme weather-related events (particularly flooding and exposure 
+        to hurricanes/cyclones). However, recent evidence suggests that certain events can lead 
+        to a long-lasting decline in prices or liquidity in geographies that have been relatively 
+        unexposed to extreme weather or climate events, or where intensity and frequency have 
+        appreciably increased.
+
+      - **Liquidity**: Trading volumes or time on market may provide early signals of how 
+        markets are reacting to climate events and risks through lower liquidity that could 
+        ultimately feed into prices.
+
+      - **Higher risk premiums**: Commercial owners/investors in some geographies are placing a 
+        higher risk premium on all properties in metro areas affected by climate events, regardless 
+        of whether their individual properties have been directly affected.
+
+      - **Short-term value drops**: For areas affected by wildfires, floods and storms, property 
+        prices can drop significantly in the short term. However, these drops might be partially 
+        balanced by the value of amenities in the area. Additionally, although there are a few 
+        commercial studies on this topic, they suggest that the benefits of being in a city 
+        (i.e. urban agglomeration) tend to persist and can offset the perceived risks from 
+        climate events.
+
+      - **Access to information**: Better information in risks and mitigation measures leads to 
+        greater awareness, belief acceptance and integration of climate impacts on prices achieved.
+
+      Consideration should be made on whether changes to climatic patterns occur - for instance 
+      we are already experiencing the slowing down of jet streams that lead to previously short-lived 
+      extreme events now prolonging. This could also extend to previously regions of stable 
+      weather / climatic systems experiencing new extreme weather events. Valuation practices, 
+      which are largely driven by lagging indicators, suffer from a paucity of climate risk-related 
+      evidence and available data. As shown below, the labour productivity steadily reduces in the 
+      Fragmented World scenario eventually reaching a low of -2.5% in 2050. This could have a 
+      knock-on impact on the revenue of the assets linked to the reduced productivity.
+
+      ![Heat Stress Damages](real_estate_tltl_productivity_heat_stress.png)
+      
+      **Source:**
+      [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+
+      In addition to the physical risks outlined above, the too-little-too-late scenario would also give 
+      rise to high transition risks as outlined below. 
+      
+      For example:
+      - **Regulatory Changes**: Stricter building codes and energy efficiency standards can increase costs 
+        for retrofitting and developing properties. For example, new regulations may require the installation 
+        of energy-efficient HVAC systems, solar panels, or green roofs, significantly increasing upfront costs. 
+        Additionally, the introduction of carbon pricing mechanisms can impact the profitability of properties 
+        with high carbon footprints.
+      
+      - **Market Preferences**: Shifts in market preferences towards sustainable and energy-efficient buildings 
+        can impact demand for older, less efficient properties. Real estate companies may find it challenging 
+        to lease or sell properties that do not meet modern sustainability standards, leading to reduced asset 
+        values. For instance, tenants and buyers are increasingly seeking buildings with green certifications, 
+        such excellent or good BREEAM certification.
+      
+      - **Technological Advancements**: Rapid advancements in green building technologies can render existing 
+        properties obsolete, leading to stranded assets. Innovations such as smart building systems, 
+        energy-efficient materials, and renewable energy integration can make older buildings less competitive. 
+        For example, the adoption of smart building technologies that optimise energy use and enhance occupant 
+        comfort can disrupt the market for traditional buildings.
+
+      - **Reputational Risks**: Real estate companies that fail to adequately address climate-related risks may 
+        suffer reputational damage, affecting their market position and customer trust. This can lead to decreased 
+        investor confidence and higher costs of capital. For example, companies that do not implement sustainable 
+        practices may face negative publicity and lose tenants or buyers who prioritize environmental responsibility.
+      
+      Real estate companies can mitigate both physical and transition risks in a too-little-too-late scenario by 
+      enhancing building resilience through infrastructure upgrades, implementing flood defence systems, and using 
+      climate-resilient landscaping. They should invest in energy-efficient technologies and renewable energy sources 
+      to decarbonise assets, obtain sustainable building certifications where possible, and proactively adapt to 
+      regulatory changes. Monitoring market trends and embracing smart building technologies can help them stay 
+      competitive, while robust climate risk management frameworks and effective communication of sustainability 
+      efforts can enhance their reputation and build stakeholder trust. These actions collectively position 
+      real estate companies for long-term success despite the challenges posed by climate change.
+
+references: |
+  - [NAICS Code 53](https://www.naics.com/six-digit-naics/?code=53){target="\_blank"}
+  
+  - [SIC Code H](https://www.naics.com/sic-codes-counts-division/?div=H){target="\_blank"}

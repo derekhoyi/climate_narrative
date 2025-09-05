@@ -1,0 +1,197 @@
+name: NGFS Hot House World Scenarios
+position: 3
+transition: no
+physical: high
+exec_short: physical
+exec_description: |
+  In the NGFS Hot House World scenarios CO2 emissions do not decrease, and carbon prices 
+  do not increase sufficiently to prevent significant temperature rises resulting in high 
+  physical risk. In these scenarios global mean temperatures are projected to increase to 
+  1.5°C by 2030 and to 1.9°C - 2°C by 2050, giving rise to high physical risk.
+  
+  This could lead to a significant chronic change in living conditions affecting health, 
+  labour productivity (due to the reduced capacity of the human body to perform physical 
+  labour under hot and humid climate conditions), agriculture, ecosystems, and sea-level rise. 
+  It can also change the frequency and severity of weather events such as heatwaves, droughts, 
+  wildfires, cyclones, and flooding. The total GDP impact from chronic physical and transition 
+  effects relative to a baseline (with no transition or physical risks) is estimated to be around 
+  -5% to 6% by 2030 and -13% to -15% by 2050, which is the highest impact apart from the 
+  Too-little-too-late scenario.
+
+  ![NGFS scenarios Features](NGFS_scenarios_Features_Hothouse.png)
+
+  **Source:**
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"} 
+
+  Note: The NGFS Hot House World scenarios have some limitations that should be carefully 
+  considered, as they could lead to uncertainties in the projections. For example:
+  - Simplified assumptions about future policies, technologies, and economic developments.
+  - Incomplete coverage of physical impacts like tipping points and compound risks.
+  - Incomplete coverage of acute physical risks – i.e., four acute physical impacts are 
+  modelled using one transmission channel (flood and cyclones through capital asset damages; 
+  droughts through crop yield losses; heatwaves through labour productivity decline).
+  - Simplified use of the damage function – i.e., within the NGFS framework the damage function accounts only for damages from chronic physical risk, while losses from acute physical risk are considered separately.
+  - Limited consideration of societal impacts, such as climate-induced migration.
+  - Uncertainty about future technology and government policy changes.
+  - Incomplete capture of financial sector dynamics and responses.
+  
+  NGFS risk assessments may require complementary assessments to align with users’ specific objectives. 
+  Understanding these limitations is important to better manage and mitigate climate-related risks. 
+  Despite these limitations, the NGFS Hot House World scenarios provide humbling insights into the 
+  (potential) severity of risks and challenges of insufficient climate policy and actions.
+
+
+description: |
+  Hot house world scenarios assume that some climate policies are implemented in some
+  jurisdictions, but globally efforts are insufficient to halt significant
+  global warming leading to severe physical risk including irreversible impacts.
+
+  ![NGFS scenarios Framework](NGFS_scenarios_Framework_Hothouse.png)
+
+   **Source:**
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"} 
+
+  The NGFS have provided two Hot house world scenarios:
+
+  - **Nationally Determined Contributions (NDCs)** includes all pledged targets
+    even if not yet backed up by implemented effective policies.
+
+  - **Current Policies** assumes that only currently implemented policies are
+    preserved, leading to high physical risks.
+
+  ### Key physical assumptions and parameters
+  
+  In these scenarios CO<sub>2</sub> emissions do not decrease sufficiently, notably 
+  in the Current Policies scenario (i.e., emissions increase by ~0.5% in 2030 and reduce 
+  by 6% in 2050 for the Current Policies scenario compared to a drop in emissions by ~16% in 
+  2030 and 54% by 2050 for the Nationally Determined Contribution scenario) to prevent significant 
+  temperature rises resulting in high physical risk.
+
+  ![CO2 emissions](scenarios_hothouse_emissions_co2.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+
+  Carbon price is a measure of overall policy intensity. Emission prices are sensitive to 
+  the timing of policy implementation. With none or relatively small additions to current 
+  policy, these scenarios have low carbon prices throughout, i.e., for Current Policies scenario, 
+  carbon price remains relatively flat at around 11 USD per tonne CO2 (baselined to 2010 prices) 
+  throughout the duration between 2025 – 2050; while for the Nationally Determined Contributions 
+  scenario, carbon prices rise to ~85 USD in 2030 and remains roughly flat until 2050. 
+  Therefore, transition risks are much less significant in these scenarios.
+
+  ![Carbon price](scenarios_hothouse_price_carbon.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Carbon prices are weighted global averages.
+  
+  Government revenues from carbon tax are affected by carbon price and emissions. 
+  Revenues are relatively low in the Current Policies scenarios given the low carbon price 
+  (i.e., ~400 billion USD compared to ~1.7 trillion USD in 2025). 
+  The Nationally Determined Contributions scenario assumes a slightly higher carbon price, 
+  resulting in a modest increase in revenues from ~1.7 billion USD in 2025, peaking to 
+  ~2.2 billion USD in 2030 due to relatively high emissions (compared to Orderly and Disorderly scenarios). 
+  Revenues remain fairly flat thereafter across both scenarios, with 375 billion USD and ~1 trillion USD 
+  by 2050 for the Current Policies and NDCs scenarios respectively.
+  
+  ![Carbon tax revenue](scenarios_hothouse_revenue.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+
+  In Hot House World scenarios, the lack of carbon price increase results in less 
+  severe deviation of inflation, unemployment, and long-term interest rates from the baseline scenario, 
+  compared to Orderly and Disorderly scenarios, i.e., never going beyond c.0.3% above 
+  or below the baseline from 2030 - 2050.
+
+  ![Inflation rate](scenarios_hothouse_inflation.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
+
+  ![Unemployment rate](scenarios_hothouse_unemployment.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
+
+  ![Interest rate](scenarios_hothouse_interest.png)
+  
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
+
+  The investments in energy efficiency and low carbon technologies are projected 
+  to increase in Hot House World scenarios. Annual investment in energy efficiency 
+  increases from ~240 billion USD (inflation adjusted to 2010 baseline) in 2025 to 
+  between 250 billion and ~285 billion USD in 2030, and between ~280 billion and 
+  ~500 billion USD by 2050, whilst annual investment in low carbon increases from 
+  ~1 trillion and ~1.3 trillion USD in 2025 to between ~1.4 trillion and ~2.2 trillion USD 
+  in 2030, and between ~2 trillion and 2.45 trillion USD by 2050. 
+  However, this increase is relatively small compared to other scenarios.
+  
+  ![Energy Efficiency Investment](scenarios_hothouse_investment_energy_efficiency.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  
+  ![Low Carbon Investment](scenarios_hothouse_investment_low_carbon.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} 
+
+  The increasing concentrations of carbon dioxide, methane and nitrous oxide in the 
+  atmosphere are unprecedented in at least the last 800,000 years and are extremely 
+  likely to have been the dominant cause of warming since the mid-20th century. 
+  Observed climate change is already at 1.4°C above pre-industrial levels and has 
+  more than doubled global land area and global population annually exposed to river flood, 
+  crop failure, cyclones, wildfire, drought and heatwaves. In the Hot House World scenarios, 
+  global mean temperatures are projected to increase to 1.5°C by 2030 and to 1.9°C - 2°C by 2050, 
+  giving rise to high physical risk  (with land warming faster than oceans and high
+  latitudes experiencing higher warming).
+
+  ![Global mean temp rise](scenarios_hothouse_temperature.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+
+  These changes could lead to chronic changes in living conditions affecting health, labour 
+  productivity, agriculture, ecosystems, and sea-level rise. It can also change the frequency 
+  and severity of weather events such as heatwaves, droughts, wildfires, cyclones, and flooding. 
+  For example, in the Current Policies and Nationally Determined Contributions scenarios 
+  we can observe the following changes: 
+  
+  * A decrease in labour productivity to circa -1.7% in 2030 and circa -2.6% in 2050 
+  due to the reduced capacity of the human body to perform physical labour 
+  under hot and humid climate conditions.
+
+  ![Labour Productivity](scenarios_hothouse_labour.png)
+
+  **Source:** 
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  
+  * Annual economic damages from cyclones are also projected to increase above reference period levels, 
+  to ~8% by 2030 and ~20% by 2050.
+  
+  ![Tropical Cyclone Damage](scenarios_hothouse_damages_cyclones.png)
+
+  **Source:** 
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  
+  In these scenarios the total GDP impact from chronic physical and transition effects 
+  relative to a baseline (with no transition or physical risks) is estimated to be around 
+  -5% to 6% by 2030 and -13% to -15% by 2050, which is the highest impact apart from the 
+  Too-little-too-late scenario. World GDP losses from physical risks vary in line with 
+  different temperatures projected for each scenario. As with other scenarios, the 
+  impact on global GDP is dominated by physical risk (chronic). Transition risk impacts 
+  in the Current Policies scenario is so low it does not impact global GDP at either 2030 or 2050. 
+  
+  ![GDP](scenarios_hothouse_gdp.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24[REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} NiGEM NGFS v1.24.2 is not available for Low Demand scenario; Only chronic physical data available (not acute physical).
+
+  Overall, these scenarios result in high physical risk including irreversible impacts 
+  like sea-level rise. Transition risks are much less significant in these scenarios 
+  as only policies that are already implemented or pledged are in place.
