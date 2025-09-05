@@ -13,7 +13,6 @@ def layout():
     YML_NAME = "purpose_overview.yml"
     FILE_PATH = Path(__file__).parent
     YML_PATH = FILE_PATH.joinpath(YML_FOLDER).joinpath(YML_NAME).resolve()
-    print('yml path', YML_PATH)
 
     # open yaml
     with open(YML_PATH, encoding="utf-8") as f:
