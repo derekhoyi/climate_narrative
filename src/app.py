@@ -2,7 +2,7 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import html, dcc, Dash
 
-from src.pages.navbar import create_navbar
+from components.navbar import create_navbar
 
 app = Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.LUX], use_pages=True)
 app.config.suppress_callback_exceptions = True
