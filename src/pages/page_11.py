@@ -37,7 +37,7 @@ def layout():
             fluid=True, 
             className="mx-auto py-3 container"
         )
-    ], className="mx-auto py-3 container")
+    ], className="container")
     return layout
 
 # Add controls to build the interaction

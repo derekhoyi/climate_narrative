@@ -26,7 +26,7 @@ def layout():
             size="lg",
             is_open=False
         )
-    ], className="mx-auto py-3 container")
+    ], className="mx-auto container")
     return layout
 
 @callback(

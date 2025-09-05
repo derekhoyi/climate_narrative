@@ -16,7 +16,7 @@ def layout():
         html.Hr(),
         html.Div(id='report-contents'),
         html.Div(dbc.Button("PREV", href='/page-4'), className="text-left") 
-    ], className="mx-auto py-3 container")
+    ], className="container")
     return layout
 
 # print data in storage

@@ -14,5 +14,5 @@ def layout():
     layout = html.Div([
         html.H3('Welcome to page 4!'),
         button_bar
-    ], className="mx-auto py-3 container")
+    ], className="container")
     return layout

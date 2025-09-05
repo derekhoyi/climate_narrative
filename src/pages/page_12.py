@@ -65,7 +65,7 @@ def layout():
             value=df['Year'].max(),
             marks={str(year): str(year) for year in df['Year'].unique()}
         ), style={'width': '49%', 'padding': '0px 20px 20px 20px'})
-    ], className="mx-auto py-3 container")
+    ], className="container")
     
     return layout
 
