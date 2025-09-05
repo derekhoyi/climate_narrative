@@ -1,0 +1,190 @@
+name: NGFS Too little too late Scenarios
+position: 4
+transition: high
+physical: high
+exec_short: transition and physical
+exec_description: |
+  In the NGFS Fragmented World scenario, policy changes are introduced however 
+  carbon prices do not increase and CO2 emissions do not decrease sufficiently 
+  to prevent significant temperature rises. This results in both high impacts from 
+  a physical and transition risk perspective, where global mean temperature is 
+  projected to increase across the world by 1.5°C by 2030 and 1.9°C by 2050, 
+  compared to pre-industrial levels, giving rise to high physical risk (with 
+  land warming faster than oceans and high latitudes experiencing higher warming).
+  
+  This could lead to a significant chronic change in living conditions affecting health, 
+  labour productivity (due to the reduced capacity of the human body to perform physical 
+  labour under hot and humid climate conditions), agriculture, ecosystems, and sea-level rise. 
+  It can also change the frequency and severity of weather events such as heatwaves, droughts, 
+  wildfires, cyclones, and flooding. The total cumulative GDP impact from chronic physical and 
+  transition effects relative to a baseline with no transition or physical risks is estimated to 
+  be around -5.2% by 2030 and -13.6% by 2050, which is comparable to the Hot House World scenarios.
+
+  ![NGFS scenarios Features](NGFS_scenarios_Features_Littlelate.png)
+
+  **Source:**
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"} 
+
+  Note: The NGFS Too-little-too-late scenarios have some limitations that should be 
+  carefully considered, as they could lead to uncertainties in the projections. For example:
+
+  - Simplified assumptions about future policies, technologies, and economic developments.
+  - Incomplete coverage of physical impacts like tipping points and compound risks.
+  - Incomplete coverage of acute physical risks – i.e., four acute physical impacts are modelled 
+  using one transmission channel (flood and cyclones through capital asset damages; droughts 
+  through crop yield losses; heatwaves through labour productivity decline).
+  - Simplified use of the damage function – i.e., within the NGFS framework the damage function accounts 
+  only for damages from chronic physical risk, while losses from acute physical risk are considered separately.
+  - Limited consideration of societal impacts, such as climate-induced migration.
+  - Uncertainty about future technology and government policy changes.
+  - Incomplete capture of financial sector dynamics and responses
+  
+  
+  NGFS risk aassessments may require complementary assessments to align 
+  with users’ specific objectives. Understanding these limitations is 
+  important to better manage and mitigate climate-related risks. 
+  Despite these limitations, the NGFS Too-little-too-late scenario 
+  provide humbling insights into the (potential) severity of risks 
+  and challenges of insufficient and uncoordinated climate policy and actions.
+
+
+description: |
+  Too-little-too-late Scenarios assume that a late and uncoordinated transition fails to limit physical risks.
+
+  ![NGFS scenarios Framework](NGFS_scenarios_Framework_Littlelate.png)
+
+  **Source:**
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"} 
+
+  The NGFS have provided one Too little, too late scenario:
+
+  - **Fragmented World** scenario assumes a delayed and divergent 
+  climate policy response among countries globally, leading to high physical and transition risks. 
+  Countries with net zero targets achieve these only partially (80% of the target), while the 
+  other countries follow current policies.
+
+
+  ### Key physical assumptions and parameters
+  
+  In this scenario, CO<sub>2</sub> emission decrease is muted (i.e., rising in 2030 by ~0.5%, and dropping 
+  by ~39% in 2050) and is not sufficient to prevent significant temperature rises resulting in 
+  high physical risk.
+
+  ![CO2 emissions](scenarios_littlelate_emissions_co2.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+
+  In line with delayed policy changes, carbon prices remain at 11 USD per tonne CO2 and are only 
+  increased after 2030, however to a limited extent (i.e. only to ~57 USD baselined to 2010 prices 
+  at 2050, which is less than those under the NDC scenario). Transition risks are therefore still 
+  present however are less significant in than Orderly or Disorderly scenarios.
+
+  ![Carbon price](scenarios_littlelate_price_carbon.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Carbon prices are weighted global averages.
+  
+  Government revenues from carbon tax are affected by carbon price and emissions. As carbon prices 
+  are slightly raised (only after 2030) and emissions remain relatively high, revenues are observed 
+  to drop slightly from ~400 billion USD (2025) to ~380 billion USD at 2030, and a modestly increase 
+  to ~1 trillion USD by 2050.
+  
+  ![Carbon tax revenue](scenarios_littlelate_revenue.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+
+  Postponed transition actions lead to policy uncertainty, resulting in higher investment premiums 
+  and a sharp deviation in inflation and unemployment from baseline after 2030. This last for c.10 years, 
+  with the inflation and unemployment rates gradually returning to baseline thereafter. Long-term interest 
+  rates increase from 2030 to 0.25% above the baseline in 2050, reflecting the inflationary pressure created 
+  by limited rise in carbon prices, as well as the increased investment demand that the transition spurs on.
+
+  ![Inflation rate](scenarios_littlelate_inflation.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
+
+  ![Unemployment rate](scenarios_littlelate_unemployment.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
+
+  ![Interest rate](scenarios_littlelate_interest.png)
+  
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
+
+  The investments in energy efficiency and low carbon technologies are projected to increase, 
+  albeit modestly, in the Fragmented World scenario. Annual investment in energy efficiency 
+  increases from ~240 billion USD (inflation adjusted to 2010 baseline) in 2025 to a modest 
+  250 billion USD in 2030, rising to ~360 billion USD by 2050, whilst annual investment in 
+  low carbon increases from ~1 trillion USD in 2025 to ~1.45 trillion USD by 2030, further 
+  increasing to ~2.4 trillion USD by 2050. These increases are relatively small compared 
+  to other scenarios.
+  
+  ![Energy Efficiency Investment](scenarios_littlelate_investment_energy_efficiency.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  
+  ![Low Carbon Investment](scenarios_littlelate_investment_low_carbon.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} 
+
+  The increasing concentrations of carbon dioxide, methane and nitrous oxide in the atmosphere 
+  are unprecedented in at least the last 800,000 years and are extremely likely to have been 
+  the dominant cause of warming since the mid-20th century. Observed climate change of 1.4°C, 
+  compared to pre-industrial levels, has already more than doubled both the global land area 
+  and the global population annually exposed to river flood, crop failure, cyclones, wildfire, 
+  drought and heatwaves. In this scenario global mean temperature is projected to increase 
+  across the world by 1.5°C by 2030 and 1.9°C by 2050, compared to pre-industrial levels, 
+  giving rise to high physical risk (with land warming faster than oceans and high
+  latitudes experiencing higher warming).
+
+  ![Global mean temp rise](scenarios_littlelate_temperature.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+
+  These changes could lead to chronic changes in living conditions affecting health, 
+  labour productivity, agriculture, ecosystems, and sea-level rise. It can also change 
+  the frequency and severity of weather events such as heatwaves, droughts, wildfires, 
+  cyclones, and flooding. For example, in the Fragmented World scenario we see the following: 
+  
+  * A decrease in labour productivity from -1.7% in 2030 to -2.5% at 2050 due to the 
+  reduced capacity of the human body to perform physical labour under hot and humid climate conditions.
+
+  ![Labour Productivity](scenarios_littlelate_labour.png)
+
+  **Source:** 
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  
+  * Annual economic damages from cyclones are also projected to increase above 
+  the reference period levels; to ~8% by 2030 and ~18% by 2050.
+  
+  ![Tropical Cyclone Damage](scenarios_littlelate_damages_cyclones.png)
+
+  **Source:** 
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  
+  In the Fragmented World scenario, the total cumulative GDP impact from chronic physical 
+  and transition effects relative to a baseline with no transition or physical risks is 
+  estimated to be around -5.2% by 2030 and -13.6% by 2050, which is comparable to the 
+  Hot House World scenarios. World GDP losses from physical risks vary in line with different 
+  temperatures projected for each scenario. The impact on global GDP is dominated by physical risk. 
+  Transition risk does not impact global GDP at 2030. 
+  
+  ![GDP](scenarios_littlelate_gdp.png)
+
+  **Source:**
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24[REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} NiGEM NGFS v1.24.2 is not available for Low Demand scenario; Only chronic physical data available (not acute physical).
+
+  Overall, these scenarios result in high physical risk including irreversible impacts like sea-level rise. 
+  Transition risks are present however only from 2030 onwards, through domestic targets and 2050 transition strategies, 
+  however, not enough to limit physical risk impacts.

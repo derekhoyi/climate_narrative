@@ -1,0 +1,508 @@
+name: Agriculture Sector
+test_report_position: 2
+description: |
+  "**"Agriculture"**" sector can be split into Crop Production and Animal Production. Industries in the Crop Production 
+  subsector grow crops mainly for food and fibre. This subsector comprises establishments such as farms, orchards, 
+  groves, greenhouses, and nurseries, primarily engaged in growing crops, plants, vines, or trees and their seeds. 
+  The industries in this subsector are grouped by similarity of production activity, the length of growing season, 
+  degree of crop rotation, extent of input specialization, labour requirements and capital demands.
+  The production process is typically completed when the raw product or commodity grown reaches the “farm gate” for 
+  market, that is, at the point of first sale or price determination. Within the subsector, the NAICS classifies 
+  establishments to a specific industry when a product or industry family of products (i.e., oilseed and grain farming, 
+  vegetable and melon farming, fruit and tree nut farming) account for one-half or more of the establishment’s 
+  agricultural production.
+
+  Industries in the Animal Production, Fishing and Aquaculture subsector raise or fatten animals for the sale of 
+  animals or animal products and/or raise aquatic plants and animals in controlled or selected aquatic environments 
+  for the sale of aquatic plants, animals, or their products. The subsector includes establishments, such as ranches, 
+  farms, and feedlots primarily engaged in keeping, grazing, breeding, or feeding animals. These animals are kept for 
+  the products they produce or for eventual sale. The industries in this subsector are grouped by important factors, 
+  such as suitable grazing or pastureland, specialised buildings, type of equipment and the amount and types of labour 
+  required.
+  Establishments are classified to the Animal Production, Fishing and Aquaculture subsector when animal production 
+  (i.e., value of animals for market) accounts for one-half or more of the establishment’s total agricultural production.
+
+
+transition:
+  high:
+    exec_description: |
+      In the Delayed Transition scenario, the agriculture sector can benefit from expanding markets but faces greater 
+      risks of stranded assets, geographic growth constraints, and rising production costs in the face of new emissions 
+      costs, land use restrictions, and necessary productivity improvements.
+    always: |
+      The agriculture sector continues to expand to feed and supply agricultural energy products to a growing global 
+      population. It contributes to 22% of anthropogenic emissions, exposing its producers and financiers to emerging 
+      climate related transition risks through public policies, consumer demand shifts and technological evolutions.
+      In the Delayed transition scenario, late policy reaction means that a ‘Business-as-Usual’ approach to decarbonisation 
+      occurs between now and 2030, followed by a sharp increase in policy aggression. The delayed policy ambition reduces 
+      the initial disincentivisation against fossil fuels, only to more aggressively penalise and thus risk stranding 
+      assets beyond 2030. Disorderly policy action results in increased transition risks. Agricultural value chains face 
+      material climate transition risk exposure due to their emissions intensity and reliance on land. Under this scenario, 
+      the expansion of land protection policies and carbon payments made to preserve and expand forests could reduce land 
+      available for agriculture.
+
+      In this scenario, it could also lead to a reduction in GDP growth. This could result in changes in the rate of growth 
+      in demand for the agriculture sector, although the impact is likely to be limited due to inelastic demand for food 
+      products.
+    high_materiality: |
+      The changes in food and bioenergy demand, emission pricing or taxes, consumer preferences and land use restrictions 
+      could potentially result in one or more of the following financial impacts:
+
+      - "**"Revenue growth:"**" this occurs due to rising global demand and commodity prices. E.g.: A rice farm in Thailand 
+      sees sporadic revenue spikes due to sudden global food shortages triggered by extreme weather events and trade 
+      restrictions in other countries. However, inconsistent demand and volatile commodity prices, driven by erratic 
+      climate policies and protectionist tariffs, make revenue unpredictable, with periods of oversupply crashing prices.
+
+      - "**"Rising production costs:"**" this occurs due to higher input costs and GHG emissions costs. E.g.: A corn farm in 
+      Mexico faces sharply rising costs as fertilizer prices surge due to sudden export bans from major suppliers reacting 
+      to global energy crises. Additionally, a hastily implemented national carbon tax, introduced without clear guidelines, 
+      increases fuel costs for farm machinery, with no transitional support to offset the financial burden.
+
+      - "**"Increase in capital expenditures:"**" this may occur as farms need to invest in research and development and 
+      deployment of new technologies necessary for long-term productivity growth. E.g.: A soybean farm in Argentina 
+      is forced to rapidly invest in expensive, unproven precision agriculture technologies (e.g., AI-driven crop 
+      monitoring systems) to comply with sudden EU import regulations requiring low-carbon farming practices. The 
+      lack of local R&D support and high borrowing costs for capital investments strain the farm’s finances, with uncertain 
+      returns.
+
+      - "**"More write-offs of assets:"**" this may occur as expansion of land protection policies to preserve and expand forests
+      could reduce land available for agriculture. E.g.: A cattle ranch in Australia writes off significant land assets after 
+      an abrupt government mandate designates large swathes of grazing land as protected zones to meet international carbon 
+      commitments made under pressure. The lack of prior notice or compensation programs leaves the ranch unable to relocate 
+      or repurpose the land, forcing a costly reduction in herd size.
+
+      The agriculture sector can benefit from expanding markets but faces greater risks of stranded assets, geographic growth 
+      constraints, and rising production costs in the face of new emissions costs, land use restrictions, and necessary 
+      productivity improvements. The sector has very high GHG emissions as farm and livestock productions and activities 
+      are emission intensive. In the Delayed transition, agriculture sector’s GHG emissions are projected to fall, 
+      especially after 2030 (c. 62% by 2050 vs 2030).
+      
+      ![Delayed transition](delayed_transition_line_chart.png)
+      
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      The total demand could continue to increase in the Delayed transition scenario, however growth in demand 
+      for food production is limited
+
+      ![Total Agriculture Demand](agricultural_demand_delayed.png)
+
+      ![Food Agriculture Production](agricultural_production_delayed.png)
+      
+      ![Food Agriculture Demand](agricultural_demand_crops_food_delayed.png)
+
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      As the use of bioenergy increases, by 2050, approx. 23% of total agricultural production in the Delayed 
+      transition scenario, is consumed for energy generation.
+
+      ![Total Agriculture Production](agricultural_production_energy_delayed.png)
+
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      The agriculture sector is key driver of forest loss, and due to forest conservation and preservation policies, 
+      availability of agricultural land reduces, limiting the growth of agricultural land cover. However, technological 
+      innovations in yields and productivity increase land use efficiency, allowing agriculture production to continue 
+      to increase with the rising demand of food and energy due to population growth. By 2050, agricultural land could 
+      decrease by around 72 million hectares in the Delayed transition scenario. Forest cover could increase by around 
+      210 million hectares.
+
+      ![Agriculture Land Cover](land_cover_cropland_delayed.png)
+
+      ![Forest Land Cover](land_cover_forest_delayed.png)
+
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      The operational and production costs of firms could increase as they need to make necessary investments for 
+      technological upgrades and increase in carbon taxes. But producers should be able to pass the higher input costs 
+      to consumers due to inelastic demand of food and increasing usage of clean bioenergy and biofuels. Despite these 
+      material risks, agricultural companies and investors can also derive significant opportunities from climate 
+      transitions. By investing in sustainable intensification, regenerative agriculture, and diversifying revenue streams, 
+      forward-looking agricultural companies could see their net value and profitability rise under transitions.
+      In a Delayed transition scenario, mitigation actions at the state and firm levels must address heightened 
+      uncertainty, rapid cost escalations, and asset risks. Below are targeted mitigation actions to navigate the 
+      chaotic environment of a disorderly transition:
+      
+      State level actions:
+      - "**"Emergency financial support programs:"**" Establish rapid-response funds or loan guarantees to stabilize 
+      farmers facing sudden cost spikes from input shortages or new carbon taxes.
+      - "**"Flexible regulatory frameworks:"**" Implement adaptive policies with phased-in compliance timelines to 
+      ease the burden of sudden carbon pricing or emissions regulations.
+      - "**"Trade and supply chain stabilisation:"**" Negotiate bilateral trade agreements or stockpile critical inputs 
+      (e.g., fertilizers) to buffer against export bans and price volatility.
+      - "**"Accelerated R&D investment:"**" Fund crash programs for climate-resilient technologies, such as drought-tolerant 
+      seeds or low-cost methane capture, to quickly equip farmers for policy and climate shocks.
+      
+      Firm level actions:
+      - "**"Diversify input sourcing:"**" Secure multiple suppliers for critical inputs like fertilizers and fuel to mitigate 
+      risks from sudden price surges or export bans.
+      - "**"Hedge against price volatility:"**" Use financial instruments like futures contracts to lock in commodity prices 
+      and protect against market swings
+      - "**"Modular technology investments:"**" Adopt scalable, low-cost technologies (e.g., portable soil sensors or leased 
+      drones) to meet new regulations without heavy upfront CapEx.
+      - "**"Proactive asset diversification:"**" Spread risk by investing in off-farm assets or leasing land instead of 
+      purchasing to avoid write-offs from sudden policy changes.
+
+  low:
+    exec_description: |
+      In Orderly transition scenarios, the agriculture sector can benefit from expanding markets but face greater risks 
+      of stranded assets, geographic growth constraints, and rising production costs in the face of new emissions costs, 
+      land use restrictions, and necessary productivity improvements.
+    always: |
+      The agriculture sector continues to expand to feed and supply agricultural energy products to a growing global 
+      population. Agriculture sector including forestry and land use contributes to 22% of anthropogenic emissions as 
+      of 2020 (source: NGFS), exposing its producers and financiers to emerging climate-related transition risks through 
+      public policies, consumer demand shifts and technological evolutions.
+      By 2050, the Orderly transition scenarios driven by societal change, national energy strategies, and carbon 
+      legislation, are likely to have a significant impact on the agriculture sector. Agricultural value chains face material 
+      climate transition risk exposure due to their emissions intensity and reliance on land. A potential expansion of land 
+      protection policies and carbon payments made to preserve and expand forests could reduce land available for agriculture.
+      These scenarios could also lead to a limited relative reduction in GDP growth and could result in changes in the rate 
+      of growth in demand for the agriculture sector, although the impact is likely to be limited due to inelastic demand 
+      for food products.
+
+    high_materiality: |
+      The changes in food and bioenergy demand, emission pricing or taxes, consumer preferences and land use restrictions 
+      could potentially result in one or more of the following financial impacts, for example:
+
+      - "**"Revenue growth:"**" this occurs in line with global demand and commodity prices. E.g.: A soybean farm in Brazil 
+      may experience increased revenue due to rising global demand for plant-based proteins, driven by dietary shifts 
+      in developed markets. Stable commodity prices, supported by predictable trade policies and climate-resilient crop 
+      varieties, allow the farm to maintain consistent income growth despite regional climate variability.
+      -	"**"Rising production costs:"**" this occurs due to higher input costs and GHG emissions costs. E.g.: A dairy farm 
+      in the Netherlands faces higher costs for feed and fertilizer due to supply chain constraints and carbon taxes on 
+      energy-intensive inputs. Additionally, the farm incurs expenses from a national carbon pricing scheme that charges 
+      for methane emissions from livestock, pushing up overall operational costs (however to note, incentives to reduce 
+      methane emissions are not explicitly covered by the scenario).
+      -	"**"Increase in capital expenditures:"**" this may occur as farms need to invest in research and development and 
+      deployment of new technologies and farming approaches necessary for long-term productivity growth. Eg: A wheat 
+      farm in Australia invests in precision agriculture technologies, such as IoT-enabled soil sensors and automated 
+      irrigation systems, to optimise water use and boost yields under stricter water regulations. The farm also funds 
+      R&D for drought-resistant crop varieties to ensure long-term productivity in a warming climate.
+      -	"**"More write-off of assets:"**" this may occur as expansion of land protection policies to preserve and expand 
+      forests could reduce land available for agriculture. Eg: A cattle ranch in the United States writes off portions 
+      of its grazing land value after new federal policies designate adjacent areas as protected zones to restore 
+      native forests and sequester carbon. The reduced available land forces the ranch to downsize its herd or shift 
+      to alternative revenue streams, like agroforestry.
+      
+      The agriculture sector can benefit from expanding markets but faces greater risks of stranded assets, geographic 
+      growth constraints, and rising production costs in the face of new emissions costs, land use restrictions, and 
+      necessary productivity improvements.
+      The sector has very high GHG emissions as farm and livestock productions and activities are emissions intensive. 
+      In Orderly transition scenarios, although the agriculture sector’s GHG emissions are projected to fall, it is to 
+      a lesser extent than other sectors, making agriculture, forestry and other land use (AFOLU) the largest GHG 
+      emitting sector by 2050. Although AFOLU GHG emissions decrease by c. 67% by 2050 vs 2025 levels, share of AFOLU 
+      in total GHG emissions increase from 21% in 2025 to c. 62% in 2050 in NZ scenario
+      
+      
+      ![Sectoral emissions](sectoral_GHG_emission_net_zero.png)
+      
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      The total demand including food, non-food and feed products (crops and livestock) and bioenergy crops could 
+      continue to increase in the Orderly transition scenarios, however growth in demand for only food production 
+      is limited. Significantly higher agricultural demand in Net Zero scenario is primarily driven by the demand 
+      for bioenergy.
+
+      ![Total Agriculture Demand](agricultural_demand.png)
+      
+      ![Food Agriculture Demand](Agricultural_demand_crops_food.png)
+
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      As the use of bioenergy increases, by 2050, approx. 34%, 24% and 18% of total agricultural production in 
+      the Net Zero 2050, Low Demand, and Below 2oC scenarios could be consumed for energy generation respectively. 
+
+      ![Total Agriculture Production](Agricultural_production.png)
+
+      ![Energy Agriculture Production](Agricultural_production_energy.png)
+
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      The agriculture sector is a key driver of forest loss, and due to forest conservation and preservation policies, 
+      availability of agricultural land reduces, limiting the growth of agricultural land cover. However, technological 
+      innovations in yields and productivity increase land use efficiency, allowing agriculture production to continue 
+      to increase with the rising demand of food and energy due to population growth. In Orderly transition scenarios, 
+      by 2050, cropland could decrease by around 10 to 30 million hectares and forest cover could increase by around 
+      150 to 200 million hectares.
+
+      ![Agriculture Land Cover](land_cover_cropland_orderly.png)
+
+      ![Forest Land Cover](land_cover_forest_orderly.png)
+
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      The operational and production costs of firms could increase as they need to make necessary investments for 
+      technological upgrades and due to increases in carbon taxes. But producers should be able to pass the higher 
+      input costs to consumers due to inelastic demand of food and increasing usage of clean bioenergy and biofuels.
+
+      Despite these material risks, agricultural companies and investors can also derive significant opportunities 
+      from climate transitions. By investing in sustainable intensification, regenerative agriculture, and diversifying 
+      revenue streams, forward-looking agricultural companies could see their net value and profitability rise under 
+      transitions.
+
+      In an orderly transition scenario, mitigation actions at the state and firm levels can address the challenges of 
+      rising costs, capital needs, and asset risks.
+      
+      State level actions:
+      -	"**"Subsidies and incentives for sustainable practices:"**" Offer financial incentives, such as grants or low-interest 
+      loans, to farmers adopting low-emission technologies (e.g., methane capture systems for livestock) or climate-resilient 
+      crops.
+      -	"**"Carbon pricing with revenue recycling:"**" Implement a carbon pricing system (e.g., a carbon tax or cap-and-trade) 
+      and redirect revenues to fund agricultural R&D or offset costs for farmers transitioning to regenerative practices.
+      -	"**"Land use and zoning policies:"**" Develop clear, gradual land protection policies to balance forest preservation 
+      with agricultural needs, offering compensation or land-swapping programs for farmers affected by protected zones.
+      -	"**"Public-private partnerships for R&D:"**" Collaborate with universities and agribusinesses to fund research into 
+      drought-resistant seeds, precision farming tools, and alternative proteins.
+      -	"**"Training and extension services:"**" Expand agricultural extension programs to train farmers on climate-smart 
+      practices, such as crop rotation or integrated pest management, to reduce input costs and emissions.
+      
+      Firm level actions:
+      -	"**"Invest in precision agriculture:"**" Adopt technologies like IoT sensors, drones, and data analytics to 
+      optimize water, fertilizer, and pesticide use, reducing input costs and emissions.
+      -	"**"Diversify revenue streams:"**" Shift toward agroforestry, carbon credit programs, or alternative crops 
+      to hedge against land use restrictions and commodity price volatility.
+      -	"**"Energy efficiency and renewables:"**" Transition to renewable energy sources, such as solar or wind, for 
+      farm operations to lower energy costs and avoid carbon pricing penalties.
+      -	"**"Supply chain optimisation:"**" Partner with suppliers to source low-carbon inputs (e.g., organic 
+      fertilizers) and negotiate long-term contracts to stabilize costs.
+      -	"**"Asset management and write-off planning:"**" Proactively assess land and equipment vulnerable to policy 
+      changes and diversify investments to minimize write-off impacts.
+
+
+physical:
+  high:
+    exec_description: |
+      The agriculture sector is highly exposed to physical risk due to the projected increase in weather variation. 
+      These scenarios could also lead to a significant GDP impact which could negatively impact demand for this sector.
+    always: |
+      The agriculture sector is highly exposed to physical risk. Chronic effects (e.g. raised sea-levels and mean temperatures) 
+      and acute effects due to changes to frequency and severity of weather events such as heatwaves, wildfires, cyclones, 
+      and flooding are adding to pressures on global agricultural and food systems and could lead to severe disruption to 
+      agricultural production which could impact the profitability for some companies in long-run. Whilst the agriculture 
+      sector is used to responding to and managing changing weather conditions, in the high physical risk scenario, climate 
+      change and global warming could increase weather variations.
+      Adverse impacts on world GDP from physical risks are assumed in the scenarios and these vary in line with different 
+      temperatures projected for each scenario. The high physical risk scenarios could therefore also lead to a significant 
+      GDP impact which could negatively affect demand for agriculture, although the impact is likely to be limited due to 
+      inelastic demand for food products.
+
+    high_materiality: |
+      The agriculture sector is key driver of forest loss, and lack of preservation policies, result in increasing usage 
+      of land for agriculture purposes. In this scenario, cropland increases by 112 million ha while the forest cover reduces 
+      by c. 74 million ha by 2050 vs 2020 levels.
+
+      ![Forest Land Cover](land_cover_cropland_hot_house_world.png)
+      
+      ![Forest Land Cover](land_cover_forest_hot_house_world.png)
+      
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      
+      The following examples illustrate how the agriculture sector could be impacted in a high physical risk scenario:
+
+      "**"Chronic Impacts"**"
+      
+      -	"**"Increase in sea-level rise:"**" this may lead to substantial losses in crop and livestock production in low-lying 
+      agricultural areas and may contribute to waterlogging and soil erosion. Wetter weather could threaten agricultural 
+      production by adversely affecting crop yields.
+      -	"**"Higher average temperatures:"**"  this could have an impact on production, this could vary across the regions. Warmer, 
+      drier climates in tropical regions may have a negative impact on production, whereas production in colder and wetter 
+      areas may benefit from warm conditions.
+      -	"**"Shifting Precipitation Patterns:"**" Changes in rainfall timing and volume could disrupt planting and harvesting 
+      seasons. Regions dependent on monsoon rains might face prolonged dry seasons, while others see excessive water, 
+      both reducing arable land viability.
+      -	"**"Soil Degradation:"**" Increased erosion from erratic weather, combined with higher evaporation rates. Countries 
+      without mitigation efforts might see faster desertification.
+      -	"**"Water Resource Decline:"**" Gradual depletion of groundwater and shrinking rivers/lakes due to overuse and 
+      reduced recharge would limit irrigation capacity, especially in arid regions unaffected by net zero policies.
+
+
+      "**"Acute Impacts"**"
+
+      -	"**"Changing rainfall patterns and reduced availability of water for irrigation:"**"  this could threaten agricultural 
+      production, particularly in areas where water supplies are already under pressure. Drier soil conditions could reduce 
+      growth of crops, pasture and trees. Extended or repeated period of droughts may cause death of younger tress reducing 
+      forest productivity.
+      -	"**"Increased frequency and intensity of wildfires, cyclones or storms:"**" this could cause significant damage to 
+      forests and disrupt the natural ecosystems that have been developed around the forests.
+      -	"**"Significantly slowed GDP growth:"**" this could impact demand for agriculture through its effect on individuals’ 
+      disposable income. The impact on food products is likely to be low due to inelastic demand, and increased demand for 
+      bioenergy could offset any reduction in food demand.
+      -	"**"Range and quality of the ecosystem services:"**" agriculture and forestry not only provide for, but also rely on 
+      ecosystem services. These include climate control, flood regulation, biodiversity, pollination and nutrient cycling. 
+      The agriculture and forestry sectors have already adapted to change by introducing new genotypes, varieties, breeds 
+      and management practices. In a high physical risk scenario, there could be a need for more anticipatory adaptation 
+      measures.
+
+
+      In a hot house world scenario, mitigation actions at the state and firm levels must focus on adapting to severe 
+      climate risks, managing escalating costs, and ensuring food security amidst declining yields and resource scarcity.
+      
+      State level actions:
+      - Fund robust irrigation systems, flood defenses, and heat-resistant storage facilities to protect agricultural 
+      productivity
+      - Support farmers in adopting drought-tolerant, heat-resistant, or flood-tolerant crop varieties through subsidies 
+      or free seed distribution
+      -	Early warning disaster response systems to help farmers prepare for extreme events
+      -	Water resource management policies: Implement strict water allocation policies and invest in desalination or 
+      water recycling to secure supply for agriculture in water-scarce regions
+      
+      Firm level actions:
+      -	Crop diversification: Plant a mix of climate-resilient crops to reduce risk from weather variability 
+      and ensure consistent revenue.
+      -	Water-efficient technologies: Invest in drip irrigation, rainwater harvesting, or soil moisture sensors 
+      to optimize water use in drought-prone areas.
+      -	On-farm renewable energy: Adopt solar or wind energy for farm operations to reduce reliance on unreliable 
+      or costly grid power during extreme weather disruptions.
+      -	Insurance and risk management: Having climate insurance to cover losses from extreme weather events, ensuring 
+      financial stability.
+      -	Soil health investments: Implement regenerative practices like cover cropping or organic amendments to 
+      enhance soil resilience against erosion and heat stress.
+
+
+transition_physical:
+  high:
+    exec_description: |
+      In a Fragmented World scenario, with countries pursuing net zero targets imposing stringent policies, 
+      strains agriculture through higher costs and market shifts, while others without new policies face delayed 
+      climate impacts and trade disadvantages.
+    always: |
+      In a scenario where countries with net zero targets implement stringent climate policies while others adopt 
+      no new measures, the agriculture sector faces a sharply divided landscape. In net zero countries, farmers 
+      encounter rigorous regulations—such as carbon taxes, limits on fertilizer use, or mandates for renewable 
+      energy—driving up production costs as they transition to low-emission practices like agroforestry or 
+      methane-reducing livestock systems (however to note, incentives to reduce methane emissions are not 
+      explicitly covered by the scenario). These farmers may also adapt to shifting consumer preferences for 
+      sustainable goods, requiring investment in certification or new technologies. Conversely, countries without 
+      new policies continue business-as-usual, avoiding immediate cost increases but remaining exposed to escalating 
+      climate risks like heatwaves, soil degradation, or water scarcity, with little institutional support for 
+      adaptation. Over time, this fragmentation threatens food security as uncoordinated climate impacts and trade 
+      distortions ripple across borders.
+    high_materiality: |
+      In the Fragmented world scenario, although the agriculture sector’s GHG emissions are projected to fall, it is 
+      to a lesser extent than other sectors (c. 40% by 2050 vs 2020).
+      
+      ![Emission](sectoral_GHG_emission.png)
+      
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      
+      The total demand could continue to increase in the Fragmented world scenario, however growth in demand for food 
+      production is limited.
+
+      ![Demand](agricultural_demand_too_little_too_late.png)
+      
+      ![Production](agricultural_production_too_little_too_late.png)
+      
+      ![Demand crops](agricultural_demand_crops_food_too_little_too_late.png)
+      
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      
+      
+      As the use of bioenergy increases, by 2050, approx. 17% of total agricultural production in the Fragmented 
+      world scenario is consumed for energy generation.
+
+      ![Production energy](agricultural_production_energy_too_little_too_late.png)
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      The agriculture sector is key driver of forest loss, and due to forest conservation and preservation policies, 
+      availability of agricultural land reduces, limiting the growth of agricultural land cover. However, technological 
+      innovations in yields and productivity increase land use efficiency, allowing agriculture production to continue 
+      to increase with the rising demand of food and energy due to population growth. By 2050, agricultural land could 
+      increase by around 71 million hectares in the Fragmented world scenario. Forest cover could increase by around 46 
+      million hectares.
+
+      ![Land cover fragmented cropland](land_cover_cropland_fragmented_world.png)
+      
+      ![Land cover fragmented forest](land_cover_forest_fragmented_world.png)
+      
+      "**"Source:"**"
+      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      
+      Uneven implementation of climate policies across countries causes transition risks:
+      -	"**"Uneven cost pressures:"**" Farmers in policy-stringent regions (e.g., EU) face higher production costs from 
+      carbon taxes and emissions regulations, while those in lax regions (e.g., parts of Asia and Africa) avoid these 
+      but risk future trade penalties.
+      -	"**"Market access challenges:"**" Stringent regions may impose carbon border adjustments, limiting market access 
+      for agricultural exports from non-compliant countries, disrupting global supply chains.
+      -	"**"Technology adoption gaps:"**" Advanced economies invest in climate-smart technologies (e.g., precision 
+      agriculture), boosting productivity, while others lag, creating competitive disparities.
+      
+      In this scenario, physical risks stem from rising global temperatures, shifting weather patterns, and increasing 
+      frequency of extreme events, exacerbated by uneven mitigation efforts. 
+      
+      Acute Impacts
+      
+      -	"**"Floods:"**" Heavy rainfall and rising sea levels could inundate farmland, destroy crops, and erode soil, 
+      particularly in low-lying regions like deltas or coastal areas. Countries with net zero policies might mitigate 
+      some local flooding through infrastructure, but global sea level rise would still affect all.
+      -	"**"Droughts:"**" Prolonged dry spells, worsened by higher temperatures and uneven precipitation, could devastate 
+      crop yields and livestock in both policy-active and inactive regions. Water scarcity would hit rain-fed 
+      agriculture hardest, especially in areas already prone to aridity.
+      -	"**"Heatwaves:"**" Extreme heat events could kill livestock, reduce crop productivity (e.g., wheat, maize), and 
+      impair farmworker safety. Regions without emission cuts would amplify global warming, making heatwaves more 
+      frequent worldwide.
+      -	"**"Storms and Hurricanes:"**" Stronger tropical storms, fuelled by warmer oceans, could flatten crops, damage 
+      infrastructure and disrupt supply chains. Coastal agricultural zones would be particularly vulnerable.
+      
+      Chronic Impacts
+      
+      -	"**"Rising Temperatures:"**" Sustained higher average temperatures could push crops beyond their optimal growing 
+      ranges, reducing yields for staples like rice, corn, and soybeans. Heat stress would also lower livestock 
+      fertility and milk production.
+      	-	"**"Shifting Precipitation Patterns:"**" Changes in rainfall timing and volume could disrupt planting and 
+        harvesting seasons. Regions dependent on monsoon rains might face prolonged dry seasons, while others see 
+        excessive water, both reducing arable land viability.
+        -	"**"Soil Degradation:"**" Increased erosion from erratic weather, combined with higher evaporation rates. 
+        Countries without mitigation efforts might see faster desertification.
+        -	"**"Water Resource Decline:"**" Gradual depletion of groundwater and shrinking rivers/lakes due to overuse 
+        and reduced recharge would limit irrigation capacity, especially in arid regions unaffected by net zero policies.
+        -	"**"Sea Level Rise:"**" Slow but steady coastal flooding would salinize soils and freshwater sources, rendering 
+        large swathes of farmland unusable over decades, particularly in countries with no adaptive measures.
+      
+        In a Fragmented world scenario, mitigation actions at the state and firm levels must address divergent 
+        policy pressures, market access risks, and competitive disparities.
+      
+        State level actions:
+        - Harmonized trade policies: Trade agreements to minimize the impact of carbon border adjustment mechanisms 
+        (CBAM) imposed by stringent regions.
+        - Targeted subsidies for compliance: Provide subsidies or tax breaks to farmers in policy-stringent regions 
+        to offset costs of adopting low-carbon practices mandated by advanced economies. 
+        - Technology transfer programs: Facilitate access to climate-smart technologies (e.g., precision agriculture tools) 
+        for farmers in lax-policy regions through partnerships with advanced economies or international organizations.
+        - Buffer against market volatility: Create national or regional stockpiles of key inputs like fertilizers to shield 
+        farmers from supply chain disruptions caused by global policy disparities.
+      
+        Firm-level actions:
+        - Dual-track production systems: Adapt operations to meet stringent export standards for advanced markets while 
+        maintaining cost-effective practices for domestic or lax markets.
+        - Strategic market diversifiaction: Expand market reach to include countries with less stringent regulations 
+        to hedge against CBAM or trade barriers.
+        - Supply chain resilience: Build relationships with diverse suppliers across regions to mitigate risks from 
+        trade disruptions or input shortages.
+
+
+
+
+
+references: |
+  - [How will African farmers adjust to changing patterns of precipitation? - McKinsey, May 2020](https://www.mckinsey.com/business-functions/sustainability/our-insights/how-will-african-farmers-adjust-to-changing-patterns-of-precipitation){target="\_blank"}
+
+  - [Agriculture and Forestry Climate Change Impacts - Living With Environmental Change, Report Card 2016](https://nerc.ukri.org/research/partnerships/ride/lwec/report-cards/agriculture/){target="\_blank"}
+  
+  - [NAICS Code 11](https://www.naics.com/six-digit-naics/?code=11){target="\_blank"}
+  
+  - [SIC Code A](https://www.naics.com/sic-codes-counts-division/?div=A){target="\_blank"}
