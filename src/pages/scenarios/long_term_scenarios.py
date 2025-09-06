@@ -54,7 +54,8 @@ def layout():
                 [
                     dbc.Col(
                         dbc.ButtonGroup(button_list, vertical=True),
-                        width="auto",
+                        md=3,
+                        class_name="mb-3"
                     ),
                     dbc.Col(
                         html.Div(
