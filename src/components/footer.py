@@ -6,9 +6,9 @@ def create_footer():
     footer = dbc.Container(
         html.Footer(
             [
-                html.Hr(),
+                html.Hr(className="mt-5"),
                 html.P(
-                    "Copyright 2025 The Climate Financial Risk Forum", className="mb-1 mt-5",
+                    "Copyright 2025 The Climate Financial Risk Forum", className="mb-1",
                 ),
                 html.Div(
                     [
