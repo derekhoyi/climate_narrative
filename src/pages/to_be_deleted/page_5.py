@@ -6,7 +6,7 @@ import pathlib
 
 dash.register_page(__name__, path='/page-5')
 PATH = pathlib.Path(__file__).parent
-DATA_PATH = PATH.joinpath("../../assets/page_contents").resolve()
+DATA_PATH = PATH.joinpath("../../../assets/page_contents").resolve()
 
 def layout():
     layout = html.Div([

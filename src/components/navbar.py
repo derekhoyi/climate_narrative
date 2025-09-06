@@ -53,9 +53,7 @@ def create_navbar():
             dbc.NavItem(dbc.NavLink("Charts", href="/charts")),
             dbc.NavItem(dbc.NavLink("FAQs", href="/faqs")),
         ],
-        brand=[
-            dbc.NavItem(dbc.NavLink("CFRF", href="/"))
-        ],
+        brand="CFRF",
         brand_href="/",
         sticky="top",
         color="dark",
