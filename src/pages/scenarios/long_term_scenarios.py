@@ -1,6 +1,5 @@
 import dash
-from dash import html, dcc, callback, Output, Input, State, MATCH, ALL, dcc
-from dash.exceptions import PreventUpdate
+from dash import html, dcc, callback, Output, Input, State, ALL
 import dash_bootstrap_components as dbc
 import yaml
 import json
@@ -32,7 +31,8 @@ def layout():
                 v['name'],
                 id={'type': 'scenario-btn', 'index': k},
                 class_name="btn-light text-start",
-                n_clicks=0
+                n_clicks=0,
+                active=(k == DEFAULT_INDEX)  # set default active button
             ),
         )
 
@@ -72,7 +72,8 @@ def layout():
 
 # display scenario
 @callback(
-    Output('scenario-description', 'children'),
+    [Output('scenario-description', 'children'),
+     Output({'type': 'scenario-btn', 'index': ALL}, 'active')],
     Input({'type': 'scenario-btn', 'index': ALL}, 'n_clicks'),
     State('yml-store', 'data'),
     prevent_initial_call=True
@@ -86,11 +87,13 @@ def display_scenario(n_clicks, yml_data):
     prop_id = dash.callback_context.triggered[0]['prop_id']
     json_str = prop_id.split('.')[0]
     button_id = json.loads(json_str)
-    index = button_id['index']  
-    # print('Clicked index:', index)
+    index = button_id['index']
 
     # get markdown from yml
     desc_yml = yml[str(index)]['description']
     desc = dcc.Markdown(desc_yml, link_target="_blank")
 
-    return desc
+    # set active button
+    active = [i == str(index) for i in yml.keys()]
+
+    return desc, active
