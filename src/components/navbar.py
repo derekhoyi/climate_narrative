@@ -32,8 +32,8 @@ def create_navbar():
                 in_navbar=True,
                 label="Scenarios",
                 children=[
-                    dbc.DropdownMenuItem("Long-term scenarios", href='/scenarios/long-term-scenario'),
-                    dbc.DropdownMenuItem("Short-term scenarios", href='/scenarios/short-term-scenario'),
+                    dbc.DropdownMenuItem("Long-term scenarios", href='/scenarios/long-term-scenarios'),
+                    dbc.DropdownMenuItem("Short-term scenarios", href='/scenarios/short-term-scenarios'),
                 ],
             ),
             dbc.NavItem(dbc.NavLink("Sectors", href="/sectors")),
