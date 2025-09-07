@@ -3,3 +3,4 @@ dash_bootstrap_components==2.0.4
 pandas==2.3.2
 plotly==6.2.0
 PyYAML==6.0.2
+dash-mantine-components==2.2.1
