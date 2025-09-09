@@ -22,9 +22,9 @@ def create_navbar():
                 in_navbar=True,
                 label="Limitations",
                 children=[
-                    dbc.DropdownMenuItem("Overview", href='/limitations/limitations-overview'),
-                    dbc.DropdownMenuItem("Introduction to the tool", href='/limitations/long-term-scenario-limitations'),
-                    dbc.DropdownMenuItem("How to use the tool", href='/limitations/short-term-scenario-limitations'),
+                    dbc.DropdownMenuItem("Limitations Overview", href='/limitations/limitations-overview'),
+                    dbc.DropdownMenuItem("Long Term Scenario Limitations", href='/limitations/long-term-scenario-limitations'),
+                    dbc.DropdownMenuItem("Short Term Scenario Limitations", href='/limitations/short-term-scenario-limitations'),
                 ],
             ),
             dbc.DropdownMenu(
