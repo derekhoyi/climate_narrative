@@ -23,5 +23,5 @@ def layout():
     layout = html.Div([
         html.Div(contents), 
         button_bar
-    ], className="mx-auto py-3 container")
+    ], className="container")
     return layout

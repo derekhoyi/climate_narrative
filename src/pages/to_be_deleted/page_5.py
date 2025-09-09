@@ -6,7 +6,7 @@ import pathlib
 
 dash.register_page(__name__, path='/page-5')
 PATH = pathlib.Path(__file__).parent
-DATA_PATH = PATH.joinpath("../../assets/page_contents").resolve()
+DATA_PATH = PATH.joinpath("../../../assets/page_contents").resolve()
 
 def layout():
     layout = html.Div([
@@ -16,7 +16,7 @@ def layout():
         html.Hr(),
         html.Div(id='report-contents'),
         html.Div(dbc.Button("PREV", href='/page-4'), className="text-left") 
-    ], className="mx-auto py-3 container")
+    ], className="container")
     return layout
 
 # print data in storage
