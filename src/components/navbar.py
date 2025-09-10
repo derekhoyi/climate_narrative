@@ -1,4 +1,7 @@
 import dash_bootstrap_components as dbc
+import dash
+from dash import html
+from PIL import Image
 
 
 def create_navbar():
@@ -53,14 +56,15 @@ def create_navbar():
             dbc.NavItem(dbc.NavLink("Charts", href="/charts")),
             dbc.NavItem(dbc.NavLink("FAQs", href="/faqs")),
         ],
-        brand="CFRF",
+        brand=html.Img(src=Image.open("assets/logos/cfrf_logo.png"), height="48px", alt="CFRF"),
         brand_href="/",
         sticky="top",
-        color="dark",
-        dark=True,
+        color="white",
+        dark=False,
         expand='xl',
         links_left=True,
-        class_name="mb-4",
+        class_name="mb-4", ####### changed from mb-4 to mb-0 #######
+        style={"backgroundColor": "#ffffff", "color": "#000000"}  # <-- Force white bg and black text
     )
 
     return navbar
