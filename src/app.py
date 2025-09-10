@@ -15,7 +15,7 @@ app.layout = html.Div([
     create_footer(),
     
     # dcc.Store to store user input
-    dcc.Store(id='storage-sector', storage_type='memory')
+    dcc.Store(id='storage-sector', storage_type='memory'),
 ], className="d-flex flex-column min-vh-100")
 
 
