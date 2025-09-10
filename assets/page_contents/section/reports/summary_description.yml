@@ -1,0 +1,40 @@
+overview: |
+
+    Each report is structured the same, with an executive summary and a long form report.
+
+    The executive summary covers the following:
+    - A summary of the key assumptions and parameters used in the selected NGFS scenario
+
+    - For each sector, underwriting and asset class as well as lending exposure type (ordered from high to low materiality):
+      - Tables summarising the selected exposure type and highlighting the materiality
+      - A summary narrative for high materiality exposure
+      - A table of one-liners for medium and low materiality exposures
+
+    The long form report covers the following:
+    - A more detailed description of key assumptions and parameters used in the selected NGFS scenario
+
+    - For each sector, underwriting and asset class as well as lending exposure type (ordered from high to low materiality):
+      - A description of each lending exposure type, underwriting class, asset class and sector selected
+      - Detailed narratives for high materiality exposures
+      - A summary narrative for medium and low materiality exposures
+
+institutional: |
+
+    Selecting this report type will take you to a series of screens where you need to input some basic information regarding your 
+    firm's business activities, products, and materiality of exposures to an asset class, sector, or liability class.
+
+sector: |
+
+    Selecting this report type will allow you to choose the relevant sector(s) and climate scenario(s) for generating into a 
+    report. The tool outputs an executive summary and a detailed long form report containing this selection.
+
+scenario: |
+
+    Selecting this report type will allow you to select the relevant climate scenario(s) for generating into a report. The tool 
+    outputs an executive summary and a detailed long form report containing detailed description of key assumptions and parameters 
+    used in the selected NGFS scenario(s).
+
+full: |
+
+    Selecting this report type will take you straight to the final report page which will output the detailed narratives for all 
+    sectors and climate scenarios.
