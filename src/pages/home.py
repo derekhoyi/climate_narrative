@@ -35,31 +35,31 @@ def layout():
         ),
 
         html.Div(
-            html.Img(src=Image.open("assets/logos/cfrf_logo.png"),
+            html.Img(src=Image.open("assets/images/CFRF image cover.jpg"),
                 style={
                     "display": "block",
                     "marginLeft": "auto",
                     "marginRight": "auto",
-                    "height": "254px"
+                    "height": "350px"
                 },
                 alt="CFRF Logo"
             ),
             style={
                 "backgroundColor": "#000000",
                 "width": "99%",
-                "padding": "20px 0",
+                "padding": "5px 0",
                 "marginLeft": "auto",
                 "marginRight": "auto"
                  }
         ),
 
-        html.Div(dbc.Button("Start: Generate Report", 
+        html.Div(dbc.Button("Generate Report", 
                             id="open", 
                             n_clicks=0,
                             href='/reports/generate-report', 
                             style={
                                 "backgroundColor": "#51C876", 
-                                "color": "black",
+                                "color": "white",
                                 "borderRadius": "8px",      
                                 "border": "none"
                             }),
@@ -67,7 +67,7 @@ def layout():
                             style={
                                 "backgroundColor": "#000000",
                                 "width": "99%",
-                                "padding": "20px 0",
+                                "padding": "5px 0",
                                 "marginLeft": "auto",
                                 "marginRight": "auto",
                                 "textAlign": "center"

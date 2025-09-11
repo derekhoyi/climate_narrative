@@ -21,7 +21,25 @@ def create_footer():
                     ],
                     className="mb-3"
                 ),
-            ],
+                html.Div(
+                    dbc.Button(
+                        [
+                            html.Span("💬", style={"verticalAlign": "middle", "marginRight": "8px", "fontSize": "1.5em"}),
+                            "FEEDBACK"
+                        ],
+                        id="feedback",
+                        n_clicks=0,
+                        style={
+                            "backgroundColor": "#51C876",
+                            "color": "white",
+                            "borderRadius": "8px",
+                            "border": "none",
+                            "marginTop": "5px"
+                        }
+                    ),
+                    className="mb-3"
+                ),
+            ]
         ),
         className="container small mt-auto",
     )
