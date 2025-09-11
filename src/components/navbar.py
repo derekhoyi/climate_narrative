@@ -25,7 +25,7 @@ def create_navbar():
                 in_navbar=True,
                 label="Limitations",
                 children=[
-                    dbc.DropdownMenuItem("Limitations Overview", href='/limitations/limitations-overview'),
+                    dbc.DropdownMenuItem("Overview", href='/limitations/limitations-overview'),
                     dbc.DropdownMenuItem("Long Term Scenario Limitations", href='/limitations/long-term-scenario-limitations'),
                     dbc.DropdownMenuItem("Short Term Scenario Limitations", href='/limitations/short-term-scenario-limitations'),
                 ],
