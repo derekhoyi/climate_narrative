@@ -1,260 +1,261 @@
-name: Consumer Products Sector
-test_report_position: 9
-description: |
-  The **consumer products** sector consists of establishments engaged in retail trade; selling commodities for personal or household consumption and rendering services incidental to the sale of the goods. Characteristics of retail trade establishments generally, but not exclusively, include:
+9:
+  name: Consumer Products Sector
+  test_report_position: 9
+  description: |
+    The **consumer products** sector consists of establishments engaged in retail trade; selling commodities for personal or household consumption and rendering services incidental to the sale of the goods. Characteristics of retail trade establishments generally, but not exclusively, include:
 
-  -	A place of business engaged in activities to attract the general public to purchase goods, such as:
-    -	Physical store: shops, department stores, fuel stations, salons, opticians, consumer cooperatives, auction houses
-    - 	Non-physical store: stalls, mail-order houses, door-to-door sales, vending machines
-  -	Buying or receiving merchandise as well as selling
-  -	Incidental or secondary processing of its products (not akin to manufacturing)
-  -	Being considered as retail in trade terms
-  - Selling to customers for personal or household use
-  - Operating warehouses which act as an auxiliary to the core business of the customer facing retail stores
-  
-  Buying of goods for resale to the consumer is a characteristic of retail trade establishments that distinguishes them from agricultural and extractive industries, e.g. farmers who sell only their own produce from the point of production are not classified as Retail Trade.
+    -	A place of business engaged in activities to attract the general public to purchase goods, such as:
+      -	Physical store: shops, department stores, fuel stations, salons, opticians, consumer cooperatives, auction houses
+      - 	Non-physical store: stalls, mail-order houses, door-to-door sales, vending machines
+    -	Buying or receiving merchandise as well as selling
+    -	Incidental or secondary processing of its products (not akin to manufacturing)
+    -	Being considered as retail in trade terms
+    - Selling to customers for personal or household use
+    - Operating warehouses which act as an auxiliary to the core business of the customer facing retail stores
+    
+    Buying of goods for resale to the consumer is a characteristic of retail trade establishments that distinguishes them from agricultural and extractive industries, e.g. farmers who sell only their own produce from the point of production are not classified as Retail Trade.
 
-  Whilst establishments in the consumer products sector sell to the public for personal or household consumption, there are notable exceptions where wholesale trade to businesses are combined, such as timber and decorating (DIY), stationery, and fuel supplies. Such outlets are classified as Retail Trade even where wholesale supplies predominate.
+    Whilst establishments in the consumer products sector sell to the public for personal or household consumption, there are notable exceptions where wholesale trade to businesses are combined, such as timber and decorating (DIY), stationery, and fuel supplies. Such outlets are classified as Retail Trade even where wholesale supplies predominate.
 
-  Conversely, establishments selling merchandise such as plumbing equipment, electrical supplies, used automobile parts, and office furniture are classified in Wholesale Trade, even if a higher proportion of their sales is made to the public.
+    Conversely, establishments selling merchandise such as plumbing equipment, electrical supplies, used automobile parts, and office furniture are classified in Wholesale Trade, even if a higher proportion of their sales is made to the public.
 
-  Warehouses may be considered as part of the retail establishment where they act as an auxiliary to the core business of the customer facing retail stores.
-
-
-transition:
-  high:
-    exec_description: |
-      In the Delayed transition scenario, the consumer products sector will need to deliver longer-term carbon reduction initiatives by shifting to lower carbon-intensive supplies, reducing the carbon intensity of their physical stores or sales platforms, and using clean energy sources.
-    always: |
-      As the consumer products sector sits between the manufacturing sector and end-consumers, it is subject to the considerations of both the products it purchases (or receives) as suppliers react to a top-down policy environment that results in a rapid reduction of emissions, as well as the changes in customer behaviour as demand shifts towards a lower carbon economy mindset. In addition, there are considerations to be given to the carbon intensity of its own inherent practices, for example distribution, property, product choices, utility consumption, or packaging.
-      
-      Transition risk arises in the consumer products sector when any of these inherent practices must change because of supply line pressures, strategic business choices, consumer demand, or regulatory or political pressure (a recent example being the banning use of single-use plastics such as disposable While the consumer products sector could continue to play a role in meeting customer demand for the coming years, the changing patterns in energy generation in the Delayed Transition scenario, results in  CO<sub>2</sub> emissions increasing until 2035 before rapidly decreasing after 2035 as carbon prices are increased to compensate for the inaction beforehand. In the Divergent scenario there is a more immediate but divergent reduction in CO<sub>2</sub> emissions. Both these scenarios are likely to have a significant impact on the inherent practices of retail companies, upstream manufacturers and consumer demand, which could affect profitability of individual retail companies and the sector overall.
-
-    high_materiality: |
-      In the Delayed Transition scenario, the following risks and margin compression may crystallise:
-      
-      - **Increased fixed costs:** due to higher product purchase costs resulting from decarbonisation in the supply chain, especially on imports (c.f. EU Carbon Border Adjusted Mechanism), or from commercial real estate financing costs being higher on less energy efficient properties as lenders seek to green their portfolios in line with zero-carbon lending strategies. Margins may be maintained by passing these costs through to the consume, but larger retailers may be able to avoid this, and so competitiveness become an issue.
-      - **Higher capital investment costs:** through investment in electric distribution fleets or new energy efficient lighting, refrigeration, air conditioning and heating systems. Margins may be maintained by passing these costs through to the consumer, but larger retailers may be able to avoid this, and so competitiveness becomes an issue.
-      - **Disposal costs/capital:** write-downs can be incurred as stranded less energy efficient infrastructure needs to be replaced, such as the distribution fleets, lighting, air conditioning and heating system.
-      - **Higher variable costs:** resulting from more expensive environmentally friendly packaging solutions (moving away from single use and high-carbon-intensive products), change of product lines (to accommodate more environmentally friendly consumer preferences), new advertising of new product lines, and higher energy tariffs resulting from higher carbon prices on fossil fuels and/or a switch to potentially more expensive renewable energy supplies. Such costs could be managed by slow phasing-in of these initiatives, or by passing the costs through.
-      - **Lower revenues:** if retailers fail to adapt to consumer-side demand for lower carbon-intensive products (for example, the recent increased demand for vegan foods in the UK) then this may result in erosion of their climate conscious customer base. By implementing the previous climate impact reducing measures ahead of competitors, this could become an opportunity.
-      - **Governance and litigation costs:** For larger players in the consumer products sector there is an increasing focus on disclosure, from both a political and end-user perspective. With homogenisation of taxonomies, the comparability and accountability of disclosures could increase, with which comes reputational and litigation risk. Litigation costs may arise through having to have third-party assessments and assurance of environmental disclosures, and because of “greenwashing”. By following industry norms and being a market follower rather than leader in this space, this risk could be reduced.
-      
-      Furthermore, there is likely to be significant wide economic disruption caused by delayed transition that could lead to falls in equity prices and reduced customer spending levels. In these scenarios, the consumer products sector will need to deliver longer-term carbon reduction initiatives by shifting to lower carbon-intensive supplies, reducing the carbon intensity of their physical stores or sales platforms, and using clean energy sources. The economic disruptions along with reduced customer spending levels could result in significant disruptions in consumer product sector and result in companies going out of business if they are not able to cope with the changing environment. The drive for change arises through retailers being sandwiched between a combination of shift in end-consumer preferences from the buy side and a similar shift on the sell side as manufacturers and suppliers react to a top-down policy environment that results in a rapid reduction of emissions. For example, in these scenarios, on the supply side, emissions due to energy consumption from industry fall from ~8,800 megatons of CO2 per year in 2030 to ~2,000 megatons of CO2 per year by 2050.
-      
-      
-      ![Industry Emissions](consumer_products_delayed_industry_emissions.png)
-      
-      **Source:**
-      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-      
-      This could lead to a sudden limited-to-zero supply of carbon-intensive goods, which could mean retailers that specialise in such markets in a monoline, or concentrated strategy may find their business models no longer viable (for example, fossil fuel suppliers such as petrol stations, and coal and oil merchants). 
-      
-      On the demand side, a change in consumer sentiment is already reflected in a 2024 collaborative retail customer survey led by Globe Scan, 69% from 23 markets polled indicated that they wanted to significantly reduce their impact on the environment and nature(Navigating a Pivotal Year, Globe Scan)
-      
-      Another survey suggests While over nine in ten people globally express an interest in healthy and sustainable products, a number of barriers continue to hinder these purchases, including the high cost of living and a lack of support from governments and brands. More than half of consumers say they have seen more sustainable products in the past year, suggesting that the availability of healthy and sustainable options is improving. Sustainable purchasing trends are being driven by young people and those with families.”
-      
-      By its very nature, the consumer sector is diverse and nuanced, with multiple product categories, distribution platforms and business sizes and complexity. Businesses could need to adopt different strategies according to these dynamics and the corresponding transition risks and opportunities arising from adaptation could differ widely across the sector. The sudden shift to decarbonisation, means this will result in significant pressure on consumer product businesses and they will need to be agile to deal with this. In overcoming these challenges and considerations, retailers have opportunities to position themselves to have both greater appeal to the climate conscious consumer and play an integral part in a full end-to-end supply-chain of product level carbon intensity analysis.
-
-  low:
-    exec_description: |
-      In Orderly transition scenarios, the consumer products sector will need to deliver longer-term carbon reduction initiatives by shifting to lower carbon-intensive supplies, reducing the carbon intensity of their physical stores or sales platforms, and using clean energy sources. 
-    always: |
-      As the consumer products sector sits between the manufacturing sector and end-consumers, it is subject to the considerations of both the products it purchases (or receives) as suppliers react to a top-down policy environment that results in an immediate and smooth reduction of emissions, as well as the changes in customer behaviour as demand shifts towards a lower carbon economy mindset. In addition, there are considerations to be given to the carbon intensity of its own inherent practices, for example distribution, property, product choices, utility consumption, and packaging.
-      
-      Transition risk arises in the consumer products sector when any of these inherent practices must change because of supply line pressures, strategic business choices, consumer demand, or regulatory or political pressure (a recent example being the banning use of single-use plastics such as disposable drinking straws in the UK).
-      
-      While the consumer products sector could continue to play a role in meeting customer demand for the coming years, the changing patterns in energy consumption, driven by societal change, national energy strategies, and carbon legislation, are likely to have a significant and long-term impact on these inherent practices of retail companies, upstream manufacturers and consumer demand, which could affect profitability of individual companies and the sector overall.
-
-    high_materiality: |
-      In Orderly scenarios, the following risks and margin compression may crystallise: 
-      
-      - **Increased fixed costs:** Due to higher product purchase costs resulting from decarbonisation in the supply chain, especially on imports (e.g.,. EU Carbon Border Adjusted Mechanism), or from commercial real estate financing costs being higher on less energy efficient properties as lenders seek to green their portfolios in line with zero-carbon lending strategies. Margins may be maintained by passing these costs through to the consumer, but larger retailers may be able to avoid this, and so competitiveness increases.Consumer products sector has a heavy reliance on agriculture and extractive industries for their products and an increased costs on these underlying products will increase the cost of the consumer products. Such costs may be difficult to pass on to customers. Additionally, there will be an increased demand to audit the supply chains and ensure all human rights are maintained.
-      - **Higher capital investment costs:** through investment in electric distribution fleets or new energy efficient lighting, refrigeration, air conditioning and heating systems. Margins may be maintained by passing these costs through to the consumer, but larger retailers may be able to avoid this, and so competitiveness becomes an issue.
-      - **Disposal costs / capital write-downs:** can be incurred as stranded less energy efficient infrastructure needs to be replaced, such as the distribution fleets, lighting, air conditioning and heating systems.
-      - **Higher variable costs:** resulting from more expensive environmentally friendly packaging solutions (moving away from single use and high-carbon-intensive products), change of product lines (to accommodate more environmentally friendly consumer preferences), advertising of new product lines, and higher energy tariffs resulting from higher carbon prices on fossil fuels and/or a switch to potentially more expensive renewable energy supplies. Such costs could be managed by slow phasing-in of these initiatives, or by passing the costs through.
-      - **Lower revenues:** If retailers fail to adapt to consumer-side demand for lower carbon-intensive products (for example, the recent increased demand for vegan foods in the UK) then this may result in erosion of their climate conscious customer base. By implementing the previous climate impact reducing measures ahead of competitors, this could become an opportunity. Higher local-produce demand could lead to reduced catchment areas, lowering demand for some companies.
-      - **Governance and litigation costs:** For larger players in the consumer products sector there is an increasing focus on disclosure, from both a political and end-user perspective. With homogenisation of taxonomies, the comparability and accountability of disclosures could increase, with which comes reputational and litigation risk. Litigation costs may arise through having to have third-party assessments and assurance of environmental disclosures, and as a result of “greenwashing”. By following industry norms and being a market follower rather than lead in this space, this risk could be reduced.
-      
-      ![Industry Emissions](consumer_products_orderly_industry_emissions.png)
-      
-      **Source:**
-      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-      
-      In Orderly transition scenarios, the consumer products sector will need to deliver longer-term carbon reduction initiatives by shifting to lower carbon-intensive supplies, reducing the carbon intensity of their physical stores or sales platforms, and using clean energy sources. The drive for change arises through retailers being sandwiched between a combination of shift in end-consumer preferences from the buy side and a similar shift on the sell side as manufacturers and suppliers react to a top-down policy environment that results in an immediate and smooth reduction of emissions. For example, in these scenarios, on the supply side, emissions due to energy consumption from industry fall from the range between ~6,700 - 8,100 megatons of CO2 per year in 2025 to a range between ~150 and ~3100 megatons of CO2 per year by 2050.
-      
-      On the demand side, a change in consumer sentiment is already reflected in a 2024 collaborative retail customer survey led by Globe Scan, 69% from 23 markets polled indicated that they wanted to significantly reduce their impact on the environment and nature(Navigating a Pivotal Year, Globe Scan)
-      
-      Another survey suggests While over nine in ten people globally express an interest in healthy and sustainable products, a number of barriers continue to hinder these purchases, including the high cost of living and a lack of support from governments and brands. More than half of consumers say they have seen more sustainable products in the past year, suggesting that the availability of healthy and sustainable options is improving. Sustainable purchasing trends are being driven by young people and those with families.” 
-      
-      By its very nature, the Consumer Sector is diverse and nuanced, with multiple product categories, distribution platforms and business sizes and complexity. Businesses could need to adopt different strategies according to these dynamics and the corresponding transition risks and opportunities arising from adaptation could differ widely across the sector. In overcoming these challenges and considerations, retailers have opportunities to position themselves to have both greater appeal to the climate conscious consumer and play an integral part in a full end-to-end supply-chain of product level carbon intensity analysis. 
-
-physical:
-  high:
-    exec_description: |
-      In high physical risk scenarios, whilst the consumer products sector is used to responding to and managing changing weather conditions, climate change and global warming could increase weather variations. This could lead to increasing disruption to supply chains and own operations which would impact the profitability for these companies. 
-    always: |
-      The consumer products sector is highly exposed to the physical impacts of climate change including both the chronic effects (e.g. raised sea-levels and global mean temperatures) and acute effects due to changes in the frequency and severity of weather events such as heatwaves, droughts, wildfires, cyclones and flooding.
-      
-      Whilst the consumer products sector is used to responding to and managing changing weather conditions, in the high physical risk scenario, climate change and global warming could increase weather variations. This could lead to increasing disruption to supply chains and own operations which could impact the profitability for these companies. In a high physical risk scenario, small perturbations in climate can lead to significant disruption in crop yields and corresponding disruption to food supply chains. Even in a 1.5°C warming scenario, flash flooding and extreme weather events can pose problems for manufacturers exposed to such geographies, leading to supply chain issues, and direct impacts for retailers based in these locations. Adverse impacts on world GDP from physical risks are assumed in the scenarios and these vary in line with different temperatures projected for each scenario. The high physical risk scenarios could therefore also lead to a significant GDP impact which could negatively impact demand for consumer products.
-
-    high_materiality: |
-      Consideration should be given to the following hazards when considering physical risk for retailers:
-
-      - **Distribution:** disruption to transport infrastructure caused by weather events or flooding, leading to inability to fulfil customer orders and deliveries, or move stock from warehouses to outlets.
-      - **Store closures:** occurring through direct impacts such as flooding, or through staff inability to get to the location due to transport disruption, or due to power outages.
-      - **Stock losses:** arising through flooding or weather events damaging warehouses or retail outlets.
-      - **Product shortages: supply chain issues can lead to inability to stock products, particularly posing issues for retailers with low diversified product offerings.
-      - **Reduced footfall:** driven by migration away from areas where inhabitation is impacted (for example, water level rises in the Somerset Levels and the Fens).
-      - **Increased costs:** driven by adaptation to new climatic conditions, and increased insurance costs (or risk of being uninsurable).
-      
-      These hazards could each lead to reductions in revenue and to direct losses. Conversely, there may be opportunities to increase sales of items that help consumers mitigate against weather events and flooding (sandbags, barriers), or assist adaptation to new weather norms (such as rainwear) or extended seasonal product periods (beachwear). The following examples help to map the potential impacts above and illustrate how the consumer products sector could be impacted in a high physical risk scenario:
-      
-      **Chronic Impacts**
-      
-      - **Rising sea levels:** this could cause local and permanent disruption to distribution networks, store location choices, consumer geographical migration and insurance issues. This was seen following Hurricane Katrina in April 2000, where population levels of New Orleans were at 50% six years after the flood and remained only 20% lower 15 years later.
-      - **Higher average temperatures: Even small perturbations in climate can lead to significant disruption in crop yields and corresponding disruption to food supply chains.
-      
-      **Acute Impacts**
-      
-      - **Cyclones or storms:** could result in disruption of the distribution network, stock losses through direct damage, product shortages due to disruption of the supply chain (particularly posing issues for retailers with low diversified product offerings), reduced footfall due to consumers being unable to access shopping locations and due to internet outages, and insurance ineligibility. Store closures could also result from direct damage to the store, inability of staff to get to the location due to transport disruption, or power outages.
-      
-      - **Flooding events:** could also lead to the same disruption as cyclones and storms. Flash flooding can pose problems for manufacturers exposed to such geographies, leading to supply chain issues, and direct impacts for retailers based in these locations. For example, severe flooding in Thailand in 2011 lead to severe supply chain disruption.
+    Warehouses may be considered as part of the retail establishment where they act as an auxiliary to the core business of the customer facing retail stores.
 
 
-      ![Impact of 2011 Thai Floods](Thai_Flooding_Consumer_Products.png)
-      
-      Infographic: impact of 2011 Thai floods.
+  transition:
+    high:
+      exec_description: |
+        In the Delayed transition scenario, the consumer products sector will need to deliver longer-term carbon reduction initiatives by shifting to lower carbon-intensive supplies, reducing the carbon intensity of their physical stores or sales platforms, and using clean energy sources.
+      always: |
+        As the consumer products sector sits between the manufacturing sector and end-consumers, it is subject to the considerations of both the products it purchases (or receives) as suppliers react to a top-down policy environment that results in a rapid reduction of emissions, as well as the changes in customer behaviour as demand shifts towards a lower carbon economy mindset. In addition, there are considerations to be given to the carbon intensity of its own inherent practices, for example distribution, property, product choices, utility consumption, or packaging.
+        
+        Transition risk arises in the consumer products sector when any of these inherent practices must change because of supply line pressures, strategic business choices, consumer demand, or regulatory or political pressure (a recent example being the banning use of single-use plastics such as disposable While the consumer products sector could continue to play a role in meeting customer demand for the coming years, the changing patterns in energy generation in the Delayed Transition scenario, results in  CO<sub>2</sub> emissions increasing until 2035 before rapidly decreasing after 2035 as carbon prices are increased to compensate for the inaction beforehand. In the Divergent scenario there is a more immediate but divergent reduction in CO<sub>2</sub> emissions. Both these scenarios are likely to have a significant impact on the inherent practices of retail companies, upstream manufacturers and consumer demand, which could affect profitability of individual retail companies and the sector overall.
 
-      **Source:**
-      [BSR Climate and Supply Chain Management](https://www.bsr.org/reports/BSR_Climate_and_Supply_Chain_Management.pdf)
+      high_materiality: |
+        In the Delayed Transition scenario, the following risks and margin compression may crystallise:
+        
+        - **Increased fixed costs:** due to higher product purchase costs resulting from decarbonisation in the supply chain, especially on imports (c.f. EU Carbon Border Adjusted Mechanism), or from commercial real estate financing costs being higher on less energy efficient properties as lenders seek to green their portfolios in line with zero-carbon lending strategies. Margins may be maintained by passing these costs through to the consume, but larger retailers may be able to avoid this, and so competitiveness become an issue.
+        - **Higher capital investment costs:** through investment in electric distribution fleets or new energy efficient lighting, refrigeration, air conditioning and heating systems. Margins may be maintained by passing these costs through to the consumer, but larger retailers may be able to avoid this, and so competitiveness becomes an issue.
+        - **Disposal costs/capital:** write-downs can be incurred as stranded less energy efficient infrastructure needs to be replaced, such as the distribution fleets, lighting, air conditioning and heating system.
+        - **Higher variable costs:** resulting from more expensive environmentally friendly packaging solutions (moving away from single use and high-carbon-intensive products), change of product lines (to accommodate more environmentally friendly consumer preferences), new advertising of new product lines, and higher energy tariffs resulting from higher carbon prices on fossil fuels and/or a switch to potentially more expensive renewable energy supplies. Such costs could be managed by slow phasing-in of these initiatives, or by passing the costs through.
+        - **Lower revenues:** if retailers fail to adapt to consumer-side demand for lower carbon-intensive products (for example, the recent increased demand for vegan foods in the UK) then this may result in erosion of their climate conscious customer base. By implementing the previous climate impact reducing measures ahead of competitors, this could become an opportunity.
+        - **Governance and litigation costs:** For larger players in the consumer products sector there is an increasing focus on disclosure, from both a political and end-user perspective. With homogenisation of taxonomies, the comparability and accountability of disclosures could increase, with which comes reputational and litigation risk. Litigation costs may arise through having to have third-party assessments and assurance of environmental disclosures, and because of “greenwashing”. By following industry norms and being a market follower rather than leader in this space, this risk could be reduced.
+        
+        Furthermore, there is likely to be significant wide economic disruption caused by delayed transition that could lead to falls in equity prices and reduced customer spending levels. In these scenarios, the consumer products sector will need to deliver longer-term carbon reduction initiatives by shifting to lower carbon-intensive supplies, reducing the carbon intensity of their physical stores or sales platforms, and using clean energy sources. The economic disruptions along with reduced customer spending levels could result in significant disruptions in consumer product sector and result in companies going out of business if they are not able to cope with the changing environment. The drive for change arises through retailers being sandwiched between a combination of shift in end-consumer preferences from the buy side and a similar shift on the sell side as manufacturers and suppliers react to a top-down policy environment that results in a rapid reduction of emissions. For example, in these scenarios, on the supply side, emissions due to energy consumption from industry fall from ~8,800 megatons of CO2 per year in 2030 to ~2,000 megatons of CO2 per year by 2050.
+        
+        
+        ![Industry Emissions](consumer_products_delayed_industry_emissions.png)
+        
+        **Source:**
+        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+        
+        This could lead to a sudden limited-to-zero supply of carbon-intensive goods, which could mean retailers that specialise in such markets in a monoline, or concentrated strategy may find their business models no longer viable (for example, fossil fuel suppliers such as petrol stations, and coal and oil merchants). 
+        
+        On the demand side, a change in consumer sentiment is already reflected in a 2024 collaborative retail customer survey led by Globe Scan, 69% from 23 markets polled indicated that they wanted to significantly reduce their impact on the environment and nature(Navigating a Pivotal Year, Globe Scan)
+        
+        Another survey suggests While over nine in ten people globally express an interest in healthy and sustainable products, a number of barriers continue to hinder these purchases, including the high cost of living and a lack of support from governments and brands. More than half of consumers say they have seen more sustainable products in the past year, suggesting that the availability of healthy and sustainable options is improving. Sustainable purchasing trends are being driven by young people and those with families.”
+        
+        By its very nature, the consumer sector is diverse and nuanced, with multiple product categories, distribution platforms and business sizes and complexity. Businesses could need to adopt different strategies according to these dynamics and the corresponding transition risks and opportunities arising from adaptation could differ widely across the sector. The sudden shift to decarbonisation, means this will result in significant pressure on consumer product businesses and they will need to be agile to deal with this. In overcoming these challenges and considerations, retailers have opportunities to position themselves to have both greater appeal to the climate conscious consumer and play an integral part in a full end-to-end supply-chain of product level carbon intensity analysis.
 
-      - **Drought** could lead to competition for water resources as well as increased environmental      regulation focusing on protecting water supply and quality. A lesser impact of this would be to increase water supply costs to the sector, but this could be offset through introducing adaptation strategies  to meet consumer demand, such as water storage facilities, refrigeration and air conditioning systems.
+    low:
+      exec_description: |
+        In Orderly transition scenarios, the consumer products sector will need to deliver longer-term carbon reduction initiatives by shifting to lower carbon-intensive supplies, reducing the carbon intensity of their physical stores or sales platforms, and using clean energy sources. 
+      always: |
+        As the consumer products sector sits between the manufacturing sector and end-consumers, it is subject to the considerations of both the products it purchases (or receives) as suppliers react to a top-down policy environment that results in an immediate and smooth reduction of emissions, as well as the changes in customer behaviour as demand shifts towards a lower carbon economy mindset. In addition, there are considerations to be given to the carbon intensity of its own inherent practices, for example distribution, property, product choices, utility consumption, and packaging.
+        
+        Transition risk arises in the consumer products sector when any of these inherent practices must change because of supply line pressures, strategic business choices, consumer demand, or regulatory or political pressure (a recent example being the banning use of single-use plastics such as disposable drinking straws in the UK).
+        
+        While the consumer products sector could continue to play a role in meeting customer demand for the coming years, the changing patterns in energy consumption, driven by societal change, national energy strategies, and carbon legislation, are likely to have a significant and long-term impact on these inherent practices of retail companies, upstream manufacturers and consumer demand, which could affect profitability of individual companies and the sector overall.
 
-      There are mitigating actions that retailers could consider against such high physical risks. For example, relocation of warehousing and stores to less flood prone locations, and pre-empting product line changes as the climatic changes take hold. Another consideration would be to explore options of more flexible store locations, such as pop-up shops.
-      
-      Understanding the impact on the supply chain, particularly the manufacturing sector, could lead to a decision to diversify supplier networks. This could be particularly focused on choosing more local suppliers so that widespread international distribution disruption would have a less significant effect than it would if reliance on imported goods was retained. This would be particularly pertinent for food supplies. Customer engagement would be crucial to develop a supply-led trend for less wide-ranging product choices in such a scenario (undoing the fashion for greater choice that has grown via the Great Acceleration that has proliferated since the second world war).
+      high_materiality: |
+        In Orderly scenarios, the following risks and margin compression may crystallise: 
+        
+        - **Increased fixed costs:** Due to higher product purchase costs resulting from decarbonisation in the supply chain, especially on imports (e.g.,. EU Carbon Border Adjusted Mechanism), or from commercial real estate financing costs being higher on less energy efficient properties as lenders seek to green their portfolios in line with zero-carbon lending strategies. Margins may be maintained by passing these costs through to the consumer, but larger retailers may be able to avoid this, and so competitiveness increases.Consumer products sector has a heavy reliance on agriculture and extractive industries for their products and an increased costs on these underlying products will increase the cost of the consumer products. Such costs may be difficult to pass on to customers. Additionally, there will be an increased demand to audit the supply chains and ensure all human rights are maintained.
+        - **Higher capital investment costs:** through investment in electric distribution fleets or new energy efficient lighting, refrigeration, air conditioning and heating systems. Margins may be maintained by passing these costs through to the consumer, but larger retailers may be able to avoid this, and so competitiveness becomes an issue.
+        - **Disposal costs / capital write-downs:** can be incurred as stranded less energy efficient infrastructure needs to be replaced, such as the distribution fleets, lighting, air conditioning and heating systems.
+        - **Higher variable costs:** resulting from more expensive environmentally friendly packaging solutions (moving away from single use and high-carbon-intensive products), change of product lines (to accommodate more environmentally friendly consumer preferences), advertising of new product lines, and higher energy tariffs resulting from higher carbon prices on fossil fuels and/or a switch to potentially more expensive renewable energy supplies. Such costs could be managed by slow phasing-in of these initiatives, or by passing the costs through.
+        - **Lower revenues:** If retailers fail to adapt to consumer-side demand for lower carbon-intensive products (for example, the recent increased demand for vegan foods in the UK) then this may result in erosion of their climate conscious customer base. By implementing the previous climate impact reducing measures ahead of competitors, this could become an opportunity. Higher local-produce demand could lead to reduced catchment areas, lowering demand for some companies.
+        - **Governance and litigation costs:** For larger players in the consumer products sector there is an increasing focus on disclosure, from both a political and end-user perspective. With homogenisation of taxonomies, the comparability and accountability of disclosures could increase, with which comes reputational and litigation risk. Litigation costs may arise through having to have third-party assessments and assurance of environmental disclosures, and as a result of “greenwashing”. By following industry norms and being a market follower rather than lead in this space, this risk could be reduced.
+        
+        ![Industry Emissions](consumer_products_orderly_industry_emissions.png)
+        
+        **Source:**
+        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+        
+        In Orderly transition scenarios, the consumer products sector will need to deliver longer-term carbon reduction initiatives by shifting to lower carbon-intensive supplies, reducing the carbon intensity of their physical stores or sales platforms, and using clean energy sources. The drive for change arises through retailers being sandwiched between a combination of shift in end-consumer preferences from the buy side and a similar shift on the sell side as manufacturers and suppliers react to a top-down policy environment that results in an immediate and smooth reduction of emissions. For example, in these scenarios, on the supply side, emissions due to energy consumption from industry fall from the range between ~6,700 - 8,100 megatons of CO2 per year in 2025 to a range between ~150 and ~3100 megatons of CO2 per year by 2050.
+        
+        On the demand side, a change in consumer sentiment is already reflected in a 2024 collaborative retail customer survey led by Globe Scan, 69% from 23 markets polled indicated that they wanted to significantly reduce their impact on the environment and nature(Navigating a Pivotal Year, Globe Scan)
+        
+        Another survey suggests While over nine in ten people globally express an interest in healthy and sustainable products, a number of barriers continue to hinder these purchases, including the high cost of living and a lack of support from governments and brands. More than half of consumers say they have seen more sustainable products in the past year, suggesting that the availability of healthy and sustainable options is improving. Sustainable purchasing trends are being driven by young people and those with families.” 
+        
+        By its very nature, the Consumer Sector is diverse and nuanced, with multiple product categories, distribution platforms and business sizes and complexity. Businesses could need to adopt different strategies according to these dynamics and the corresponding transition risks and opportunities arising from adaptation could differ widely across the sector. In overcoming these challenges and considerations, retailers have opportunities to position themselves to have both greater appeal to the climate conscious consumer and play an integral part in a full end-to-end supply-chain of product level carbon intensity analysis. 
 
-transition_physical:
-  high:
-    exec_description: |
-      In high physical and transition risk scenarios, whilst the consumer products sector is used to responding to and managing changing weather conditions, climate change and global warming could increase weather variations. This could lead to increasing disruption to supply chains and own operations which could impact the profitability for these companies. The changing environmental conditions will lead to drastic changes in regulatory policies to tackle the situations and this could impact the production of consumer products. The companies will have to adapt to these fast-changing policies and consumer demand to have minimum impact on its production line and stock clearance. 
-    always: |
-      The consumer products sector is highly exposed to the physical impacts of climate change including both the chronic effects (e.g. raised sea-levels and global mean temperatures) and acute effects due to changes in the frequency and severity of weather events such as heatwaves, droughts, wildfires, cyclones and flooding. Whilst the consumer products sector is used to responding to and managing changing weather conditions, in the high physical scenario, climate change and global warming could increase weather variations which may disrupt the supply chains and own operations could impact the profitability. A small perturbation in climate can lead to significant disruption in crop yields and corresponding disruption to food supply chains. Even in a 1.5°C warming scenario, flash flooding and extreme weather events can pose problems for manufacturers exposed to such geographies, leading to supply chain issues, and direct impacts for retailers based in these locations.
-      
-      The consumer products sector is also highly exposed to transition impacts of climate change. A fast-changing regulatory policies or drastic shift in demand could lead to increasing disruption to stock maintenance, increasing stranded products that could further impact the profitability for these companies.
-      
-      Adverse impacts on world GDP from physical and transition risks are assumed in the scenario and these vary in line with different temperatures projected for fragmented world scenario. The high physical and transition risk scenario could therefore also lead to a significant GDP impact which could negatively impact demand for consumer products.
-    high_materiality: |
-      Consideration should be given to the following hazards when considering high physical for retailers:
-      - **Distribution:** disruption to transport infrastructure caused by weather events or flooding, leading to inability to fulfil customer orders and deliveries, or move stock from warehouses to outlets
-      - **Store closures:** occurring through direct impacts such as flooding, or through staff inability to get to the location due to transport disruption, or due to power outages
-      - **Stock losses:** arising through flooding or weather events damaging warehouses or retail outlets
-      - **Product shortages:** supply chain issues can lead to inability to stock products, particularly posing issues for retailers with low diversified product offerings
-      - **Reduced footfall:** driven by migration away from areas where inhabitation is impacted (for example, water level rises in the Somerset Levels and the Fens)
-      - **Increased costs:** driven by adaptation to new climatic conditions, and increased insurance costs (or risk of being uninsurable).
-      - **Demand Impact:** rapid shift in demand towards less carbon-intensive products and a shortage of production is created due to significant disruptions in supply chain and lower adaptability to rapid change.
-      - **Policy Changes:** sudden shift in regulatory policies can create additional burden on retailers where products in market become stranded and obsolete with limited demand.
-      
-      Consideration should also be given to the following hazards when considering high transition risk for retailers:
-      
-      - **Store closures or reduced footfall:** occurring through rapid shift in demand towards less carbon-intensive products
-      - **Stock losses:** arising through stranded assets in warehouses or retail outlets. Sudden shift in regulatory policies can create additional burden on retailers where products in market become stranded and obsolete with limited demand.
-      - **Product shortages:** supply chain issues can lead to inability to stock products, particularly posing issues for retailers with low diversified product offerings
-      
-      From a high physical risk perspective, in the fragmented world scenario, extreme events where land is exposed to river floods increases from 0.014% in 2030 to 0.033% in 2050. These hazards could each lead to reductions in revenue and to direct losses. Conversely, there may be opportunities to increase sales of items that help consumers mitigate against weather events and flooding (sandbags, barriers), or assist adaptation to new weather norms (such as rainwear) or extended seasonal product periods (beachwear). 
+  physical:
+    high:
+      exec_description: |
+        In high physical risk scenarios, whilst the consumer products sector is used to responding to and managing changing weather conditions, climate change and global warming could increase weather variations. This could lead to increasing disruption to supply chains and own operations which would impact the profitability for these companies. 
+      always: |
+        The consumer products sector is highly exposed to the physical impacts of climate change including both the chronic effects (e.g. raised sea-levels and global mean temperatures) and acute effects due to changes in the frequency and severity of weather events such as heatwaves, droughts, wildfires, cyclones and flooding.
+        
+        Whilst the consumer products sector is used to responding to and managing changing weather conditions, in the high physical risk scenario, climate change and global warming could increase weather variations. This could lead to increasing disruption to supply chains and own operations which could impact the profitability for these companies. In a high physical risk scenario, small perturbations in climate can lead to significant disruption in crop yields and corresponding disruption to food supply chains. Even in a 1.5°C warming scenario, flash flooding and extreme weather events can pose problems for manufacturers exposed to such geographies, leading to supply chain issues, and direct impacts for retailers based in these locations. Adverse impacts on world GDP from physical risks are assumed in the scenarios and these vary in line with different temperatures projected for each scenario. The high physical risk scenarios could therefore also lead to a significant GDP impact which could negatively impact demand for consumer products.
 
-      ![River flood](consumer_products_land_friction_annually_exposed_to river_floods.png)
-      
-      **Source:**
-      [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
-      
-      
-      The following examples help to map the potential impacts above and illustrate how the Consumer Products sector could be impacted from higher physical risk impacts:
-      
-      Chronic Impacts
-      - **Rising sea levels:** could cause local and permanent disruption to distribution networks, store location choices, consumer geographical migration and insurance issues. Reduced footfall could also result from migration away from affected areas, this was seen following Hurricane Katrina in April 2000, where population levels of New Orleans were at 50% six years after the flood and remained 20% lower 15 years later.
-      
-      - **Higher average temperatures:** even small perturbations in climate can lead to significant disruption in crop yields and corresponding disruption to food supply chains.
-      
-      Acute Impacts
-      
-      - **Cyclones or storms:** could result in disruption of the distribution network, stock losses through direct damage, product shortages due to disruption of the supply chain (particularly posing issues for retailers with low diversified product offerings), reduced footfall due to consumers being unable to access shopping locations and due to internet outages, and insurance ineligibility. Store closures could also result from direct damage to the store, inability of staff to get to the location due to transport disruption, or power outages.
-      
-      - **Flooding events:** could also lead to the same disruption as cyclones and storms. Flash flooding can pose problems for manufacturers exposed to such geographies, leading to supply chain issues, and direct impacts for retailers based in these locations. For example, severe flooding in Thailand in 2011 lead to severe supply chain disruption.
+      high_materiality: |
+        Consideration should be given to the following hazards when considering physical risk for retailers:
 
-      ![Impact of 2011 Thai Floods](Thai_Flooding_Consumer_Products.png)
-      
-      Infographic: impact of 2011 Thai floods.
-
-      **Source:**
-      [BSR Climate and Supply Chain Management](https://www.bsr.org/reports/BSR_Climate_and_Supply_Chain_Management.pdf)
-
-
-      - **Drought:** could lead to competition for water resources as well as increased environmental regulation focusing on protecting water supply and quality. A lesser impact of this would be to increase water supply costs to the sector, but this could be offset through introducing product lines to meet consumer demand, such as water storage facilities, refrigeration and air conditioning systems.
-      
-      There are mitigating actions that retailers could consider against high physical risks. For example, relocation of warehousing and stores to less flood prone locations, and pre-empting product line changes as the climatic changes take hold. Another consideration would be to explore options of more flexible store locations, such as pop-up shops.
-      
-      Understanding the impact on the supply chain, particularly the manufacturing sector, could lead to a decision to diversify supplier networks. This could be particularly focused on choosing more local suppliers so that widespread international distribution disruption would have a less significant effect than it would if reliance on imported goods was retained. This would be particularly pertinent for food supplies. Customer engagement would be crucial to develop a supply-led trend for less wide-ranging product choices in such a scenario (undoing the fashion for greater choice that has grown via the Great Acceleration that has proliferated since the second world war).
-      
-      From a high transition risk perspective, in the fragmented world scenario, the price of carbon remains very low and emissions very high compared to other scenarios. This trend encourages retailers to continue to produce more of carbon-intensive consumer products. However, any drastic change in regulatory policy and sudden change of consumer demand towards less carbon intensive product raise the risk of shortage of products and losses for the companies. The big retailers who have the capacity to address the environmental changes by taking rapid action will stay in the competition, while the small retailers will suffer the major losses.
-
-      ![Carbon price](consumer_products_carbon_price.png)
-      
-      ![Carbon price industry](consumer_products_carbon_price_industry.png)
-      
-      **Source:**
-      [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-      
-      
-      There are mitigating actions that retailers could consider against high transition risks. For example, invest in product diversification, closely monitor demand shifts, integrate climate-friendly technologies, and adopt planning and strategy to cope up with changing environment.
+        - **Distribution:** disruption to transport infrastructure caused by weather events or flooding, leading to inability to fulfil customer orders and deliveries, or move stock from warehouses to outlets.
+        - **Store closures:** occurring through direct impacts such as flooding, or through staff inability to get to the location due to transport disruption, or due to power outages.
+        - **Stock losses:** arising through flooding or weather events damaging warehouses or retail outlets.
+        - **Product shortages: supply chain issues can lead to inability to stock products, particularly posing issues for retailers with low diversified product offerings.
+        - **Reduced footfall:** driven by migration away from areas where inhabitation is impacted (for example, water level rises in the Somerset Levels and the Fens).
+        - **Increased costs:** driven by adaptation to new climatic conditions, and increased insurance costs (or risk of being uninsurable).
+        
+        These hazards could each lead to reductions in revenue and to direct losses. Conversely, there may be opportunities to increase sales of items that help consumers mitigate against weather events and flooding (sandbags, barriers), or assist adaptation to new weather norms (such as rainwear) or extended seasonal product periods (beachwear). The following examples help to map the potential impacts above and illustrate how the consumer products sector could be impacted in a high physical risk scenario:
+        
+        **Chronic Impacts**
+        
+        - **Rising sea levels:** this could cause local and permanent disruption to distribution networks, store location choices, consumer geographical migration and insurance issues. This was seen following Hurricane Katrina in April 2000, where population levels of New Orleans were at 50% six years after the flood and remained only 20% lower 15 years later.
+        - **Higher average temperatures: Even small perturbations in climate can lead to significant disruption in crop yields and corresponding disruption to food supply chains.
+        
+        **Acute Impacts**
+        
+        - **Cyclones or storms:** could result in disruption of the distribution network, stock losses through direct damage, product shortages due to disruption of the supply chain (particularly posing issues for retailers with low diversified product offerings), reduced footfall due to consumers being unable to access shopping locations and due to internet outages, and insurance ineligibility. Store closures could also result from direct damage to the store, inability of staff to get to the location due to transport disruption, or power outages.
+        
+        - **Flooding events:** could also lead to the same disruption as cyclones and storms. Flash flooding can pose problems for manufacturers exposed to such geographies, leading to supply chain issues, and direct impacts for retailers based in these locations. For example, severe flooding in Thailand in 2011 lead to severe supply chain disruption.
 
 
-appendix: |
-  **Rising temperatures and retail sales**
-  
-  It is established that retail sales are negatively impacted by negative 
-  divergence of seasonal temperatures from the norm, and positively impacted 
-  by positive divergence of seasonal temperatures from the norm:
-  
-  ![Retail Sales](Retail_Sales.png)
-  
-  Retail sales and UK mean temperature variance to mean (2003-2013).
+        ![Impact of 2011 Thai Floods](Thai_Flooding_Consumer_Products.png)
+        
+        Infographic: impact of 2011 Thai floods.
 
-  **Source:**
-  [ONS: How sensitive to weather is the retail sector?](https://webarchive.nationalarchives.gov.uk/ukgwa/20160109040025/http:/www.ons.gov.uk/ons/rel/rsi/retail-sales/november-2013/sty-how-sensitive-to-the-weather-is-the-retail-sector-.html){target="\_blank"}
+        **Source:**
+        [BSR Climate and Supply Chain Management](https://www.bsr.org/reports/BSR_Climate_and_Supply_Chain_Management.pdf)
 
-references: |
-  - [Standard industrial classification of economic activities (SIC) - Gov.uk](https://www.gov.uk/government/publications/standard-industrial-classification-of-economic-activities-sic){target="\_blank"}
+        - **Drought** could lead to competition for water resources as well as increased environmental      regulation focusing on protecting water supply and quality. A lesser impact of this would be to increase water supply costs to the sector, but this could be offset through introducing adaptation strategies  to meet consumer demand, such as water storage facilities, refrigeration and air conditioning systems.
 
-  - [People Want to Make Healthy and Sustainable Living Choices but Do Not Know Where to Start - Globe Scan, October 2020](https://globescan.com/2020/10/07/people-want-healthy-sustainable-living-choices-2020/){target="\_blank"}
+        There are mitigating actions that retailers could consider against such high physical risks. For example, relocation of warehousing and stores to less flood prone locations, and pre-empting product line changes as the climatic changes take hold. Another consideration would be to explore options of more flexible store locations, such as pop-up shops.
+        
+        Understanding the impact on the supply chain, particularly the manufacturing sector, could lead to a decision to diversify supplier networks. This could be particularly focused on choosing more local suppliers so that widespread international distribution disruption would have a less significant effect than it would if reliance on imported goods was retained. This would be particularly pertinent for food supplies. Customer engagement would be crucial to develop a supply-led trend for less wide-ranging product choices in such a scenario (undoing the fashion for greater choice that has grown via the Great Acceleration that has proliferated since the second world war).
 
-  - [Climate and Supply Chain: The Business Case for Action - BSR, September 2018](https://www.bsr.org/reports/BSR_Climate_and_Supply_Chain_Management.pdf){target="\_blank"}
+  transition_physical:
+    high:
+      exec_description: |
+        In high physical and transition risk scenarios, whilst the consumer products sector is used to responding to and managing changing weather conditions, climate change and global warming could increase weather variations. This could lead to increasing disruption to supply chains and own operations which could impact the profitability for these companies. The changing environmental conditions will lead to drastic changes in regulatory policies to tackle the situations and this could impact the production of consumer products. The companies will have to adapt to these fast-changing policies and consumer demand to have minimum impact on its production line and stock clearance. 
+      always: |
+        The consumer products sector is highly exposed to the physical impacts of climate change including both the chronic effects (e.g. raised sea-levels and global mean temperatures) and acute effects due to changes in the frequency and severity of weather events such as heatwaves, droughts, wildfires, cyclones and flooding. Whilst the consumer products sector is used to responding to and managing changing weather conditions, in the high physical scenario, climate change and global warming could increase weather variations which may disrupt the supply chains and own operations could impact the profitability. A small perturbation in climate can lead to significant disruption in crop yields and corresponding disruption to food supply chains. Even in a 1.5°C warming scenario, flash flooding and extreme weather events can pose problems for manufacturers exposed to such geographies, leading to supply chain issues, and direct impacts for retailers based in these locations.
+        
+        The consumer products sector is also highly exposed to transition impacts of climate change. A fast-changing regulatory policies or drastic shift in demand could lead to increasing disruption to stock maintenance, increasing stranded products that could further impact the profitability for these companies.
+        
+        Adverse impacts on world GDP from physical and transition risks are assumed in the scenario and these vary in line with different temperatures projected for fragmented world scenario. The high physical and transition risk scenario could therefore also lead to a significant GDP impact which could negatively impact demand for consumer products.
+      high_materiality: |
+        Consideration should be given to the following hazards when considering high physical for retailers:
+        - **Distribution:** disruption to transport infrastructure caused by weather events or flooding, leading to inability to fulfil customer orders and deliveries, or move stock from warehouses to outlets
+        - **Store closures:** occurring through direct impacts such as flooding, or through staff inability to get to the location due to transport disruption, or due to power outages
+        - **Stock losses:** arising through flooding or weather events damaging warehouses or retail outlets
+        - **Product shortages:** supply chain issues can lead to inability to stock products, particularly posing issues for retailers with low diversified product offerings
+        - **Reduced footfall:** driven by migration away from areas where inhabitation is impacted (for example, water level rises in the Somerset Levels and the Fens)
+        - **Increased costs:** driven by adaptation to new climatic conditions, and increased insurance costs (or risk of being uninsurable).
+        - **Demand Impact:** rapid shift in demand towards less carbon-intensive products and a shortage of production is created due to significant disruptions in supply chain and lower adaptability to rapid change.
+        - **Policy Changes:** sudden shift in regulatory policies can create additional burden on retailers where products in market become stranded and obsolete with limited demand.
+        
+        Consideration should also be given to the following hazards when considering high transition risk for retailers:
+        
+        - **Store closures or reduced footfall:** occurring through rapid shift in demand towards less carbon-intensive products
+        - **Stock losses:** arising through stranded assets in warehouses or retail outlets. Sudden shift in regulatory policies can create additional burden on retailers where products in market become stranded and obsolete with limited demand.
+        - **Product shortages:** supply chain issues can lead to inability to stock products, particularly posing issues for retailers with low diversified product offerings
+        
+        From a high physical risk perspective, in the fragmented world scenario, extreme events where land is exposed to river floods increases from 0.014% in 2030 to 0.033% in 2050. These hazards could each lead to reductions in revenue and to direct losses. Conversely, there may be opportunities to increase sales of items that help consumers mitigate against weather events and flooding (sandbags, barriers), or assist adaptation to new weather norms (such as rainwear) or extended seasonal product periods (beachwear). 
 
-  - [Facts for Features: Katrina Impact - The Data Center, August 2016](https://www.datacenterresearch.org/data-resources/katrina/facts-for-impact/){target="\_blank"}
+        ![River flood](consumer_products_land_friction_annually_exposed_to river_floods.png)
+        
+        **Source:**
+        [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+        
+        
+        The following examples help to map the potential impacts above and illustrate how the Consumer Products sector could be impacted from higher physical risk impacts:
+        
+        Chronic Impacts
+        - **Rising sea levels:** could cause local and permanent disruption to distribution networks, store location choices, consumer geographical migration and insurance issues. Reduced footfall could also result from migration away from affected areas, this was seen following Hurricane Katrina in April 2000, where population levels of New Orleans were at 50% six years after the flood and remained 20% lower 15 years later.
+        
+        - **Higher average temperatures:** even small perturbations in climate can lead to significant disruption in crop yields and corresponding disruption to food supply chains.
+        
+        Acute Impacts
+        
+        - **Cyclones or storms:** could result in disruption of the distribution network, stock losses through direct damage, product shortages due to disruption of the supply chain (particularly posing issues for retailers with low diversified product offerings), reduced footfall due to consumers being unable to access shopping locations and due to internet outages, and insurance ineligibility. Store closures could also result from direct damage to the store, inability of staff to get to the location due to transport disruption, or power outages.
+        
+        - **Flooding events:** could also lead to the same disruption as cyclones and storms. Flash flooding can pose problems for manufacturers exposed to such geographies, leading to supply chain issues, and direct impacts for retailers based in these locations. For example, severe flooding in Thailand in 2011 lead to severe supply chain disruption.
 
-  - [The Great Acceleration - Future Earth, January 2015](https://futureearth.org/2015/01/16/the-great-acceleration/){target="\_blank"}
+        ![Impact of 2011 Thai Floods](Thai_Flooding_Consumer_Products.png)
+        
+        Infographic: impact of 2011 Thai floods.
 
-  - [The UK Retial Industry and Climate Change - BRC](https://brc.org.uk/climate-roadmap/section-1-context/15-the-uk-retail-industry-and-climate-change/#:~:text=In%20the%20UK%2C%20climate%20change,retail%20buildings%2C%20logistics%20and%20infrastructure.&text=Climate%2Drelated%20economic%20disruption%20has,on%20impacts%20on%20consumer%20spending){target="\_blank"}
+        **Source:**
+        [BSR Climate and Supply Chain Management](https://www.bsr.org/reports/BSR_Climate_and_Supply_Chain_Management.pdf)
 
-  - [How companies can adapt to climate change - McKinsey & Company, July 2015](https://www.mckinsey.com/~/media/McKinsey/Business%20Functions/Sustainability/Our%20Insights/How%20companies%20can%20adapt%20to%20climate%20change/How%20companies%20can%20adapt%20to%20climate%20change.pdf){target="\_blank"}
 
-  - [Assessing the environmental impacts of UK supply chains - JNCC, November 2021](https://jncc.gov.uk/our-work/environmental-impacts-of-uk-supply-chains/){target="\_blank"}
+        - **Drought:** could lead to competition for water resources as well as increased environmental regulation focusing on protecting water supply and quality. A lesser impact of this would be to increase water supply costs to the sector, but this could be offset through introducing product lines to meet consumer demand, such as water storage facilities, refrigeration and air conditioning systems.
+        
+        There are mitigating actions that retailers could consider against high physical risks. For example, relocation of warehousing and stores to less flood prone locations, and pre-empting product line changes as the climatic changes take hold. Another consideration would be to explore options of more flexible store locations, such as pop-up shops.
+        
+        Understanding the impact on the supply chain, particularly the manufacturing sector, could lead to a decision to diversify supplier networks. This could be particularly focused on choosing more local suppliers so that widespread international distribution disruption would have a less significant effect than it would if reliance on imported goods was retained. This would be particularly pertinent for food supplies. Customer engagement would be crucial to develop a supply-led trend for less wide-ranging product choices in such a scenario (undoing the fashion for greater choice that has grown via the Great Acceleration that has proliferated since the second world war).
+        
+        From a high transition risk perspective, in the fragmented world scenario, the price of carbon remains very low and emissions very high compared to other scenarios. This trend encourages retailers to continue to produce more of carbon-intensive consumer products. However, any drastic change in regulatory policy and sudden change of consumer demand towards less carbon intensive product raise the risk of shortage of products and losses for the companies. The big retailers who have the capacity to address the environmental changes by taking rapid action will stay in the competition, while the small retailers will suffer the major losses.
 
-  - [Retailers tackle climate change - National Retail Federation, September 2021](https://nrf.com/blog/retailers-tackle-climate-change){target="\_blank"}
+        ![Carbon price](consumer_products_carbon_price.png)
+        
+        ![Carbon price industry](consumer_products_carbon_price_industry.png)
+        
+        **Source:**
+        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+        
+        
+        There are mitigating actions that retailers could consider against high transition risks. For example, invest in product diversification, closely monitor demand shifts, integrate climate-friendly technologies, and adopt planning and strategy to cope up with changing environment.
 
-  - [Letter from Andrew Griffity MP to retail sector, August 2021](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1012159/tfop-letter-retail.pdf){target="\_blank"}
 
-  - [The Governance of Corporate Responses to Climate Change: An International Comparison - Business Strategy and the Environment, May 2016](https://www.researchgate.net/publication/309145941_The_Governance_of_Corporate_Responses_to_Climate_Change_An_International_Comparison_Governance_of_Corporations_and_Climate_Change){target="\_blank"}
-  
-  - [NAICS Code 42](https://www.naics.com/six-digit-naics/?code=42){target="\_blank"}
-  
-  - [NAICS Code 44-45](https://www.naics.com/six-digit-naics/?code=44-45){target="\_blank"}
-  
-  - [NAICS Code 71](https://www.naics.com/six-digit-naics/?code=71){target="\_blank"}
-  
-  - [NAICS Code 72](https://www.naics.com/six-digit-naics/?code=72){target="\_blank"}
-  
-  - [SIC Code F](https://www.naics.com/sic-codes-counts-division/?div=F){target="\_blank"}
-  
-  - [SIC Code G](https://www.naics.com/sic-codes-counts-division/?div=G){target="\_blank"}
+  appendix: |
+    **Rising temperatures and retail sales**
+    
+    It is established that retail sales are negatively impacted by negative 
+    divergence of seasonal temperatures from the norm, and positively impacted 
+    by positive divergence of seasonal temperatures from the norm:
+    
+    ![Retail Sales](Retail_Sales.png)
+    
+    Retail sales and UK mean temperature variance to mean (2003-2013).
+
+    **Source:**
+    [ONS: How sensitive to weather is the retail sector?](https://webarchive.nationalarchives.gov.uk/ukgwa/20160109040025/http:/www.ons.gov.uk/ons/rel/rsi/retail-sales/november-2013/sty-how-sensitive-to-the-weather-is-the-retail-sector-.html){target="\_blank"}
+
+  references: |
+    - [Standard industrial classification of economic activities (SIC) - Gov.uk](https://www.gov.uk/government/publications/standard-industrial-classification-of-economic-activities-sic){target="\_blank"}
+
+    - [People Want to Make Healthy and Sustainable Living Choices but Do Not Know Where to Start - Globe Scan, October 2020](https://globescan.com/2020/10/07/people-want-healthy-sustainable-living-choices-2020/){target="\_blank"}
+
+    - [Climate and Supply Chain: The Business Case for Action - BSR, September 2018](https://www.bsr.org/reports/BSR_Climate_and_Supply_Chain_Management.pdf){target="\_blank"}
+
+    - [Facts for Features: Katrina Impact - The Data Center, August 2016](https://www.datacenterresearch.org/data-resources/katrina/facts-for-impact/){target="\_blank"}
+
+    - [The Great Acceleration - Future Earth, January 2015](https://futureearth.org/2015/01/16/the-great-acceleration/){target="\_blank"}
+
+    - [The UK Retial Industry and Climate Change - BRC](https://brc.org.uk/climate-roadmap/section-1-context/15-the-uk-retail-industry-and-climate-change/#:~:text=In%20the%20UK%2C%20climate%20change,retail%20buildings%2C%20logistics%20and%20infrastructure.&text=Climate%2Drelated%20economic%20disruption%20has,on%20impacts%20on%20consumer%20spending){target="\_blank"}
+
+    - [How companies can adapt to climate change - McKinsey & Company, July 2015](https://www.mckinsey.com/~/media/McKinsey/Business%20Functions/Sustainability/Our%20Insights/How%20companies%20can%20adapt%20to%20climate%20change/How%20companies%20can%20adapt%20to%20climate%20change.pdf){target="\_blank"}
+
+    - [Assessing the environmental impacts of UK supply chains - JNCC, November 2021](https://jncc.gov.uk/our-work/environmental-impacts-of-uk-supply-chains/){target="\_blank"}
+
+    - [Retailers tackle climate change - National Retail Federation, September 2021](https://nrf.com/blog/retailers-tackle-climate-change){target="\_blank"}
+
+    - [Letter from Andrew Griffity MP to retail sector, August 2021](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1012159/tfop-letter-retail.pdf){target="\_blank"}
+
+    - [The Governance of Corporate Responses to Climate Change: An International Comparison - Business Strategy and the Environment, May 2016](https://www.researchgate.net/publication/309145941_The_Governance_of_Corporate_Responses_to_Climate_Change_An_International_Comparison_Governance_of_Corporations_and_Climate_Change){target="\_blank"}
+    
+    - [NAICS Code 42](https://www.naics.com/six-digit-naics/?code=42){target="\_blank"}
+    
+    - [NAICS Code 44-45](https://www.naics.com/six-digit-naics/?code=44-45){target="\_blank"}
+    
+    - [NAICS Code 71](https://www.naics.com/six-digit-naics/?code=71){target="\_blank"}
+    
+    - [NAICS Code 72](https://www.naics.com/six-digit-naics/?code=72){target="\_blank"}
+    
+    - [SIC Code F](https://www.naics.com/sic-codes-counts-division/?div=F){target="\_blank"}
+    
+    - [SIC Code G](https://www.naics.com/sic-codes-counts-division/?div=G){target="\_blank"}

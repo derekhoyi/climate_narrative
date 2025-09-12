@@ -1,0 +1,37 @@
+1:  
+   name: Highway to Paris (Transition Risk Scenario)
+   description: |
+      # Short-Term Scenarios
+      ## Highway to Paris (Transition Risk Scenario)
+
+      This scenario is Net Zero aligned and assume a rise in capital costs and risk premia for polluting sectors. It assumes a 
+      gradual unfolding of technology-driven (and orderly) transition, where carbon tax revenues are reinvested into green 
+      subsidies and investments. The table below summarise some of the potential impacts and implications to be considered.
+
+          | Variable  | Potential impact  | Possible Implications & Considerations (non-exhaustive)  |
+          |-----------|-------------------|----------------------------------------------------------|
+          | Inflation  | Higher inflation, varies by geography  | Short-term increase driven by energy transition and infrastructure build-out; raises cost base. Global inflation is 0.93 percentage points (pp) higher in 2027 relative to baseline scenario.  |
+          | Interest Rates  | Higher interest rates, varies by geography  | Central banks respond to rising inflation, where world interest rates in 2027Q4 are 0.61pp higher compared to baseline scenario.  |
+          | GDP Growth  | Volatile  | Economic activity slows due to adjustment costs and investment reallocation with a reduction of 0.3% of the World GDP impact at 2027 relative to the baseline scenario.  |
+          | Carbon Prices  | Rapid and material increase  | In 2027, carbon prices are $45 per tonne CO2 (at 2017 prices) higher compared to baseline scenario. Improves risk-adjusted return outlook for green assets; Credit risk increases for high-emission companies / sectors.  |
+
+
+2:  
+   name: Sudden Wake-Up Call (Transition Risk Scenario)
+   description: |
+      # Short-Term Scenarios
+      ## Sudden Wake-Up Call (Transition Risk Scenario)
+
+      This scenario is Net Zero aligned and assume a rise in capital costs and risk premia for polluting sectors. It assumes a 
+      sudden change in policy preferences after a period of widespread climate unawareness. Consumer and investor preferences 
+      shift abruptly toward green sectors, and there is a supply shock triggered by a sharp surge in carbon prices. The transition 
+      occurs too suddenly for markets to adapt, leading to a “Climate Minsky Moment” where asset values adjust abruptly, leading 
+      to a wave of financial instability. The table below summarise some of the potential impacts and implications to be considered.
+
+          | Variable       | Potential impact    | Possible Implications & Considerations (non-exhaustive)   |
+          |----------------|---------------------|-----------------------------------------------------------|
+          | Inflation      | Significant inflation spikes, varies by geography      | Short-term spike (2027) in inflation driven by sudden energy transition and infrastructure build-out; raises cost base. Global inflation is 3.54pp higher in 2027 relative to baseline scenario.      |
+          | Interest Rates | Higher interest rates, varies by geography      | Central banks respond to rising inflation, where world interest rates in 2027Q4 are 0.81pp higher compared to baseline scenario.    |
+          | GDP Growth     | Negative impact, varies by geography    | GDP is impacted negatively across all regions, but with comparatively milder impacts in countries with ambitious climate policies in place. The global GDP contraction is estimated approximately to 1.2% at 2027 relative to the baseline scenario.     |
+          | Carbon Prices  | Sudden and material increase    | Carbon price increases significantly in 2027, where world carbon price is $75 per tonne CO2 (at 2017 prices) higher compared to baseline scenario; improves risk-adjusted return outlook for green assets; credit risk increases for high-emission companies / sectors.      |
+
