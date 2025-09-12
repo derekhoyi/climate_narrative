@@ -11,7 +11,6 @@ def layout():
 
     layout = html.Div([
         
-        #dcc.Location(id="redirect-home"),  # For redirecting after acknowledging the disclaimer
         dcc.Store(id="disclaimer-acknowledged", storage_type="local"),  # To store acknowledgment status
 
         html.Div(
@@ -80,7 +79,15 @@ def layout():
                 dbc.ModalBody([html.P(p) for p in disclaimer_text.split('\n')], style={"backgroundColor": "#51C876", "color": "white"}),
                 dbc.ModalFooter(
                     [
-                        dbc.Button("Acknowledge", id="acknowledge", class_name="mx-auto")#, href='/')
+                        dbc.Button("Acknowledge", id="acknowledge", 
+                                   class_name="mx-auto",
+                                    style={
+                                        "backgroundColor": "#fff",    
+                                        "color": "#51C876",            
+                                        "borderRadius": "8px",
+                                        "border": "none",
+                                        "fontweight": "bold",
+                                    })
                     ],
                     style={"backgroundColor": "#51C876", "color": "white"}
                 ),
