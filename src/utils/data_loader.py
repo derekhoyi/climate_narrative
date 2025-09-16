@@ -61,18 +61,13 @@ def load_config_json_and_store():
     # Create stores
     stores = [
         dcc.Store(id='institution-type-store', storage_type='memory'),
-        dcc.Store(id='all-exposure-selection-store', storage_type='memory'),
-        dcc.Store(id='exposure-selection-store', storage_type='memory'),
+        dcc.Store(id='all-user-selection-store', storage_type='memory'),
     ] + [
         dcc.Store(
             id=f'{sheet_name.replace("_", "-")}-store',
             data=sheet_data,
             storage_type='memory',
-        )
-        for sheet_name, sheet_data in config_json['sheets'].items()
-    ] + [
-        dcc.Store(id=f'{e.lower()}-selection-store', storage_type='memory')
-        for e in pd.DataFrame(config_json['sheets']['exposure_product_mapping'])['exposure'].unique()
+        ) for sheet_name, sheet_data in config_json['sheets'].items()
     ]
     return config_json, stores
 
