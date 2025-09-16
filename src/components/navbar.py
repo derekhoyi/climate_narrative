@@ -8,28 +8,8 @@ def create_navbar():
 
     navbar = dbc.NavbarSimple(
         children=[
-            dbc.DropdownMenu(
-                nav=True,
-                in_navbar=True,
-                label="Purpose",
-                children=[
-                    dbc.DropdownMenuItem("Overview", href='/purpose/purpose-overview'),
-                    dbc.DropdownMenuItem("Introduction to the tool", href='/purpose/introduction-to-the-tool'),
-                    dbc.DropdownMenuItem("How to use the tool?", href='/purpose/how-to-use-the-tool'),
-                    dbc.DropdownMenuItem("How can the reports be used?", href='/purpose/how-can-the-reports-be-used'),
-                    dbc.DropdownMenuItem("What is next?", href='/purpose/what-is-next'),
-                ],
-            ),
-            dbc.DropdownMenu(
-                nav=True,
-                in_navbar=True,
-                label="Limitations",
-                children=[
-                    dbc.DropdownMenuItem("Overview", href='/limitations/limitations-overview'),
-                    dbc.DropdownMenuItem("Long Term Scenario Limitations", href='/limitations/long-term-scenario-limitations'),
-                    dbc.DropdownMenuItem("Short Term Scenario Limitations", href='/limitations/short-term-scenario-limitations'),
-                ],
-            ),
+            dbc.NavItem(dbc.NavLink("purpose", href="/purpose")),
+            dbc.NavItem(dbc.NavLink("limitations", href="/limitations")),
             dbc.DropdownMenu(
                 nav=True,
                 in_navbar=True,
