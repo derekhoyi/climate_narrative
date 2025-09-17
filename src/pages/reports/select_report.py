@@ -19,13 +19,12 @@ def layout():
 @callback(
     Output("report-type-buttons", "children"),
     Input("output-structure-mapping-store", "data"),
-    Input("select-report-url", "pathname"),
 )
-def report_type_buttons(output_structure_mapping_dict, pathname):
+def report_type_buttons(output_structure_mapping_dict):
     button_list = []
-    unique_report_types_df = pd.DataFrame(output_structure_mapping_dict)[['report_type', 'report_description_yml_file']].drop_duplicates()
+    output_structure_mapping_df = pd.DataFrame(output_structure_mapping_dict)
     yml = data_loader.load_yml_file('section/reports', 'button_description.yml')
-    for i, (report_type, report_description_yml_file) in enumerate(unique_report_types_df.values):
+    for i, report_type in enumerate(output_structure_mapping_df['report_type'].unique()):
         # get markdown from yml
         desc_title = dcc.Markdown(report_type, link_target="_blank", className='h4 fw-bolder text-white')
         desc_yml = dcc.Markdown(yml[report_type.lower()], link_target="_blank", className='display-12', style={'textTransform': 'none'})

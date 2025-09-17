@@ -18,15 +18,15 @@ def layout(institution_type=None, **kwargs):
 	# page layout
 	layout = html.Div([
 		dcc.Location(id="customise-institutional-report-url"),
+		dcc.Store(id='report-type-store', storage_type='session', data='institutional'),
 		html.H3('Institutional Report', className="text-success fw-bold"),
 		html.Br(),
 		html.Div(id="institution-type-radio"),
 		html.Div(id="exposure-stepper-content", children=[html.Div(id="exposure-stepper")]),
 		html.Div(id='exposure-type', className="d-none opacity-0 w-1"),
-		html.Br(),
 		html.Div(id="exposure-selection-content"),
-		html.Br(),
 		html.Div(id="no-customisation-error-message"),
+		html.Div(id="review-summary-content"),
 		html.Div(id="institutional-navigation-buttons", children=[
 			html.Div(id="institutional-restart-btn"),
 			html.Div(id="institutional-previous-btn"),
@@ -35,6 +35,40 @@ def layout(institution_type=None, **kwargs):
 		]),
 	], className="mx-auto py-3 container")
 	return layout
+
+@callback(
+	Output("customise-institutional-report-url", "href", allow_duplicate=True),
+	Input('user-selection-completed-store', 'data'),
+	Input("institutional-previous-btn", "n_clicks"),
+	Input("institutional-next-btn", "n_clicks"),
+	Input("institutional-restart-btn", "n_clicks"),
+	Input("generate-report-btn", "n_clicks"),
+	State("institution-type-store", "data"),
+	State("customise-institutional-report-url", "search"),
+	State("all-user-selection-store", "data"),
+	prevent_initial_call=True
+)
+def update_url(user_selection_completed, back, _next, restart, generate_report, institution_type, current_search, all_stored_data):
+	query = parse_qs(current_search.lstrip('?'))
+	start_page = len(query) == 0
+	institution_type = query.get("institution-type", [None])[0] if institution_type is None else institution_type
+	review_summary = query.get("review", [None])[0]
+
+	if start_page or (review_summary and back):
+		user_selection_completed = None
+	if start_page and _next and not user_selection_completed:
+		return f"/reports/customise-institutional-report?institution-type={institution_type}"
+	elif start_page and restart:
+		return f"/reports/select-report"
+	elif not start_page and restart:
+		return f"/reports/customise-institutional-report"
+	elif user_selection_completed and not review_summary:
+		return f"/reports/customise-institutional-report?institution-type={institution_type}&review=summary"
+	elif review_summary and back:
+		return f"/reports/customise-institutional-report?institution-type={institution_type}"
+	elif generate_report and all_stored_data:
+		return f"/reports/generate-report"
+	return dash.no_update
 
 @callback(
 	Output("institution-type-radio", "children"),
@@ -53,7 +87,7 @@ def institution_type_radio(exposure_product_mapping_dict, url_search):
 			dbc.RadioItems(
 				options=[{"label": x, "value": x} for x in unique_institution_types],
 				value=unique_institution_types[0] if unique_institution_types else None,
-				id="institution-type-store",
+				id="institution-type-value",
 				persistence=True,
 				persistence_type='memory'
 			),
@@ -63,43 +97,28 @@ def institution_type_radio(exposure_product_mapping_dict, url_search):
 	return institution_selection
 
 @callback(
-	Output("customise-institutional-report-url", "href", allow_duplicate=True),
-	Input("institutional-next-btn", "n_clicks"),
-	Input("institutional-restart-btn", "n_clicks"),
-	Input("generate-report-btn", "n_clicks"),
-	State("institution-type-store", "value"),
-	State("customise-institutional-report-url", "search"),
-	State("all-user-selection-store", "data"),
+	Output("institution-type-store", "data"),
+	Input("institution-type-value", "value"),
 	prevent_initial_call=True
 )
-def update_url(_next, restart, generate_report, institution_type, current_search, all_stored_data):
-	query = parse_qs(current_search.lstrip('?'))
-	start_page = len(query) == 0
-
-	# Only update URL if we're on the start page and have an institution type
-	if start_page and _next:
-		return f"/reports/customise-institutional-report?institution-type={institution_type}"
-	elif restart:
-		return f"/reports/select-report"
-	elif generate_report and all_stored_data:
-		return f"/reports/generate-report"
-	return dash.no_update
-
+def store_institution_type(value):
+	return value
 
 @callback(
 	Output("exposure-stepper-content", "children"),
 	Output("exposure-type", "children", allow_duplicate=True),
 	Input("exposure-product-mapping-store", "data"),
+	State('user-selection-completed-store', 'data'),
 	State("customise-institutional-report-url", "search"),
 	prevent_initial_call='initial_duplicate'
 )
-def initiate_exposure_stepper(exposure_product_mapping_dict, url_search):
+def initiate_exposure_stepper(exposure_product_mapping_dict, user_selection_completed, url_search):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 	institution_type = query.get("institution-type", [None])[0]
 
 	# Only run this callback if not on start page
-	if start_page:
+	if start_page or user_selection_completed:
 		raise dash.exceptions.PreventUpdate
 
 	exposure_product_mapping_df = data_loader.get_selected_institution_type_mapping(exposure_product_mapping_dict, institution_type)
@@ -108,7 +127,7 @@ def initiate_exposure_stepper(exposure_product_mapping_dict, url_search):
 
 	# stepper
 	stepper_children_styling = {"minWidth": "180px", "maxWidth": "220px", "overflow": "auto"}
-	stepper = dmc.MantineProvider(html.Div([
+	stepper = html.Div([dmc.MantineProvider(html.Div([
 		dmc.Stepper(
 			id="exposure-stepper",
 			active=0,
@@ -122,7 +141,7 @@ def initiate_exposure_stepper(exposure_product_mapping_dict, url_search):
 			],
 			className="m-0 p-2 pt-4 g-4 align-items-stretch"
 		)], className="rounded-4 p-3 border border-1 border-gray-4"
-	))
+	)), html.Br()])
 	return stepper, exposure_type
 
 @callback(
@@ -131,24 +150,25 @@ def initiate_exposure_stepper(exposure_product_mapping_dict, url_search):
 	Input("exposure-product-mapping-store", "data"),
 	Input("institutional-previous-btn", "n_clicks"),
 	Input("institutional-next-btn", "n_clicks"),
+	State('user-selection-completed-store', 'data'),
 	Input("exposure-stepper", "active"),
 	State("exposure-stepper", "children"),
 	State("customise-institutional-report-url", "search"),
 	prevent_initial_call=True
 )
-def update_stepper(exposure_product_mapping_dict, back, next_, stepper_active, stepper_children, url_search):
+def update_stepper(exposure_product_mapping_dict, back, _next, user_selection_completed, stepper_active, stepper_children, url_search):
 	# Parse institution type from URL
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 	institution_type = query.get("institution-type", [None])[0]
 
-	# Only run this callback if not on start page or not created stepper yet
-	if start_page:
+	# Only run this callback if not on start page
+	if start_page or user_selection_completed:
 		raise dash.exceptions.PreventUpdate
 
-	# Get selected institution type mapping
+	# Get selected institution type mapping and max_step (according to python indexing convention)
 	exposure_product_mapping_df = data_loader.get_selected_institution_type_mapping(exposure_product_mapping_dict, institution_type)
-	max_step = len(exposure_product_mapping_df['exposure'].unique()) + 1
+	max_step = len(exposure_product_mapping_df['exposure'].unique())
 
 	# Initialize current step
 	stepper_active = stepper_active or 0
@@ -158,7 +178,7 @@ def update_stepper(exposure_product_mapping_dict, back, next_, stepper_active, s
 	# Update step based on button clicked or direct stepper click
 	if button_id == "institutional-previous-btn" and back:
 		step = step - 1 if step > 0 else step
-	elif button_id == "institutional-next-btn" and next_:
+	elif button_id == "institutional-next-btn" and _next:
 		step = step + 1 if step < max_step else step
 	elif button_id == "exposure-stepper":
 		step = stepper_active
@@ -177,16 +197,17 @@ def update_stepper(exposure_product_mapping_dict, back, next_, stepper_active, s
 	Output("exposure-selection-dropdown", "children"),
 	Input("exposure-product-mapping-store", "data"),
 	Input("exposure-type", "children"),
+	State('user-selection-completed-store', 'data'),
+	Input("all-user-selection-store", "data"),
 	State("customise-institutional-report-url", "search"),
-	State("all-user-selection-store", "data")
 )
-def initiate_exposure_selection_dropdown(exposure_product_mapping_dict, exposure_type, url_search, stored_data):
+def initiate_exposure_selection_dropdown(exposure_product_mapping_dict, exposure_type, user_selection_completed, stored_data, url_search):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 	institution_type = query.get("institution-type", [None])[0]
 
 	# Only run this callback if not on start page
-	if exposure_type == "Scenario" or start_page:
+	if exposure_type == "Scenario" or start_page or user_selection_completed:
 		raise dash.exceptions.PreventUpdate
 
 	stored_data = stored_data or {}
@@ -195,17 +216,24 @@ def initiate_exposure_selection_dropdown(exposure_product_mapping_dict, exposure
 	exposure_product_mapping_df = data_loader.get_selected_institution_type_mapping(exposure_product_mapping_dict, institution_type)
 	exposure_product_mapping_df = exposure_product_mapping_df[exposure_product_mapping_df['exposure'] == exposure_type]
 	portfolios = exposure_product_mapping_df['portfolio'].unique()
-	types = exposure_product_mapping_df['type'].unique()
+	ptypes = exposure_product_mapping_df['type'].unique()
 	combinations_to_keep_list = [(p, t) for p, t in exposure_product_mapping_df[['portfolio', 'type']].drop_duplicates().values]
 
-	table_styling = {"margin": 8, "padding": 8, "align-items": "center", "verticalAlign": "middle", "width": "100%", "height": "100%", "minWidth": 200, "maxWidth": 250}
-	header = html.Tr([html.Th("Type", style=table_styling | {"maxWidth": 300})] + [html.Th(t, style=table_styling | {"textAlign": "center"}) for t in types])
+	table_styling = {
+		"margin": 8, "padding": 8, "align-items": "center", "verticalAlign": "middle", "width": "100%", "height": "100%",
+		"minWidth": 150, "maxWidth": 200,
+	}
+	header = html.Tr(
+		[html.Th("Type", style=table_styling | {"maxWidth": 300})] +
+		[html.Th(t, style=table_styling | {"textAlign": "center"}) for t in ptypes]
+	)
 	rows = []
 	for p in portfolios:
 		row = [html.Td(p, style=table_styling)]
-		for t in types:
-			options_list = [{"label": l, "value": f"{exposure_type}|{p}|{t}|{l}"} for l in value_bg_color_mapping.keys()]
-			default_items = [x for x in filtered_stored_data if x['portfolio'] == p and x['type'] == t]
+		for t in ptypes:
+			options_list = [{"label": l, "value": f"{institution_type}|{exposure_type}|{p}|{t}|{l}"} for l in
+							value_bg_color_mapping.keys()]
+			default_items = [x for x in filtered_stored_data if x['portfolio'] == p and x['ptype'] == t]
 			default_value = default_items[0]['value'] if default_items else options_list[0]['value']
 			background_color = value_bg_color_mapping.get(default_value.split('|')[-1], "white")
 			row.append(html.Td(
@@ -216,25 +244,30 @@ def initiate_exposure_selection_dropdown(exposure_product_mapping_dict, exposure
 					clearable=False,
 					style=({'visibility': 'hidden', "opacity": 0} if (p, t) not in combinations_to_keep_list else {})
 						  | {"background-color": background_color},
-				)
-			, style=table_styling | {"textAlign": "center"}))
+				),
+				style=table_styling | {"textAlign": "center"}
+			))
 		rows.append(html.Tr(row))
-	return html.Table([html.Thead(header)] + [html.Tbody(rows)], className="table")
+	return html.Div(
+		html.Table([html.Thead(header)] + [html.Tbody(rows)], className="table table-responsive",
+		style={"width": "100%", "tableLayout": "fixed", "overflow-x": "auto"})
+	)
 
 @callback(
 	Output({"type": "exposure-selection-store", "exposure": dash.ALL, "portfolio": dash.ALL, "ptype": dash.ALL}, "style"),
+	State('user-selection-completed-store', 'data'),
 	Input({"type": "exposure-selection-store", "exposure": dash.ALL, "portfolio": dash.ALL, "ptype": dash.ALL}, "value"),
 	State({"type": "exposure-selection-store", "exposure": dash.ALL, "portfolio": dash.ALL, "ptype": dash.ALL}, "style"),
 	State("customise-institutional-report-url", "search"),
 	State("exposure-type", "children"),
 	prevent_initial_call=True
 )
-def update_dropdown_color(values, current_styles, url_search, exposure_type):
+def update_dropdown_color(user_selection_completed, values, current_styles, url_search, exposure_type):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 
 	# Only run this callback if not on start page
-	if exposure_type == "Scenario" or start_page:
+	if exposure_type == "Scenario" or start_page or user_selection_completed:
 		raise dash.exceptions.PreventUpdate
 
 	# Merge color with existing style
@@ -249,15 +282,16 @@ def update_dropdown_color(values, current_styles, url_search, exposure_type):
 	Output("scenario-selection-checklist", "children"),
 	Input("scenario-mapping-store", "data"),
 	Input("exposure-type", "children"),
+	State('user-selection-completed-store', 'data'),
 	State("customise-institutional-report-url", "search"),
 	State("all-user-selection-store", "data")
 )
-def initiate_scenario_checklist(scenario_mapping_dict, exposure_type, url_search, stored_data):
+def initiate_scenario_checklist(scenario_mapping_dict, exposure_type, user_selection_completed, url_search, stored_data):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 
 	# Only run this callback if not on start page
-	if exposure_type != "Scenario" or start_page:
+	if exposure_type != "Scenario" or start_page or user_selection_completed:
 		raise dash.exceptions.PreventUpdate
 
 	if exposure_type == "Scenario":
@@ -317,79 +351,101 @@ def scenario_checklist_select_or_clear_all(select_all, clear_all, options):
 		raise dash.exceptions.PreventUpdate
 	return [selection]
 
+
 @callback(
-	Output("all-user-selection-store", "data", allow_duplicate=True),
+	Output("all-user-selection-store", "data"),
 	Input("institutional-previous-btn", "n_clicks"),
 	Input("institutional-next-btn", "n_clicks"),
 	Input("institutional-restart-btn", "n_clicks"),
 	Input("generate-report-btn", "n_clicks"),
-	State({"type": "exposure-selection-store", "exposure": dash.ALL, "portfolio": dash.ALL, "ptype": dash.ALL}, "value"),
+	State('user-selection-completed-store', 'data'),
+	State("customise-institutional-report-url", "href"),
 	State("exposure-type", "children"),
 	State("all-user-selection-store", "data"),
+	State({"type": "exposure-selection-store", "exposure": dash.ALL, "portfolio": dash.ALL, "ptype": dash.ALL}, "value"),
 	State({"type": 'scenario-selection-store', "scenario": dash.ALL}, "value"),
-	State("customise-institutional-report-url", "search"),
-	prevent_initial_call=True
+	Input("customise-institutional-report-url", "search"),
 )
-def store_selection(back, _next, restart, generate_report, exposure_selection_values, exposure_type, all_stored_data,
-					scenario_selection_values, url_search):
-	button_id = ctx.triggered_id
-	all_stored_data = all_stored_data or {}
-
-	# Parse institution type from URL
+def store_user_selection(back, _next, restart, generate_report, user_selection_completed, url_path, exposure_type,
+					all_stored_data, exposure_selection_values, scenario_selection_values, url_search):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
+	institution_type = query.get("institution-type", [None])[0]
+	button_id = ctx.triggered_id
+	updated = False
 
-	if start_page or (not back and not _next and not restart and not generate_report):
+	# Create empty dictionary if empty or restart triggered
+	empty_flag = (all_stored_data is None) or (button_id == "institutional-restart-btn" and restart) or start_page
+	if empty_flag:
+		return {}
+
+	# Allow update on review summary arrival both on the Next click and the subsequent URL change
+	if start_page or button_id is None or user_selection_completed:
 		raise dash.exceptions.PreventUpdate
 
-	# Update selection store based on button clicked
-	if (button_id in ["institutional-previous-btn", "institutional-next-btn", "generate-report-btn"]
-			and (back or _next or generate_report) and not start_page):
+	# Only act on navigation / generate buttons
+	if button_id in ["institutional-previous-btn", "institutional-next-btn", "generate-report-btn", "customise-institutional-report-url"]:
 		if exposure_type == "Scenario":
 			stored_data = [{
-				'id': scenario_selection_values[0],
+				'report': 'institutional',
+				'id': s,
+				'institution': institution_type,
 				'exposure': 'Scenario',
-				'portfolio': None,
-				'type': None,
-				'label': scenario_selection_values[0],
-				'value': scenario_selection_values[0],
-			}]
-			if stored_data[0]["id"]:
-				all_stored_data["Scenario"] = stored_data
-		else:
-			stored_data = [{
-				'id': '|'.join(x.split('|')[:3]),
-				'exposure': x.split('|')[0],
-				'portfolio': x.split('|')[1],
-				'type': x.split('|')[2],
-				'label': x.split('|')[3],
-				'value': x,
-			} for x in exposure_selection_values if x.split('|')[3] != 'N/A']
+				'portfolio': "N/A",
+				'ptype': "N/A",
+				'label': s,
+				'value': s,
+			} for s in scenario_selection_values[0]]
 			if stored_data:
+				all_stored_data = all_stored_data or {}
 				all_stored_data[exposure_type] = stored_data
-	elif button_id == "institutional-restart-btn" and restart:
-		all_stored_data = {}
+				updated = True
+		else:
+			if exposure_selection_values:
+				stored_data = []
+				for x in exposure_selection_values:
+					parts = x.split('|')
+					if len(parts) == 5 and parts[4] != 'N/A':
+						stored_data.append({
+							'report': 'institutional',
+							'id': '|'.join(parts[:4]),
+							'institution': institution_type,
+							'exposure': parts[1],
+							'portfolio': parts[2],
+							'ptype': parts[3],
+							'label': parts[4],
+							'value': x,
+						})
+				if stored_data:
+					all_stored_data = all_stored_data or {}
+					all_stored_data[exposure_type] = stored_data
+					updated = True
+
+	if not updated:
+		raise dash.exceptions.PreventUpdate
 	print(f'stored data: {all_stored_data}')
 	return all_stored_data
 
+
 @callback(
 	Output("exposure-selection-content", "children"),
+	State('user-selection-completed-store', 'data'),
 	Input("exposure-stepper", "active"),
 	State("exposure-stepper", "children"),
 	State("customise-institutional-report-url", "search"),
 )
-def exposure_selection_layout(stepper_active, stepper_children, url_search):
+def exposure_selection_layout(user_selection_completed, stepper_active, stepper_children, url_search):
 	# Parse institution type from URL
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 	institution_type = query.get("institution-type", [None])[0]
 
 	# Only run this callback if not on start page or not created stepper yet
-	if start_page:
+	if start_page or user_selection_completed:
 		raise dash.exceptions.PreventUpdate
 
 	# title
-	exposure_type = stepper_children[stepper_active]['props']['description']
+	exposure_type = stepper_children[stepper_active]['props']['description'] if stepper_children else None
 	title = html.H4(
 		f"{institution_type}: {exposure_type}" + (" Exposures" if exposure_type != "Scenario" else "")
 		, className="ms-1 mb-3"
@@ -404,7 +460,7 @@ def exposure_selection_layout(stepper_active, stepper_children, url_search):
 		- Low: Below than 5% of total assets
 		- N/A: Immaterial or no exposure
 		"""),
-	], className="rounded-4 p-2 mb-2 border border-1 border-gray-4 bg-light text-transform-none")
+	], className="rounded-4 p-3 border border-1 border-gray-4 bg-light text-transform-none")
 
 	# layout
 	if exposure_type == "Scenario":
@@ -427,11 +483,11 @@ def exposure_selection_layout(stepper_active, stepper_children, url_search):
 @callback(
 	Output("institutional-navigation-buttons", "children"),
 	Input("exposure-stepper", "active"),
-	State("exposure-stepper", "children"),
+	State('user-selection-completed-store', 'data'),
 	State("customise-institutional-report-url", "search"),
 )
-def navigation_buttons(stepper_active, stepper_children, url_search):
-	# Parse institution type from URL
+def navigation_buttons(stepper_active, user_selection_completed, url_search):
+	# Parse from URL
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 
@@ -445,13 +501,10 @@ def navigation_buttons(stepper_active, stepper_children, url_search):
 	}
 
 	# Update button styles based on step
-	exposure_type = None
-	if stepper_children and stepper_active is not None and stepper_active < len(stepper_children):
-		exposure_type = stepper_children[stepper_active]['props']['description']
 	if start_page:
 		buttons = ['restart', 'previous', 'generate_report', 'next']
 		visibility = [False, True, True, False]
-	elif exposure_type == "Scenario":
+	elif user_selection_completed:
 		buttons = ['restart', 'previous', 'next', 'generate_report']
 		visibility = [False, False, True, False]
 	elif stepper_active == 0:
@@ -462,11 +515,12 @@ def navigation_buttons(stepper_active, stepper_children, url_search):
 		visibility = [False, False, False, True]
 
 	button_bar = html.Div([
+		html.Br(),
 		dbc.Container(
 			dbc.Row(
 				[dbc.Col(button_map[b], className="p-0 invisible opacity-0" if v else "p-0") for b, v in zip(buttons, visibility)],
-				class_name="d-flex align-items-stretch w-100 h-100",
-				style={'gap': "30px"}
+				class_name="d-flex align-items-stretch w-100 h-100 p-3",
+				style={'gap': "100px"}
 			), fluid=True, className="p-0"
 		),
 	])
@@ -513,3 +567,69 @@ def toggle_modal(n_click, is_open, url_search):
 		institution_type = query.get("institution-type", [None])[0]
 		return not is_open, f"/reports/customise-institutional-report?institution-type={institution_type}"
 	return is_open, dash.no_update
+
+@callback(
+	Output('user-selection-completed-store', 'data'),
+	Input("institutional-next-btn", "n_clicks"),
+	Input("institutional-previous-btn", "n_clicks"),
+	State("customise-institutional-report-url", "search"),
+	State("exposure-stepper", "children"),
+	State("exposure-stepper", "active"),
+	prevent_initial_call=True
+)
+def store_user_selection_completed(_next, back, url_search, stepper_children, stepper_active):
+	query = parse_qs(url_search.lstrip('?'))
+	start_page = len(query) == 0
+	review_summary = query.get("review", [None])[0]
+
+	if start_page or (back and review_summary):
+		return None
+
+	if not _next:
+		raise dash.exceptions.PreventUpdate
+
+	exposure_type = stepper_children[stepper_active]['props']['description'] if stepper_children else None
+	if exposure_type == "Scenario":
+		return True
+
+	raise dash.exceptions.PreventUpdate
+
+@callback(
+	Output("review-summary-content", "children"),
+	Input("institutional-next-btn", "n_clicks"),
+	Input("all-user-selection-store", "data"),
+	Input('user-selection-completed-store', 'data'),
+	State("customise-institutional-report-url", "search"),
+	prevent_initial_call=True
+)
+def review_summary_page(_next, all_stored_data, user_selection_completed, url_search):
+	query = parse_qs(url_search.lstrip('?'))
+	institution_type = query.get("institution-type", [None])[0]
+	review_summary = query.get("review", [None])[0]
+
+	if not (user_selection_completed and review_summary):
+		raise dash.exceptions.PreventUpdate
+
+	all_user_selection_df = data_loader.get_user_selection_from_store(all_stored_data)
+	all_user_selection_df = all_user_selection_df[['institution', 'exposure', 'portfolio', 'ptype', 'label']]
+	all_user_selection_df = all_user_selection_df.rename(columns={
+		'institution': 'Institution Type',
+		'exposure': 'Exposure',
+		'portfolio': 'Portfolio',
+		'ptype': 'Portfolio Type',
+		'label': 'Materiality / Scenario'
+	})
+	review_summary_layout = html.Div([
+		html.H4(f"{institution_type}: Review your selections", className="ms-1 mb-3"),
+		html.Div(
+			"Please review your selections below. You can go back to previous steps to make any changes if needed before generating the report.",
+			className="rounded-4 p-3 border border-1 border-gray-4 bg-light text-transform-none"
+		),
+		html.Br(),
+		dbc.Table.from_dataframe(
+			all_user_selection_df, striped=True, bordered=True, hover=True, responsive=True,
+			className="border border-1 text-center align-middle w-auto",
+			style={"minWidth": "100%", "tableLayout": "fixed", "overflow-x": "auto"}
+		),
+	], className="rounded-4 p-4 border border-1 border-gray-4")
+	return review_summary_layout
