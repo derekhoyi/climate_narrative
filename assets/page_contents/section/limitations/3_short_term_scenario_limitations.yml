@@ -1,7 +1,8 @@
 3:    
     name: Short-term scenario limitations
     description: |
-        # Limitations of the Short-term Scenarios
+        # limitations
+        ## Short-term Scenarios
 
         The tool provides an indicative crosswalk to the NGFS short-term scenarios (May 2025). This is an analytical aid developed by 
         CFRF members and should not be interpreted as an official NGFS prescription. The tool does not provide granular sector metrics 

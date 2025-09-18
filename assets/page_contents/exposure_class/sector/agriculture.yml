@@ -2,7 +2,9 @@
   name: Agriculture Sector
   test_report_position: 2
   description: |
-    "**"Agriculture"**" sector can be split into Crop Production and Animal Production. Industries in the Crop Production 
+    # Agriculture
+    
+    **Agriculture** sector can be split into Crop Production and Animal Production. Industries in the Crop Production 
     subsector grow crops mainly for food and fibre. This subsector comprises establishments such as farms, orchards, 
     groves, greenhouses, and nurseries, primarily engaged in growing crops, plants, vines, or trees and their seeds. 
     The industries in this subsector are grouped by similarity of production activity, the length of growing season, 

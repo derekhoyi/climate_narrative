@@ -1,8 +1,12 @@
 import dash_bootstrap_components as dbc
 from dash import html
 
-
 def create_footer():
+    mailto_link = (
+        "mailto:climate.forum@fca.org.uk"
+        "?subject=Feedback for Online Climate Scenario Analysis Narrative Tool"
+        "&body=Please%20enter%20your%20feedback%20here..."
+    )
     footer = dbc.Container(
         html.Footer(
             [
@@ -13,9 +17,7 @@ def create_footer():
                 html.Div(
                     [
                         html.A("Source Code", href="#", className="me-4 text-muted"),
-                        html.A("Support", href="#", className="me-4 text-muted"),
                         html.A("Known Issues", href="#", className="me-4 text-muted"),
-                        html.A("Contributors", href="#", className="me-4 text-muted"),
                         html.A("CFRF - Data and Tools Providers", href="#", className="me-4 text-muted"),
                         html.A("Data used in Charts", href="#", className="me-4 text-muted"),
                     ],
@@ -24,18 +26,24 @@ def create_footer():
                 html.Div(
                     dbc.Button(
                         [
-                            html.Span("💬", style={"verticalAlign": "middle", "marginRight": "8px", "fontSize": "1.5em"}),
+                            html.Span("💬", style={
+                                "verticalAlign": "middle",
+                                "marginRight": "8px",
+                                "fontSize": "1.5em"
+                            }),
                             "FEEDBACK"
                         ],
                         id="feedback",
                         n_clicks=0,
                         style={
-                            "backgroundColor": "#51C876",
+                            "backgroundColor": "#5ecc82",
                             "color": "white",
                             "borderRadius": "8px",
                             "border": "none",
                             "marginTop": "5px"
-                        }
+                        },
+                        href=mailto_link,           # This makes the button open the mail client
+                        external_link=True          # Ensures it works as a link
                     ),
                     className="mb-3"
                 ),
@@ -43,5 +51,4 @@ def create_footer():
         ),
         className="container small mt-auto",
     )
-
     return footer

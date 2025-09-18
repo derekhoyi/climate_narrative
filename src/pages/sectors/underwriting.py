@@ -4,12 +4,13 @@ import dash_bootstrap_components as dbc
 import yaml
 import json
 from pathlib import Path
+import re
 
-dash.register_page(__name__, path='/sectors')
+dash.register_page(__name__, path='/sectors/underwriting')
 
 def layout():
     # define paths
-    YML_FOLDER = "../../../assets/page_contents/exposure_class"
+    YML_FOLDER = "../../../assets/page_contents/exposure_class/underwriting"
     FILE_PATH = Path(__file__).parent
     YML_DIR = FILE_PATH.joinpath(YML_FOLDER).resolve()
 
@@ -27,10 +28,11 @@ def layout():
     # create buttons
     button_list = []
     for k, v in yml.items():
+        clean_name = re.sub(r'class|sector|underwriting', '', v['name'], flags=re.IGNORECASE).strip()
         button_list.append(
             dbc.Button(
-                v['name'],
-                id={'type': 'sector-btn', 'index': k},
+                clean_name,
+                id={'type': 'sector3-btn', 'index': k},
                 class_name="btn-light text-start",
                 n_clicks=0,
                 active=(k == DEFAULT_INDEX)  # set default active button
@@ -62,7 +64,7 @@ def layout():
                     dbc.Col(
                         html.Div(
                             default_desc,
-                            id='sector-description'
+                            id='sector3-description'
                         )
                     ),
                 ]
@@ -75,13 +77,13 @@ def layout():
 
 # display sector
 @callback(
-    [Output('sector-description', 'children'),
-     Output({'type': 'sector-btn', 'index': ALL}, 'active')],
-    Input({'type': 'sector-btn', 'index': ALL}, 'n_clicks'),
+    [Output('sector3-description', 'children'),
+     Output({'type': 'sector3-btn', 'index': ALL}, 'active')],
+    Input({'type': 'sector3-btn', 'index': ALL}, 'n_clicks'),
     State('yml-store', 'data'),
     prevent_initial_call=True
 )
-def display_sector(n_clicks, yml_data):
+def display_sector3(n_clicks, yml_data):
 
     # load yml
     yml = json.loads(yml_data)
