@@ -10,7 +10,7 @@ dash.register_page(__name__, path='/reports/overview')
 def layout():
 
     # define paths
-    YML_FOLDER = "../../../assets/page_contents/section/reports"
+    YML_FOLDER = "../../assets/page_contents/section/reports"
     FILE_PATH = Path(__file__).parent
 
     # get overview markdown from yml

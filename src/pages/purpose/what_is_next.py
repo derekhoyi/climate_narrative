@@ -9,7 +9,7 @@ dash.register_page(__name__, path='/purpose/what-is-next')
 def layout():
 
     # define paths
-    YML_FOLDER = "../../../assets/page_contents/section/purpose"
+    YML_FOLDER = "../../assets/page_contents/section/purpose"
     YML_NAME = "what_is_next.yml"
     FILE_PATH = Path(__file__).parent
     YML_PATH = FILE_PATH.joinpath(YML_FOLDER).joinpath(YML_NAME).resolve()

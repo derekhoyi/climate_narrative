@@ -11,7 +11,7 @@ dash.register_page(__name__, path='/scenarios/long-term-scenarios')
 def layout():
 
     # define paths
-    YML_FOLDER = "../../../assets/page_contents/section/scenarios"
+    YML_FOLDER = "../../assets/page_contents/section/scenarios"
     YML_NAME = "long_term_scenarios.yml"
     FILE_PATH = Path(__file__).parent
     YML_PATH = FILE_PATH.joinpath(YML_FOLDER).joinpath(YML_NAME).resolve()

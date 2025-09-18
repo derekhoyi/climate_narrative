@@ -1,0 +1,685 @@
+16:
+    name: Property Underwriting Class
+	test_report_position: 19
+	description: | 
+      # Property Underwriting 
+	  
+	  The **property underwriting** class covers a very wide range of asset types 
+	  and coverages, with risk transfers flowing from the policyholders, through 
+	  to insurers, reinsurers and retrocessional reinsurers, and with both simple 
+	  (e.g. direct) and complex risk sharing arrangements between multiple parties, 
+	  for example through bordereau and other aggregate risk products. Underwriting 
+	  is the act of accepting liability up to a specified amount in an insurance policy, 
+	  and generally, property insurance could be related to either fixed, immovable 
+	  assets such as buildings or movable property, such as transport or goods in 
+	  transit, in both personal (e.g. residential/domestic) and professional 
+	  (e.g. landlords, commercial real estate, industrial real estate) settings.
+	  
+	transition:
+	  high:
+	    exec_description: |
+	      In the Delayed Transition scenario, the increase in carbon price along 
+	      with a change to the demand in the quality of real estate is likely to 
+	      influence insurance products’ pricing, terms and conditions and coverage. 
+	      There is likely to be an increasing pressure on insurers to decline cover 
+	      for high GHG emitting industrial or commercial activities.
+	      
+	    always: |
+	      In the Delayed transition scenario, the demand for real estate is likely 
+	      to increase. While the property underwriting class could continue to play 
+	      a role in meeting customer demand for the coming years, the late policy 
+	      action under the Delayed transition scenario beyond 2030 could lead to a 
+	      relative reduction in GDP growth. This could partially offset any growth 
+	      in demand. 
+	
+	      Under most transition scenarios, there is likely to be an increasing pressure 
+	      on insurers to decline cover for high GHG emitting industrial or commercial 
+	      activities, which in turn could influence the overall underwriting strategy 
+	      employed within non-life property insurers. National and international legislative 
+	      actions, for example in determining premium rates may affect future underwriting 
+	      strategies.
+	
+	    high_materiality: |
+	      The changes in carbon pricing, societal preference, energy prices and
+	      energy mix could potentially result in one or more of the following
+	      impacts on the property underwriting class:
+	
+	      - **Stranded assets:** changes in underwriting rules regarding excluded 
+	      or stranded asset types, including fossil fuel or other carbon-intensive 
+	      industrial or commercial activities and assets. This could include reference 
+	      to relevant green taxonomies which would be incorporated into underwriting 
+	      strategies and might vary by region depending on the development of relevant 
+	      taxonomy (e.g. EU taxonomy for sustainable activities).
+	      
+	      -	**Changes in consumer behaviour:** changes to the demand for insurance 
+	      products due to changes in consumer behaviour (e.g. increased demand for 
+	      EPC A or BREEAM excellent buildings) or national or international policy 
+	      changes regarding transition rules and expectations.
+	      
+	      -	**Increased regulatory oversight and sanctions for non-compliant insurance 
+	      companies.:** there is also potential legal or other liability risks, and 
+	      associated reputational risks, due to inadequate transition strategies.
+	      
+	      -	**Reinsurance coverage:** inability to secure reinsurance coverage 
+	      (either availability of capital, or exclusions) for insured risks which 
+	      are not in line with industry Net Zero commitments.
+	      
+	      -	**Growth of decarbonisation technology:** opportunities arising from 
+	      the development of new classes of assets and risk transfer requirements, 
+	      e.g., through technological and social changes influencing product design 
+	      and insurance capacity.
+	      
+	     The specific nature of the climate related transition risks and opportunities 
+	     could vary widely. The underwriting processes followed could be designed 
+	     to reflect the needs of each property class, for example, domestic household 
+	     versus commercial real estate or industrial insurance. The level of exposure 
+	     by property sector could therefore vary significantly. In general terms, a 
+	     differentiation between residential/domestic and commercial/industrial property 
+	     can be made to illustrate potential consideration with respect to transition 
+	     risks from climate change. 
+	     
+	     Contractual terms, including exclusions (e.g. insurance ‘wordings’), play an 
+	     important role in determining the level of cover, and hence exposure either 
+	     retained by the policyholder, or ceded to insurers and reinsurers. This 
+	     could also vary widely depending on the type of assets being insured, the 
+	     territorial coverage of the assets and the insurance policy in place. 
+	     
+	     Transition risks can influence contractual policy wordings both through a 
+	     company’s risk appetite, but also through market standards which can themselves 
+	     be influenced by transition risk considerations. The uncertainty which surrounds 
+	     the likely rate and direction of the transition to Net Zero, alongside the evolving 
+	     regulatory, consumer and technological environments which influence insurance 
+	     product design and risk assessments, mean that the ability to determine likely 
+	     materiality from transition risk, could be limited by the availability of 
+	     information that adequately reflects the possible outcomes over the near and 
+	     longer timescales. The geographic extents and territorial coverage of insured 
+	     assets, as well as the domicile of the insurer, by determining the legislative 
+	     and supervisory environment which it is operating within, could also influence 
+	     the materiality of transition risks and hence underwriting impact.
+	     
+	     In the Delayed Transition scenario, buildings increase their use of electricity 
+	     over time from between 50 to 55 exajoules (EJ) in 2025 to between over 90 EJ in 
+	     2050, while natural gas consumption decreases from between 25 to 30 EJ in 2025 
+	     to below 15 EJ in 2050.
+	     
+	      ![Final Energy - Delayed Transition](property_uw_delayed_residential_and_commercial_final_energy.png)
+	
+	      **Source:**
+	      [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+	     
+	     In the Delayed Transition scenario, as carbon price increases, carbon tax paid 
+	     from buildings’ emissions peaks at ~$360 billion around 2035 in the Delayed 
+	     Transition scenario. Carbon tax paid begins to decrease thereafter as 
+	     improvements are made to buildings’ emissions intensities.
+	     
+	      ![Carbon Tax Demand](property_uw_delayed_carbon_demand.png)
+	
+	      **Source:**
+	      [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+	     
+	     The profitability of the property underwriting class could depend on the 
+	     relevant companies proactively addressing transition risks through mitigating 
+	     actions. For example:
+	     
+	     -	Developing a clear net-zero underwriting strategy based on industry standards 
+	        such as the [Net Zero Insurance Alliance](https://www.unepfi.org/net-zero-insurance/)
+	     
+	     -	Applying a range of scenarios reflecting the most likely range of socio-economic, 
+	        legislative technological and consumer futures within the risk appetite, and 
+	        underwriting strategies applied across all property lines of business, especially 
+	        in the likely influences on changing portfolio structure, and diversification options.
+	     
+	     -	Ensuring underwriting rules and policies are aligned to corporate and industry 
+	        wide Net Zero objectives.
+	     
+	     -	Encouraging policy holder’s approaches to risk mitigation and transition 
+	        strategies through increased knowledge transfer and remediation advisories, 
+	        as well as new product development, for example to support Orderly transition 
+	        to agreed timescales for high GHG emitting assets and activities.
+	
+	        The underwriting function within most insurers and reinsurers could need to consider 
+	        a wide range of potential impacts, through both the pricing of insurance (e.g., setting 
+	        the technical rate and premium required based on estimated loss potential) and the 
+	        management of the insurer or reinsurer’s aggregate exposure to losses 
+	        (e.g., to large losses from multiple claims occurring due to a natural disaster). 
+	        The specific underwriting process followed, and the considerations made by an 
+	        insurer or reinsurer, for example when determining underwriting authorities 
+	        across the business, could depend on the risk appetite and portfolio exposure 
+	        management strategy in place. Commercial underwriting decisions related to price 
+	        and capacity could be influenced by transition risk considerations, as these 
+	        could either directly affect the selection and acceptance of risk (through the 
+	        inclusion of conditions such as exclusions or retention in a specific policy) or 
+	        influence aggregate limits and share and line sizes, as well as directly affect the 
+	        premium rate set, whether technically and risk-aligned, or due to market, regulatory 
+	        or consumer demand drivers. In addition, rating and shareholder drivers could also 
+	        influence insurance underwriting decisions, either in determining limits on the 
+	        level of risk acceptance, or in the setting of corporate risk appetite and 
+	        capital.
+	        
+	        The importance of data analysis and modelling for assessing transition risks to make 
+	        more informed decisions is critical. By leveraging climate-related data, insurers 
+	        can identify vulnerable assets, forecast potential financial losses, and develop 
+	        strategies to mitigate these risks. Additionally, integrating scenario analysis 
+	        helps insurers understand the long-term implications of different regulatory and 
+	        market developments, allowing them to adjust their underwriting practices and pricing 
+	        strategies accordingly.
+	
+	  low:
+	    exec_description: |
+	      In Orderly transition scenarios, the increase in carbon price 
+	      along with a change to the demand in the quality of real estate are likely 
+	      to influence insurance products' pricing, terms and conditions and coverage. 
+	      There is likely to be an increasing pressure on insurers to decline cover for 
+	      high GHG emitting industrial or commercial activities.
+	
+	    always: |
+	      While the property underwriting class could continue to play a role in 
+	      meeting customer demand for the coming years, the changing patterns in 
+	      energy generation in an Orderly transition risk scenario, driven by 
+	      immediate policy reaction, societal change, national energy strategies, 
+	      and carbon legislation, could lead to an immediate but smooth reduction 
+	      in CO<sub>2</sub> emissions by 2050. The increase in carbon price along with a 
+	      change to the demand in the quality of real estate 
+	      (e.g. emissions from the construction and fabric of the building, 
+	      energy efficiency performance and use of lower carbon technology 
+	      (especially heating and cooling)) is likely to influence insurance 
+	      products’ pricing, terms and conditions and coverage.
+	
+	      Under most transition scenarios, there is likely to be an increasing 
+	      pressure on insurers to decline cover for high GHG emitting industrial or 
+	      commercial activities, which in turn could influence the overall underwriting 
+	      strategy employed within non-life property insurers. In addition, national 
+	      and international legislative actions, for example in determining premium 
+	      rates or coverage may affect future underwriting strategies. Insurers can 
+	      adapt by incorporating and expanding climate risk assessments into their 
+	      underwriting processes, leveraging data analytics to evaluate the environmental 
+	      impact of potential clients, and offering incentives for businesses that adopt 
+	      sustainable practices.
+	      
+	    high_materiality: |
+	      The changes in carbon pricing, societal preference, energy prices and
+	      energy mix could potentially result in one or more of the following
+	      impacts on the property underwriting class:
+	
+	      - **Stranded assets:** changes in underwriting rules regarding excluded 
+	        or stranded asset types, including fossil fuel or other carbon-intensive 
+	        industrial or commercial activities and assets. This could include reference 
+	        to relevant green taxonomies which would be incorporated into underwriting 
+	        strategies and might vary by region depending on the development of 
+	        relevant taxonomy (e.g. EU taxonomy for sustainable activities).
+	      
+	      -	**Changes in consumer behaviour:** changes to the demand for insurance 
+	      products due to changes in consumer behaviour (e.g. increased demand for EPC A or 
+	      BREEAM excellent buildings) or national or international policy changes regarding 
+	      transition rules and expectations.
+	      
+	      -	**Increased regulatory oversight and sanctions for non-compliant insurance 
+	      companies:** there is also potential legal or other liability risks, and associated 
+	      reputational risks, due to inadequate transition strategies.
+	      
+	      - **Reinsurance coverage:** inability to secure reinsurance coverage 
+	      (either availability of capital, or exclusions) for insured risks which 
+	      are not in line with industry Net Zero commitments.
+	      
+	      -	**Growth in decarbonisation technology:** opportunities arising from the 
+	      development of new classes of assets and risk transfer requirements, e.g., through 
+	      technological and social changes influencing product design and insurance capacity.
+	
+	      The specific nature of the climate related transition risks and opportunities could 
+	      vary widely. The underwriting processes followed could be designed to reflect the needs 
+	      of each property class, for example, domestic household versus commercial real 
+	      estate or industrial insurance. The level of exposure by property sector could 
+	      therefore vary significantly. In general terms, a differentiation between 
+	      residential/domestic and commercial/industrial property can be made to illustrate 
+	      potential consideration with respect to transition risks from climate change. 
+	      Contractual terms, including exclusions (e.g. insurance ‘wordings’), 
+	      play an important role in determining the level of cover, and hence exposure 
+	      either retained by the policyholder, or ceded to insurers and reinsurers. This 
+	      could also vary widely depending on the type of assets being insured, the territorial 
+	      coverage of the assets and the insurance policy in place. 
+	      
+	      Transition risks can influence contractual policy wordings both through a company’s 
+	      risk appetite, but also through market standards which can themselves be influenced by 
+	      transition risk considerations. The uncertainty which surrounds the likely rate and 
+	      direction of the transition to Net Zero, alongside the evolving regulatory, consumer 
+	      and technological environments which influence insurance product design and risk 
+	      assessments, mean that the ability to determine likely materiality from transition 
+	      risk, could be limited by the availability of information that adequately reflects 
+	      the range of possible outcomes over the near and longer timescales. The geographic 
+	      extents and territorial coverage of insured assets, as well as the domicile of the 
+	      insurer, by determining the legislative and supervisory environment which it is 
+	      operating within, could also influence the materiality of transition risks and hence 
+	      underwriting impact.
+	
+	      In Orderly transition scenarios, buildings increase their use of electricity over 
+	      time from between 50 to 60 exajoules (EJ) in 2025 to between 90 EJ and 102 EJ in 2050, 
+	      while natural gas consumption decreases from between 28 to 31 EJ in 2025 to 15 and 
+	      below EJ in 2050. 
+	      
+	      ![Final Energy](property_uw_orderly_final_energy_netzero_lowdemand.png)
+	
+	      ![Final Energy](property_uw_orderly_final_energy_below2c.png)
+	
+	      **Source:**
+	      [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+	      
+	      As carbon price increases, carbon tax paid from buildings’ emissions peaks at ~$443 billion 
+	      (inflation adjusted to 2010 baseline) around 2035 in the Net Zero 2050 scenario, 
+	      and below ~$151 billion around 2035 in the Below 2&deg;c scenario. Carbon tax paid begins 
+	      to decrease thereafter as improvements are made to buildings’ emissions intensities 
+	      in both Net Zero 2050 and low demand scenarios to be below ~$100 billion, however, 
+	      it continues to increase in the below 2&deg;c scenario to be around ~$200 billion.
+	
+	      ![Carbon Tax Demand](property_uw_orderly_carbon_demand.png)
+	
+	      **Source:**
+	      [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+	
+	      The profitability of the property underwriting class could also depend on
+	      the relevant companies proactively addressing transition risks through
+	      mitigating actions. For example:
+	
+	      - Developing a clear net-zero underwriting strategy based on industry
+	        standards such as the [Net Zero Insurance Alliance](https://www.unepfi.org/net-zero-insurance/).
+	
+	      - Applying a range of scenarios reflecting the most likely range of
+	        socio-economic, legislative technological and consumer futures within
+	        the risk appetite, and underwriting strategies applied across all
+	        property lines of business, especially in the likely influences on
+	        changing portfolio structure, and diversification options.
+	
+	      - Ensuring underwriting rules and policies are aligned to corporate and
+	        industry wide Net Zero objectives.
+	
+	      - Encouraging policy holder's approaches to risk mitigation and transition
+	        strategies through increased knowledge transfer and remediation
+	        advisories, as well as new product development, for example to support
+	        Orderly transition to agreed timescales for high GHG emitting assets and
+	        activities.
+	
+	      The underwriting function within most insurers and reinsurers could need
+	      to consider a wide range of potential impacts, through both the pricing of
+	      insurance (e.g., setting the technical rate and premium required based on
+	      estimated loss potential) and the management of the insurer or reinsurer's
+	      aggregate exposure to losses (e.g., to large losses from multiple claims
+	      occurring due to a natural disaster). The specific underwriting process
+	      followed, and the considerations made by an insurer or reinsurer, for
+	      example when determining underwriting authorities across the business,
+	      could depend on the risk appetite and portfolio exposure management
+	      strategy in place.
+	
+	      Commercial underwriting decisions related to price and capacity could be
+	      influenced by transition risk considerations, as these could either
+	      directly affect the selection and acceptance of risk (through the
+	      inclusion of conditions such as exclusions or retention in a specific
+	      policy) or influence aggregate limits and share and line sizes, as well as
+	      directly affect the premium rate set, whether technically and
+	      risk-aligned, or due to market, regulatory or consumer demand drivers. In
+	      addition, rating and shareholder drivers could also influence insurance
+	      underwriting decisions, either in determining limits on the level of risk
+	      acceptance, or in the setting of corporate risk appetite and capital.
+	      
+	      The importance of data analysis and modelling for assessing transition 
+	      risks to make more informed decisions is critical. By leveraging 
+	      climate-related data, insurers can identify vulnerable assets, forecast 
+	      potential financial losses, and develop strategies to mitigate these risks. 
+	      Additionally, integrating scenario analysis helps insurers understand the 
+	      long-term implications of different regulatory and market developments, 
+	      allowing them to adjust their underwriting practices and pricing strategies 
+	      accordingly.
+	      
+	physical:
+	  high:
+	    exec_description: |
+	      In high physical risk scenarios, insurance underwriting strategies could 
+	      need to assess existing, and future physical risks, not only due to the 
+	      potential for future changes in the physical drivers of climate related 
+	      hazards (e.g., flood intensity, frequency and extents), but also due to 
+	      changes in the distribution of exposures and in the types of assets being 
+	      insured. The increased severity and frequency of physical risk events will 
+	      likely lead to higher premiums and coverage being removed in areas deemed 
+	      uninsurable.
+	
+	    always: |
+	      While the non-life property insurance market is generally highly exposed 
+	      to physical risks, and from those related to weather extremes the actual 
+	      materiality of an insurer’s portfolio and the policies it writes could 
+	      however vary significantly, by geography, asset class and risk mitigation 
+	      strategies in place. As most traditional property insurance policies could be 
+	      short term (e.g. for one year) this has limited the level of concern applied. 
+	      This does not take account of the already significant changes in potential 
+	      severity, frequency, and aggregation of extreme loss causing events at the 
+	      global and regional scales which the property insurance sector is already 
+	      experiencing. For instance, the California wildfires in 2025 have caused 
+	      significant economic and insured losses, prompting insurers to raise premiums 
+	      and limit coverage availability.
+	
+	      This means that any insurance underwriting strategy could need to assess 
+	      existing, and future, physical risk, not only due to the potential for 
+	      future changes in the physical drivers of climate related hazards 
+	      (e.g., flood intensity, frequency and extents), but also due to changes 
+	      in the distribution of exposures due to changing underwriting plans, and 
+	      changes in the types of assets being insured. 
+	      
+	    high_materiality: |
+	      The relative materiality of physical risks to insurers and hence the impact 
+	      on underwriting strategies, could vary over time, and at varying rates. The 
+	      interdependency which exists between hazard, exposure and vulnerability elements 
+	      of insured property assets could also influence the level of materiality experienced 
+	      across a portfolio, and this could also vary over time.
+	      
+	      The following physical risk considerations are likely to be relevant to 
+	      underwriting strategies:
+	
+	      - **Changing exposure accumulations at portfolio levels:** resulting from the changes 
+	        to the underwriting strategies and risk appetites of the insurer. For instance, insurers 
+	        may adjust their risk models to account for increased frequency and severity of natural 
+	        disasters, such as hurricanes and wildfires. This can lead to higher premiums and stricter 
+	        underwriting criteria, reducing the number of policies issued in high-risk areas 
+	        (see further examples below).
+		  
+	      - **Unaffordability of insurance:** due to increased technical rates and premiums, especially 
+	        due to the addition of increased uncertainty within pricing models. Regions with a high number 
+	        of uninsured properties can become "insurance deserts," where obtaining coverage is extremely 
+	        difficult or impossible. This can lead to broader economic impacts, including reduced investment 
+	        and development in these areas. 
+		  
+	      - **Increased risk of underinsurance and reinsurance failure:** due to underestimation of 
+	        potential losses, particularly aggregate loss from multiple occurring extreme events.
+		  
+	      - **Changes to the level of portfolio diversification:** achieved across an insurance property 
+	        book due to varying hazard, exposure and vulnerability from climate related influences, especially 
+	        due to higher frequencies of multiple loss causing events from the range of climate related impacts 
+	        to properties, whether via direct physical damage or indirect Impacts to supply chains or other 
+	        factors critical to the performance of the insured assets. Increased cost of capital due to increased 
+	        uncertainty amongst reinsurance and other capital providers.
+		  
+	      - **Growth of decarbonisation technology:** opportunities for new products or lines of business 
+	        reflecting changing patterns of hazard and demand for insurance cover, e.g., for climate 
+	        related business interruption policies.
+	
+	      The specific nature of these risks could vary widely. The underwriting processes followed could be 
+	      designed to reflect the needs of each property class, for example, domestic household versus commercial 
+	      real estate or industrial insurance. The level of exposure by property sector could therefore vary 
+	      significantly. In general terms, a differentiation between residential/domestic and commercial/industrial 
+	      property can be made to illustrate potential consideration with respect to physical risks from climate 
+	      change.
+	      
+	      In a high physical risk scenario, it may be possible that certain risks become uninsurable. 
+	      This could have knock on consequences for the region meaning that properties in the area 
+	      become stranded. For example, the 1-in-100 year expected damage from tropical 
+	      cyclones in both Current Policies and NDCs scenarios show a significant 
+	      increase over time with the % change in annual expected damage going from 
+	      ~6% in 2025 to between ~18% and ~19% by 2050. The increased frequency and 
+	      severity of tropical cyclones pose substantial challenges. Insurers may need 
+	      to adjust their risk models and pricing strategies to account for the higher 
+	      likelihood of claims. This could lead to higher premiums and stricter underwriting 
+	      criteria, making it difficult for homeowners or businesses in vulnerable areas to 
+	      obtain coverage.
+	      
+	     ![Tropical Cyclones Damages](property_uw_physical_economic_damages.png)
+	
+	      **Source:**
+	      [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/)
+	      
+	      Another example is the California wildfires have caused significant economic 
+	      and insured losses, prompting insurers to raise premiums and limit coverage 
+	      availability. In 2025, catastrophic wildfires in California resulted in 
+	      significant estimated economic losses. This trend is not isolated to California; 
+	      globally, the financial costs of climate-related physical risks for the world's 
+	      largest companies are projected to reach $1.2 trillion annually by 2050 (see article 
+	      here: [Climate Hazards Projected to Hit Companies Hard by 2050s - Risk & Insurance : 
+	      Risk & Insurance](https://riskandinsurance.com/climate-hazards-projected-to-hit-companies-hard-by-2050s/)). Consequently, 
+	      insurers are responding by increasing premiums and reducing coverage in high-risk areas.
+	      
+	      Contractual terms, including exclusions (e.g. insurance ‘wordings’), play an 
+	      important role in determining the level of cover, and hence exposure either 
+	      retained by the policyholder, or ceded to insurers and reinsurers. This could 
+	      also vary widely depending on the type of assets being insured and the territorial 
+	      coverage of the assets. Physical risks can influence contractual policy wordings 
+	      both through a company’s risk appetite, but also through market standards which 
+	      can themselves be influenced by physical risk considerations.
+	      
+	      Underwriting decisions on price, through either experience based pricing, or 
+	      actuarial / model based, require considerable understanding of the potential 
+	      range of losses which could impact both individual assets and policy holders, 
+	      but equally the aggregate risk which the insurer is exposed to across all policies 
+	      and lines of business which it provides.
+	
+	      The increased uncertainties, which underly the assessment of changing physical 
+	      risks, mean that utilising frequency and severity distribution methods for 
+	      pricing and portfolio assessment could be less effective to effectively account 
+	      for future losses within premiums. The lack of consistent modelling approaches 
+	      for both present day and future physical risk, particularly in emerging economies 
+	      and markets, means that there could be a lower level of confidence placed on 
+	      estimates of probable maximum loss. This uncertainty drives many of the physical 
+	      risk considerations mentioned. The profitability of the property underwriting 
+	      class could depend on the relevant companies proactively addressing physical 
+	      risks through mitigating actions. For example:
+	
+	      - Developing improved data capture and modelling processes that more accurately 
+	        represent the levels of vulnerability and resilience of insured assets to direct 
+	        and indirect physical risks - both present day and future
+	
+	      -	Encouraging improved resiliency amongst policyholders through advisory 
+	        services and risk reduction initiatives. Resilience could also be encouraged 
+	        on a larger scale through influencing public policy engagement on flood 
+	        defences, building regulations, local/civic planning strategy, infrastructure
+	
+	      -	Incorporating a forward-looking element into risk modelling and pricing tools 
+	
+	      -	Developing a range of realistic scenarios which reflect a range of potential 
+	        future impacts on physical risk at various short, medium and long-time horizons
+	
+	      -	Developing policies and products which are aligned to changing consumer 
+	        requirements, and physical risk profiles
+	
+	      -	Ensuring risk appetite and tolerance statements, and associated underwriting 
+	        authorities are fully aligned to clear physical risk scenarios
+	
+	      The underwriting function within most insurers and reinsurers could need to 
+	      consider a wide range of potential impacts, through both the pricing of insurance 
+	      (e.g., setting the technical rate and premium required based on estimated loss potential) 
+	      and the management of the insurer or reinsurer’s aggregate exposure to losses 
+	      (e.g., to large losses from multiple claims occurring due to a natural disaster). The 
+	      specific underwriting process followed, and the considerations made by an insurer or 
+	      reinsurer, for example when determining underwriting authorities across the business, 
+	      could depend on the risk appetite and portfolio exposure management strategy in place.
+	
+	      Commercial underwriting decisions related to price and capacity could be influenced 
+	      by physical risk considerations, as these could either directly affect the selection 
+	      and acceptance of risk (through the inclusion of conditions such as exclusions or 
+	      retention in a specific policy) or influence aggregate limits and share and line 
+	      sizes, as well as directly affect the premium rate set, whether technically and 
+	      risk-aligned, or due to market, regulatory or consumer demand drivers. In addition, 
+	      rating and shareholder drivers could also influence insurance underwriting decisions, 
+	      either in determining limits on the level of risk acceptance, or in the setting of 
+	      corporate risk appetite and capital.
+	
+	transition_physical:  
+	  high:
+	    exec_description: |
+	      In a high physical and transition risk scenario, insurance underwriting 
+	      strategies would need to assess existing, and future climate risks. This 
+	      includes potential changes in climate-related hazards (e.g., flood intensity, 
+	      frequency and extents), shifts in distribution of exposures, and in the types 
+	      of assets being insured. The increased severity and frequency of physical risk 
+	      events will likely lead to higher premiums and coverage being removed in areas 
+	      deemed uninsurable. Additionally, heighted transition risks such as stringent 
+	      regulations must be considered.
+	
+	    always: |
+	      The non-life property insurance market is highly exposed to physical risks, 
+	      particularly those related to weather extremes. However, the materiality of an 
+	      insurer’s portfolio and the policies it writes could however vary significantly, 
+	      by geography, asset class and risk mitigation strategies. Traditional property 
+	      insurance policies are often short term, typically one year, which has 
+	      historically limited the exposure. Nonetheless, this does not take account 
+	      of the already significant changes in potential severity, frequency, and 
+	      aggregation of extreme loss causing events at the global and regional scales 
+	      that the property insurance sector is already experiencing. For instance, the 
+	      California wildfires in 2025 have caused significant economic and insured losses, 
+	      prompting insurers to raise premiums and limit coverage availability.
+	
+	      In a Fragmented World scenario, heightened transition risks should also be 
+	      considered including National and international legislative actions, for example 
+	      in determining premium rates or coverage which may affect future underwriting 
+	      strategies.
+	      
+	      Insurance underwriting strategy should evaluate both current and future 
+	      climate risk, considering potential changes in climate-related hazards 
+	      (e.g., flood intensity, frequency and extents) and shifts in exposure 
+	      distribution due to changing underwriting plans, and asset types.
+	      
+	    high_materiality: |
+	      There would both high physical and transition risks from a too-little-too-late 
+	      scenario as a result of the delayed (“too late”) implementation and ultimately 
+	      diverging in their mitigation stringency, thus rendering the overall efforts 
+	      insufficient to reach net zero (“too little”). Countries with net zero targets 
+	      achieve these only partially, while other countries follow current policies 
+	      leading to increased inequality which would exacerbate regional tensions as well 
+	      as the physical impacts.
+	
+	      The materiality of physical risks to insurers and hence the impact on 
+	      underwriting strategies, could vary over time, and at different rates. The 
+	      interdependency which exists between hazard, exposure and vulnerability 
+	      elements of insured property assets influences the level of materiality 
+	      experienced across a portfolio. The following physical risk considerations 
+	      are likely to be relevant to underwriting strategies:
+	
+	      - **Changing exposure accumulations:** at portfolio levels due to changes 
+	        in underwriting strategies and risk appetites. For instance, insurers may 
+	        adjust their risk models to account for increased frequency and severity 
+	        of natural disasters, such as hurricanes and wildfires. This can lead 
+	        to higher premiums and stricter underwriting criteria, reducing the number 
+	        of policies issued in high-risk areas (see further examples below).
+	      
+	      -	**Unaffordability of insurance:** due to increased technical rates and 
+	        premiums, especially with added uncertainty in pricing models. Regions 
+	        with a high number of uninsured properties can become "insurance deserts,
+	        " where obtaining coverage is extremely difficult or impossible. This can 
+	        lead to broader economic impacts, including reduced investment and development 
+	        in these areas.
+	      
+	      -	**Increased risk of underinsurance and reinsurance failure:** due to 
+	        underestimation of potential losses, particularly aggregate loss from 
+	        multiple occurring extremes.
+	      
+	      - **Changes in portfolio diversification:** due to varying hazard, exposure, 
+	        and vulnerability from climate-related influences, especially higher frequencies 
+	        of multiple loss-causing events.
+	      
+	      - **Growth in decarbonisation technology:** opportunities for new products or lines 
+	        of business reflecting changing patterns of hazard and demand for insurance cover, 
+	        e.g., climate-related business interruption policies.
+	
+	      With high physical risk it may be possible that certain risks become uninsurable. 
+	      This could have knock on consequences for the region meaning that properties in 
+	      the area become stranded. For example, the 1-in-100 year expected damage from 
+	      tropical cyclones in the Fragmented World scenario shows a significant increase
+	      over time with the % change in annual expected damage going from ~6% in 2025 
+	      to ~18% by 2050. The increased frequency and severity of tropical cyclones 
+	      pose substantial challenges. Insurers may need to adjust their risk models 
+	      and pricing strategies to account for the higher likelihood of claims. This 
+	      could lead to higher premiums and stricter underwriting criteria, making it 
+	      difficult for homeowners or businesses in vulnerable areas to obtain coverage.
+	      
+	     ![Tropical Cyclones Damages](property_uw_physical_and_transition_economic_damages.png)
+	
+	      **Source:**
+	      [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/)
+	
+	      Another example is the California wildfires have caused significant economic 
+	      and insured losses, prompting insurers to raise premiums and limit coverage 
+	      availability. In 2025, catastrophic wildfires in California resulted in 
+	      significant estimated economic losses. This trend is not isolated to California; 
+	      globally, the financial costs of climate-related physical risks for the world's 
+	      largest companies are projected to reach $1.2 trillion annually by 2050 
+	      (see article here: Climate Hazards Projected to Hit Companies Hard by 2050s - 
+	      Risk & Insurance : Risk & Insurance). Consequently, insurers are responding by 
+	      increasing premiums and reducing coverage in high-risk areas.
+	
+	      Heighted transition risks in a Fragmented World scenario include regulatory 
+	      changes such as National and international legislative actions, for example 
+	      in determining premium rates or coverage may affect future underwriting 
+	      strategies. Stricter building codes and energy efficiency standards can 
+	      increase costs for retrofitting and developing properties. For example, 
+	      new regulations may require the installation of energy-efficient HVAC 
+	      systems, solar panels, or green roofs, significantly increasing upfront 
+	      costs as well the ability of real estate companies to afford premiums.
+	
+	      The specific nature of these risks could vary widely. The underwriting 
+	      processes followed could be designed to reflect the needs of each property 
+	      class, for example, domestic household versus commercial real estate or 
+	      industrial insurance. Exposure levels by property sector can vary 
+	      significantly. Differentiation between residential/domestic and 
+	      commercial/industrial property illustrates potential considerations 
+	      regarding physical risks from climate change.
+	
+	      Contractual terms, including exclusions (e.g. insurance ‘wordings’), 
+	      play an important role in determining the level of cover, and hence exposure 
+	      either retained by the policyholder, or ceded to insurers and reinsurers. This 
+	      could also vary widely depending on the type of assets being insured and the 
+	      territorial coverage of the assets. Physical and transition risks can influence 
+	      contractual policy wordings both through a company’s risk appetite, but also 
+	      through market standards which can themselves be influenced by physical & 
+	      transition risk considerations.
+	      
+	      Underwriting decisions on price, through either experience based pricing, 
+	      or actuarial / model based, require considerable understanding of the 
+	      potential range of losses which could impact both individual assets and 
+	      policy holders, but equally the aggregate risk which the insurer is 
+	      exposed to increased uncertainties, which underly the assessment of 
+	      changing physical & transition risks, mean that utilising frequency and 
+	      severity distribution methods for pricing and portfolio assessment could be 
+	      less effective as a means to effectively account for future losses within 
+	      premiums. The lack of consistent modelling approaches for both present day and 
+	      future physical risk, particularly in emerging economies and markets, 
+	      means that there could be a lower level of confidence placed on estimates 
+	      of probable maximum loss. This uncertainty drives many of the physical & 
+	      transition risk considerations mentioned. The profitability of the 
+	      property underwriting class could also depend on the relevant companies 
+	      proactively addressing physical risks through mitigating actions. 
+	      
+	      Proactively addressing physical and transition risks through mitigating actions 
+	      can enhance the profitability of the property underwriting class. Examples include:
+	      
+	      -	Developing improved data capture and modelling processes that more accurately 
+	        represent the levels of vulnerability and resilience of insured assets to 
+	        direct and indirect physical risks - both present day and future.
+	      -	Encouraging improved resiliency amongst policyholders through advisory 
+	        services and risk reduction initiatives. Resilience could also be 
+	        encouraged on a larger scale through influencing public policy engagement 
+	        on flood defences, building regulations, local/civic planning strategy, 
+	        infrastructure.
+	      -	Incorporating a forward-looking element into risk modelling and pricing tools.
+	      -	Developing a range of realistic scenarios which reflect a range of potential 
+	        future impacts on physical and transition risks at various short, medium 
+	        and long-time horizons.
+	      -	Developing policies and products which are aligned to changing consumer 
+	        requirements, and physical and transition risk profiles.
+	      -	Ensuring risk appetite and tolerance statements, and associated underwriting 
+	        authorities are fully aligned to clear physical and transition risk scenarios.
+	      -	Developing a clear net-zero underwriting strategy based on industry 
+	        standards such as the Net Zero Insurance Alliance.
+	      -	Encouraging policy holder’s approaches to risk mitigation and transition 
+	        strategies through increased knowledge transfer and remediation advisories, 
+	        as well as new product development, for example to support Orderly scenarios 
+	        to agreed timescales for high GHG emitting assets and activities.
+	
+	        The underwriting function within insurers and reinsurers must consider a 
+	        wide range of potential impacts, through both the pricing of insurance 
+	        (e.g., setting the technical rate and premium required based on estimated 
+	        loss potential) and the management of the insurer or reinsurer’s aggregate 
+	        exposure to losses (e.g., to large losses from multiple claims occurring 
+	        due to a natural disaster). The specific underwriting process and considerations 
+	        depend on the risk appetite and portfolio exposure management strategy in place.
+	        
+	        Commercial underwriting decisions related to price and capacity could be 
+	        influenced by physical and transition risk considerations, affecting risk 
+	        selection and acceptance, aggregate limits, share and line sizes, and premium 
+	        rates. Rating and shareholder drivers could also influence insurance underwriting 
+	        decisions, determining limits on risk acceptance and setting of corporate risk 
+	        appetite and capital.
+	
+

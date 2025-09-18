@@ -1,0 +1,238 @@
+6:
+  name: Energy Underwriting Class
+  test_report_position: 14
+  description: |
+    # Energy Underwriting
+    
+    The **Energy** underwriting class involves insuring companies engaging in economic activity related to the supply of energy, including those operating in the oil, gas, coal, nuclear and renewable energy industries. The energy sector has a long and complex supply chain, and the underwriting class involves insuring operations at each stage of the supply chain. This includes insuring upstream operations, such as exploration and extraction, midstream operations such as distribution via pipelines, as well as downstream operations such as refinement, power generation (e.g. power plants, renewables), and storage. 
+    
+    The energy sector is positioned such that it could be exposed to high transition risk scenarios as well as high physical risk scenarios. The changing patterns in energy consumption are likely have to a negative impact on firms with no transition plans. Additionally, given energy firms very often operate in extremely risky environments, projected increases in weather variation are likely to lead to greater business interruption impacts. 
+    
+    This is likely to have a downstream impact on the associated underwriting class due to the products they offer. Typical energy insurance policies provide cover for: physical loss or damage to physical assets (property insurance); operational-specific energy firms (offshore, onshore, or renewable based operations); liability (including personal injuries, pollution, and other environmental damage); and business interruption. 
+  
+  transition:
+    high:
+      exec_description: |
+        In a Delayed transition scenario, there is a sudden, significant change in the global energy mix after 2030 towards renewables, driven by strong climate policies, decreasing the demand for insurance covering fossil-intensive energy operations, and increasing the demand of insurance covering renewable energy operations. 
+      always: |
+        In a Delayed Transition scenario, late climate policy delays the increase of carbon prices until 2030. Thereafter, implementation of strong climate policies to compensate for prior inaction causes carbon prices to increase sharply, leading to a change in the energy consumption pattern. This is likely to have a significant impact on the energy sector and the associated insurance products’ pricing, terms and conditions, and coverage that could generate fast-changing requirements and opportunities. 
+        
+        The projected decline in demand for carbon-intensive energy products could result in an associated decline in demand for insurance covering these energy forms. However, the demand for renewable and sustainable energy forms such as solar, wind, hydro, and biomass, is projected to significantly increase, thereby presenting an opportunity for these types of energy insurance products. 
+        
+        A delayed transition to a low-carbon economy poses greater levels of risks to the energy sector than an orderly transition. The negative impact to economic growth, and therefore energy demand, would be significantly higher under a disorderly transition, impacting its underwriting class as well. 
+  
+  
+      high_materiality: |
+        The transition risk passed through channels such as changes in carbon prices, consumer preferences, legislation, and national energy strategies could potentially result in one or more of the following impacts in the long-term:
+        
+        - **Reduced revenues:** for carbon-intensive energy firms. As carbon prices increase after 2030 and consumers switch to low carbon/electrified alternatives for residential and commercial use, the demand for fossil fuels decreases. In a Delayed transition risk scenario, the demand for coal, oil, and gas, reduces from ~490 EJ in 2025 to ~190 EJ in 2050, with coal almost being phased out between 2045 and 2050. This will have a knock-on impact on the demand for traditional insurance coverage products within the fossil fuel energy sector. 
+  
+        ![Delayed transition](energy_delayed_transition.png)
+  
+        **Source:**
+        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        
+        - **Stranded assets:** the implementation of strong climate policies after 2030 will significantly increase the risk of stranded assets for energy companies, though this risk will manifest differently for onshore and offshore companies. Onshore companies (e.g., coal mines, shale drillers) face immediate risks due to rapid policy shifts, phase-outs, and cheaper renewable alternatives, leading to asset write-downs. The decrease in end-user fossil fuel activities may lead insurers to face increased claims related to asset devaluation or business interruption.  Conversely, offshore companies (e.g., deepwater oil rigs, LNG operators) face a more gradual stranding risk due to continued, yet declining, demand from harder-to-abate sectors and slower paced regulations. In a delayed transition, post the transition, the demand for coal decreases significantly in the short-term negatively impacting onshore energy companies while the demand for oil and gas reduces in the long-term triggering asset write-offs for offshore energy companies. To mitigate such risks, insurers could conduct enhanced risk assessments to assess premium pricing or structure policies to incorporate phase-out clauses for high carbon assets.       - **Carbon taxes:** there would be no negative impact to energy companies up until 2030 after which the impact of transition risk on the energy company would depend on its position within the energy sector’s supply chain:
+           -	Carbon-intensive upstream and downstream energy companies will be subject to high carbon taxes, in conjunction with declining fossil-demand, leading to reduced profits and high stranded asset risk levels. This will have a knock-on impact on the underwriting class and to mitigate the risks, insurers could reassess premiums to ensure they are reflective of evolving carbon prices. Additionally, underwriters could apply exclusion policies to avoid covering high carbon assets or limit business interruption coverage provided due to collapse in demand.  
+           -	Downstream energy companies will be subject to carbon taxes, and methane regulations (e.g., methane leak penalties -  however to note, incentives to reduce methane emissions are not explicitly covered by the scenario). In conjunction with reduced oil/gas demand, existing pipelines may also become obsolete unless retrofitted with hydrogen blending. To mitigate such risks, insurers can structure policies to include “Hydrogen-Ready” clauses to ensure pipelines are adaptable for hydrogen transport or exclude covering operators without methane leakage detection and repair capabilities. 
+   
+        - **Demand fluctuations and price volatility:** caused by the macroeconomic downturn of a delayed transition in the short-term. Sudden, stringent climate policies after a period of inaction will result in economic slowdowns, reducing consumer demand and putting a downward pressure on prices. This will result in lower revenues in the short-term and have a knock-on impact on the demand for energy insurance products. 
+  
+        - **Reinsurance coverage:** primary insurers will face challenges in securing reinsurance coverage for risks associated with fossil fuels. This difficulty stems from reinsurers’ concerns about stranded asset risk and capital allocation challenges towards fossil fuel projects due to alignment with sustainability objectives. Reinsurers must carefully balance their portfolios to manage declining risks, reallocating capital away from fossil fuel projects and towards renewable energy initiatives. 
+  
+        - **Accurate forward-looking pricing:** insurers might struggle in accurately pricing forward-looking risks in a rapidly changing energy landscape. This is particularly relevant for emerging renewable energy technologies where there is limited historical data for risk modelling. 
+  
+        - **Growth of renewables:** insurers can capitalise on the growth of the renewable energy sector by designing specialised insurance solutions to address the unique risk transfer requirements of this emerging market. 
+        
+        In conclusion, under the Delayed transition scenario, the profitability of the energy underwriting class depends on the relevant companies proactively addressing transition risks. For example: 
+        
+        - Developing a clear transition plan based on industry standards such as the FIT from the UNEP FI to progress towards net zero and other sustainability objectives.
+  
+        - Ensuring underwriting rules and policies are aligned to corporate and industry wide net zero objectives without violating antitrust laws. For example, members of the NZIA faced intense regulatory pressure and scrutiny over potential antitrust violations, ultimately leading several members to withdraw from the alliance. 
+  
+        - Support policy holders’ transition to a low carbon economy by providing knowledge, resources, and tailored advice on transition risk and mitigation strategies. 
+  
+        - Developing new product offerings that could be specialised to renewable energy projects or tailored to emerging risks, such as carbon capture and storage or energy efficiency projects. 
+  
+    low:
+      exec_description: |
+        In the Orderly Transition scenarios, there is a significant change in the global energy mix towards renewable energy sources, resulting in a decrease in demand for insurance covering fossil-intensive energy operations and an increase in demand for insurance covering renewable energy operations. 
+      always: |
+        The changing pattern in energy consumption, driven by carbon prices, consumer demand, policy action, and national energy strategies, is likely to have a significant impact on the energy sector under an orderly transition. These changes are also likely to impact the pricing, terms and conditions, and coverage of associated insurance products. 
+        
+        Under the Orderly Transition scenarios, the energy underwriting class is likely to face two opposing forces. On the one hand, the projected decline in demand for carbon-intensive energy products could result in an associated decline in demand for insurance covering these energy forms. On the other hand, significant projected increases in the demand for renewable and sustainable energy forms such as solar, wind, hydro, and biomass, presents an opportunity for these types of energy insurance products. 
+  
+      high_materiality: |
+        The transition risk passed through channels such as changes in carbon prices, consumer preferences, legislation, and national energy strategies could potentially result in one or more of the following impacts: 
+  
+        - **Reduced revenues: for carbon-intensive energy firms. As carbon prices increase and consumers switch to low carbon / electrified alternatives for residential and commercial use, the demand for fossil fuels decreases. In orderly scenarios, the demand for coal, oil, and gas, reduces from ~490 EJ in 2025 to between ~70-230 EJ in 2050, with coal (almost) phased out between 2035 and 2045. This will have a knock-on impact on the demand for traditional insurance coverage products within the fossil fuel energy sector.
+  
+        ![Primary Energy](energy_net_zero_and_below_2c_orderly.png)
+        
+        ![Low demand](energy_net_zero_low_demand_orderly.png)
+  
+        **Source:**
+        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        
+        - **Stranded assets:** the implementation of climate policies will significantly increase the risk of stranded assets for energy companies, though this risk will manifest differently for onshore and offshore companies. Onshore companies (e.g., coal mines, shale drillers) face immediate risks due to rapid policy shifts, phase-outs, and cheaper renewable alternatives, leading to asset write-downs. The decrease in end-user fossil fuel activities may lead insurers to face increased claims related to asset devaluation or business interruption. These risks have already prompted several insurers to stop ensuring coal-based projects. Conversely, offshore companies (e.g., deepwater oil rigs, LNG operators) face a more gradual stranding risk due to continued, yet declining, demand from harder-to-abate sectors and slower paced regulations. To mitigate such risks, insurers could conduct enhanced risk assessments to assess premium pricing or structure policies to incorporate phase-out clauses for high carbon assets.
+  
+        - **Carbon taxes:** the impact of transition risk on the energy company would depend on its position within the energy sector’s supply chain:
+           -	Carbon-intensive upstream and downstream energy companies will be subject to high carbon taxes, in conjunction with declining fossil-demand, leading to reduced profits and high stranded asset levels. This will have a knock-on impact on the underwriting class and to mitigate the risks, insurers could reassess premiums to ensure they are reflective of evolving carbon prices. Additionally, underwriters could apply exclusion policies to avoid covering high carbon assets or limit business interruption coverage provided due to collapse in demand.  
+           -	Downstream energy companies will be subject to carbon taxes, and methane regulations (e.g., methane leak penalties - however to note, incentives to reduce methane emissions are not explicitly covered by the scenario). In conjunction with reduced oil/gas demand, existing pipelines may also become obsolete unless retrofitted with hydrogen blending. To mitigate such risks, insurers can structure policies to include “Hydrogen-Ready” clauses to ensure pipelines are adaptable for hydrogen transport or exclude covering operators without methane leakage detection and repair capabilities. 
+  
+        - **Reinsurance coverage:** primary insurers will face challenges in securing reinsurance coverage for risks associated with fossil fuels. This difficulty stems from reinsurers’ concerns about stranded asset risk and capital allocation challenges towards fossil fuel projects due to alignment with sustainability objectives. Reinsurers must carefully balance their portfolios to manage declining risks, reallocating capital away from fossil fuel projects and towards renewable energy initiatives. 
+  
+        - **Accurate forward-looking pricing:** insurers might struggle with accurately pricing forward-looking risks in a rapidly changing energy landscape. This is particularly relevant for emerging renewable energy technologies where there is limited historical data for risk modelling. 
+  
+        - **Growth of renewables:** insurers can capitalise on the growth of the renewable energy sector by designing specialised insurance solutions to address the unique risk transfer requirements of this emerging market.
+        
+        In conclusion, under orderly transition scenarios, the profitability of the energy underwriting class depends on the relevant companies proactively addressing transition risks. For example: 
+  
+        -	Developing a clear transition plan based on industry standards such as the FIT from the UNEP FI to progress towards net zero and other sustainability objectives.
+  
+        -	Ensuring underwriting rules and policies are aligned to corporate and industry wide net zero objectives without violating antitrust laws. For example, members of the NZIA faced intense regulatory pressure and scrutiny over potential antitrust violations, ultimately leading several members to withdraw from the alliance. 
+   
+        -	Support policy holders’ transition to a low carbon economy by providing knowledge, resources, and tailored advice on transition risk and mitigation strategies.
+   
+        -	Developing new product offerings that could be tailored to renewable energy projects or to emerging risks, such as carbon capture and storage or energy efficiency projects. 
+  
+  
+  physical:
+    high:
+      exec_description: |
+        In a high physical risk scenario, the projected increase in weather variations resulting in damage and disruption could significantly impact the profitability of the energy sector and have downstream impacts to its associated underwriting class. 
+      always: |
+        The energy sector’s profits face threats from both chronic and acute physical risks. Rising sea levels and temperatures (chronic risks) and intensifying weather events such as hurricanes, wildfires, and flooding (acute risks) could damage infrastructure and cause significant disruptions to the energy sector. 
+        
+        The disruptions within the energy sector could impact profitability and have downstream impacts to the energy underwriting class. The physical effects of climate change could result in increased claims and increased premiums, potentially resulting in some energy underwriting risks becoming either uninsurable or unaffordable. 
+        
+        Under high physical risks scenario, there are adverse impacts on global GDP from physical risks which vary in line with the different temperatures projected for each scenario. The negative impact to economic growth could negatively impact demand for the energy sector and its associated underwriting class
+  
+      high_materiality: |
+        In high physical risk scenarios, short-term risks (i.e., acute physical risks) as well as long-term risks (i.e., chronic physical risks) could potentially result in one or more of the following impacts to the energy sector. 
+  
+        **Acute impacts**
+        
+        - **Frequent hurricanes, flooding, wildfires, and extreme weather events:** could cause damage to infrastructure and significant disruption to the energy sector. Although the materiality of these risks will vary based on geography; energy infrastructure is typically located in environments suspectable to physical risks. Hence, projected increase in weather variations could severely impact the energy sector. For example, Hurricane Ida caused massive disruption to the U.S. energy sector, particularly in the Gulf Coast region. As a result of this hurricane, 96% of crude oil production and 94% of natural gas production in the U.S. federally administered areas of the Gulf of Mexico were shut in. Additionally, at least 9 refineries shut down or reduced operations during that time.
+        
+        - **Frequent extreme weather events can lead to reduced wind energy output:** For example, extreme hurricanes, cyclones, and storms can cause significant damage to wind turbine blades, towers, and foundations, lowering output and revenue, and increasing operating costs. 
+        
+        - **Extreme precipitation and flooding can lead to reduction in the output of hydropower:** Intense rainfall events can damage dam infrastructure, cause reservoirs to overflow, and disrupt operations. 
+        
+        - **Frequent hailstorms:** can damage solar panels, reducing efficiency and increasing operating costs for energy firms. Additionally, events such as wildfires can cause thermal power plants to temporarily cease operations. 
+        
+        **Chronic impacts**
+  
+        - **Rising sea levels:** could cause disruption to energy infrastructure located in coastal areas that are vulnerable to flooding and erosion. This effect is compounded with storm surges and high tides leading to temporary / permanent closure of power plants. 
+  
+        - **Rising mean temperatures:** could lead to reduced energy efficiency for energy companies. The majority of thermal power plants use water for cooling, with higher water temperatures reducing cooling efficiency. Additionally, under high physical risk scenarios, the demand for solar energy is projected to increase with no transition away from fossil fuels. Higher temperatures also negatively impact the efficiency of solar panels, leading to lower energy output. 
+  
+        - **Rising mean temperatures:** could lead to water stress / long-term droughts, which could lead to competition between energy companies for water resources, and potentially result in increased environmental regulation focusing on protecting water supply and quality. This could add costs for water-intensive energy industries, such as fossil fuel and nuclear, which use large quantities of water in their cooling processes. Renewables typically use less water so would not be as impacted.
+        
+        In conjunction with one another, acute and chronic physical risks have severe impacts on the energy sector and the underlying impact on companies depend on its position within the energy sector’s value chain:
+  
+        -	Upstream energy companies face acute and chronic impacts under high physical risk scenarios. Frequent hurricanes, flooding, and rising sea-levels threatens offshore and onshore energy operation, causing property damage and operational shutdowns such as damage to offshore oil rigs, or flooding of well sites. 
+  
+        -	Midstream energy companies face risks from landslides, permafrost melting, flooding, and wildfires. These hazards might disrupt pipeline integrity, damage storage facilities, and cause supply chain delays, causing an increase in property damage and business interruptions. 
+  
+        -	Downstream energy companies such as refineries and distribution terminals are subject to risks from extreme weather events, and rising sea-levels, leading to property damage and business interruptions. 
+        
+        Hence, there would be significant disruption to the energy sector, resulting in an increased number of claims and premiums, leading to energy underwriting risks becoming uninsurable and unaffordable. 
+        
+        However, there are many actions that the energy underwriting class can take to mitigate climate change and reduce the physical risks. For example: 
+        
+        -	Ensuring underwriting rules and policies are aligned to corporate and industry wide Net Zero objectives.
+  
+        -	Developing new product offerings, with incentives for firms with more climate resilient infrastructure, robust design and construction standards, and location of new facility with lower risk of damage caused by flooding. 
+   
+        -	Encouraging policy holder’s approaches to risk mitigation and transition strategies through increased knowledge transfer and remediation advisories. These could include investing in more resilient infrastructure, robust design and construction standards, and location of new facility with lower risk of damage caused by flooding.
+  
+  transition_physical:
+    high:
+      exec_description: |
+        In a high physical and transition risk scenario, delayed and divergent climate policies globally in conjunction with increased weather variations causes significant disruption to the energy sector, having severe downstream impacts to its associated underwriting class. 
+      always: |
+        In a ‘too little too late scenario’, delayed and divergent responses on climate policies amongst countries globally leads to a lack of global coordination in transition to a low-carbon economy. Overall carbon prices are low because not all countries implement effective carbon pricing mechanisms. This results in no significant change in the global energy mix of the energy sector. However, despite the lack of global change, some individual countries with net-zero targets experience a change in their energy mix towards cleaner energy sources, driven by strong domestic climate policies. 
+        
+        However, such a scenario still poses a transition risk element especially for energy firms that operate across borders. Due to the lack of consistency in climate policies, regions with strong climate policies might impose tariffs on energy imports from regions with lower levels of climate policies, which could disadvantage energy exporters. Additionally, the demand for fossil fuels might decline in regions with strong climate policies but remain strong in regions with low climate policies. This could have downstream impacts on asset valuation and thus, on number of energy insurance claims. 
+        
+        Additionally, such a scenario assumes higher physical risks, both acute and chronic impacts due to rising emission levels. Rising sea levels and temperatures (chronic risks) and intensifying weather events such as hurricanes, wildfires, and flooding (acute risks) could damage infrastructure and cause business disruptions to the energy sector. This could have downstream impacts to the energy underwriting class resulting in increased claims and increased premiums, potentially resulting in some energy underwriting risks becoming either uninsurable or unaffordable.
+  
+      high_materiality: |
+        The transition risk passed through channels such as delayed and divergent climate policies amongst different countries globally could potentially result in one or more of the following impacts: 
+        
+        - **Regional divergence in demand:** for different forms of energy leading to regional divergences in revenues. In advanced economies with net zero targets and strong climate policies, demand for fossil fuels is projected to decrease. However, in emerging economies with weak climate policies, demand for fossil fuels remain stable or grow in the short-medium term. The regional divergence in fossil demand will have a knock-on impact on the demand for traditional insurance coverage products across different regions.
+  
+        ![Fragmented world](energy_fragmented_world.png)
+  
+        **Source:**
+        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+          
+        - **Stranded assets:** the divergence in climate policies will lead to a divergence in the risk of stranded assets of energy companies operating across regions. In emerging economies with no net zero targets, weak climate policies would result in no risk in stranded assets of underlying energy companies. Conversely, in advanced economies, strong climate policies aimed at decarbonisation and phasing out of fossil fuels would result in an increased risk of stranded assets. Onshore companies (e.g., coal mines, shale drillers) face immediate risks due to rapid policy shifts, phase-outs, and cheaper renewable alternatives, leading to asset write-downs. The decrease in end-user fossil fuel activities may lead insurers to face increased claims related to asset devaluation or business interruption. Offshore companies (e.g., deepwater oil rigs, LNG operators) face a more gradual stranding risk due to continued, yet declining, demand from harder-to-abate sectors and slower paced regulations. At a global level, under a fragmented world, the scenario assumes a decrease in coal and oil demand over the long-term. This decrease in fossil fuel related energy activities may lead insurers to face claims related to asset devaluation or business interruption, particularly from onshore energy operators.
+        
+        - **Carbon taxes:** the impact of transition risk will depend on the energy companies position within the energy sector’s supply chain and its regional presence:
+           - Carbon-intensive upstream and downstream energy companies located in advanced economies with net zero targets will be subject to high carbon taxes, in conjunction with declining fossil-demand, leading to reduced profits and high stranded asset risk levels. This will have a knock-on impact on the underwriting class and to mitigate such risks, insurers could reassess premiums to ensure they are reflective of evolving carbon prices. Underwriters could also apply exclusion policies to avoid covering high carbon assets or limit business interruption coverage provided due to collapse in demand. 
+           -	Downstream energy companies located in advanced economies will be subject to carbon taxes, and methane regulations (e.g., methane leak penalties -  however to note, incentives to reduce methane emissions are not explicitly covered by the scenario). In conjunction with reduced oil/gas demand, existing pipelines may also become obsolete unless retrofitted with hydrogen blending. To mitigate such risks, insurers can structure policies to include “Hydrogen-Ready” clauses to ensure pipelines are adaptable for hydrogen transport or exclude covering operators without methane leakage detection and repair capabilities. 
+           -	Carbon-intensive upstream, midstream, and downstream energy companies located in emerging economies with weak climate policies will not be negatively impacted given the continued demand for fossil fuels and the prevalent low carbon prices in such regions under the scenario. 
+  
+        - **Reinsurance coverage:** primary insurers will face challenges in securing reinsurance coverage for risks associated with coal and oil projects. This difficulty stems from reinsurers’ concerns about stranded asset risk and capital allocation challenges towards fossil fuel projects due to alignment with sustainability objectives. Reinsurers must carefully balance their portfolios to manage declining risks, reallocating capital towards renewable energy initiatives, especially in advanced economies with net zero targets. 
+   
+        - **Accurate forward-looking pricing:** insurers might struggle in accurately pricing forward-looking risks in a rapidly changing energy landscape. This is particularly relevant in an environment where different regions have different levels of climate actions, leading to differing transition risk levels. 
+   
+        - **Growth of renewables:** given the projected growth of solar energy globally under such a scenario, insurers have an opportunity to develop specialised insurance solutions to address the unique risk transfer requirements of this emerging market. 
+   
+        Additionally, high levels of acute and chronic physical risks under such a scenario could potentially result in one or more of the following impacts to the energy sector globally. 
+        
+        **Acute impacts**
+        
+        - **Frequent hurricanes, flooding, wildfires, and extreme weather events:** could cause damage to infrastructure and significant disruption to the sector. Although the materiality of these risks will vary based on geography, energy infrastructure is typically located in environments suspectable to physical risks. Hence, projected increase in weather variations could severely impact the energy sector. For example, Hurricane Ida caused massive disruptions to the U.S. energy sector, particularly in the Gulf Coast region. As a result of this hurricane, 96% of crude oil production and 94% of natural gas production in the U.S. federally administered areas of the Gulf of Mexico were shut in. Additionally, at least 9 refineries shut down or reduced operations during this event.
+  
+        - **Frequent extreme weather events can lead to reduced wind energy output:** for example, extreme hurricanes, cyclones, and storms can cause significant damage to wind turbine blades, towers, and foundations, lowering output and revenue, and increasing operating costs. 
+  
+        - **Extreme precipitation and flooding can lead to reduction in the output of hydropower:** intense rainfall events can damage dam infrastructure, overflow reservoir, and disrupt operations. 
+  
+        - **Frequent hailstorms:** can damage solar panels, reducing efficiency and increasing operating costs for energy firms. Additionally, events such as wildfires can cause thermal power plants to temporarily cease operations. 
+        
+        **Chronic impacts**
+        
+        - **Rising sea levels:** could cause disruption to energy infrastructure located in coastal areas that are vulnerable to flooding and erosion. This effect is compounded with storm surges and high tides leading to temporary / permanent closure of power plants. 
+  
+        - **Rising mean temperatures:** could lead to reduced energy efficiency for energy companies. The majority of thermal power plants use water for cooling, with higher water temperatures reducing cooling efficiency. Higher temperatures also negatively impact the efficiency of solar panels, leading to lower energy output. 
+   
+        - **Rising mean temperatures could lead to water stress / long-term droughts:** which could lead to competition between energy companies for water resources, and potentially result in increased environmental regulation focusing on protecting water supply and quality. This could add costs for water-intensive energy industries, such as fossil fuel and nuclear, which use large quantities of water in their cooling processes. Renewables typically use less water so would not be as impacted.
+        
+        In conjunction with one another, acute and chronic physical risks have severe impacts on the energy sector and the underlying impacts on companies depend on their position within the energy sector’s value chain: 
+        
+        -	Upstream energy companies face acute and chronic impacts under high physical risk scenarios. Frequent hurricanes, flooding, and rising sea-levels threatens offshore and onshore energy operation, causing property damage and operational shutdowns such as damage to offshore oil rigs, or flooding of well sites. 
+        -	Midstream energy companies face risks from landslides, permafrost melting, flooding, and wildfires. These hazards might disrupt pipeline integrity, damage storage facilities, and cause supply chain delays, causing an increase in property damage and disruption within the sector. 
+        -	Downstream energy companies such as refineries and distribution terminals are subject to risks from extreme weather events, and rising sea-levels, leading to property damage and disruption within the sector. 
+        
+        Hence, there would be significant disruptions to the energy sector, resulting in an increased number of claims and premiums, leading to some energy underwriting risks in some regions becoming uninsurable and unaffordable. In conclusion, under a fragmented world scenario, the profitability of the energy underwriting class depends on the relevant companies proactively addressing both transition and physical risks. 
+        
+        For example, transition risks can be addressed by:
+        
+        -	Developing a clear transition plan based on industry standards such as the FIT from the UNEP FI to progress towards net zero and other sustainability objectives.
+    
+        -	Ensuring underwriting rules and policies are aligned to corporate and industry wide net zero objectives without violating antitrust laws. For example, members of the NZIA faced intense regulatory pressure and scrutiny over potential antitrust violations, ultimately leading several members to withdraw from the alliance. 
+    
+        -	Support policy holders’ transition to a low carbon economy by providing knowledge, resources, and tailored advice on transition risk and mitigation strategies. 
+     
+        -	Developing new product offerings that could be tailored to renewable energy projects or to emerging risks, such as carbon capture and storage or energy efficiency projects.
+        
+        Whereas physical risk can be mitigated by: 
+  
+        -	Developing new product offerings, with incentives for firms with more climate resilient infrastructure, robust design and construction standards, and location of new facility with lower risk of damage caused by flooding. 
+     
+        -	Encouraging policy holder’s approaches to risk mitigation and transition strategies through increased knowledge transfer and remediation advisories. These could include investing in more resilient infrastructure, robust design and construction standards, and location of new facility with lower risk of damage caused by flooding.
+  
+  
+  
+  
+  references: |
+    - [Energy Insurance](https://www.chubb.com/uk-en/chubb-global-markets/energy-insurance.html )
+  
+    - [Coping with climate change risks and opportunities for insurers](https://www.cii.co.uk/media/4043851/ch12_energy.pdf )
+  
+    - [World Water Day --- Which industries consume the most water and why should we care?](https://2030.builders/articles/world-water-day/)
+  
+    - [E.ON's On course for net zero](https://www.eon.com/content/dam/eon/eon-com/eon-com-assets/documents/sustainability/en/tcfd/EON_2021_On_course_for_net_zero.pdf)

@@ -9,7 +9,7 @@ dash.register_page(__name__, path='/purpose/introduction-to-the-tool')
 def layout():
 
     # define paths
-    YML_FOLDER = "../../../assets/page_contents/section/purpose"
+    YML_FOLDER = "../../assets/page_contents/section/purpose"
     YML_NAME = "introduction_to_the_tool.yml"
     FILE_PATH = Path(__file__).parent
     YML_PATH = FILE_PATH.joinpath(YML_FOLDER).joinpath(YML_NAME).resolve()
