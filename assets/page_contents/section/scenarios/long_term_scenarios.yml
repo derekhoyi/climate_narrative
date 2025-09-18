@@ -23,6 +23,7 @@
          - **Net Zero 2050** is an ambitious scenario that limits global warming to 1.5°C through stringent climate policies and 
          innovation, reaching global Net Zero CO2 emissions around 2050. This scenario assumes that ambitious climate policies and 
          technological shift are introduced immediately and forcefully impact the economy. 
+         
          - **Below 2°C** gradually increases the stringency of climate policies, giving a 67% chance of limiting global warming to
          below 2°C.
 
@@ -33,7 +34,7 @@
          temperature outcome. 
 
 3:  
-   name: Disorderly scenarios
+   name: Disorderly scenario
    description: |
       # Long-Term Scenarios
       ## Disorderly scenario (Delayed Transition)
@@ -42,11 +43,11 @@
       subsequently needed to limit warming to below 2°C. The level of commitments of countries depend on currently implemented 
       policies, leading to heterogeneity at the global level.
 
-5:  
-   name: Hot House World scenario
+4:  
+   name: Hot House World scenarios
    description: |
       # Long-Term Scenarios
-      ## Hot House World scenario
+      ## Hot House World scenarios
 
       The Hot house world scenarios assume that some climate policies are implemented in some jurisdictions, but globally efforts are
       insufficient to halt significant global warming, leading to high physical risk.
@@ -57,7 +58,7 @@
          - **Current Policies** assumes that only currently implemented policies are preserved, leading to high physical risks. 
          Emissions grow leading to a global temperature rise of around 3°C. Investments allocation and energy mix do not change.
 
-6:  
+5:  
    name: Too-little-too-late scenario
    description: |
       # Long-Term Scenarios

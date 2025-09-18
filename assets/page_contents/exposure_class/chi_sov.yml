@@ -106,7 +106,7 @@ transition:
       
       **Source:**
       
-      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} 
+      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) 
 
       Based on data from IEA (see below graph), in 2023 the renewables share of power in China 
       is characterized by a mix where coal remains dominant at 62% making it one of the most 
@@ -117,7 +117,7 @@ transition:
        ![Sources of Electricity Generation](sov_china_electricity_generation.png)
 
       **Source:**
-      [IEA 2024; Evolution of electricity generation in China since 2000](https://www.iea.org/countries/china/energy-mix){target="\_blank"} License: CC By 4.0.
+      [IEA 2024; Evolution of electricity generation in China since 2000](https://www.iea.org/countries/china/energy-mix) License: CC By 4.0.
       
       China's latest renewable energy plan, unveiled in October 2024, aims to significantly boost 
       renewable energy consumption. This represents a strategic shift from merely expanding capacity 
@@ -151,7 +151,7 @@ transition:
       
       **Source:**
       
-      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} 
+      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) 
 
       **Downgrading of credit ratings effect**
 
@@ -219,7 +219,7 @@ transition:
       
       **Source:**
       
-      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} 
+      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) 
 
       Based on data from IEA (see below graph), in 2023 the renewables share of power in China is characterized 
       by a mix where coal remains dominant at 62% making it one of the most coal-reliant power sectors out of 
@@ -230,7 +230,7 @@ transition:
        ![Sources of Electricity Generation](sov_china_electricity_generation.png)
 
       **Source:**
-      [IEA 2024; Evolution of electricity generation in China since 2000](https://www.iea.org/countries/china/energy-mix){target="\_blank"} License: CC By 4.0.
+      [IEA 2024; Evolution of electricity generation in China since 2000](https://www.iea.org/countries/china/energy-mix) License: CC By 4.0.
 
       China's latest renewable energy plan, unveiled in October 2024, aims to significantly boost 
       renewable energy consumption. This represents a strategic shift from merely expanding capacity 
@@ -266,7 +266,7 @@ transition:
       
       **Source:**
       
-      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} 
+      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) 
 
       **Downgrading of credit ratings**
 
@@ -337,7 +337,7 @@ physical:
       
       **Source:**
       
-      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} For NGFS “Current Policies”, there are no estimated GDP loses from transition risk, so a combined is not available. Physical damages have been plotted but this causes an underestimate of the true damages to the GDP for the “Nationally Determined Contributions (NDCs)” scenario and for the existing transition risks facing the economy in a “Current Policies” scenario.
+      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) For NGFS “Current Policies”, there are no estimated GDP loses from transition risk, so a combined is not available. Physical damages have been plotted but this causes an underestimate of the true damages to the GDP for the “Nationally Determined Contributions (NDCs)” scenario and for the existing transition risks facing the economy in a “Current Policies” scenario.
       
       Opportunities could arise from mitigation actions, including climate resilience 
       investments (e.g. to cope with flooding risks that would propel the growth of economic 
@@ -358,15 +358,6 @@ physical:
       the Chinese government by a debt range of roughly US$12.92–19.38bn. This significant adjustment 
       reflects the increased vulnerability from widespread infrastructure damage, declining productivity, 
       and higher adaptation costs, all of which contribute to elevated borrowing costs.
-
-  low:
-    exec_description: |
-      n/a
-    always: |
-      n/a.
-
-    high_materiality: |
-      n/a.
 
 transition_physical:
   high:
@@ -412,6 +403,7 @@ transition_physical:
       impacting employment and economic stability. Additionally, the lack of cohesive policy frameworks may hinder 
       the effectiveness of climate adaptation and mitigation efforts, further exacerbating the risks associated 
       with climate change.
+      
     high_materiality: |
       There would be high transition and physical risks from a too-little-too-late scenario as 
       a result of the delayed (“too late”) implementation and ultimately diverging in their mitigation stringency, 
@@ -448,7 +440,7 @@ transition_physical:
       
       **Source:**
       
-      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} 
+      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) 
 
       **GDP growth effect**
 
@@ -477,7 +469,7 @@ transition_physical:
       
       **Source:**
       
-      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+      [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
 
       Opportunities could arise from mitigation actions, including climate resilience investments 
       (e.g. to cope with flooding risks that would propel the growth of economic sectors providing 
@@ -520,10 +512,6 @@ transition_physical:
         highlight significant inequalities and internal tension, with some areas facing higher 
         unemployment and lower incomes, which could be worsened by uneven climate action.
 
-
-
-
 appendix: |
   ![20 Notch Rating Scale](Sovereign_Rating_Scale.png)
 
-  **Source:**: 20 Notch Rating Scale

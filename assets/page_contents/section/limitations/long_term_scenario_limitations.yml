@@ -32,7 +32,7 @@ description: |
     – ahead of NGFS scenarios by 5 years.
 
     - NiGEM, used for understanding the macroeconomic impacts as a response to the different transition pathways, is a 
-    Single-Agent General Equilibrium Model Global Semi-structural Macro-econometric Policy Model. These models excel in 
+    Global Semi-structural Macro-econometric Policy Model. These models excel in 
     understanding the wider macroeconomic response, but are not designed to model intra-group competition, inequalities, or 
     variation, and extra caution is advised in examining individual companies or sovereigns modelled within a group.
 
@@ -42,9 +42,10 @@ description: |
     production).
 
     - They do not fully account for physical impacts, including tipping points and compound risks. For example, acute impacts have 
-    not been refreshed since Phase IV and certain relevant and material acute physical risks are not comprehensively remain 
+    not been refreshed since Phase IV and certain relevant and material acute physical risks remain 
     un-modelled as only four acute physical impacts are modelled using one transmission channel (flood and cyclones through 
-    capital asset damages; droughts through crop yield losses; heatwaves through labour productivity decline).
+    capital asset damages; droughts through crop yield losses; heatwaves through labour productivity decline). Please refer to [CFRF Seassion 5 outputs](https://www.fca.org.uk/cfrf)
+    namely the UK Physical Risk Benchmarking Exercise and the 2025 CFRF Adaptation paper for more information. 
 
     - The societal impacts, such as climate-induced migration, are not thoroughly considered and are assumed to be the same across
     these scenarios.
@@ -56,8 +57,7 @@ description: |
     - There is significant uncertainty about future technology developments and government policy changes, which can affect the 
     accuracy of the scenarios.
 
-    - The climate scenarios focus on the most likely and plausible range of outcomes for given emissions or temperature pathways 
-    rather than the tail events or extreme outcomes such as tipping pointswhere there is an 18% change of equilibrium climate 
-    sensitivity being greater than 4.5°C. For further information please see the paper produced by the Institute of Actuaries 
-    Climate Scorpion – the sting is in the tail Introducing planetary solvency.
+    - The climate scenarios focus on a plausible range of outcomes for given emissions or temperature pathways 
+    rather than the tail events or extreme outcomes such as tipping points. For further information please see the paper produced by the Institute of Actuaries 
+    [Climate Scorpion – the sting is in the tail Introducing planetary solvency](https://actuaries.org.uk/media/g1qevrfa/climate-scorpion.pdf).
 

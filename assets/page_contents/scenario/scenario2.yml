@@ -30,17 +30,21 @@ exec_description: |
   ![NGFS scenarios Features](NGFS_scenarios_Features_Disorderly.png)
 
   **Source:**
-  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"} 
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf)
   
   Note: The NGFS Delayed transition scenario has some limitations that 
   should be carefully considered, as they could lead to uncertainties in the projections. For example: 
 
    - Simplified assumptions about future policies, technologies, and economic developments.
+   
    - Incomplete coverage of physical impacts like tipping points and compound risks.
+   
    - Limited consideration of societal impacts, such as climate-induced migration.
+   
    - Uncertainty about future technology and government policy changes, namely the scenarios 
    account for political and economic conditions becoming increasingly disorderly, which in 
    turn has an impact on future transition pathways.
+   
    - Incomplete capture of financial sector dynamics and responses.
 
    NGFS risk assessments may require complementary assessments to align with users’ specific objectives. 
@@ -58,7 +62,7 @@ description: |
   ![NGFS scenarios Framework](NGFS_scenarios_Framework_Disorderly.png)
 
   **Source:**
-  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"} 
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf)
 
   The NGFS have provided one Disorderly scenario:
 
@@ -75,7 +79,7 @@ description: |
   ![CO2 emissions](scenarios_disorderly_emissions_co2.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
 
   In the Delayed transition scenario, late policy reaction means that a ‘Business-as-Usual’ 
   approach to decarbonisation occurs between now and 2030, followed by a sharp increase in 
@@ -88,7 +92,7 @@ description: |
   ![Carbon price](scenarios_disorderly_price_carbon.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Carbon prices are weighted global averages.
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Carbon prices are weighted global averages.
 
   Government revenues from carbon tax increase in line with the carbon price, until 2035 
   when emissions are reduced to a degree that this offsets carbon price increase. In the 
@@ -99,7 +103,7 @@ description: |
   ![Carbon tax revenue](scenarios_disorderly_revenue.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
 
   In many countries, the implementation of carbon prices in the transition scenarios 
   tends to raise energy costs in the short-term, initially weighing down on prices 
@@ -116,17 +120,17 @@ description: |
   ![Inflation rate](scenarios_disorderly_inflation.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
   
   ![Unemployment rate](scenarios_disorderly_unemployment.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
   
   ![Interest rate](scenarios_disorderly_interest.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
   
   The investments in energy efficiency and low carbon technologies are projected to 
   increase in the Delayed transition scenario. Overall, firms could be required to 
@@ -142,12 +146,12 @@ description: |
   ![Energy Efficiency Investment](scenarios_disorderly_investment_energy_efficiency.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
   ![Low Carbon Investment](scenarios_disorderly_investment_low_carbon.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}  
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)  
   
   Observed climate change has already increased global mean temperatures above 1.1&deg;C, 
   compared to pre-industrial levels, and both the global land area and the global 
@@ -164,7 +168,7 @@ description: |
   ![Global mean temp rise](scenarios_disorderly_temperature.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
   These changes could lead to chronic changes in living conditions affecting health, 
   labour productivity, agriculture, ecosystems, and sea-level rise. It can also further 
@@ -179,7 +183,7 @@ description: |
   ![Labour Productivity](scenarios_disorderly_labour.png)
 
   **Source:** 
-  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
   
   * The annual economic damages from cyclones are also projected to increase, 
   but to a lesser extent; peaking at ~8% in 2030 and ~16% in 2050 which is 
@@ -188,7 +192,7 @@ description: |
   ![Tropical Cyclone Damage](scenarios_disorderly_damages_cyclones.png)
 
   **Source:** 
-  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
   
   In this scenario the total cumulative GDP impact from chronic physical and 
   transition effects relative to a baseline with no transition or physical risks 
@@ -204,7 +208,7 @@ description: |
   ![GDP](scenarios_disorderly_gdp.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   NiGEM NGFS v1.24.2 is not available for Low Demand scenario; Only chronic physical data available (not acute physical).
 
   Overall, the Delayed transition scenario leaves a limited timeframe for countries, 
