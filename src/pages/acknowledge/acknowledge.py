@@ -8,7 +8,7 @@ dash.register_page(__name__, path='/acknowledge')
 
 def layout():
     # define paths
-    YML_FOLDER = "../../../assets/page_contents/section"
+    YML_FOLDER = "../../assets/page_contents/section"
     YML_NAME = "acknowledgements.yml"
     FILE_PATH = Path(__file__).parent
     YML_PATH = FILE_PATH.joinpath(YML_FOLDER).joinpath(YML_NAME).resolve()

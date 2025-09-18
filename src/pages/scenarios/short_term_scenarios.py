@@ -55,7 +55,7 @@ def build_sector_tabs(sector_desc):
 
 def layout():
     # define paths
-    YML_FOLDER = "../../../assets/page_contents/section/scenarios"
+    YML_FOLDER = "../../assets/page_contents/section/scenarios"
     YML_NAME = "short_term_scenarios.yml"
     FILE_PATH = Path(__file__).parent
     YML_PATH = FILE_PATH.joinpath(YML_FOLDER).joinpath(YML_NAME).resolve()

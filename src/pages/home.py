@@ -45,7 +45,7 @@ def layout():
         # Hero image
         html.Div(
             html.Img(
-                src=Image.open("assets/images/CFRF image cover.jpg"),
+                src="assets/images/CFRF image cover.jpg",
                 style={"display": "block", "marginLeft": "auto", "marginRight": "auto", "height": "auto", "width": "100%",},
                 alt="CFRF Logo"
             ),

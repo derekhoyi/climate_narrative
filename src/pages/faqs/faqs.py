@@ -10,7 +10,7 @@ dash.register_page(__name__, path='/faqs')
 
 def layout():
     # Define paths
-    YML_FOLDER = "../../../assets/page_contents/section/faqs"
+    YML_FOLDER = "../../assets/page_contents/section/faqs"
     FILE_PATH = Path(__file__).parent
     YML_DIR = FILE_PATH.joinpath(YML_FOLDER).resolve()
 

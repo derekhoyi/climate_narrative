@@ -10,7 +10,7 @@ dash.register_page(__name__, path='/limitations')
 
 def layout():
     # define paths
-    YML_FOLDER = "../../../assets/page_contents/section/limitations"
+    YML_FOLDER = "../../assets/page_contents/section/limitations"
     FILE_PATH = Path(__file__).parent
     YML_DIR = FILE_PATH.joinpath(YML_FOLDER).resolve()
 

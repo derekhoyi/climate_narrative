@@ -3,3 +3,5 @@ dash_bootstrap_components==2.0.4
 pandas==2.3.2
 plotly==6.2.0
 PyYAML==6.0.2
+pillow==11.3.0
+pydash==8.0.5
