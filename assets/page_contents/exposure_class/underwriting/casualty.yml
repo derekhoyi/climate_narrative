@@ -1,7 +1,8 @@
-18:
+2:
   name: Casualty Underwriting Class
   test_report_position: 18
   description: |
+    # Casualty Underwriting
     The casualty underwriting class is a broad insurance category that protects individuals, employers, and businesses against loss of property, damage and various other liabilities.  This typically encompasses motor underwriting, liability coverage and protection against theft. In this section, motor underwriting, life protection and health are out of scope as they are covered separately or in other classes. As climate change leads to an increase in the frequency and severity of extreme weather events, liability risks for insurance firms are expected to rise. Parties suffering loss and damage due to climate-related incidents may seek to recover their losses from those they believe are responsible. Successful claims could result in those parties passing on some or all of the costs to insurance firms under third-party liability contracts, such as professional indemnity or directors’ and officers’ insurance. This means that casualty insurers are directly impacted by third-party claims arising from climate litigation, as well as indirectly affected through claims related to property damage or bodily injury caused by extreme weather events. Recent regulatory developments emphasize the importance of understanding and managing these climate-related liability risks (e.g. PRA Climate Change Adaptation report 2025).
   transition:
     high:

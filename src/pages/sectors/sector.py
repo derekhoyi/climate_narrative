@@ -6,11 +6,11 @@ import json
 from pathlib import Path
 import re
 
-dash.register_page(__name__, path='/limitations')
+dash.register_page(__name__, path='/sectors/sector')
 
 def layout():
     # define paths
-    YML_FOLDER = "../../../assets/page_contents/section/limitations"
+    YML_FOLDER = "../../../assets/page_contents/exposure_class/sector"
     FILE_PATH = Path(__file__).parent
     YML_DIR = FILE_PATH.joinpath(YML_FOLDER).resolve()
 
@@ -22,17 +22,17 @@ def layout():
     for yml_file in YML_DIR.glob("*.yml"):
         with open(yml_file, encoding="utf-8") as f:
             data = yaml.safe_load(f)
-            # Merge or append limitation sections; assumes each file is a dict of limitation sections
+            # Merge or append sectors; assumes each file is a dict of sectors
             yml.update(data)
 
     # create buttons
     button_list = []
     for k, v in yml.items():
-        clean_name = re.sub(r'limitations', '', v['name'], flags=re.IGNORECASE).strip()
+        clean_name = re.sub(r'class|sector', '', v['name'], flags=re.IGNORECASE).strip()
         button_list.append(
             dbc.Button(
                 clean_name,
-                id={'type': 'limitations-btn', 'index': k},
+                id={'type': 'sector1-btn', 'index': k},
                 class_name="btn-light text-start",
                 n_clicks=0,
                 active=(k == DEFAULT_INDEX)  # set default active button
@@ -64,7 +64,7 @@ def layout():
                     dbc.Col(
                         html.Div(
                             default_desc,
-                            id='limitations-description'
+                            id='sector1-description'
                         )
                     ),
                 ]
@@ -77,13 +77,13 @@ def layout():
 
 # display sector
 @callback(
-    [Output('limitations-description', 'children'),
-     Output({'type': 'limitations-btn', 'index': ALL}, 'active')],
-    Input({'type': 'limitations-btn', 'index': ALL}, 'n_clicks'),
+    [Output('sector1-description', 'children'),
+     Output({'type': 'sector1-btn', 'index': ALL}, 'active')],
+    Input({'type': 'sector1-btn', 'index': ALL}, 'n_clicks'),
     State('yml-store', 'data'),
     prevent_initial_call=True
 )
-def display_sector(n_clicks, yml_data):
+def display_sector1(n_clicks, yml_data):
 
     # load yml
     yml = json.loads(yml_data)

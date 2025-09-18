@@ -43,6 +43,7 @@ def build_sector_tabs(sector_desc):
                     tabs,
                     id="sector-tabs",
                     active_tab=list(sectors.keys())[0],
+                    class_name="box-style"
                 )
             ),
             dbc.CardBody(
