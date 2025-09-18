@@ -21,18 +21,25 @@ exec_description: |
   ![NGFS scenarios Features](NGFS_scenarios_Features_Hothouse.png)
 
   **Source:**
-  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"} 
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf)
 
-  Note: The NGFS Hot House World scenarios have some limitations that should be carefully 
+  Note: The NGFS Hot House World scenarios have some limitations that should be carefully
   considered, as they could lead to uncertainties in the projections. For example:
+  
   - Simplified assumptions about future policies, technologies, and economic developments.
+  
   - Incomplete coverage of physical impacts like tipping points and compound risks.
+  
   - Incomplete coverage of acute physical risks – i.e., four acute physical impacts are 
   modelled using one transmission channel (flood and cyclones through capital asset damages; 
   droughts through crop yield losses; heatwaves through labour productivity decline).
+  
   - Simplified use of the damage function – i.e., within the NGFS framework the damage function accounts only for damages from chronic physical risk, while losses from acute physical risk are considered separately.
+  
   - Limited consideration of societal impacts, such as climate-induced migration.
+  
   - Uncertainty about future technology and government policy changes.
+  
   - Incomplete capture of financial sector dynamics and responses.
   
   NGFS risk assessments may require complementary assessments to align with users’ specific objectives. 
@@ -49,7 +56,7 @@ description: |
   ![NGFS scenarios Framework](NGFS_scenarios_Framework_Hothouse.png)
 
    **Source:**
-  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"} 
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf) 
 
   The NGFS have provided two Hot house world scenarios:
 
@@ -70,7 +77,7 @@ description: |
   ![CO2 emissions](scenarios_hothouse_emissions_co2.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
 
   Carbon price is a measure of overall policy intensity. Emission prices are sensitive to 
   the timing of policy implementation. With none or relatively small additions to current 
@@ -83,7 +90,7 @@ description: |
   ![Carbon price](scenarios_hothouse_price_carbon.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Carbon prices are weighted global averages.
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Carbon prices are weighted global averages.
   
   Government revenues from carbon tax are affected by carbon price and emissions. 
   Revenues are relatively low in the Current Policies scenarios given the low carbon price 
@@ -97,7 +104,7 @@ description: |
   ![Carbon tax revenue](scenarios_hothouse_revenue.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
 
   In Hot House World scenarios, the lack of carbon price increase results in less 
   severe deviation of inflation, unemployment, and long-term interest rates from the baseline scenario, 
@@ -107,19 +114,19 @@ description: |
   ![Inflation rate](scenarios_hothouse_inflation.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
 
   ![Unemployment rate](scenarios_hothouse_unemployment.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
 
   ![Interest rate](scenarios_hothouse_interest.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
 
   The investments in energy efficiency and low carbon technologies are projected 
@@ -134,12 +141,12 @@ description: |
   ![Energy Efficiency Investment](scenarios_hothouse_investment_energy_efficiency.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
   ![Low Carbon Investment](scenarios_hothouse_investment_low_carbon.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} 
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads) 
 
   The increasing concentrations of carbon dioxide, methane and nitrous oxide in the 
   atmosphere are unprecedented in at least the last 800,000 years and are extremely 
@@ -154,7 +161,7 @@ description: |
   ![Global mean temp rise](scenarios_hothouse_temperature.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
 
   These changes could lead to chronic changes in living conditions affecting health, labour 
   productivity, agriculture, ecosystems, and sea-level rise. It can also change the frequency 
@@ -169,7 +176,7 @@ description: |
   ![Labour Productivity](scenarios_hothouse_labour.png)
 
   **Source:** 
-  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
   
   * Annual economic damages from cyclones are also projected to increase above reference period levels, 
   to ~8% by 2030 and ~20% by 2050.
@@ -177,7 +184,7 @@ description: |
   ![Tropical Cyclone Damage](scenarios_hothouse_damages_cyclones.png)
 
   **Source:** 
-  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
   
   In these scenarios the total GDP impact from chronic physical and transition effects 
   relative to a baseline (with no transition or physical risks) is estimated to be around 
@@ -190,7 +197,7 @@ description: |
   ![GDP](scenarios_hothouse_gdp.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24[REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} NiGEM NGFS v1.24.2 is not available for Low Demand scenario; Only chronic physical data available (not acute physical).
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24[REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) NiGEM NGFS v1.24.2 is not available for Low Demand scenario; Only chronic physical data available (not acute physical).
 
   Overall, these scenarios result in high physical risk including irreversible impacts 
   like sea-level rise. Transition risks are much less significant in these scenarios 

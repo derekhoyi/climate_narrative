@@ -1,8 +1,9 @@
-9:
+18:
   name: Savings and Retirement Underwriting Class
   test_report_position: 20
   description: |
-    # Savings and Retirement Underwriting
+    # Savings and Retirement Underwriting 
+    
     The **savings and retirement** underwriting class covers products such as
     pensions, investment bonds, with-profits, unit-linked investments and annuities,
     written on an individual or group basis.
@@ -17,7 +18,7 @@
     risks through these policies, including mortality, persistency, expense, 
     market and credit risks. These risks will vary depending on the different 
     countries, geographies and sectors the providers write business and invest in.
-
+  
   transition:
     high:
       exec_description: |
@@ -26,7 +27,7 @@
         reduction in GDP could reduce real household income. The reduction in 
         CO<sub>2</sub> emissions could also lead to an increase in longevity and 
         reduction in morbidity.
-
+  
       always: |
         The Delayed Transition scenario, driven by late policy action 
         would result in CO<sub>2</sub> emissions increasing until 2030 before 
@@ -46,19 +47,19 @@
         reduced household incomes and could result in policyholder pessimism regarding 
         longer-term economic outcomes, leading to lower savings rates, increased lapses, 
         and a decrease in new business sales. 
-
+  
       high_materiality: |
         **Diet effect**
-
+  
         Under the Delayed Transition scenario, consumers may seek to reduce their 
         carbon footprint through changes in diet, for example away from carbon-intensive 
         processes such as livestock raising (e.g. through reduction in calorie intake or 
         shift to plant-based diets). This may result in lower levels of obesity, diabetes 
         and cardiovascular disease, and may also improve morbidity and mortality rates, 
         but may also result in malnutrition which would have a negative impact on health.
-
+  
         **GDP growth effect**
-
+  
         As outlined in the scenarios overview, total cumulative GDP impact is estimated 
         to be just under -5.2% by 2030 and -13% by 2050. In the Delayed Transition scenario, 
         physical risks have a larger impact on global GDP than transition risks. There is 
@@ -88,9 +89,9 @@
         requirements as this risk emerges. Companies could face operational risk from 
         model error if experience ceases to be a reliable predictor for future 
         trends.
-
+  
         **Pollution effect**
-
+  
         It seems reasonable to assume that a reduction in greenhouse gas emissions 
         could be associated with cleaner air and therefore positive health outcomes. 
         However, it is important to differentiate between the production of 
@@ -108,19 +109,19 @@
         ![NOx emissions](savings_and_retirement_disorderly_emissions_nox.png)
         
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         Whilst it may be the case that reductions in greenhouse gas emissions are 
         typically correlated with reductions in harmful pollutants, this is not 
         necessarily the case. For example:
-
+  
         - If we replace diesel cars with electric cars but continue to rely on
           fossil fuels to generate the electricity, then this could address the
           particulates but not the greenhouse effect;
-
+  
         - If we increase biomass burning, this may reduce the greenhouse effect
           but actually contribute to local particulate pollution.
-
+  
         However, under the Delayed Transition scenarios, there is 
         certainly potential for improved health outcomes due to reduced air 
         pollution and therefore fewer deaths. For example, reduced pollution 
@@ -135,9 +136,9 @@
         to generate electrical power for the national grid, as the suggested 
         improved health outcomes would rely on a net reduction in harmful 
         pollution.
-
+  
         **Impact on pricing or product design**
-
+  
         Under the Delayed Transition scenario, the impact on pricing and product design 
         is likely to be modest. Though price adjustments may be necessary due to 
         expected impacts on mortality (as described above), as well as reduced market 
@@ -178,7 +179,7 @@
         This could increase lapse rates, reduce premiums, reduce pension scheme contributions 
         and/or increase opt outs, and reduce new business sales. Operational risk could also 
         be impacted through a failure to attract and retain talent.
-
+  
     low:
       exec_description: |
         Savings and retirement underwriting exposures could be impacted in the 
@@ -186,7 +187,7 @@
         could reduce real household income. The immediate and smooth reduction 
         in CO<sub>2</sub> emissions could also lead to an increase in longevity and 
         reduction in morbidity.
-
+  
       always: |
         The Orderly Transition scenarios could lead to a limited relative 
         reduction in GDP growth. However, any negative impacts on GDP are likely to 
@@ -207,7 +208,7 @@
         expected reduction in household incomes and some property valuations, which could 
         negatively impact health outcomes and thus increase policyholder morbidity and 
         reduce policyholder longevity.
-
+  
       high_materiality: |
         In Orderly Transition scenarios, the impact on the savings and retirement underwriting
         class could depend on GDP as well as other effects. For example:
@@ -220,9 +221,9 @@
         may result in lower levels of obesity, diabetes and cardiovascular disease, and may also 
         improve morbidity and mortality rates, but may also result in malnutrition which would have 
         a negative impact on health.
-
+  
         **GDP growth effect**
-
+  
         As outlined in the scenarios overview, GDP impacts from transition risk are only 
         moderately negative as negative impacts on demand from higher carbon prices and 
         energy costs are only partially offset by the recycling of carbon revenues into 
@@ -239,9 +240,9 @@
         Transition costs are likely to be low and spread out over a moderate time period. 
         This may be expected to increase expenses from the regulatory 
         interventions necessary under an Orderly Transition scenario.
-
+  
         **Pollution effect**
-
+  
         It seems reasonable to assume that a reduction in greenhouse gas emissions 
         could be associated with cleaner air and therefore positive health outcomes. 
         However, it is important to differentiate between the production of greenhouse 
@@ -254,23 +255,23 @@
         90 – 105 million tonnes per year in 2030 to 35 – 39 million tonnes per year in 2050 across 
         the Net Zero 2050, Below 2&deg;C and Low Demand scenario. Other hazardous pollutants 
         in the NGFS could equally be referenced as a guide as these have broadly similar trajectories.
-
+  
         ![NOx emissions](savings_and_retirement_orderly_emissions_nox.png)
         
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         Whilst it may be the case that reductions in greenhouse gas emissions are 
         typically correlated with reductions in harmful pollutants, this is not necessarily 
         the case. For example:
-
+  
         - If we replace diesel cars with electric cars but continue to rely on
           fossil fuels to generate the electricity, then this could address the
           particulates but not the greenhouse effect;
-
+  
         - If we increase biomass burning this may reduce the greenhouse effect but
           contribute to local particulate pollution.
-
+  
         However, under the Orderly Transition scenarios, there is certainly 
         potential for improved health outcomes due to reduced air pollution and therefore 
         fewer deaths. For example, reduced pollution could result in a reduction of 
@@ -283,9 +284,9 @@
         priced. The ultimate outcome is very much dependent on the fuel mix used to 
         generate electrical power for the national grid, as the suggested improved health 
         outcomes would rely on a net reduction in harmful pollution.
-
+  
         **Impact on pricing or product design**
-
+  
         Under an Orderly Transition scenario, the impact on pricing and product design is likely 
         to be modest. Though price adjustments may be necessary due to expected impacts 
         on morbidity and mortality (as described above), as well as reduced market sentiment and increased 
@@ -308,19 +309,19 @@
         Mitigating measures for companies could be informed by the development of transition 
         plans aligned with orderly scenarios pathways and revisions to key assumptions, 
         such as, mortality and morbidity rates. 
-
+  
         As with all climate scenarios, companies will face reputational risk if considered to 
         be laggards in their reporting and reaction to climate change. This could increase 
         lapse rates, reduce premiums, reduce pension scheme contributions and/or increase 
         opt outs, and reduce new business sales. Operational risk could also be impacted 
         through a failure to attract and retain talent. 
-
+  
   physical:
     high:
       exec_description: |
         Savings and retirement underwriting exposures could be significantly impacted in 
         Hot House World scenarios as significant temperature rises result in high physical risk. 
-
+  
       always: |
         In the high physical risk scenarios, climate change is expected to result in material 
         disruption to the savings and retirement underwriting class. Chronic effects (such as 
@@ -336,10 +337,10 @@
         A reduction in GDP growth could result in reduced real household income. In turn this may lead 
         to lower savings rates and increased lapses due to customers’ affordability concerns, resulting 
         in reduced profitability within savings and retirement products.
-
+  
       high_materiality: |
         **GDP growth effect**
-
+  
         As outlined in the scenarios overview, total cumulative GDP impact is estimated to be around 
         -5% to -6% by 2030 and -13% to -15% by 2050. As with other scenarios, the impact on global 
         GDP is dominated by physical risk (chronic). 
@@ -363,9 +364,9 @@
         of guarantees biting on legacy policies. This would in turn impact the 
         impacted companies' bottom line and would likely result in more stringent 
         capital requirements as this risk emerges.
-
+  
         **Temperature and weather effect**
-
+  
         In a high physical risk scenario, the increases in acute and chronic climate 
         effects could pose significant but different challenges that in turn could 
         impact the saving and retirement underwriting class. Acute physical risks, 
@@ -374,7 +375,7 @@
         mitigations compared to those chronic physical risks derived from longer-term 
         shifts in climate patterns, such as sea level rise and changes in precipitation 
         patters. For example:
-
+  
         - **Mortality**: Mortality rates may be expected to remain the same, but could 
           improve, or decline as a result of climate change, depending on where the customers 
           are located. For example, an increase in average UK temperatures could lead to a 
@@ -385,7 +386,7 @@
           Global warming and changing precipitation patterns are likely to change the geographical 
           spread of vector borne diseases, increase the global population at risk and lead to an 
           increase in deaths. 
-
+  
         - **Morbidity**: A rise in temperatures could lead to an increase in the
           incidence rates of skin cancer. The prevalence of skin cancer is
           dependent on geographic location so any increased prevalence may also
@@ -396,9 +397,9 @@
           periods for annuity providers. An increase in vector borne diseases is 
           likely to an increase morbidity rates potentially lead to lower savings 
           rates and increased lapses for savings products.
-
+  
         **Impact on pricing or product design**
-
+  
         Under these scenarios, the impact on pricing and product design is likely to be 
         material. Though price adjustments may be necessary for certain locations due to 
         expected impacts on morbidity and mortality (as described above), as well as 
@@ -431,14 +432,14 @@
         with high physical risk exposures or underwriting liabilities held in sectors or 
         geographies with high physical risk exposures. In additions actions could be taken 
         to capitalise on new opportunities, for example, in adapted infrastructure and property. 
-
+  
         As with all climate scenarios, companies will face reputational risk if 
         considered to be laggards in their reporting and reaction to climate change. 
         This could increase lapse rates, reduce premiums, reduce pension scheme 
         contributions and/or increase opt outs, and reduce new business sales. 
         Operational risk could also be impacted through a failure to attract 
         and retain talent.
-
+  
   transition_physical:
     high:
       exec_description: |
@@ -446,7 +447,7 @@
         in the Too-little-too-late scenario as a delayed and divergent transition is 
         likely to give rise to significant temperature rises and high impacts from 
         both physical and transition risks. 
-
+  
       always: |
         Under high physical and transition risk scenarios, climate change is likely 
         to result in severe temperature increases and large increases in both the 
@@ -471,10 +472,10 @@
         severe negative impacts on GDP which could exacerbate negative impacts on population health 
         and lead to a fall in savings rates, increased lapses, reduced new business sales and 
         reduced pension scheme contributions and/or increased opt outs.
-
+  
       high_materiality: |
         **GDP growth effect**
-
+  
         As outlined in the scenarios overview, total cumulative GDP impact is estimated to be 
         around -5.2% by 2030 and -13.6% by 2050. The impact on global GDP is dominated by 
         physical risk including irreversible impacts like sea-level rise. 
@@ -498,9 +499,9 @@
         likely result in more stringent capital requirements as this risk emerges. Companies 
         could face operational risk from model error if experience ceases to be a reliable 
         predictor for future trends.
-
+  
         **Temperature and weather effect**
-
+  
         In a high physical risk scenario, the increases in acute and chronic climate effects 
         could pose significant but different challenges that in turn could impact the saving 
         and retirement underwriting class. Acute physical risks, which are event driven, for 
@@ -511,7 +512,7 @@
         sectors and geographies could be exposed to materially different impacts in different 
         locations. Delayed and divergent policy transition actions in different jurisdictions 
         is likely to increase these impacts in some locations. For example:
-
+  
         - **Mortality**: Due to the increased incidence in catastrophes, mortality rates for 
         certain customer segments (depending on location) may also be expected to rise. A 
         level increase in temperature in the UK could lead to a reduction in deaths since 
@@ -519,7 +520,7 @@
         deaths due to warmer weather and the risk of prolonged heat waves. However, to the 
         extent that any increase in temperatures comes with an increase in the variability 
         of temperatures, we could see an increase in both winter and summer excess mortality.
-
+  
         - **Morbidity**: A rise in temperatures could lead to an increase in the
           incidence rates of skin cancer. The prevalence of skin cancer is
           dependent on geographic location so any increased prevalence may also
@@ -528,9 +529,9 @@
           risk, e.g. heart attacks which could potentially lead to lower savings
           rates and increased lapses for savings products and shorter payment
           periods for annuity providers.
-
+  
         **Impact on pricing or product design**
-
+  
         Under high physical risk scenarios, price adjustments may be necessary due to expected 
         impacts on morbidity and mortality (as described above), as well as reduced market 
         sentiment and increased credit risk (due to impact on GDP growth expectations). These 

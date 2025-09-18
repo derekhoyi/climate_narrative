@@ -43,7 +43,7 @@
       subsequently needed to limit warming to below 2°C. The level of commitments of countries depend on currently implemented 
       policies, leading to heterogeneity at the global level.
 
-5:  
+4:  
    name: Hot House World scenarios
    description: |
       # Long-Term Scenarios
@@ -58,7 +58,7 @@
          - **Current Policies** assumes that only currently implemented policies are preserved, leading to high physical risks. 
          Emissions grow leading to a global temperature rise of around 3°C. Investments allocation and energy mix do not change.
 
-6:  
+5:  
    name: Too-little-too-late scenario
    description: |
       # Long-Term Scenarios

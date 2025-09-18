@@ -30,7 +30,7 @@ exec_description: |
   ![NGFS scenarios Features](NGFS_scenarios_Features_Orderly.png)
 
   **Source:**
-  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"}
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf)
   
   Note: The NGFS Orderly scenarios have some limitations that should be carefully considered, 
   as they could lead to uncertainties in the projections. For example: 
@@ -46,9 +46,6 @@ exec_description: |
   Despite these limitations, the NGFS scenarios provide valuable insights and a common framework for 
   analysing climate-related risks.
 
-
-
-
 description: |
   Orderly transition scenarios assume climate policies are introduced early and become 
   gradually more stringent. Both physical and transition risks are relatively subdued. 
@@ -56,7 +53,7 @@ description: |
   ![NGFS scenarios Framework](NGFS_scenarios_Framework_Orderly.png)
 
   **Source:**
-  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf){target="\_blank"}
+  [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf)
 
   The NGFS have defined three orderly scenarios:
 
@@ -83,7 +80,7 @@ description: |
   ![CO2 emissions](scenarios_orderly_emissions_co2.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
 
   The price of carbon is highest in the Net Zero 2050 scenario compared to the 
   Below 2&deg;C or Low Demand scenario (at 2030, ~185 USD per tonne CO2 adjusted to 2010 baseline, 
@@ -97,7 +94,7 @@ description: |
   ![Carbon price](scenarios_orderly_price_carbon.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Carbon prices are weighted global averages.
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Carbon prices are weighted global averages.
 
   Government revenues from carbon tax increase in line with the carbon price, 
   until emissions are reduced to a degree that this offsets the carbon price increase. 
@@ -111,7 +108,7 @@ description: |
   ![Carbon tax revenue](scenarios_orderly_revenue.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
   In many countries, the implementation of carbon prices in the transition scenarios 
   tends to raise energy costs in the short-term, which initially weighs on prices (as 
@@ -129,17 +126,17 @@ description: |
   ![Inflation rate](scenarios_orderly_inflation.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Combined Chronic physical and Transition effects. UK specific Absolute difference to baseline with no transition or physical risks.
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific Absolute difference to baseline with no transition or physical risks.
   
   ![Unemployment rate](scenarios_orderly_unemployment.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Combined Chronic physical and Transition effects. UK specific Absolute difference to baseline with no transition or physical risks..
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific Absolute difference to baseline with no transition or physical risks..
   
   ![Interest rate](scenarios_orderly_interest.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} Combined = Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined = Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
   
   The investments in energy efficiency and low carbon technologies are projected to increase, 
   where the Low Demand and Net Zero 2050 scenarios are expected to be higher than the Below 2&deg;C 
@@ -156,12 +153,12 @@ description: |
   ![Energy Efficiency Investment](scenarios_orderly_investment_energy_efficiency.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
   ![Low Carbon Investment](scenarios_orderly_investment_low_carbon.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
   Observed climate change has already increased global mean temperatures above
   1.4&deg;C, compared to pre-industrial levels, and both the global land area and
@@ -180,7 +177,7 @@ description: |
   ![Global mean temp rise](scenarios_orderly_temperature.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
 
   These changes could lead to chronic changes in living conditions affecting health, 
   labour productivity, agriculture, ecosystems, and sea-level rise. It can also 
@@ -197,7 +194,7 @@ description: |
   ![Labour Productivity](scenarios_orderly_labour.png)
 
   **Source:** 
-  [Climate Impact Explorer.](https://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  [Climate Impact Explorer.](https://climate-impact-explorer.climateanalytics.org/)
   
   * Annual economic damages from cyclones are also projected to increase, peaking 
   at ~8% above reference period levels in 2030 for the three scenarios, and peaking 
@@ -207,7 +204,7 @@ description: |
   ![Tropical Cyclone Damage](scenarios_orderly_damages_cyclones.png)
 
   **Source:** 
-  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
   
   In these scenarios, the total cumulative GDP impact from chronic physical 
   and transition effects relative to a baseline (with no transition or physical 
@@ -223,7 +220,7 @@ description: |
   ![GDP](scenarios_orderly_gdp.png)
 
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"} NiGEM NGFS v1.24.2 is not available for Low Demand scenario; only chronic physical data available (not acute physical).
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) NiGEM NGFS v1.24.2 is not available for Low Demand scenario; only chronic physical data available (not acute physical).
 
   Overall, these are more optimistic scenarios, as while transition risks lead to negative 
   short-term impacts on GDP, the cost-saving later more than offsets these initial losses 

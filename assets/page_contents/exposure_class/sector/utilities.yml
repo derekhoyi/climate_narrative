@@ -1,31 +1,33 @@
-6:
+22:
   name: Utilities Sector
   test_report_position: 6
   description: |
+    # Utilities 
+    
     The **utilities** sector comprises companies that provide basic amenities
     such as water, sewage services, electricity, and gas. The sector includes
     companies that:
-
+  
     - Produce or distribute electricity (Electric Utilities)
-
+  
     - Distribute and transmit natural and manufactured gas (Gas Utilities)
-
+  
     - Purchase and redistribute water to the end consumer (Water Utilities)
-
+  
     - Have diversified activities in addition to core electric utility, gas
       utility or water utility operations  (Multi-Utilities)
-
+  
     - Operate as Independent Power Producers (IPPs), Gas and Power Marketing and
       Trading Specialists and Integrated Energy Merchants
-
+  
     - Generate and distribute electricity using renewable sources (Renewable
       Electricity Companies)
-
+  
     Note that this sector excludes companies that are primarily involved in gas
     exploration or production; storage and/or transportation of fossil fuels and
     their derivatives; and manufacture of capital equipment used to generate
     electricity from renewable and non-renewable sources.
-
+  
   transition:
     high:
       exec_description: |
@@ -34,7 +36,7 @@
         electrified but faces a sharply rising carbon price post-2030 which could 
         increase production costs for carbon intensive utilities without adequate 
         transition plans.
-
+  
       always: |
         The Delayed Transition scenario is primarily characterised by the 
         more disruptive effects on the utility sector. This can be seen most 
@@ -52,7 +54,7 @@
         a lot longer to emerge. There would be considerable dispersion of impacts 
         across firms in the Delayed transition scenarios, depending on the 
         carbon intensity of their production processes.
-
+  
       high_materiality: |
         Changes in implicit carbon pricing, electricity demand, the energy mix, and energy 
         prices are likely to dominate financial impacts, through the same revenue 
@@ -62,18 +64,18 @@
         delayed decarbonisation requires greater decarbonisation later.
         
         ![Final Energy Electricity](utilities_disorderly_energy_elec.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         In the Delayed Transition scenario, electricity-use increases by c.20% by 2030 and 
         more than doubles by 2050, from ~100 exajoules to ~200 exajoules.
         
         ![Secondary Energy](utilities_disorderly_elec_sources.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         Comparing energy usage and mix patterns between the Below 2&deg;C and Delayed 
         Transition scenarios, we generally see similarly large shifts towards solar 
         and wind generation, and away from fossil fuel generation over the longer-term. 
@@ -93,10 +95,10 @@
         the longer term.
         
         ![Cumulative Energy Investment](utilities_disorderly_energy_investment.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         Testing these assumptions using different models and narratives remains wise, 
         especially to allow for policy variation across different regions in the scenarios 
         that fall short of achieving Net Zero emissions by 2050.
@@ -114,9 +116,9 @@
         otherwise position themselves within such transitions, also need to account for 
         the sector’s diversity. Different strategies will be appropriate for different 
         firms to maintain revenues and minimise the long-term financial impact. 
-
+  
         Examples include:
-
+  
         - Expanding renewable energy development, including self-generation assets;
         
         - Investing into grid infrastructure to improve storage, transmission, and distribution efficiency for heat and power;
@@ -130,14 +132,14 @@
         - Supporting the development of low-carbon alternatives to fossil gas;
         
         - Increasing the weight of electricity in their portfolio.
-
+  
     low:
       exec_description: |
         In Orderly transition scenarios, the utility sector may benefit 
         from the global energy system becoming more electrified but could 
         face rising carbon prices which could increase production costs for 
         carbon-intensive utilities without adequate transition plans.
-
+  
       always: |
         The utilities sector would have a critical role to play in an orderly 
         transition to either Net Zero CO<sub>2</sub> emissions by 2050, or a 
@@ -163,7 +165,7 @@
         due to electrification and efficiency improvements. Water utilities are indirectly 
         exposed to the volatility in electricity, used for desalination, purification, 
         wastewater treatment, and pumping. 
-
+  
       high_materiality: |
         Changes in effective carbon pricing, electricity demand, the energy mix and energy prices 
         are likely to dominate financial impacts, with the extent dependant on how
@@ -172,7 +174,7 @@
         average. 
         
         For example:
-
+  
         - **Increased revenue**: this occurs for electric utilities in all transition scenarios 
           except Low Demand as the global energy system becomes more electrified, with revenue 
           gains strongest for firms with zero and low carbon-intensive production processes. 
@@ -183,25 +185,25 @@
         ![Final Energy Electricity](utilities_orderly_energy_elec.png)
         
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         - **Reduced revenue**: this can occur for carbon-intensive utilities as consumers 
           switch to low carbon/electrified alternatives for heating and become more energy 
           autonomous.
-
+  
         - **Increased operating costs**: this can occur for gas and electric utilities from 
           regulatory compliance costs or otherwise paying a price on carbon emissions via tax 
           or cap & trade clearing price, albeit with considerable dispersion in the ability to 
           pass carbon prices on to end-users depending on the carbon intensity of a firm’s 
           operations. 
-
+  
         - **Readjusted capital expenditures**: this can occur for new investments required to 
           pivot business model towards renewable electricity generation. Water utilities could 
           be required to invest in becoming energy autonomous to combat volatility in energy 
           prices, for example using biogas Combined Heat and Power engines, which utilise the 
           biogas produced through the anaerobic digestion of sewage sludge at water recycling 
           centres.
-
+  
         Risks are heavily concentrated in carbon-intensive utilities that do not have adequate 
         transition plans, whilst opportunities exist for utilities drawing most heavily on zero 
         and low carbon activities. Capital investments into fossil intensive electricity would 
@@ -209,16 +211,16 @@
         scenario, reduced ambition leads to the expectation of lower levels of investment in 2030 
         than in a Net Zero 2050 scenario, demonstrating action needs to be significantly 
         accelerated to keep temperature rise to just above 1.5&deg;C relative to below 2&deg;C.
-
+  
         ![Cumulative Energy Investment](utilities_NZ2050_energy_investment.png)
         
         ![Cumulative Energy Investment](utilities_below2deg_energy_investment.png)
         
         ![Cumulative Energy Investment](utilities_lowdemand_energy_investment.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         Nevertheless, in Orderly Transition scenarios, the clear policy signals as shown by 
         the steadily increasing implicit carbon process, reduce the risks of sudden valuation 
         shocks, as transition is priced in early. This prevents both sudden rises in the 
@@ -232,15 +234,15 @@
         largest increases in Orderly Transition scenarios. In contrast the outlook for coal, 
         oil and natural gas is much poorer, though gas continues to have a significant 
         role in the short and medium term, especially in the Below 2&deg;C scenario.
-
+  
         ![Secondary Energy](utilities_NZ2050_elec_sources.png)
-
+  
         ![Secondary Energy](utilities_below2deg_elec_sources.png)
-
+  
         ![Secondary Energy](utilities_lowdemand_elec_sources.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         Users should be aware that the results presented are representative of a 
         particular energy-systems model (REMIND-MAgPIE), which makes particular 
@@ -271,7 +273,7 @@
         impact. 
         
         Examples include:
-
+  
         - Expanding renewable energy development, including self-generation assets;
         
         - Investing into grid infrastructure to improve storage, transmission, and distribution efficiency for heat and power;
@@ -285,7 +287,7 @@
         - Supporting the development of low-carbon alternatives to fossil gas;
         
         - Increasing the weight of electricity in their portfolio.
-
+  
   physical:
     high:
       exec_description: |
@@ -293,7 +295,7 @@
         disruption and cause damage to infrastructure, resulting in severe impacts 
         for the utilities sector as large proportion of the value of most utilities 
         is comprised of tangible (physical) capital.
-
+  
       always: |
         High physical risk scenarios are those in which global policy makers do not 
         take sufficient steps to hold temperature increases below the Paris Agreement's 
@@ -312,7 +314,7 @@
         (e.g. grid infrastructure), the effects on profitability and valuations through 
         this channel will be highly dependent for individual firms on the geography of 
         the underlying assets.
-
+  
       high_materiality: |
         Utilities are exposed to the chronic and acute threats of physical climate change, 
         and this is exacerbated in a High Physical Risk (Hot house world) scenario. 
@@ -380,21 +382,21 @@
         
         Despite this, solar and wind are still expected to become the dominant energy sources 
         globally with much of the existing growth momentum already baked into forecasts.
-
+  
         ![Secondary Energy](utilities_currpol_elec_sources.png)
-
+  
         ![Secondary Energy](utilities_ndc_elec_sources.png)
-
+  
         ![Cumulative Energy Investment](utilities_currpol_energy_investment.png)
         
         ![Cumulative Energy Investment](utilities_ndc_energy_investment.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         Again though, there will be significant variation in these valuation effects across 
         regions as NDCs and current policy settings vary significantly across different jurisdictions.
-
+  
   transition_physical:
     high:
       exec_description: |
@@ -403,7 +405,7 @@
         manner, leading to higher transition risk and extreme weather events that could 
         increase disruption, cause damage to infrastructure and ultimately result in severe 
         physical risk impacts for the utilities sector.
-
+  
       always: |
         Changes in carbon prices, energy prices and energy mix are likely to dominate 
         transition risk impacts with policy changes likely to diverge across regions in a 
@@ -423,25 +425,25 @@
         be larger in high physical risk scenarios with significant disruptions to the utility sector. 
         Effects on profitability and valuations through this channel will be highly dependent on the 
         locational characteristics of the underlying assets.
-
+  
       high_materiality: |
         ![Carbon Price](utilities_tltl_carbon_price.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         Regional changes in carbon prices, energy prices and energy mix are likely to dominate 
         transition risk impacts with policy changes likely to diverge across regions in a 
         Fragmented World scenario, especially post-2030 when certain countries increase 
         their decarbonisation while others simply continue with current policies. The 
         misaligned efforts across regions and sectors leads to higher transition risk 
         than in the Delayed Transition scenario. 
-
+  
         ![Secondary Energy](utilities_tltl_elec_sources.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         Despite (or in some cases because of) the nature of the scenario, Solar PV and 
         Wind are still the dominant technologies over time, as existing cost decisions 
         allow them to take the majority of the market, relative to the more capital intensive 
@@ -452,12 +454,12 @@
         also vary significantly from region to region. As a result, globally, solar and wind 
         become the dominant technologies, displacing coal and gas but not uniformly across 
         jurisdictions.
-
+  
         ![Cumulative Energy Investment](utilities_tltl_energy_investment.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         However, under a Fragmented World scenario, the lack of a coordinated, accelerated 
         effort to increase non-fossil fuel electricity generation also means insufficient 
         investments are made in the years up to 2030 when compared to the Net Zero 2050 
@@ -482,7 +484,7 @@
         and transition risk (Too-little-too-late world) scenario. Different utility activities 
         are exposed for a variety of reasons. The following (non-exhaustive) examples illustrate 
         how the utilities sector could be impacted by the high physical risks: 
-
+  
         **Chronic Impacts**
         
         - **Rising sea-levels**: this can cause existing power, heat, and water 
@@ -526,7 +528,7 @@
         limbs a safe distance from power lines) and increase contribution of electricity 
         businesses vs gas businesses. However, adaptation becomes more difficult and costly 
         as the extent of the temperature and climate change rises.
-
+  
         The most serious, sustained impacts on asset prices are likely to manifest later in 
         the scenario horizon. Indeed, standard discounting methods generate relatively 
         moderate negative effects on utility security valuations, though there is naturally 
@@ -544,10 +546,10 @@
         Because alternative assumptions about future technology can generate vastly different 
         usage patterns across the renewable and fossil fuel types, users undertaking their own 
         analyses should test the sensitivity of their results to alternative models and assumptions. 
-
+  
   references: |
-    - [International Energy Agency: Global Energy Review, March 2025](https://www.iea.org/reports/global-energy-review-2025){target="\_blank"}
+    - [International Energy Agency: Global Energy Review, March 2025](https://www.iea.org/reports/global-energy-review-2025)
     
-    - [Assessing physical climate risks for the European Bank for Reconstruction and Developement's power generation project investment portfolio, December 2021](https://files.wri.org/d8/s3fs-public/2021-11/assessing-physical-risks-european-bank.pdf?VersionId=3c.B94pePo8fnuchFRpkrtPOXIjbam3n){target="\_blank"}
+    - [Assessing physical climate risks for the European Bank for Reconstruction and Developement's power generation project investment portfolio, December 2021](https://files.wri.org/d8/s3fs-public/2021-11/assessing-physical-risks-european-bank.pdf?VersionId=3c.B94pePo8fnuchFRpkrtPOXIjbam3n)
     
-    - [NAICS Code 22](https://www.naics.com/six-digit-naics/?code=22){target="\_blank"}
+    - [NAICS Code 22](https://www.naics.com/six-digit-naics/?code=22)

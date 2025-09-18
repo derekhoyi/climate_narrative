@@ -1,40 +1,41 @@
-1:
+15:
   name: Oil and gas Sector
   test_report_position: 1
   description: |
-    # Oil and gas Sector
+    # Oil and Gas
+    
     The **Oil and Gas sector** comprises three main activities along their operational chain - upstream
     (exploration and production), midstream (transportation and processing) and
     downstream (distribution and sale to end users/consumers). This sector
     includes companies that are, for example, involved in the following:
-
+  
     - the exploration/extraction, development and/or the production of natural gas from wells
       in which the hydrocarbons could initially flow or can be produced using
       normal or enhanced drilling and extraction techniques;
-
+  
     - the production of crude petroleum from reservoirs in which the hydrocarbons
       are semi-solids;
-
+  
     - the recovery of liquid hydrocarbons from oil and gas field gases;
-
+  
     - manufacturing machinery and equipment for the use in the Oil and Gas sector
       or for drilling water wells, including portable drilling rigs;
-
+  
     - producing gasoline, kerosene, distillate fuel oils and residual fuel oils
       through refraction or straight distillation of crude oil, redistillation,
       cracking or other processes;
-
+  
     - transmission, distribution and storage of natural gas for sale; and
-
+  
     - operating oil and gas wells as well as those engaged in providing support
       services.
-
+  
   transition:
     high:
       exec_description: |
         In the Delayed Transition scenario, demand for oil and gas decreases, 
         which could affect profitability of individual companies and the sector overall. 
-
+  
       always: |
         Based on the IIASA NGFS Climate Scenarios, REMIND model, by 2050, in a
         Delayed Transition scenario, fossil fuels represent only
@@ -44,7 +45,7 @@
         policy ambition reduces the impetus to transition the global energy 
         mix until 2030, where a sudden increase in decarbonisation ambition 
         leads to a sharp decline in demand for fossil fuels.
-
+  
         While oil and gas could continue to play a role in meeting global energy
         demand in the short-term, the changing patterns in energy
         consumption, driven by societal change, national energy strategies, and
@@ -53,11 +54,11 @@
         and the sector overall. The policy and economic conditions described in the
         Delayed Transition Scenario could result in changes in the demand for 
         the Oil and Gas sector. 
-
+  
       high_materiality: |
         The changes in effective carbon pricing, energy demand/mix and energy prices could 
         potentially result in one or more of the following financial impacts:
-
+  
         - **Reduced revenue**: this may occur for Oil and Gas firms due to the 
         decline in fossil fuel demand driven by the rise in demand for electricity 
         and low-carbon alternatives. This is especially apparent for firms with no 
@@ -70,21 +71,24 @@
         reduces demand of gas. Oil demand is less elastic as it is primarily driven by 
         transportation as opposed to electricity. Oil demand does however still steadily 
         decrease, primarily due to the electrification of road transportation.
-
+  
         ![Electricity Capacity](oil_gas_disorderly_oil_demand.png)
-
+  
         ![Electricity Capacity](oil_gas_disorderly_gas_demand.png)
-
+  
         ![Electricity Capacity](oil_gas_disorderly_renewables_demand.png)
-
+  
+        **Source:**
+        [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        
         A reduction in demand leads to both a reduction in aggregate sales volume, 
         and a reduction in the pricing power that firms have in transitioning sectors.
-
+  
         - **Increase in regulatory costs**: both from paying an explicit price on 
           carbon emissions via tax or cap & trade clearing programs, as well as 
           from the cost of compliance (or penalties of non-compliance) with e
           missions reductions programs, such as fugitive emissions capture.
-
+  
         - **Increased costs of goods sold**: this may occur as carbon prices 
           (both real and effective) increase operational costs. In conjunction with 
           a decline in demand, there could be a decrease in profit margins for 
@@ -93,13 +97,13 @@
           unconventional oil and gas reserves has increased the operating costs 
           of fields that are currently in development, and thus the breakeven price 
           of the fossil fuels to maintain profitability.
-
+  
         - **Increases in capital expenditures**: this may be required with new 
           investments required to pivot business models towards low carbon energy 
           production, renewable biofuels/hydrogen/synthetic and/or Carbon Capture, 
           Usage and Storage (CCUS), assuming firms do not choose to engage in a 
           “planned” or “managed decline”.
-
+  
         - **Falling asset values**: this may occur for existing oil and gas reserves 
           and infrastructure required for extraction based on re-adjusted market 
           expectations of a lower demand of fossil fuels in the future. There are 
@@ -111,7 +115,7 @@
           suddenly shifts against high-carbon assets. As this occurs market wide, there 
           would be significant risks of Oil and Gas firms not being able to retreat from 
           the losses endured in a Delayed Transition scenario for myopic investments.
-
+  
         - **Litigation and business disruption**: this may occur as the social licence 
           of Oil and Gas businesses is eroded significantly. The erosion of social license 
           may also increase costs for fines when non-climate related incidents occur such 
@@ -121,18 +125,18 @@
         This costs and reductions to the price of fossil fuels erode at both ends the profit 
         margins and the overall profitability of the Oil and Gas sectors in the 
         Delayed Transition Scenario. 
-
+  
         In the Delayed Transition scenario, capital investments into fossil fuel extraction 
         and supply are significantly lower than investment into renewable electricity and 
         storage after 2030 when strong policy ambition leads to rapid decarbonisation. 
         There is still some legacy capital investment in fossil fuel extraction to maintain 
         the existing infrastructure while phasing down the overall capacity.
-
+  
         ![Cumulative Energy Investment](oil_gas_disorderly_energy_investment.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         In the Delayed Transition scenario, the Oil and Gas sector is likely to be 
         significantly impacted. There is a steady but rapid increase in electricity 
         demand from the electrification of demand, on top of a sudden steep decline 
@@ -158,14 +162,14 @@
         reduction of demand reduces the scope of downstream consumers of oil and gas to 
         those who have less optionality with energy sources (such as shipping and aviation 
         for oil demand) and thus have more inelastic demand to the price increases.
-
+  
         ![Oil and Gas Price](oil_gas_disorderly_energy_price_oil.png)
-
+  
         ![Oil and Gas Price](oil_gas_disorderly_energy_price_gas.png)
-
+  
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+  
         Under the Delayed Transition scenario, belated awareness by financial 
         market participants of the scale and speed of the transition required 
         may cause fossil fuel assets to undergo a fire-sale by investors, at the 
@@ -180,13 +184,13 @@
         r transitioning the business model from a traditional Oil and Gas company to 
         an “Integrated Energy” company by switching to supplying renewable energy, 
         among others.
-
+  
     low:
       exec_description: |
         In Orderly transition scenarios, there is a significant reduction in the 
         demand for oil and gas products, resulting in a decrease in the profitability 
         of individual companies within the overall sector. 
-
+  
       always: |
         Based on the IIASA NGFS Climate Scenarios, REMIND model, by 2050, in
         Orderly Transition scenarios, there is a significant reduction in fossil 
@@ -201,11 +205,11 @@
         affecting profitability of individual companies and the sector overall. 
         The policy and economic conditions described in Orderly Transition scenarios 
         could result in changes in the demand for the Oil and Gas sector. 
-
+  
       high_materiality: |
         The changes in effective carbon pricing, energy demand/mix and energy prices could
         potentially result in one or more of the following financial impacts:
-
+  
         - **Reduced revenue**: this may occur for Oil and Gas firms due to decline in 
         fossil fuel demand driven by the rise in demand for  electricity and low-carbon 
         alternatives. This is especially apparent for firms with no transition plans 
@@ -218,24 +222,24 @@
         reduces demand of gas. Oil demand is less elastic as it is primarily driven by 
         transportation as opposed to electricity. Oil demand does however still steadily 
         decrease, primarily due to the electrification of road transportation.
-
+  
         ![Electricity Capacity](oil_gas_orderly_oil_demand.png)
-
+  
         ![Electricity Capacity](oil_gas_orderly_gas_demand.png)
-
+  
         ![Electricity Capacity](oil_gas_orderly_renewables_demand.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         A reduction in demand leads to both a reduction in aggregate sales volume, 
         and a reduction in the pricing power that firms have in transitioning sectors.
-
+  
         - **Increase in regulatory costs**: both from paying an explicit price on 
           carbon emissions via tax or cap & trade clearing programs, as well as 
           from the cost of compliance (or penalties of non-compliance) with e
           missions reductions programs, such as fugitive emissions capture.
-
+  
         - **Increased costs of goods sold**: this may occur as carbon prices 
           (both real and effective) increase operational costs. In conjunction with 
           a decline in demand, there could be a decrease in profit margins for 
@@ -244,13 +248,13 @@
           unconventional oil and gas reserves has increased the operating costs 
           of fields that are currently in development, and thus the breakeven price 
           of the fossil fuels to maintain profitability.
-
+  
         - **Increases in capital expenditures**: this may be required with new 
           investments required to pivot business models towards low carbon energy 
           production, renewable biofuels/hydrogen/synthetic and/or Carbon Capture, 
           Usage and Storage (CCUS), assuming firms do not choose to engage in a 
           “planned” or “managed decline”.
-
+  
         - **Falling asset values**: this may occur for existing oil and gas reserves 
           and infrastructure required for extraction based on re-adjusted market 
           expectations of a lower demand of fossil fuels in the future. There are 
@@ -262,13 +266,13 @@
           suddenly shifts against high-carbon assets. As this occurs market wide, there 
           would be significant risks of Oil and Gas firms not being able to retreat from 
           the losses endured in a Delayed Transition scenario for myopic investments.
-
+  
         - **Litigation and business disruption**: this may occur as the social licence 
           of Oil and Gas businesses is eroded significantly. The erosion of social license 
           may also increase costs for fines when non-climate related incidents occur such 
           as oil spills. These incidents are made more likely as aging infrastructure fails 
           to receive investments required to maintain them.
-
+  
         This costs and reductions to the price of fossil fuels erode at both ends the 
         profit margins and the overall profitability of the Oil and Gas sectors in the 
         Orderly Transition scenarios.
@@ -278,16 +282,16 @@
         into renewable electricity and storage, some legacy capital investment in fossil 
         fuel extraction will be required to maintain the existing infrastructure while 
         phasing down the overall capacity.
-
+  
         ![Cumulative Energy Investment](oil_gas_NZ2050_energy_investment.png)
-
+  
         ![Cumulative Energy Investment](oil_gas_below2deg_energy_investment.png)
-
+  
         ![Cumulative Energy Investment](oil_gas_lowdemand_energy_investment.png)
-
-        **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+  
+         **Source:**
+         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         Overall, demand for both oil and gas decreases significantly as the share of 
         renewables in the energy mix increases.
         
@@ -307,41 +311,41 @@
         real-world price dynamics are harder to predict as any reduction of demand 
         scenario leads to an overall oversupply, and price competition between 
         Oil and Gas firms would drive the prices down.
-
+  
         ![Oil and Gas price](oil_gas_orderly_energy_price_oil.png)
-
+  
         ![Oil and Gas price](oil_gas_orderly_energy_price_gas.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         Based on the IIASA NGFS Climate Scenarios, REMIND model, by 2050,
         renewables and biomass could cover ~80% of global primary energy needs 
         in a Net Zero 2050 scenario, compared to below 20% in 2025), driving 
         stranding of fossil fuel assets, and cannibalisation of profitability, 
         if firms fail to adapt to the changing market.
-
+  
         ![Primary Energy Mix](oil_gas_orderly_energy_mix.png)
-
-        **Source:**
-        IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+  
+         **Source:**
+         IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
-        Because the scale and variety within the Oil and Gas sector, there is 
-        no single adaptation strategy that can be adopted, but a range of 
-        possible strategies exist based on the circumstances each company faces. 
-        Examples include “Managed Decline” where a business winds down the 
-        business operations in a planned manner in keeping with their fiduciary 
-        duties to shareholders or transitioning the business model from a 
-        traditional Oil and Gas company to an “Integrated Energy” company by 
-        switching to supplying renewable energy, among others.
-
+         Because the scale and variety within the Oil and Gas sector, there is 
+         no single adaptation strategy that can be adopted, but a range of 
+         possible strategies exist based on the circumstances each company faces. 
+         Examples include “Managed Decline” where a business winds down the 
+         business operations in a planned manner in keeping with their fiduciary 
+         duties to shareholders or transitioning the business model from a 
+         traditional Oil and Gas company to an “Integrated Energy” company by 
+         switching to supplying renewable energy, among others.
+  
   physical:
     high:
       exec_description: |
         The Oil and Gas sector involves significant and geographically concentrated 
         physical assets that are especially exposed to the chronic and acute physical 
         impact of climate change and extreme weather events. 
-
+  
       always: |
         The Oil and Gas sector is highly exposed to the physical impacts of
         climate change including both the chronic effects (e.g., raised sea-levels and 
@@ -358,13 +362,13 @@
         of oil and gas supply. Oil and Gas firms are especially exposed as their 
         assets are geographically concentrated and cannot be migrated to safer 
         locations.
-
+  
       high_materiality: |
         The following examples illustrate how the Oil and Gas sector could be
         impacted in a High Physical Risk (Hot House World) scenario:
-
+  
         **Chronic Impacts**
-
+  
         - **Rising sea levels**: this could cause disruption to coastal 
           refineries and terminals, especially when compounded with storm 
           surge events, such as those generated by cyclones. For example, 
@@ -374,33 +378,33 @@
           U.S. federally administered areas of the Gulf of Mexico were shut in. 
           Additionally, at least 9 refineries shut down or reduced operations 
           during that time.
-
+  
         - **Water stress/long-term drought**: this could lead to competition
           between Oil and Gas companies for water resources.There is a chance that 
           it could lead to increased environmental regulation focusing on protecting 
           water supply from excess withdrawal and from pollution, with the Oil and Gas 
           sector being affected in both ways.
-
+  
         - **Thawing permafrost**: this could lead to areas of pipeline subsidence, 
           causing damage and associated increased maintenance costs.
-
+  
         **Acute Impacts**
-
+  
         - **Cyclones**: this could have an effect on the construction, offshore 
           production, onshore processing and decommission phases of oil and gas 
           projects resulting from either short-term disruption or damage to 
           facilities. These conditions could also lead to spills/leaks resulting 
           in additional clean-up costs.
-
+  
         - **Floods**: this could pose serious risks to the Oil and Gas sector such as
           damage to facilities, refineries, loss of production, and increasing risks of 
           dispersal of salt and chemicals from coal seam gas mines onto farming land.
-
+  
         - **Wildfires**: especially due to the highly flammable nature of methane, this 
           could be induced or exacerbated by gas vented from leaks in pipelines and 
           compressors. These would be ignited by sparks or embers from existing 
           bushfires and cause significant damage to fossil fuel infrastructure.
-
+  
         Oil and Gas assets are mostly limited by geographical constraints due to the 
         location of reserves, and thus the risks above cannot be averted by relocation 
         of supply. Some actions remain to mitigate the physical risks however, namely 
@@ -409,7 +413,7 @@
         are exposed to rising sea levels and storm surges, but refineries are capable 
         of being relocated to consider climate change risks, especially those caused 
         by flooding.
-
+  
   transition_physical:
     high:
       exec_description: |
@@ -419,7 +423,7 @@
         uncoordinated, and fragmented decarbonisation policy further negatively affects 
         product demands and operating costs for this sector, exposing it to transition 
         risks. 
-
+  
       always: |
         The Oil and Gas sector is highly exposed to the physical impacts of climate 
         change including both the chronic effects (e.g. rising sea-levels) and acute 
@@ -448,13 +452,13 @@
         of individual companies and the sector overall. The policy and economic conditions 
         described in High Physical and Transition risk Scenarios could result in changes 
         in the demand for the Oil and Gas sector.
-
+  
       high_materiality: |
         The following examples illustrate how the Oil and Gas sector could be
         impacted in a High Physical and Transition Risk (Too-little-too-late) scenario:
-
+  
         **Chronic Impacts**
-
+  
         - **Rising sea levels**: this could cause disruption to coastal 
           refineries and terminals, especially when compounded with storm 
           surge events, such as those generated by cyclones. For example, 
@@ -464,33 +468,33 @@
           U.S. federally administered areas of the Gulf of Mexico were shut in. 
           Additionally, at least 9 refineries shut down or reduced operations 
           during that time.
-
+  
         - **Water stress/long-term drought**: this could lead to competition
           between Oil and Gas companies for water resources.There is a chance that 
           it could lead to increased environmental regulation focusing on protecting 
           water supply from excess withdrawal and from pollution, with the Oil and Gas 
           sector being affected in both ways.
-
+  
         - **Thawing permafrost**: this could lead to areas of pipeline subsidence, 
           causing damage and associated increased maintenance costs.
-
+  
         **Acute Impacts**
-
+  
         - **Cyclones**: this could have an effect on the construction, offshore 
           production, onshore processing and decommission phases of oil and gas 
           projects resulting from either short-term disruption or damage to 
           facilities. These conditions could also lead to spills/leaks resulting 
           in additional clean-up costs.
-
+  
         - **Floods**: this could pose serious risks to the Oil and Gas sector such as
           damage to facilities, refineries, loss of production, and increasing risks of 
           dispersal of salt and chemicals from coal seam gas mines onto farming land.
-
+  
         - **Wildfires**: especially due to the highly flammable nature of methane, this 
           could be induced or exacerbated by gas vented from leaks in pipelines and 
           compressors. These would be ignited by sparks or embers from existing 
           bushfires and cause significant damage to fossil fuel infrastructure.
-
+  
         Significantly slowed GDP growth could further impact demand for oil and gas 
         through a decrease in spending power of economic agents. 
         
@@ -502,7 +506,7 @@
         these effects are relatively muted compared to the Orderly and Disorderly 
         Transition scenarios, the following financial impacts could still potentially 
         arise for companies:
-
+  
         - Regional divergence in demand for different forms of energy, resulting in 
           regional divergence in revenues. In decarbonising or service-based economies, 
           oil and gas fuel demand is projected to decline, resulting in a reduction in 
@@ -510,7 +514,7 @@
           remain stable or grow in short to medium terms. This regional divergence will 
           lead to knock-on impacts as capital is reallocated and different firms are 
           advantaged or disadvantaged.
-
+  
         - Overall, oil and gas demand is expected to decline globally in too-little-too-late
           scenarios. As such, reduced revenue due to decline in fossil fuel demand as energy 
           demand is electrified or pushed to low-carbon alternatives. This is especially apparent 
@@ -518,19 +522,19 @@
           also at risk of switching. This would have an impact on the business models of c
           ompanies both within the Oil and Gas industry, and those service providers with 
           Oil and Gas businesses as part of their clientele.
-
+  
         ![Electricity Capacity](oil_gas_tltl_fossil_demand.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
         - **Increase in regulatory costs**: this could occur from paying a price on 
           carbon emissions via tax or cap & trade clearing programs. Fragmented and 
           uncoordinated policy is likely to increase the regulatory burden of 
           compliance and thus the costs involved for transnational firms, whilst 
           national oil companies and state-owned or partially state-owned entities 
           will not necessarily face the same concerns.
-
+  
         - **Increased costs of goods sold**: this may occur as carbon prices 
           (both real and effective) affect operational costs, and demand drops, 
           there could be an increase in the business costs for supplying fossil 
@@ -541,14 +545,14 @@
           high-carbon economies maintaining low costs of production in regions 
           such as petrostates with significant reserves or political involvement 
           in fossil industries.
-
+  
         - **Increases in capital expenditures**: this may be required with new 
           investments required to pivot business models towards low carbon energy 
           production, renewable biofuels/hydrogen/synthetic and/or Carbon Capture, 
           Usage and Storage (CCUS), in regions where there is a demand for 
           low-carbon energy alternatives, and it is viable for Oil and Gas firms 
           to fill this role over existing incumbents.
-
+  
         - **Falling asset values**: this could occur as oil and gas reserves and 
           infrastructure required for extraction based on re-adjusted market 
           expectations of a lower demand of fossil fuels in the future, with 
@@ -567,13 +571,13 @@
         overall demand. Primary energy demand for both oil and gas are likely to decrease 
         as it is replaced on purely economic grounds by renewables in power generation, 
         and electrification of demand in heating and transportation. 
-
+  
         ![Oil and Gas Price](oil_gas_tltl_energy_price_oil.png)
-
+  
         ![Oil and Gas Price](oil_gas_tltl_energy_price_gas.png)
-
+  
         **Source:**
-        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+        [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         Reductions in overall demand starts with the sectors where oil and gas are 
         most substitutable for alternatives. The remaining consumers of oil and gas are 
@@ -602,8 +606,8 @@
         operations in a planned manner in keeping with their fiduciary duties to shareholders or 
         transitioning the business model from a traditional Oil and Gas company to an “Integrated 
         Energy” company by switching to supplying renewable energy, among others.
-
+  
   references: |
-    - [Assessing Climate Change Risks and Opportunities for Investors - Investor Group on Climate Change, 2020](https://igcc.org.au/wp-content/uploads/2020/06/Oil-and-Gas.pdf){target="\_blank"}
+    - [Assessing Climate Change Risks and Opportunities for Investors - Investor Group on Climate Change, 2020](https://igcc.org.au/wp-content/uploads/2020/06/Oil-and-Gas.pdf)
     
-    - [NAICS Code 21](https://www.naics.com/six-digit-naics/?code=21){target="\_blank"}
+    - [NAICS Code 21](https://www.naics.com/six-digit-naics/?code=21)

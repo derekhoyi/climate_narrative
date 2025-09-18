@@ -1,14 +1,15 @@
-6:
+11:
   name: Marine Underwriting Class
   test_report_position: 13
   description: |
     # Marine Underwriting
+    
     The **marine** underwriting class is a long-established segment of the re/insurance industry, covering a diverse range of sub-classes that protect against various maritime risks. These include hull and liability insurance, marine cargo coverage, charterer’s insurance, and policies for vessels under construction, mortgages, and financial loss. Other key areas include kidnap and ransom coverage, carrier’s liability, and personal accident insurance for ship crews, however those areas have different climate transmission mechanisms and are not explored as part of this analysis.
     
     Marine underwriting also extends to critical services related to the maritime industry, such as the design, construction, maintenance, and operation of vessels and shipping lines. It encompasses the operation of ports, shipyards, drydocks, and cruise lines, as well as sectors like maritime law, warships, customs services, fishing operations, marine science, and salvage operations. As such, marine underwriting class has material interdependencies with other insurance lines such as property, business interruption and public liability. Whilst this analysis is focusing on marine underwriting class, it is noteworthy that a holistic climate risk analysis would require to assess the interdependencies across relevant classes. 
     
     In recent years, marine underwriting has evolved to address emerging risks from climate change, carbon pricing in shipping, and the transition to more sustainable maritime practices. These developments are reshaping the underwriting landscape, as insurers begin factoring in the impacts of environmental regulations and consumer demand for greener maritime solutions.
-
+  
   transition:
     high:
       exec_description: |
@@ -21,10 +22,10 @@
         Underwriting risks will vary geographically, with international shipping influenced by global policies and regional shipping facing fragmented, slower changes. The shift to alternative fuels such as ammonia and hydrogen introduces new liabilities, particularly around fuel storage and transport, requiring insurers to adapt risk models.
         
         Physical risks are expected to be higher in this scenario compared to an orderly transition, requiring adjustments to underwriting practices to address the increased volatility from rapid transitions.
-
+  
       high_materiality: |
         In the Delayed Transition scenario, the marine underwriting sector faces intensified risks due to abrupt policy changes and the rapid, uneven adoption of new technologies. As delayed climate policies trigger sudden actions, such as carbon taxes and emission regulations, marine insurers must swiftly adapt to these shifts, which could modify contractual wording (e.g. exclusions) and alter coverage for vessels that are not compliant with emerging standards. Unlike the orderly transition, where gradual changes allow for smoother adjustments, a disorderly transition leads to more rapid crystallisation of underwriting risks—particularly increased liability risks due to the storage and transport of alternative fuels such as ammonia and hydrogen.
-
+  
         **Underwriting Adjustments in Response to Transition Risks**
         
         Higher operating costs and premium adjustments: As carbon and energy prices rise abruptly, operating costs for marine companies using fossil fuels will increase significantly and equally those transitioning to alternative fuels will need material capex to fund the transition. Insurers will need to account for these higher costs by adjusting premiums. For instance, vessels that transition to cleaner technologies, could face increased liability premiums due to the risks associated with handling and transporting new fuels.
@@ -32,20 +33,23 @@
         Storage and Transport Liabilities: Underwriters must address the new liability risks from fuel storage and transportation. For instance, ammonia and hydrogen are hazardous fuels, and insurers will need to develop new coverage options to account for the risks associated with these fuels (e.g., storage tank failures, fuel transfer accidents). These risks could lead to exclusions or higher premiums for fleets adopting these fuels.
         
         **Geographical Variability in Delayed Transition Risks**
-
+  
         Regional Policy Differences: The speed and intensity of the transition will vary geographically. In regions where fossil fuel dependence is high (e.g., regional parts of Asia and Africa), the transition to low-carbon alternatives may be slower, resulting in delayed regulatory actions. This creates geographical differences in the speed at which underwriting risks manifest, with regions facing a later crystallisation of risks than others that have stricter policies or more immediate transitions.
-
+  
         International vs. Regional Shipping: While international shipping will likely follow global policy trends (e.g., IMO regulations), regional fleets will experience a more fragmented and heterogeneous pace of change. Local policies may not align with international standards, creating different levels of underwriting risk across various shipping sectors. Underwriters will need to adjust their risk models, accordingly, considering these regional disparities in policy enforcement and technological adoption.
-
+  
         **Technological Innovation and Impact on Underwriting**
         
         Energy-Efficient Vessels and Modifications: The transition to low-carbon shipping technologies could include examples such as:
-
+  
         -	Efficiency increasing shipping methods (e.g. containerization)
+  
         -	Energy efficient vessels and vessel modifications (e.g. Silverstream air lubrication, sensor-controlled cabin lighting)
+  
         -	‘Smart ports’ which enhance co-ordination between ship and port call activities to optimise voyage speeds
+  
         -	Alternatives to fossil-based bunker fuels (e.g. biodiesel, methanol, lignin, and Ammonia). In the Delayed transition risk scenario, sources of final energy used in the transport sector change dramatically. 
-
+  
         Pricing and risk selection will be affected for companies adopting such technologies and new underlying operational risks will require development of new actuarial models to be developed to account for those risks. 
         
         For example, the implementation of smart ports to optimise ship-to-port coordination, as well as the shift to alternative fuels like methanol, biodiesel, and ammonia, could necessitate underwriting adjustments. Ships that use alternative fuels could face pricing volatility initially due to the hazardous nature of these fuels, but this risk could be offset by advanced port infrastructure that mitigates operational disruptions.
@@ -55,25 +59,24 @@
         Physical risks in a disorderly transition are expected to be slightly higher than in an orderly transition, as the greenhouse effect is higher under this scenario especially for longer time horizons. Risk crystallisation include increase in drought frequency – especially for riverine and lake transport routes, potential storm intensifications that can affect both vessel and port infrastructure damage, and higher operational costs as companies scramble to meet new regulatory standards. Insurers will need to update their risk models to account for these increased physical risks, adjusting premium volumes and coverage terms accordingly. Adaptation measures will become essential, and underwriters must collaborate with companies to help build resilience into operations by financing adaptation projects, offering incentives for sustainable practices, and developing long-term solutions to the emerging climate risks.  To inform adaptation efficiency, insurers will be expected to closely collaborating between underwriting and claims teams, as well as use the claims trend information to consider developing new products (e.g. usage-based marine insurance in arctic) to gain first-mover advantage.
         
         Other considerations under a disorderly scenario for the underlying maritime industry that in turns implicitly impacts underwriting practice include:
-
+  
         - **Changes in maritime law:** maritime transport firms could have to keep up with the diverse or rapidly changing regulations across jurisdictions in which they operate, leading to increasing compliance requirements. These changes may require firms to adapt their service, potentially reducing sales (e.g. efficiency-based speed limits for Cruise ships leading to a less appealing service with reduced itinerary and more sea days) and could lead to changes in the level and type of insurance coverage required.
         
         - **Repricing of assets:** asset valuation of marine company reserves could be re-priced based on the re-adjusted expectations of the use of low-carbon products and energy efficient technologies in the future.
-
+  
         ![Current policies](marine_delayed_current_policies.png)
         
         **Source:**
-        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-        
+        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         In the Delayed transition scenario, these innovations could contribute to an overall decrease in CO<sub>2</sub> emissions in the transportation sector in the long term.
-
+  
         ![Delayed transition](marine_delayed_transition_curve.png)
         
         **Source:**
-        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
     
-
+  
     low:
       exec_description: |
         In the orderly transition scenario, the shift to lower-carbon fuels will change underwriting risks, especially in fuel storage and transportation, increasing liability risks for vessels and infrastructure (e.g., ports and cargo facilities). While the cyclical nature of global maritime trade drives underwriting demand, new fuels and technologies will affect the risk profiles of the fleet, ports, and the broader maritime supply chain, potentially altering premiums and coverage. Physical risks are not expected to materially change in this scenario compared to others, since crystallisation of physical risk is limited given the climate mitigation that an orderly transition stipulates.
@@ -99,18 +102,25 @@
         Technological innovations, such as energy-efficient vessels, smart ports, and fuel alternatives (e.g., biodiesel, methanol), could present opportunities for marine underwriting by lowering overall risks. For example:
         
         -	Efficiency increasing shipping methods (e.g. containerisation)
+  
         -	Energy efficient vessels and vessel modifications (e.g. Silverstream air lubrication, sensor-controlled cabin lighting)
+  
         -	‘Smart ports’ which enhance co-ordination between ship and port call activities to optimise voyage speeds
+  
         -	Alternatives to fossil-based bunker fuels (e.g. biodiesel, methanol, lignin, and ammonia). In Orderly transition scenarios, sources of final energy used in the transport sector change dramatically. As the use of oil gradually declines, electricity becomes the dominant source of final energy by the end of the century, impacting non-hull exposures (e.g. port, container storage, etc).
         
         Such innovations could impact premiums for ships equipped with these technologies. Conversely, underwriters should also prepare for new risks associated with these technologies, particularly in relation to ship modifications and fuel compatibility issues.
-
+  
         The Poseidon Principles framework for marine insurance further highlights how insurers may benefit from green technologies by offering changed premiums for low-carbon vessels where risk profile changes to conventionally-fuelled vessels and providing a clearer path for sustainability reporting for underwriters. These developments will encourage insurers to adjust their underwriting models based on green initiatives and decarbonisation targets.
-
+  
         The orderly transition scenario will likely result in increased complexity for marine underwriters, but also presents opportunities to refine pricing models and adapt to new risks. The adoption of cleaner fuels like ammonia and hydrogen will drive changes in underwriting practices, with the potential for higher premiums tied to the storage and transport of these fuels, while energy-efficient technologies could reduce overall risks and premiums. As the marine sector transitions, underwriting must evolve to account for these changes, with liability risks and carbon pricing becoming key considerations in pricing models, coverage terms, and policy development. Other considerations include:
+  
         - **Increase in operating costs:** demand for insurance could be impacted by an increase in the operating costs. The significant rise in carbon and energy prices could potentially result in financial impacts, as marine firms’ carbon emissions face a rising price in the form of a carbon tax or cap & trade clearing price, particularly for shipping firms using fossil-based bunker fuel.
+  
         - **Changes in maritime law:** international cooperation could spur changes in maritime law leading to increasing compliance requirements. These changes may require firms to adapt their service, potentially reducing sales (e.g. efficiency-based speed limits for Cruise ships leading to a less appealing service with reduced itinerary and more sea days) and could lead to changes in the level and type of insurance coverage required.
+  
         - **Repricing of assets:** asset valuation of marine company reserves could be re-priced based on the re-adjusted expectations of the use of low-carbon products and energy efficient technologies in the future. Failure to use low-carbon products and energy efficient technologies could affect the commercial reputation of the company and could lead to loss in customers and decrease in revenue.
+  
         - **Changing consumer preferences:** these could lead to changes in sales due to lower customer demand as a result of change in environmental expectations that could impact this underwriting class. Consumer’s acceptance of firms’ products can also affect sales (e.g. ‘planetary diets’ reducing demand for animal-based products, including fish).
         
           ![Transportation Liquid Price](marine_orderly_net_zero_2050_1.png)
@@ -118,19 +128,17 @@
           ![Transportation Liquid Price](marine_orderly_low_demand_1.png)
         
         **Source:**
-        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
+        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         In Orderly transition scenarios, these innovations could contribute to an overall decrease in CO<sub>2</sub> emissions in the transportation sector overall, however, the impact to marine transportation is not necessarily following the same pattern (e.g. hydrogen having a small contribution to the overall fuel mix).
-
+  
           ![Transportation Liquid Price](marine_orderly_net_zero_2050_2.png)
           ![Transportation Liquid Price](marine_orderly_below_2c_2.png)
           ![Transportation Liquid Price](marine_orderly_low_demand_2.png)
         
         **Source:**
-        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
-
-
-
+        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+  
   physical:
     high:
       exec_description: |
@@ -139,10 +147,10 @@
         In the high physical climate risk scenario, marine underwriting faces severe disruptions due to escalating climate impacts. Chronic risks, such as melting ice caps and sea level rise, will force global shipping routes to shift, creating new opportunities and challenges for underwriters. Acute risks, including intensified storms and extreme weather events, will result in higher claims frequency and increased infrastructure damage, requiring significant adjustments to pricing models, reserves, and risk selection.
         
         As global infrastructure—including major ports—faces mounting pressure from physical risks, adaptation costs will likely be passed across the supply chain. Regional ports, particularly those in vulnerable areas, will bear the brunt of the disruptions, creating additional underwriting challenges. In turn, the need for resilience investments will increase demand for specialised insurance products. Underwriters will need to adapt swiftly to these changes, recalibrating their models to account for the shifting global landscape of climate risk and the new opportunities arising from this transformation.
-
+  
       high_materiality: |
         In the high physical climate risk scenario, the marine underwriting sector is exposed to far more severe and frequent climate-related disruptions than those seen in the high physical risk scenario. The term "high physical risk" refers to the extreme impacts of climate change, where physical risks—both chronic and acute—become far more severe, potentially rendering some risks uninsurable. These disruptions will require substantial adjustments in underwriting practices, including pricing models, risk selection, and reserving to reflect the escalating severity and frequency of climate events.
-
+  
         **Chronic and Acute Physical Risks Impacting Marine Underwriting**
         
         Chronic physical risks—such as melting ice caps and sea level rise—pose long-term threats to the global marine industry. The melting of polar ice will open new shipping routes, particularly in the Arctic, which will shift global shipping patterns and create new opportunities for underwriters. However, these new shipping routes will also expose vessels to new environmental risks, such as icebergs and extreme weather patterns beyond regions that were previously ice-bound. Underwriters will need to reassess risk profiles to reflect these changing dynamics and adjust premiums for fleets operating in these newly opened, but still hazardous, regions.
@@ -150,15 +158,15 @@
         Simultaneously, sea level rise will impact critical port infrastructure around the world, particularly in coastal cities. Ports with higher resilience to storms and rising sea levels, such as those in developed countries, will still face substantial risks, while regional ports in developing countries will be disproportionately impacted. Port infrastructure damage from storm surges and flooding will become a significant underwriting concern, requiring underwriters to adapt their risk models and factor in regional vulnerabilities when adjusting pricing and coverage.
         
         Acute physical risks—including increased storm intensity, flooding, and extreme weather events—will become far more frequent and severe. The Panama Canal has already experienced significant disruptions due to droughts, with water levels falling, affecting shipping lanes and increasing the risk of delays and cargo damage. Such risks are expected to intensify in the high physical risk scenario, creating additional claims exposure for underwriters. Similarly, extreme weather events will increase the frequency and severity of storm-related claims, as hurricane damage, flooding, and wind-related incidents become more common. Underwriters may need to increase reserves to address the anticipated rise in claims and adjust pricing accordingly to manage exposure.
-
+  
         ![Current policies](marine_physical_current_policies.png)
         ![NDCs](marine_physical_NDCs.png)
         
         **Source:**
-        [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
+        [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
         
         The marine transportation is exposed to a range of physical risks and are highly localised. The global circulation models underpinning the results illustrated above provide with an average global change in trend which at a localised level could be further amplified.
-
+  
         **Underwriting Adjustments and Resilience**
         
         As physical risks escalate, so too does the need for resilience investments in both infrastructure and operational capacity. Marine companies will increasingly invest in adapting port infrastructure, reinforcing hulls, and upgrading weather forecasting systems to prepare for extreme weather events. These resilience investments not only mitigate the direct physical impacts of storms, flooding, and sea level rise but also create new opportunities for insurers to offer specialised coverage for these adaptation measures. The demand for insurance products designed to cover adaptation and resilience-building will grow, requiring underwriters to adjust their pricing models to incorporate these new risks and opportunities.
@@ -176,7 +184,7 @@
         At the same time, insurers may need to introduce new exclusions for certain high-risk events, where the probability of claims is no longer manageable. However, such exclusions could create challenges for the marine transport industry, which relies on predictable insurance coverage to maintain operational stability. Adaptation measures will become essential, and underwriters must collaborate with companies to help build resilience into operations by financing adaptation projects, offering incentives for sustainable practices, and developing long-term solutions to the emerging climate risks. To inform adaptation efficiency, insurers will be expected to closely collaborating between underwriting and claims teams, as well as use the claims trend information to consider developing new products (e.g. usage-based marine insurance in arctic) to gain first-mover advantage.
         
         The high physical climate risk scenario represents a shift in how the marine underwriting industry must approach physical risks. The increased frequency and intensity of chronic and acute climate risks, combined with shifting global shipping routes, requires substantial adjustments in underwriting practices. Insurers must adapt to new and more severe risks, adjust their pricing and reserves, and provide coverage for adaptation measures to help mitigate these rising climate risks. As climate change accelerates, the need for resilient infrastructure and effective policy adjustments will become central to ensuring long-term sustainability for both the marine transport industry and marine insurance underwriting.
-
+  
   transition_physical:
     high:
       exec_description: |
@@ -189,17 +197,16 @@
         This scenario also presents opportunities, as new shipping patterns and polar routes drive increased demand for underwriting. However, these routes come with increased claims frequency and vulnerable infrastructure. Systemic risks emerge as infrastructure may become uninsurable, requiring insurers to adapt models to address climate vulnerabilities.
         
         Underwriters must adjust pricing, reserves, and risk selection to reflect regional differences, new shipping routes, and rising risks. Resilience investments in ports and vessels are essential, along with policies covering adaptation measures and infrastructure resilience. The Fragmented World scenario highlights the need for proactive adjustments in marine underwriting to manage emerging risks and capitalize on new opportunities.
-
+  
       high_materiality: |
         In the Fragmented World scenario, marine underwriting faces a particularly complex landscape due to high physical risks and disorderly transition policies. This scenario is driven by delayed climate action ("too little") and divergent mitigation ambitions across regions ("too late"). The uneven implementation of climate policies leads to high transition risks, while physical climate impacts intensify, resulting in an underwriting environment where historical trends are no longer reliable. The combined effects of fragmented climate action and unpredictable physical risks create significant challenges for marine insurers, who must adapt to an increasingly volatile landscape, with the unpredictability of both climate impacts and regulatory shifts.
-
+  
         **Regional Differences and Tipping Points**
         
-        ![Fragmented world](marine_physical_and_transition_fragmented_world.png)
+         ![Fragmented world](marine_physical_and_transition_fragmented_world.png)
         
         **Source:**
-        [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/){target="\_blank"}
-        
+        [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
         
         The marine transportation is exposed to a range of physical risks and are highly localised. The global circulation models underpinning the results illustrated above provide with an average global change in trend which at a localised level could be further amplified.
         
@@ -222,19 +229,20 @@
         **Adaptation and Policy Adjustments**
         
         In this scenario, resilience investments will become essential as climate change accelerates. The marine sector will be required to invest heavily in adapting port infrastructure, improving storm surge defences, and reinforcing shipping vessels to withstand extreme weather events. This will create new demands for specialised insurance products that cover climate adaptation and infrastructure upgrades.
+  
         Insurers will need to revise their policies to accommodate these rising risks, expanding coverage to include climate resilience measures and updating policy exclusions to account for uninsurable risks. Policies that address flooding, storm surges, and long-term climate effects will need to be adjusted to ensure that adaptation strategies are covered while also managing the growing exposure to risks from new shipping routes and disrupted infrastructure.
         
         The Fragmented World scenario represents a future where climate action is delayed and global policies diverge, leading to a combination of high physical risks and disorderly transition risks. While this creates significant challenges for marine underwriting—particularly in terms of pricing, claims frequency, and reserves—it also opens new opportunities for insurers to adapt their offerings to the emerging demands of climate-impacted shipping routes and infrastructure resilience. Underwriters will need to evolve rapidly, balancing emerging risks with new growth areas in a complex and volatile risk landscape.
-
+  
   references: |
-    - [MAERSK 2020 Sustainability Report](https://www.maersk.com/~/media_sc9/maersk/about/files/sustainability/sustainability-reports/apmm-sustainability-report-2020-a3.pdf){target="\_blank"}
-
-    - [Evergreen Corporate Social Responsibility Report 2020](https://csr.evergreen-marine.com/csr/pdf/csr-policy-report/Evergreen_CSR_2020.pdf?v=145840){target="\_blank"}
-
-    - [Mowi Intergrated Annual Report 2020](https://corpsite.azureedge.net/corpsite/wp-content/uploads/2021/03/Mowi_Integrated_Annual_Report_2020.pdf){target="\_blank"}
-
-    - [Carnival Corporation & Plc 2020 Sustainability Report](https://carnival-sustainability-2021.nyc3.digitaloceanspaces.com/assets/content/pdf/2020-Sustainability-Report_Carnival-Corporation-plc.pdf){target="\_blank"}
+    - [MAERSK 2020 Sustainability Report](https://www.maersk.com/~/media_sc9/maersk/about/files/sustainability/sustainability-reports/apmm-sustainability-report-2020-a3.pdf)
+  
+    - [Evergreen Corporate Social Responsibility Report 2020](https://csr.evergreen-marine.com/csr/pdf/csr-policy-report/Evergreen_CSR_2020.pdf?v=145840)
+  
+    - [Mowi Intergrated Annual Report 2020](https://corpsite.azureedge.net/corpsite/wp-content/uploads/2021/03/Mowi_Integrated_Annual_Report_2020.pdf)
+  
+    - [Carnival Corporation & Plc 2020 Sustainability Report](https://carnival-sustainability-2021.nyc3.digitaloceanspaces.com/assets/content/pdf/2020-Sustainability-Report_Carnival-Corporation-plc.pdf)
     
-    - [NAICS Code 48-49](https://www.naics.com/six-digit-naics/?code=48-49){target="\_blank"}
+    - [NAICS Code 48-49](https://www.naics.com/six-digit-naics/?code=48-49)
     
-    - [SIC Code E](https://www.naics.com/sic-codes-counts-division/?div=E){target="\_blank"}
+    - [SIC Code E](https://www.naics.com/sic-codes-counts-division/?div=E)
