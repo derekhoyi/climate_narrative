@@ -4,7 +4,7 @@ from dash import html, get_asset_url
 
 def create_footer():
     # Build the correct assets URL (respects base path / proxies)
-    data_zip_href = get_asset_url("assets/data/chart_data.zip")
+    data_zip_href = get_asset_url("src/assets/data/chart_data.zip")
 
     mailto_link = (
         "mailto:climate.forum@fca.org.uk"
