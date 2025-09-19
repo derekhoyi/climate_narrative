@@ -8,7 +8,7 @@ dash.register_page(__name__, path='/')
 
 def _load_disclaimer_text():
     # Use the exact path you provided
-    yml_path = Path(__file__).parent.parent.parent / "assets" / "page_contents" / "section" / "disclaimer.yml"
+    yml_path = Path(__file__).parent.parent.parent / "src" / "assets" / "page_contents" / "section" / "disclaimer.yml"
     if yml_path.exists():
         with yml_path.open(encoding="utf-8") as f:
             yml = yaml.safe_load(f) or {}
@@ -45,7 +45,7 @@ def layout():
         # Hero image
         html.Div(
             html.Img(
-                src="assets/images/CFRF image cover.jpg",
+                src="../../assets/images/CFRF image cover.jpg",
                 style={"display": "block", "marginLeft": "auto", "marginRight": "auto", "height": "auto", "width": "100%",},
                 alt="CFRF Logo"
             ),

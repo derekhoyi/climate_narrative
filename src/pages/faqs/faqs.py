@@ -41,7 +41,7 @@ def layout():
     faqs = pydash.get(yml, default_topic, [])
     accordion_items = [
         dbc.AccordionItem(
-            [html.P(pydash.get(faq, "answer", ""), className="mb-0")],
+            [dcc.Markdown(pydash.get(faq, "answer", ""), className="mb-0", link_target="_self")],
             title=pydash.get(faq, "question", f"Question {idx+1}"),
             item_id=str(idx)
         )
