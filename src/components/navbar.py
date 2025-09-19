@@ -1,54 +1,56 @@
 import dash_bootstrap_components as dbc
+import dash
+from dash import html
+from PIL import Image
 
 
 def create_navbar():
 
     navbar = dbc.NavbarSimple(
         children=[
-            dbc.DropdownMenu(
-                nav=True,
-                in_navbar=True,
-                label="Purpose",
-                children=[
-                    dbc.DropdownMenuItem("Overview", href='/purpose/purpose-overview'),
-                    dbc.DropdownMenuItem("Introduction to the tool", href='/purpose/introduction-to-the-tool'),
-                    dbc.DropdownMenuItem("How to use the tool?", href='/purpose/how-to-use-the-tool'),
-                    dbc.DropdownMenuItem("How can the reports be used?", href='/purpose/how-can-the-reports-be-used'),
-                    dbc.DropdownMenuItem("What is next?", href='/purpose/what-is-next'),
-                ],
-            ),
-            dbc.DropdownMenu(
-                nav=True,
-                in_navbar=True,
-                label="Limitations",
-                children=[
-                    dbc.DropdownMenuItem("Overview", href='/limitations/limitations-overview'),
-                    dbc.DropdownMenuItem("Introduction to the tool", href='/limitations/long-term-scenario-limitations'),
-                    dbc.DropdownMenuItem("How to use the tool", href='/limitations/short-term-scenario-limitations'),
-                ],
-            ),
+            dbc.NavItem(dbc.NavLink("purpose", href="/purpose")),
+            dbc.NavItem(dbc.NavLink("limitations", href="/limitations")),
             dbc.DropdownMenu(
                 nav=True,
                 in_navbar=True,
                 label="Scenarios",
                 children=[
-                    dbc.DropdownMenuItem("Long-term scenarios", href='/scenarios/long-term-scenarios'),
-                    dbc.DropdownMenuItem("Short-term scenarios", href='/scenarios/short-term-scenarios'),
+                    dbc.DropdownMenuItem("Long-term scenarios", href='/scenarios/long-term-scenarios',class_name="box-style"),
+                    dbc.DropdownMenuItem("Short-term scenarios", href='/scenarios/short-term-scenarios',class_name="box-style"),
                 ],
             ),
-            dbc.NavItem(dbc.NavLink("Sectors", href="/sectors")),
+            dbc.DropdownMenu(
+                nav=True,
+                in_navbar=True,
+                label="Sectors",
+                children=[
+                    dbc.DropdownMenuItem("Sector", href='/sectors/sector',class_name="box-style"),
+                    dbc.DropdownMenuItem("Underwriting", href='/sectors/underwriting',class_name="box-style"),
+                    dbc.DropdownMenuItem("Sovereigns", href='/sectors/sovereigns',class_name="box-style"),
+                ],
+            ),
             dbc.NavItem(dbc.NavLink("Reports", href="/reports/overview")),
-            dbc.NavItem(dbc.NavLink("Charts", href="/charts")),
+            dbc.DropdownMenu(
+                nav=True,
+                in_navbar=True,
+                label="Charts",
+                children=[
+                    dbc.DropdownMenuItem("Physical Risk", href='/charts/ph_chart',class_name="box-style"),
+                    dbc.DropdownMenuItem("Transition Risk", href='/charts/tr_chart',class_name="box-style"),
+                ],
+            ),
             dbc.NavItem(dbc.NavLink("FAQs", href="/faqs")),
+            dbc.NavItem(dbc.NavLink("Acknowledgements", href="/acknowledge")),
         ],
-        brand="CFRF",
+        brand=html.Img(src=Image.open("src/assets/logos/cfrf_logo.png"), height="48px", alt="CFRF"),
         brand_href="/",
         sticky="top",
-        color="dark",
-        dark=True,
+        color="white",
+        dark=False,
         expand='xl',
         links_left=True,
-        class_name="mb-4",
+        class_name="mb-4", ####### changed from mb-4 to mb-0 #######
+        style={"backgroundColor": "#ffffff", "color": "#000000"}  # <-- Force white bg and black text
     )
 
     return navbar
