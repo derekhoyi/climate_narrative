@@ -4,8 +4,9 @@ import json
 from pathlib import Path
 import yaml
 from dash import dcc
+import dash_bootstrap_components as dbc
 
-FILE_PATH = Path(__file__).parent.parent.parent
+FILE_PATH = Path(__file__).parent.parent
 CONFIG_PATH = FILE_PATH.joinpath("./assets/config").resolve()
 PAGE_CONTENTS_PATH = FILE_PATH.joinpath("./assets/page_contents").resolve()
 
@@ -84,3 +85,30 @@ def get_user_selection_from_store(all_stored_data):
         user_selection_df = pd.DataFrame(all_stored_data[k])
         all_user_selection_df = pd.concat([all_user_selection_df, user_selection_df])
     return all_user_selection_df
+
+def rename_user_selection_data_columns(all_user_selection_df):
+    output_df = all_user_selection_df.copy()
+    columns_to_keep_and_rename_dict = {
+        'institution': 'Institution Type',
+        'exposure': 'Exposure',
+        'sector': 'Sector',
+        'ptype': 'Type',
+        'label': 'Materiality / Scenario',
+        'materiality': 'Materiality',
+        'scenario': 'Scenario',
+        'description': 'Description'
+    }
+    columns_to_keep_and_rename_dict = {k: v for k, v in columns_to_keep_and_rename_dict.items() if k in output_df.columns}
+    output_df = output_df[columns_to_keep_and_rename_dict.keys()]
+    output_df = output_df.rename(columns=columns_to_keep_and_rename_dict)
+    return output_df
+
+def create_data_table(df):
+    return dbc.Table.from_dataframe(
+        df, striped=True, bordered=True, hover=True, responsive=True,
+        className="border border-1 text-center align-middle w-auto",
+        style={"minWidth": "100%", "tableLayout": "fixed", "overflow-x": "auto"}
+    )
+
+def plural_add_s(plural_flag):
+    return "s" if plural_flag else ""

@@ -18,7 +18,7 @@ def layout(institution_type=None, **kwargs):
 	# page layout
 	layout = html.Div([
 		dcc.Location(id="customise-institutional-report-url"),
-		dcc.Store(id='report-type-store', storage_type='session', data='institutional'),
+		dcc.Store(id='report-type-store', storage_type='session', data='Institutional'),
 		html.H3('Institutional Report', className="text-success fw-bold"),
 		html.Br(),
 		html.Div(id="institution-type-radio"),
@@ -72,16 +72,16 @@ def update_url(user_selection_completed, back, _next, restart, generate_report, 
 
 @callback(
 	Output("institution-type-radio", "children"),
-	Input("exposure-product-mapping-store", "data"),
+	Input("exposure-sector-product-mapping-store", "data"),
 	State("customise-institutional-report-url", "search"),
 )
-def institution_type_radio(exposure_product_mapping_dict, url_search):
+def institution_type_radio(exposure_sector_product_mapping_dict, url_search):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 
 	if start_page:
-		exposure_product_mapping_df = pd.DataFrame(exposure_product_mapping_dict)
-		unique_institution_types = [x for x in exposure_product_mapping_df['institution'].unique() if x.upper() != 'ALL']
+		exposure_sector_product_mapping_df = pd.DataFrame(exposure_sector_product_mapping_dict)
+		unique_institution_types = [x for x in exposure_sector_product_mapping_df['institution'].unique() if x.upper() != 'ALL']
 		institution_selection = html.Div([
 			dbc.Label("Type of institution: "),
 			dbc.RadioItems(
@@ -107,12 +107,12 @@ def store_institution_type(value):
 @callback(
 	Output("exposure-stepper-content", "children"),
 	Output("exposure-type", "children", allow_duplicate=True),
-	Input("exposure-product-mapping-store", "data"),
+	Input("exposure-sector-product-mapping-store", "data"),
 	State('user-selection-completed-store', 'data'),
 	State("customise-institutional-report-url", "search"),
 	prevent_initial_call='initial_duplicate'
 )
-def initiate_exposure_stepper(exposure_product_mapping_dict, user_selection_completed, url_search):
+def initiate_exposure_stepper(exposure_sector_product_mapping_dict, user_selection_completed, url_search):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 	institution_type = query.get("institution-type", [None])[0]
@@ -121,8 +121,8 @@ def initiate_exposure_stepper(exposure_product_mapping_dict, user_selection_comp
 	if start_page or user_selection_completed:
 		raise dash.exceptions.PreventUpdate
 
-	exposure_product_mapping_df = data_loader.get_selected_institution_type_mapping(exposure_product_mapping_dict, institution_type)
-	exposures = exposure_product_mapping_df['exposure'].unique()
+	exposure_sector_product_mapping_df = data_loader.get_selected_institution_type_mapping(exposure_sector_product_mapping_dict, institution_type)
+	exposures = exposure_sector_product_mapping_df['exposure'].unique()
 	exposure_type = exposures[0] if len(exposures) > 0 else None
 
 	# stepper
@@ -147,7 +147,7 @@ def initiate_exposure_stepper(exposure_product_mapping_dict, user_selection_comp
 @callback(
 	Output("exposure-stepper", "active", allow_duplicate=True),
 	Output("exposure-type", "children", allow_duplicate=True),
-	Input("exposure-product-mapping-store", "data"),
+	Input("exposure-sector-product-mapping-store", "data"),
 	Input("institutional-previous-btn", "n_clicks"),
 	Input("institutional-next-btn", "n_clicks"),
 	State('user-selection-completed-store', 'data'),
@@ -156,7 +156,7 @@ def initiate_exposure_stepper(exposure_product_mapping_dict, user_selection_comp
 	State("customise-institutional-report-url", "search"),
 	prevent_initial_call=True
 )
-def update_stepper(exposure_product_mapping_dict, back, _next, user_selection_completed, stepper_active, stepper_children, url_search):
+def update_stepper(exposure_sector_product_mapping_dict, back, _next, user_selection_completed, stepper_active, stepper_children, url_search):
 	# Parse institution type from URL
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
@@ -167,8 +167,8 @@ def update_stepper(exposure_product_mapping_dict, back, _next, user_selection_co
 		raise dash.exceptions.PreventUpdate
 
 	# Get selected institution type mapping and max_step (according to python indexing convention)
-	exposure_product_mapping_df = data_loader.get_selected_institution_type_mapping(exposure_product_mapping_dict, institution_type)
-	max_step = len(exposure_product_mapping_df['exposure'].unique())
+	exposure_sector_product_mapping_df = data_loader.get_selected_institution_type_mapping(exposure_sector_product_mapping_dict, institution_type)
+	max_step = len(exposure_sector_product_mapping_df['exposure'].unique())
 
 	# Initialize current step
 	stepper_active = stepper_active or 0
@@ -184,7 +184,7 @@ def update_stepper(exposure_product_mapping_dict, back, _next, user_selection_co
 		step = stepper_active
 
 	# Get exposure type for current step
-	exposure_types = list(exposure_product_mapping_df['exposure'].unique())
+	exposure_types = list(exposure_sector_product_mapping_df['exposure'].unique())
 	if step < len(exposure_types):
 		exposure_type = exposure_types[step]
 	elif step == len(exposure_types):
@@ -195,13 +195,13 @@ def update_stepper(exposure_product_mapping_dict, back, _next, user_selection_co
 
 @callback(
 	Output("exposure-selection-dropdown", "children"),
-	Input("exposure-product-mapping-store", "data"),
+	Input("exposure-sector-product-mapping-store", "data"),
 	Input("exposure-type", "children"),
 	State('user-selection-completed-store', 'data'),
 	Input("all-user-selection-store", "data"),
 	State("customise-institutional-report-url", "search"),
 )
-def initiate_exposure_selection_dropdown(exposure_product_mapping_dict, exposure_type, user_selection_completed, stored_data, url_search):
+def initiate_exposure_selection_dropdown(exposure_sector_product_mapping_dict, exposure_type, user_selection_completed, stored_data, url_search):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 	institution_type = query.get("institution-type", [None])[0]
@@ -213,11 +213,11 @@ def initiate_exposure_selection_dropdown(exposure_product_mapping_dict, exposure
 	stored_data = stored_data or {}
 	filtered_stored_data = stored_data.get(exposure_type, [])
 
-	exposure_product_mapping_df = data_loader.get_selected_institution_type_mapping(exposure_product_mapping_dict, institution_type)
-	exposure_product_mapping_df = exposure_product_mapping_df[exposure_product_mapping_df['exposure'] == exposure_type]
-	portfolios = exposure_product_mapping_df['portfolio'].unique()
-	ptypes = exposure_product_mapping_df['type'].unique()
-	combinations_to_keep_list = [(p, t) for p, t in exposure_product_mapping_df[['portfolio', 'type']].drop_duplicates().values]
+	exposure_sector_product_mapping_df = data_loader.get_selected_institution_type_mapping(exposure_sector_product_mapping_dict, institution_type)
+	exposure_sector_product_mapping_df = exposure_sector_product_mapping_df[exposure_sector_product_mapping_df['exposure'] == exposure_type]
+	sectors = exposure_sector_product_mapping_df['sector'].unique()
+	ptypes = exposure_sector_product_mapping_df['type'].unique()
+	combinations_to_keep_list = [(p, t) for p, t in exposure_sector_product_mapping_df[['sector', 'type']].drop_duplicates().values]
 
 	table_styling = {
 		"margin": 8, "padding": 8, "align-items": "center", "verticalAlign": "middle", "width": "100%", "height": "100%",
@@ -228,21 +228,21 @@ def initiate_exposure_selection_dropdown(exposure_product_mapping_dict, exposure
 		[html.Th(t, style=table_styling | {"textAlign": "center"}) for t in ptypes]
 	)
 	rows = []
-	for p in portfolios:
-		row = [html.Td(p, style=table_styling)]
+	for s in sectors:
+		row = [html.Td(s, style=table_styling)]
 		for t in ptypes:
-			options_list = [{"label": l, "value": f"{institution_type}|{exposure_type}|{p}|{t}|{l}"} for l in
+			options_list = [{"label": l, "value": f"{institution_type}|{exposure_type}|{s}|{t}|{l}"} for l in
 							value_bg_color_mapping.keys()]
-			default_items = [x for x in filtered_stored_data if x['portfolio'] == p and x['ptype'] == t]
+			default_items = [x for x in filtered_stored_data if x['sector'] == s and x['ptype'] == t]
 			default_value = default_items[0]['value'] if default_items else options_list[0]['value']
 			background_color = value_bg_color_mapping.get(default_value.split('|')[-1], "white")
 			row.append(html.Td(
 				dcc.Dropdown(
 					options=options_list,
 					value=default_value,
-					id={"type": 'exposure-selection-store', "exposure": exposure_type, "portfolio": p, "ptype": t},
+					id={"type": 'exposure-selection-store', "exposure": exposure_type, "sector": s, "ptype": t},
 					clearable=False,
-					style=({'visibility': 'hidden', "opacity": 0} if (p, t) not in combinations_to_keep_list else {})
+					style=({'visibility': 'hidden', "opacity": 0} if (s, t) not in combinations_to_keep_list else {})
 						  | {"background-color": background_color},
 				),
 				style=table_styling | {"textAlign": "center"}
@@ -254,10 +254,10 @@ def initiate_exposure_selection_dropdown(exposure_product_mapping_dict, exposure
 	)
 
 @callback(
-	Output({"type": "exposure-selection-store", "exposure": dash.ALL, "portfolio": dash.ALL, "ptype": dash.ALL}, "style"),
+	Output({"type": "exposure-selection-store", "exposure": dash.ALL, "sector": dash.ALL, "ptype": dash.ALL}, "style"),
 	State('user-selection-completed-store', 'data'),
-	Input({"type": "exposure-selection-store", "exposure": dash.ALL, "portfolio": dash.ALL, "ptype": dash.ALL}, "value"),
-	State({"type": "exposure-selection-store", "exposure": dash.ALL, "portfolio": dash.ALL, "ptype": dash.ALL}, "style"),
+	Input({"type": "exposure-selection-store", "exposure": dash.ALL, "sector": dash.ALL, "ptype": dash.ALL}, "value"),
+	State({"type": "exposure-selection-store", "exposure": dash.ALL, "sector": dash.ALL, "ptype": dash.ALL}, "style"),
 	State("customise-institutional-report-url", "search"),
 	State("exposure-type", "children"),
 	prevent_initial_call=True
@@ -362,7 +362,7 @@ def scenario_checklist_select_or_clear_all(select_all, clear_all, options):
 	State("customise-institutional-report-url", "href"),
 	State("exposure-type", "children"),
 	State("all-user-selection-store", "data"),
-	State({"type": "exposure-selection-store", "exposure": dash.ALL, "portfolio": dash.ALL, "ptype": dash.ALL}, "value"),
+	State({"type": "exposure-selection-store", "exposure": dash.ALL, "sector": dash.ALL, "ptype": dash.ALL}, "value"),
 	State({"type": 'scenario-selection-store', "scenario": dash.ALL}, "value"),
 	Input("customise-institutional-report-url", "search"),
 )
@@ -387,11 +387,11 @@ def store_user_selection(back, _next, restart, generate_report, user_selection_c
 	if button_id in ["institutional-previous-btn", "institutional-next-btn", "generate-report-btn", "customise-institutional-report-url"]:
 		if exposure_type == "Scenario":
 			stored_data = [{
-				'report': 'institutional',
+				'report': 'Institutional',
 				'id': s,
 				'institution': institution_type,
 				'exposure': 'Scenario',
-				'portfolio': "N/A",
+				'sector': "N/A",
 				'ptype': "N/A",
 				'label': s,
 				'value': s,
@@ -407,11 +407,11 @@ def store_user_selection(back, _next, restart, generate_report, user_selection_c
 					parts = x.split('|')
 					if len(parts) == 5 and parts[4] != 'N/A':
 						stored_data.append({
-							'report': 'institutional',
+							'report': 'Institutional',
 							'id': '|'.join(parts[:4]),
 							'institution': institution_type,
 							'exposure': parts[1],
-							'portfolio': parts[2],
+							'sector': parts[2],
 							'ptype': parts[3],
 							'label': parts[4],
 							'value': x,
@@ -475,6 +475,7 @@ def exposure_selection_layout(user_selection_completed, stepper_active, stepper_
 			html.Div([
 				title,
 				description,
+				html.Br(),
 				html.Div(id='exposure-selection-dropdown'),
 			], className="rounded-4 p-4 border border-1 border-gray-4"),
 		])
@@ -611,14 +612,8 @@ def review_summary_page(_next, all_stored_data, user_selection_completed, url_se
 		raise dash.exceptions.PreventUpdate
 
 	all_user_selection_df = data_loader.get_user_selection_from_store(all_stored_data)
-	all_user_selection_df = all_user_selection_df[['institution', 'exposure', 'portfolio', 'ptype', 'label']]
-	all_user_selection_df = all_user_selection_df.rename(columns={
-		'institution': 'Institution Type',
-		'exposure': 'Exposure',
-		'portfolio': 'Portfolio',
-		'ptype': 'Portfolio Type',
-		'label': 'Materiality / Scenario'
-	})
+	all_user_selection_df = data_loader.rename_user_selection_data_columns(all_user_selection_df)
+
 	review_summary_layout = html.Div([
 		html.H4(f"{institution_type}: Review your selections", className="ms-1 mb-3"),
 		html.Div(
@@ -626,10 +621,6 @@ def review_summary_page(_next, all_stored_data, user_selection_completed, url_se
 			className="rounded-4 p-3 border border-1 border-gray-4 bg-light text-transform-none"
 		),
 		html.Br(),
-		dbc.Table.from_dataframe(
-			all_user_selection_df, striped=True, bordered=True, hover=True, responsive=True,
-			className="border border-1 text-center align-middle w-auto",
-			style={"minWidth": "100%", "tableLayout": "fixed", "overflow-x": "auto"}
-		),
+		data_loader.create_data_table(all_user_selection_df)
 	], className="rounded-4 p-4 border border-1 border-gray-4")
 	return review_summary_layout
