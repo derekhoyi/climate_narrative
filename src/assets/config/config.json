@@ -1,0 +1,1247 @@
+{
+  "exported_at": "20250919_1527",
+  "sheets": {
+    "output_structure_mapping": [
+      {
+        "report_type": "Institutional",
+        "output_structure": "Executive Summary",
+        "materiality": "Low",
+        "summary_input_table_flag": "Yes",
+        "scenario_content_id": "exec_description",
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": "exec_description",
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Institutional",
+        "output_structure": "Executive Summary",
+        "materiality": "Medium",
+        "summary_input_table_flag": "Yes",
+        "scenario_content_id": "exec_description",
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": "exec_description",
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Institutional",
+        "output_structure": "Executive Summary",
+        "materiality": "High",
+        "summary_input_table_flag": "Yes",
+        "scenario_content_id": "exec_description",
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": "always",
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Institutional",
+        "output_structure": "Scenario Detail",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": "description",
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Institutional",
+        "output_structure": "Sector Overview",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": "description",
+        "sector_scenario_content_id": NaN,
+        "product_content_id": "text"
+      },
+      {
+        "report_type": "Institutional",
+        "output_structure": "Sector Detail",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": "always",
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Institutional",
+        "output_structure": "Sector Detail",
+        "materiality": "High",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": "high_materiality",
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Institutional",
+        "output_structure": "Appendices",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": "appendices",
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Institutional",
+        "output_structure": "References",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": "references",
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Sector",
+        "output_structure": "Executive Summary",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": "exec_description",
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": "always",
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Sector",
+        "output_structure": "Scenario Detail",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": "description",
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Sector",
+        "output_structure": "Sector Overview",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": "description",
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Sector",
+        "output_structure": "Sector Detail",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": "always",
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Sector",
+        "output_structure": "Sector Detail",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": "high_materiality",
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Sector",
+        "output_structure": "Appendices",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": "appendices",
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Sector",
+        "output_structure": "References",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": "references",
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Scenario",
+        "output_structure": "Executive Summary",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": "exec_description",
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Scenario",
+        "output_structure": "Scenario Detail",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": "description",
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Full",
+        "output_structure": "Scenario Detail",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": "description",
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Full",
+        "output_structure": "Sector Overview",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": "description",
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Full",
+        "output_structure": "Sector Detail",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": "always",
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Full",
+        "output_structure": "Sector Detail",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": NaN,
+        "sector_scenario_content_id": "high_materiality",
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Full",
+        "output_structure": "Appendices",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": "appendices",
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      },
+      {
+        "report_type": "Full",
+        "output_structure": "References",
+        "materiality": "All",
+        "summary_input_table_flag": NaN,
+        "scenario_content_id": NaN,
+        "sector_description_content_id": "references",
+        "sector_scenario_content_id": NaN,
+        "product_content_id": NaN
+      }
+    ],
+    "scenario_mapping": [
+      {
+        "scenario_name": "Orderly Scenarios",
+        "risk_type": "transition",
+        "risk_level": "low",
+        "scenario_yml_file": "scenario1"
+      },
+      {
+        "scenario_name": "Disorderly Scenario",
+        "risk_type": "transition",
+        "risk_level": "high",
+        "scenario_yml_file": "scenario2"
+      },
+      {
+        "scenario_name": "Hot House World Scenarios",
+        "risk_type": "physical",
+        "risk_level": "high",
+        "scenario_yml_file": "scenario3"
+      },
+      {
+        "scenario_name": "Too Little Too Late Scenario",
+        "risk_type": "transition_physical",
+        "risk_level": "high",
+        "scenario_yml_file": "scenario4"
+      }
+    ],
+    "exposure_sector_product_mapping": [
+      {
+        "institution": "Bank",
+        "exposure": "Real Estate",
+        "sector": "Residential ",
+        "type": "Revenue generating",
+        "sector_yml_file": "sector/mortgages",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "bank_re"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Real Estate",
+        "sector": "Residential ",
+        "type": "Non revenue generating",
+        "sector_yml_file": "sector/mortgages",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "bank_re"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Real Estate",
+        "sector": "Commercial",
+        "type": "Revenue generating",
+        "sector_yml_file": "sector/real_estate",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "bank_re"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Real Estate",
+        "sector": "Commercial",
+        "type": "Non revenue generating",
+        "sector_yml_file": "sector/real_estate",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "bank_re"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Real Estate",
+        "sector": "Land Acquisition Development and Construction",
+        "type": "Revenue generating",
+        "sector_yml_file": "sector/real_estate",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "bank_re"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Real Estate",
+        "sector": "Land Acquisition Development and Construction",
+        "type": "Non revenue generating",
+        "sector_yml_file": "sector/real_estate",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "bank_re"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Agriculture",
+        "type": "General Exposures to (NON SME) Corporates",
+        "sector_yml_file": "sector/agriculture",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Agriculture",
+        "type": "Retail Exposure to SMEs",
+        "sector_yml_file": "sector/agriculture",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Agriculture",
+        "type": "Subordinated Debt and Equity",
+        "sector_yml_file": "sector/agriculture",
+        "product_yml_file": "equities",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Construction",
+        "type": "General Exposures to (NON SME) Corporates",
+        "sector_yml_file": "sector/construction",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Construction",
+        "type": "Retail Exposure to SMEs",
+        "sector_yml_file": "sector/construction",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Construction",
+        "type": "Subordinated Debt and Equity",
+        "sector_yml_file": "sector/construction",
+        "product_yml_file": "equities",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Consumer Products",
+        "type": "General Exposures to (NON SME) Corporates",
+        "sector_yml_file": "sector/consumer_products",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Consumer Products",
+        "type": "Retail Exposure to SMEs",
+        "sector_yml_file": "sector/consumer_products",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Consumer Products",
+        "type": "Subordinated Debt and Equity",
+        "sector_yml_file": "sector/consumer_products",
+        "product_yml_file": "equities",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Financial Services",
+        "type": "Bank Exposures",
+        "sector_yml_file": "sector/financials",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Financial Services",
+        "type": "Other Financial Institutions",
+        "sector_yml_file": "sector/financials",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Manufacturing",
+        "type": "General Exposures to (NON SME) Corporates",
+        "sector_yml_file": "sector/manufacturing",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Manufacturing",
+        "type": "Retail Exposure to SMEs",
+        "sector_yml_file": "sector/manufacturing",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Manufacturing",
+        "type": "Subordinated Debt and Equity",
+        "sector_yml_file": "sector/manufacturing",
+        "product_yml_file": "equities",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Mining",
+        "type": "General Exposures to (NON SME) Corporates",
+        "sector_yml_file": "sector/metals_and_mining",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Mining",
+        "type": "Retail Exposure to SMEs",
+        "sector_yml_file": "sector/metals_and_mining",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Mining",
+        "type": "Subordinated Debt and Equity",
+        "sector_yml_file": "sector/metals_and_mining",
+        "product_yml_file": "equities",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Oil and Gas",
+        "type": "General Exposures to (NON SME) Corporates",
+        "sector_yml_file": "sector/oil_and_gas",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Oil and Gas",
+        "type": "Retail Exposure to SMEs",
+        "sector_yml_file": "sector/oil_and_gas",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Oil and Gas",
+        "type": "Subordinated Debt and Equity",
+        "sector_yml_file": "sector/oil_and_gas",
+        "product_yml_file": "equities",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Telecommunications",
+        "type": "General Exposures to (NON SME) Corporates",
+        "sector_yml_file": "sector/telecoms",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Telecommunications",
+        "type": "Retail Exposure to SMEs",
+        "sector_yml_file": "sector/telecoms",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Telecommunications",
+        "type": "Subordinated Debt and Equity",
+        "sector_yml_file": "sector/telecoms",
+        "product_yml_file": "equities",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Transport",
+        "type": "General Exposures to (NON SME) Corporates",
+        "sector_yml_file": "sector/transport",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Transport",
+        "type": "Retail Exposure to SMEs",
+        "sector_yml_file": "sector/transport",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Transport",
+        "type": "Subordinated Debt and Equity",
+        "sector_yml_file": "sector/transport",
+        "product_yml_file": "equities",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Utilities",
+        "type": "General Exposures to (NON SME) Corporates",
+        "sector_yml_file": "sector/utilities",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Utilities",
+        "type": "Retail Exposure to SMEs",
+        "sector_yml_file": "sector/utilities",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Company",
+        "sector": "Utilities",
+        "type": "Subordinated Debt and Equity",
+        "sector_yml_file": "sector/utilities",
+        "product_yml_file": "equities",
+        "original_csv_file": "bank_corporate"
+      },
+      {
+        "institution": "Bank",
+        "exposure": "Retail",
+        "sector": "Exposures to individuals",
+        "type": "Unsecured Lending",
+        "sector_yml_file": "sector/unsecured_retail_lending",
+        "product_yml_file": "loans",
+        "original_csv_file": "bank_retail"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "UK",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/uk_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "Europe",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/eu_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "US",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/us_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "Canada",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/can_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "France",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/fra_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "Japan",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/jap_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "Germany",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/ger_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "Italy",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/itl_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "China",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/chi_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "India",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/ind_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereign",
+        "sector": "Brazil",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/bra_sov",
+        "product_yml_file": "sovereigns",
+        "original_csv_file": "sovereign"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Life and Health Lines of Business",
+        "sector": "Life Protection",
+        "type": "Exposure",
+        "sector_yml_file": "underwritng/life_protection",
+        "product_yml_file": "insurance_life",
+        "original_csv_file": "insurance_life"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Life and Health Lines of Business",
+        "sector": "Savings and Retirement",
+        "type": "Exposure",
+        "sector_yml_file": "underwritng/savings_and_retirement",
+        "product_yml_file": "insurance_life",
+        "original_csv_file": "insurance_life"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Life and Health Lines of Business",
+        "sector": "Health",
+        "type": "Exposure",
+        "sector_yml_file": "underwritng/health",
+        "product_yml_file": "insurance_life",
+        "original_csv_file": "insurance_life"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Property and Casualty Lines of Business",
+        "sector": "Aviation",
+        "type": "Exposure",
+        "sector_yml_file": "underwritng/aviation",
+        "product_yml_file": "insurance_nonlife",
+        "original_csv_file": "insurance_nonlife"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Property and Casualty Lines of Business",
+        "sector": "Casualty",
+        "type": "Exposure",
+        "sector_yml_file": "underwritng/casualty",
+        "product_yml_file": "insurance_nonlife",
+        "original_csv_file": "insurance_nonlife"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Property and Casualty Lines of Business",
+        "sector": "Energy",
+        "type": "Exposure",
+        "sector_yml_file": "underwritng/energy",
+        "product_yml_file": "insurance_nonlife",
+        "original_csv_file": "insurance_nonlife"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Property and Casualty Lines of Business",
+        "sector": "Marine",
+        "type": "Exposure",
+        "sector_yml_file": "underwritng/marine",
+        "product_yml_file": "insurance_nonlife",
+        "original_csv_file": "insurance_nonlife"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Property and Casualty Lines of Business",
+        "sector": "Motor",
+        "type": "Exposure",
+        "sector_yml_file": "underwritng/motor",
+        "product_yml_file": "insurance_nonlife",
+        "original_csv_file": "insurance_nonlife"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Property and Casualty Lines of Business",
+        "sector": "Property",
+        "type": "Exposure",
+        "sector_yml_file": "underwritng/property",
+        "product_yml_file": "insurance_nonlife",
+        "original_csv_file": "insurance_nonlife"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Agriculture",
+        "type": "Bonds",
+        "sector_yml_file": "sector/agriculture",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Construction",
+        "type": "Bonds",
+        "sector_yml_file": "sector/construction",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Consumer Products",
+        "type": "Bonds",
+        "sector_yml_file": "sector/consumer_products",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Financial Services",
+        "type": "Bonds",
+        "sector_yml_file": "sector/financials",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Manufacturing",
+        "type": "Bonds",
+        "sector_yml_file": "sector/manufacturing",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Mining",
+        "type": "Bonds",
+        "sector_yml_file": "sector/metals_and_mining",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Oil and Gas",
+        "type": "Bonds",
+        "sector_yml_file": "sector/oil_and_gas",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Telecommunications",
+        "type": "Bonds",
+        "sector_yml_file": "sector/telecoms",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Transport",
+        "type": "Bonds",
+        "sector_yml_file": "sector/transport",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Utilities",
+        "type": "Bonds",
+        "sector_yml_file": "sector/utilities",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Agriculture",
+        "type": "Equity",
+        "sector_yml_file": "sector/agriculture",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Construction",
+        "type": "Equity",
+        "sector_yml_file": "sector/construction",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Consumer Products",
+        "type": "Equity",
+        "sector_yml_file": "sector/consumer_products",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Financial Services",
+        "type": "Equity",
+        "sector_yml_file": "sector/financials",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Manufacturing",
+        "type": "Equity",
+        "sector_yml_file": "sector/manufacturing",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Mining",
+        "type": "Equity",
+        "sector_yml_file": "sector/metals_and_mining",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Oil and Gas",
+        "type": "Equity",
+        "sector_yml_file": "sector/oil_and_gas",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Telecommunications",
+        "type": "Equity",
+        "sector_yml_file": "sector/telecoms",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Transport",
+        "type": "Equity",
+        "sector_yml_file": "sector/transport",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Corporate Assets",
+        "sector": "Utilities",
+        "type": "Equity",
+        "sector_yml_file": "sector/utilities",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_corporate"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Real Estate",
+        "sector": "Commercial Real Estate",
+        "type": "Bonds",
+        "sector_yml_file": "sector/real_estate",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "insurance_re"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Real Estate",
+        "sector": "Commercial Real Estate",
+        "type": "Equity",
+        "sector_yml_file": "sector/real_estate",
+        "product_yml_file": "equities",
+        "original_csv_file": "insurance_re"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Real Estate",
+        "sector": "Mortgages",
+        "type": "Commercial Mortgages",
+        "sector_yml_file": "sector/mortgages",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "insurance_re"
+      },
+      {
+        "institution": "Insurance",
+        "exposure": "Real Estate",
+        "sector": "Mortgages",
+        "type": "Residential Mortgages including ERM",
+        "sector_yml_file": "sector/mortgages",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "insurance_re"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Agriculture",
+        "type": "Bonds",
+        "sector_yml_file": "sector/agriculture",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Construction",
+        "type": "Bonds",
+        "sector_yml_file": "sector/construction",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Consumer Products",
+        "type": "Bonds",
+        "sector_yml_file": "sector/consumer_products",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Financial Services",
+        "type": "Bonds",
+        "sector_yml_file": "sector/financials",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Manufacturing",
+        "type": "Bonds",
+        "sector_yml_file": "sector/manufacturing",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Mining",
+        "type": "Bonds",
+        "sector_yml_file": "sector/metals_and_mining",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Oil and Gas",
+        "type": "Bonds",
+        "sector_yml_file": "sector/oil_and_gas",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Telecommunications",
+        "type": "Bonds",
+        "sector_yml_file": "sector/telecoms",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Transport",
+        "type": "Bonds",
+        "sector_yml_file": "sector/transport",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Utilities",
+        "type": "Bonds",
+        "sector_yml_file": "sector/utilities",
+        "product_yml_file": "corporate_bonds",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Agriculture",
+        "type": "Equity",
+        "sector_yml_file": "sector/agriculture",
+        "product_yml_file": "equities",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Construction",
+        "type": "Equity",
+        "sector_yml_file": "sector/construction",
+        "product_yml_file": "equities",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Consumer Products",
+        "type": "Equity",
+        "sector_yml_file": "sector/consumer_products",
+        "product_yml_file": "equities",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Financial Services",
+        "type": "Equity",
+        "sector_yml_file": "sector/financials",
+        "product_yml_file": "equities",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Manufacturing",
+        "type": "Equity",
+        "sector_yml_file": "sector/manufacturing",
+        "product_yml_file": "equities",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Mining",
+        "type": "Equity",
+        "sector_yml_file": "sector/metals_and_mining",
+        "product_yml_file": "equities",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Oil and Gas",
+        "type": "Equity",
+        "sector_yml_file": "sector/oil_and_gas",
+        "product_yml_file": "equities",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Telecommunications",
+        "type": "Equity",
+        "sector_yml_file": "sector/telecoms",
+        "product_yml_file": "equities",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Transport",
+        "type": "Equity",
+        "sector_yml_file": "sector/transport",
+        "product_yml_file": "equities",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Corporate Assets",
+        "sector": "Utilities",
+        "type": "Equity",
+        "sector_yml_file": "sector/utilities",
+        "product_yml_file": "equities",
+        "original_csv_file": "am_corporate"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Real Estate",
+        "sector": "Residential ",
+        "type": "Revenue generating",
+        "sector_yml_file": "sector/mortgages",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "am_re"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Real Estate",
+        "sector": "Residential ",
+        "type": "Revenue generating",
+        "sector_yml_file": "sector/mortgages",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "am_re"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Real Estate",
+        "sector": "Residential ",
+        "type": "Non revenue generating",
+        "sector_yml_file": "sector/mortgages",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "am_re"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Real Estate",
+        "sector": "Residential ",
+        "type": "Non revenue generating",
+        "sector_yml_file": "sector/mortgages",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "am_re"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Real Estate",
+        "sector": "Commercial",
+        "type": "Revenue generating",
+        "sector_yml_file": "sector/real_estate",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "am_re"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Real Estate",
+        "sector": "Commercial",
+        "type": "Revenue generating",
+        "sector_yml_file": "sector/real_estate",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "am_re"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Real Estate",
+        "sector": "Commercial",
+        "type": "Non revenue generating",
+        "sector_yml_file": "sector/real_estate",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "am_re"
+      },
+      {
+        "institution": "Asset Manager / Owner / Fund",
+        "exposure": "Real Estate",
+        "sector": "Commercial",
+        "type": "Non revenue generating",
+        "sector_yml_file": "sector/real_estate",
+        "product_yml_file": "mortgages",
+        "original_csv_file": "am_re"
+      }
+    ]
+  }
+}
