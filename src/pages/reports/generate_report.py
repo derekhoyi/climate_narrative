@@ -1,6 +1,6 @@
 import dash
 from dash import html, callback, Output, Input, State, ctx, dcc
-from src.utils import data_loader
+from   utils import data_loader
 import pandas as pd
 from urllib.parse import parse_qs
 import numpy as np
