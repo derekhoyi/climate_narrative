@@ -3,7 +3,7 @@ from datetime import datetime
 import json
 from pathlib import Path
 import yaml
-from dash import dcc
+from dash import dcc, dash_table, html
 import dash_bootstrap_components as dbc
 
 FILE_PATH = Path(__file__).parent.parent
@@ -12,103 +12,135 @@ PAGE_CONTENTS_PATH = FILE_PATH.joinpath("./assets/page_contents").resolve()
 
 
 def clean_string(s):
-    """
-    Clean a string by stripping whitespace, converting to lowercase, replacing hyphens and spaces with underscores.
-    """
-    return s.strip().lower().replace('-', '_').replace(' ', '_')
+	"""
+	Clean a string by stripping whitespace, converting to lowercase, replacing hyphens and spaces with underscores.
+	"""
+	return s.strip().lower().replace('-', '_').replace(' ', '_')
 
 def clean_df_columns(input_df):
-    """
-    Clean DataFrame column names.
-    """
-    output_df = input_df.copy()
-    output_df.columns = [clean_string(col) for col in output_df.columns]
-    return output_df
+	"""
+	Clean DataFrame column names.
+	"""
+	output_df = input_df.copy()
+	output_df.columns = [clean_string(col) for col in output_df.columns]
+	return output_df
 
 def convert_config_excel_to_json():
-    """
-    Convert an Excel file with multiple sheets to a versioned JSON file.
-    """
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M')
-    input_file_path = CONFIG_PATH.joinpath('./config.xlsx').resolve()
-    output_file_path = CONFIG_PATH.joinpath('./config.json').resolve()
+	"""
+	Convert an Excel file with multiple sheets to a versioned JSON file.
+	"""
+	timestamp = datetime.now().strftime('%Y%m%d_%H%M')
+	input_file_path = CONFIG_PATH.joinpath('./config.xlsx').resolve()
+	output_file_path = CONFIG_PATH.joinpath('./config.json').resolve()
 
-    xls = pd.ExcelFile(input_file_path)
-    converted_json = {'exported_at': timestamp, 'sheets': {}}
-    for sheet_name in xls.sheet_names:
-        df = pd.read_excel(input_file_path, sheet_name=sheet_name)
-        cleaned_df = clean_df_columns(df)
-        converted_json['sheets'][clean_string(sheet_name)] = cleaned_df.to_dict(orient='records')
+	xls = pd.ExcelFile(input_file_path)
+	converted_json = {'exported_at': timestamp, 'sheets': {}}
+	for sheet_name in xls.sheet_names:
+		df = pd.read_excel(input_file_path, sheet_name=sheet_name)
+		cleaned_df = clean_df_columns(df)
+		converted_json['sheets'][clean_string(sheet_name)] = cleaned_df.to_dict(orient='records')
 
-    with open(output_file_path, 'w', encoding='utf-8') as f:
-        json.dump(converted_json, f, indent=2)
-    return converted_json
+	with open(output_file_path, 'w', encoding='utf-8') as f:
+		json.dump(converted_json, f, indent=2)
+	return converted_json
 
 def load_yml_file(yml_folder_path, yml_file_name):
-    """
-    Load a YAML file and return its contents as a dictionary.
-    """
-    yml_file_path = PAGE_CONTENTS_PATH.joinpath(yml_folder_path).joinpath(yml_file_name).resolve()
-    with open(yml_file_path, encoding="utf-8") as f:
-        yml = yaml.safe_load(f)
-    return yml
+	"""
+	Load a YAML file and return its contents as a dictionary.
+	"""
+	yml_file_path = PAGE_CONTENTS_PATH.joinpath(yml_folder_path).joinpath(yml_file_name).resolve()
+	with open(yml_file_path, encoding="utf-8") as f:
+		yml = yaml.safe_load(f)
+	return yml
 
 def load_config_json_and_store():
-    """
-    Load the configuration JSON file and return its contents as a dictionary and dcc.Store.
-    """
-    config_json = convert_config_excel_to_json()
+	"""
+	Load the configuration JSON file and return its contents as a dictionary and dcc.Store.
+	"""
+	config_json = convert_config_excel_to_json()
 
-    # Create stores
-    stores = [
-        dcc.Store(id='report-type-store', storage_type='session'),
-        dcc.Store(id='institution-type-store', storage_type='session'),
-        dcc.Store(id='all-user-selection-store', storage_type='session'),
-        dcc.Store(id='user-selection-completed-store', storage_type='session', data=False)
-    ] + [
-        dcc.Store(
-            id=f'{sheet_name.replace("_", "-")}-store',
-            data=sheet_data,
-            storage_type='session',
-        ) for sheet_name, sheet_data in config_json['sheets'].items()
-    ]
-    return config_json, stores
+	# Create stores
+	stores = [
+		dcc.Store(id='report-type-store', storage_type='session'),
+		dcc.Store(id='institution-type-store', storage_type='session'),
+		dcc.Store(id='all-user-selection-store', storage_type='session'),
+		dcc.Store(id='user-selection-completed-store', storage_type='session', data=False)
+	] + [
+		dcc.Store(
+			id=f'{sheet_name.replace("_", "-")}-store',
+			data=sheet_data,
+			storage_type='session',
+		) for sheet_name, sheet_data in config_json['sheets'].items()
+	]
+	return config_json, stores
 
 def get_selected_institution_type_mapping(exposure_product_mapping_dict, institution_type):
-    exposure_product_mapping_df = pd.DataFrame(exposure_product_mapping_dict)
-    exposure_product_mapping_df = exposure_product_mapping_df[exposure_product_mapping_df['institution'].isin([institution_type, 'All'])]
-    return exposure_product_mapping_df
+	exposure_product_mapping_df = pd.DataFrame(exposure_product_mapping_dict)
+	exposure_product_mapping_df = exposure_product_mapping_df[exposure_product_mapping_df['institution'].isin([institution_type, 'All'])]
+	return exposure_product_mapping_df
 
 def get_user_selection_from_store(all_stored_data):
-    all_user_selection_df = pd.DataFrame()
-    for k, v in all_stored_data.items():
-        user_selection_df = pd.DataFrame(all_stored_data[k])
-        all_user_selection_df = pd.concat([all_user_selection_df, user_selection_df])
-    return all_user_selection_df
+	all_user_selection_df = pd.DataFrame()
+	for k, v in all_stored_data.items():
+		user_selection_df = pd.DataFrame(all_stored_data[k])
+		all_user_selection_df = pd.concat([all_user_selection_df, user_selection_df])
+	return all_user_selection_df
 
 def rename_user_selection_data_columns(all_user_selection_df):
-    output_df = all_user_selection_df.copy()
-    columns_to_keep_and_rename_dict = {
-        'institution': 'Institution Type',
-        'exposure': 'Exposure',
-        'sector': 'Sector',
-        'ptype': 'Type',
-        'label': 'Materiality / Scenario',
-        'materiality': 'Materiality',
-        'scenario': 'Scenario',
-        'description': 'Description'
-    }
-    columns_to_keep_and_rename_dict = {k: v for k, v in columns_to_keep_and_rename_dict.items() if k in output_df.columns}
-    output_df = output_df[columns_to_keep_and_rename_dict.keys()]
-    output_df = output_df.rename(columns=columns_to_keep_and_rename_dict)
-    return output_df
+	output_df = all_user_selection_df.copy()
+	columns_to_keep_and_rename_dict = {
+		'institution': 'Institution Type',
+		'exposure': 'Exposure',
+		'sector': 'Sector',
+		'product': 'Product',
+		'ptype': 'Type',
+		'type': 'Type',
+		'label': 'Materiality / Scenario',
+		'materiality': 'Materiality',
+		'scenario': 'Scenario',
+		'description': 'Description'
+	}
+	columns_to_keep_and_rename_dict = {k: v for k, v in columns_to_keep_and_rename_dict.items() if k in output_df.columns}
+	output_df = output_df[columns_to_keep_and_rename_dict.keys()]
+	output_df = output_df.rename(columns=columns_to_keep_and_rename_dict)
+	return output_df
 
-def create_data_table(df):
-    return dbc.Table.from_dataframe(
-        df, striped=True, bordered=True, hover=True, responsive=True,
-        className="border border-1 text-center align-middle w-auto",
-        style={"minWidth": "100%", "tableLayout": "fixed", "overflow-x": "auto"}
-    )
+def create_data_table(df, bullet_point_columns_list=None, left_align_columns_list=None):
+	updated_columns_presentation_list = [
+		{"name": col, "id": col, "presentation": "markdown" if col in bullet_point_columns_list else "input"}
+		for col in df.columns
+	] if bullet_point_columns_list else [{"name": i, "id": i} for i in df.columns]
+	table_styling = {
+		# "border": "none",
+		"textAlign": "center",
+        "verticalAlign": "middle",
+        "width": "auto",
+        "whiteSpace": "normal",
+        "wordWrap": "break-word"
+    }
+	header_styling = {
+		'backgroundColor': 'rgb(210, 210, 210)',
+		'color': 'black',
+		'fontWeight': 'bold'
+	}
+	left_aligned_styling = [{
+        'if': {'column_id': c},
+        'textAlign': 'left'
+        } for c in left_align_columns_list
+    ] if left_align_columns_list else []
+	striped_rows_styling = [{
+		'if': {'row_index': 'odd'},
+		'backgroundColor': 'rgb(240, 240, 240)',
+	}]
+	return html.Div([dash_table.DataTable(
+        data=df.to_dict('records'),
+        columns=updated_columns_presentation_list,
+	    style_data=table_styling,
+	    style_header=table_styling | header_styling,
+		style_data_conditional=left_aligned_styling + striped_rows_styling
+	)], className="d-block table-responsive w-100 m-1 border border-1 border-solid border-black",
+		style={"minWidth": "100%", "tableLayout": "auto", "overflow-x": "auto"}
+	)
 
 def plural_add_s(plural_flag):
-    return "s" if plural_flag else ""
+	return "s" if plural_flag else ""

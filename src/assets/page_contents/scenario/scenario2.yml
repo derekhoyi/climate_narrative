@@ -27,7 +27,7 @@ exec_description: |
   risks. There is no impact of transition risk in 2030. The NGFS estimate that global GDP impact in the 
   Delayed transition scenario will be around -13% by 2050.
 
-  ![NGFS scenarios Features](NGFS_scenarios_Features_Disorderly.png)
+  ![NGFS scenarios Features](/assets/images/NGFS_scenarios_Features_Disorderly.png)
 
   **Source:**
   [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf)
@@ -59,7 +59,7 @@ description: |
   divergent level of actions across countries and sectors based on currently implemented policies. 
   For example, carbon prices are typically higher for a given temperature outcome.
 
-  ![NGFS scenarios Framework](NGFS_scenarios_Framework_Disorderly.png)
+  ![NGFS scenarios Framework](/assets/images/NGFS_scenarios_Framework_Disorderly.png)
 
   **Source:**
   [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf)
@@ -76,7 +76,7 @@ description: |
   (by ~0.5%) until 2030. Policies drive a sharp decrease in CO<sub>2</sub> emissions after 2030 
   to compensate for the inaction beforehand causing a drop in emissions by ~84% by 2050.
 
-  ![CO2 emissions](scenarios_disorderly_emissions_co2.png)
+  ![CO2 emissions](/assets/images/scenarios_disorderly_emissions_co2.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -89,7 +89,7 @@ description: |
   aggressively penalise and thus risk stranding fossil fuel assets beyond 2030. In this 
   scenario, disorderly policy action results in increased transition risks.
 
-  ![Carbon price](scenarios_disorderly_price_carbon.png)
+  ![Carbon price](/assets/images/scenarios_disorderly_price_carbon.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Carbon prices are weighted global averages.
@@ -100,7 +100,7 @@ description: |
   and peak at ~3.2 trillion USD per year around 2035. By 2050, revenues drop by 43% 
   (~1.8 trillion USD per year).
   
-  ![Carbon tax revenue](scenarios_disorderly_revenue.png)
+  ![Carbon tax revenue](/assets/images/scenarios_disorderly_revenue.png)
   
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -117,17 +117,17 @@ description: |
   demand that the transition spurs on. In the disorderly scenarios policy uncertainty 
   leads to a higher investment premium. This trend remains until 2050 in all the scenarios.
 
-  ![Inflation rate](scenarios_disorderly_inflation.png)
+  ![Inflation rate](/assets/images/scenarios_disorderly_inflation.png)
   
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
   
-  ![Unemployment rate](scenarios_disorderly_unemployment.png)
+  ![Unemployment rate](/assets/images/scenarios_disorderly_unemployment.png)
   
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
   
-  ![Interest rate](scenarios_disorderly_interest.png)
+  ![Interest rate](/assets/images/scenarios_disorderly_interest.png)
   
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
@@ -143,12 +143,12 @@ description: |
   whilst annual investment in low carbon increases from ~1 trillion USD (2025) to ~1.4 
   trillion USD in 2030, and further to ~3 trillion USD by 2050. 
   
-  ![Energy Efficiency Investment](scenarios_disorderly_investment_energy_efficiency.png)
+  ![Energy Efficiency Investment](/assets/images/scenarios_disorderly_investment_energy_efficiency.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
-  ![Low Carbon Investment](scenarios_disorderly_investment_low_carbon.png)
+  ![Low Carbon Investment](/assets/images/scenarios_disorderly_investment_low_carbon.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)  
@@ -165,7 +165,7 @@ description: |
   giving rise to moderately high physical risk (with land warming faster 
   than oceans and high latitudes experiencing higher warming).
 
-  ![Global mean temp rise](scenarios_disorderly_temperature.png)
+  ![Global mean temp rise](/assets/images/scenarios_disorderly_temperature.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -180,7 +180,7 @@ description: |
   and humid climate conditions. Although this will depend on location, and in the UK 
   this decrease may be relatively subdued.
   
-  ![Labour Productivity](scenarios_disorderly_labour.png)
+  ![Labour Productivity](/assets/images/scenarios_disorderly_labour.png)
 
   **Source:** 
   [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -189,7 +189,7 @@ description: |
   but to a lesser extent; peaking at ~8% in 2030 and ~16% in 2050 which is 
   above reference period levels of 1986-2006.
   
-  ![Tropical Cyclone Damage](scenarios_disorderly_damages_cyclones.png)
+  ![Tropical Cyclone Damage](/assets/images/scenarios_disorderly_damages_cyclones.png)
 
   **Source:** 
   [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -205,7 +205,7 @@ description: |
   on global GDP than transition risks. There is no impact of transition risk in 2030. 
   The NGFS estimate that global GDP impact in the Delayed transition scenario will be around -13% by 2050.
   
-  ![GDP](scenarios_disorderly_gdp.png)
+  ![GDP](/assets/images/scenarios_disorderly_gdp.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

@@ -20,7 +20,7 @@ exec_description: |
   transition effects relative to a baseline with no transition or physical risks is estimated to 
   be around -5.2% by 2030 and -13.6% by 2050, which is comparable to the Hot House World scenarios.
 
-  ![NGFS scenarios Features](NGFS_scenarios_Features_Littlelate.png)
+  ![NGFS scenarios Features](/assets/images/NGFS_scenarios_Features_Littlelate.png)
 
   **Source:**
   [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf) 
@@ -56,7 +56,7 @@ exec_description: |
 description: |
   Too-little-too-late Scenarios assume that a late and uncoordinated transition fails to limit physical risks.
 
-  ![NGFS scenarios Framework](NGFS_scenarios_Framework_Littlelate.png)
+  ![NGFS scenarios Framework](/assets/images/NGFS_scenarios_Framework_Littlelate.png)
 
   **Source:**
   [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf) 
@@ -75,7 +75,7 @@ description: |
   by ~39% in 2050) and is not sufficient to prevent significant temperature rises resulting in 
   high physical risk.
 
-  ![CO2 emissions](scenarios_littlelate_emissions_co2.png)
+  ![CO2 emissions](/assets/images/scenarios_littlelate_emissions_co2.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -85,7 +85,7 @@ description: |
   at 2050, which is less than those under the NDC scenario). Transition risks are therefore still 
   present however are less significant in than Orderly or Disorderly scenarios.
 
-  ![Carbon price](scenarios_littlelate_price_carbon.png)
+  ![Carbon price](/assets/images/scenarios_littlelate_price_carbon.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Carbon prices are weighted global averages.
@@ -95,7 +95,7 @@ description: |
   to drop slightly from ~400 billion USD (2025) to ~380 billion USD at 2030, and a modestly increase 
   to ~1 trillion USD by 2050.
   
-  ![Carbon tax revenue](scenarios_littlelate_revenue.png)
+  ![Carbon tax revenue](/assets/images/scenarios_littlelate_revenue.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -106,19 +106,19 @@ description: |
   rates increase from 2030 to 0.25% above the baseline in 2050, reflecting the inflationary pressure created 
   by limited rise in carbon prices, as well as the increased investment demand that the transition spurs on.
 
-  ![Inflation rate](scenarios_littlelate_inflation.png)
+  ![Inflation rate](/assets/images/scenarios_littlelate_inflation.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
 
-  ![Unemployment rate](scenarios_littlelate_unemployment.png)
+  ![Unemployment rate](/assets/images/scenarios_littlelate_unemployment.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
 
-  ![Interest rate](scenarios_littlelate_interest.png)
+  ![Interest rate](/assets/images/scenarios_littlelate_interest.png)
   
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -132,12 +132,12 @@ description: |
   increasing to ~2.4 trillion USD by 2050. These increases are relatively small compared 
   to other scenarios.
   
-  ![Energy Efficiency Investment](scenarios_littlelate_investment_energy_efficiency.png)
+  ![Energy Efficiency Investment](/assets/images/scenarios_littlelate_investment_energy_efficiency.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
-  ![Low Carbon Investment](scenarios_littlelate_investment_low_carbon.png)
+  ![Low Carbon Investment](/assets/images/scenarios_littlelate_investment_low_carbon.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads) 
@@ -152,7 +152,7 @@ description: |
   giving rise to high physical risk (with land warming faster than oceans and high
   latitudes experiencing higher warming).
 
-  ![Global mean temp rise](scenarios_littlelate_temperature.png)
+  ![Global mean temp rise](/assets/images/scenarios_littlelate_temperature.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -165,7 +165,7 @@ description: |
   * A decrease in labour productivity from -1.7% in 2030 to -2.5% at 2050 due to the 
   reduced capacity of the human body to perform physical labour under hot and humid climate conditions.
 
-  ![Labour Productivity](scenarios_littlelate_labour.png)
+  ![Labour Productivity](/assets/images/scenarios_littlelate_labour.png)
 
   **Source:** 
   [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -173,7 +173,7 @@ description: |
   * Annual economic damages from cyclones are also projected to increase above 
   the reference period levels; to ~8% by 2030 and ~18% by 2050.
   
-  ![Tropical Cyclone Damage](scenarios_littlelate_damages_cyclones.png)
+  ![Tropical Cyclone Damage](/assets/images/scenarios_littlelate_damages_cyclones.png)
 
   **Source:** 
   [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -185,7 +185,7 @@ description: |
   temperatures projected for each scenario. The impact on global GDP is dominated by physical risk. 
   Transition risk does not impact global GDP at 2030. 
   
-  ![GDP](scenarios_littlelate_gdp.png)
+  ![GDP](/assets/images/scenarios_littlelate_gdp.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24[REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) NiGEM NGFS v1.24.2 is not available for Low Demand scenario; Only chronic physical data available (not acute physical).

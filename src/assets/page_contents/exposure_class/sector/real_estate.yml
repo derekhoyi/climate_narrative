@@ -81,7 +81,7 @@
         over time from 54 exajoules (EJ) in 2025 to 93 EJ in 2050, while natural gas 
         consumption decreases from 29 EJ in 2025 to 6 EJ in 2050.
         
-        ![Energy Consumption](real_estate_disorderly_energy_cons.png)
+        ![Energy Consumption](/assets/images/real_estate_disorderly_energy_cons.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -91,7 +91,7 @@
         The carbon tax paid begins to decrease thereafter as improvements are 
         made to buildings’ emissions intensities.
         
-        ![Government Tax Revenue](real_estate_disorderly_gov_revenue.png)
+        ![Government Tax Revenue](/assets/images/real_estate_disorderly_gov_revenue.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -164,11 +164,11 @@
         while natural gas consumption decreases from between 28 to 31 EJ in 2025 to 15 and 
         below EJ in 2050.
         
-        ![Energy Consumption](real_estate_NZ2050_energy_cons.png)
+        ![Energy Consumption](/assets/images/real_estate_NZ2050_energy_cons.png)
         
-        ![Energy Consumption](real_estate_below2deg_energy_cons.png)
+        ![Energy Consumption](/assets/images/real_estate_below2deg_energy_cons.png)
         
-        ![Energy Consumption](real_estate_lowdemand_energy_cons.png)
+        ![Energy Consumption](/assets/images/real_estate_lowdemand_energy_cons.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -181,7 +181,7 @@
         Low Demand scenarios to be below ~$100 billion, however, it continues to increase 
         in the below 2&deg;C scenario to be around ~$200 billion.
         
-        ![Government Tax Revenue](real_estate_orderly_gov_revenue.png)
+        ![Government Tax Revenue](/assets/images/real_estate_orderly_gov_revenue.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -296,7 +296,7 @@
         low of between -2.5% to -2.7% in 2050. This could have a knock-on impact on the revenue 
         of the assets linked to the reduced productivity.
   
-        ![Heat Stress Damages](real_estate_hothouse_productivity_heat_stress.png)
+        ![Heat Stress Damages](/assets/images/real_estate_hothouse_productivity_heat_stress.png)
         
         **Source:**
         [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/)
@@ -417,7 +417,7 @@
         Fragmented World scenario eventually reaching a low of -2.5% in 2050. This could have a 
         knock-on impact on the revenue of the assets linked to the reduced productivity.
   
-        ![Heat Stress Damages](real_estate_tltl_productivity_heat_stress.png)
+        ![Heat Stress Damages](/assets/images/real_estate_tltl_productivity_heat_stress.png)
         
         **Source:**
         [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/)

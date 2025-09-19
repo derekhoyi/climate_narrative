@@ -3,13 +3,24 @@ from dash import html, callback, Output, Input, State, ctx, dcc
 from src.utils import data_loader
 import pandas as pd
 from urllib.parse import parse_qs
+import numpy as np
+import dash_bootstrap_components as dbc
+import io
+from docx import Document
+from bs4 import BeautifulSoup
 
 dash.register_page(__name__, path='/reports/generate-report')
 
 def layout(report_type=None, institution_type=None, **kwargs):
 	layout = html.Div([
 		dcc.Location(id='generate-report-url'),
+		dbc.ButtonGroup([
+			dbc.Button("Return to Selection", id="generate-report-previous-btn", color="primary", style={'maxWidth': 250}),
+			dbc.Button(className="d-none w-auto"),
+			dbc.Button("Download Report", id="download-btn", color="success", style={'maxWidth': 250}),
+		], className="d-flex justify-content-between mb-3 w-100 gap-5"),
 		html.Div(id='report-content'),
+		dcc.Download(id="download-store"),
 	], className="container")
 	return layout
 
@@ -17,17 +28,52 @@ def layout(report_type=None, institution_type=None, **kwargs):
 	Output("generate-report-url", "href"),
 	Input("user-selection-completed-store", "data"),
 	Input("generate-report-url", "search"),
+	Input("generate-report-previous-btn", "n_clicks"),
 	State("report-type-store", "data"),
 	State("institution-type-store", "data"),
 )
-def update_url(user_selection_completed, url_search, report_type, institution_type):
+def update_url(user_selection_completed, url_search, back, report_type, institution_type):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0
 	report_page = query.get('report_type', [None])[0]
 
 	if start_page and user_selection_completed and not report_page:
 		return f"/reports/generate-report?report-type={report_type}&institution-type={institution_type}"
+	if back:
+		return f"/reports/customise-institutional-report?institution-type={institution_type}&review=summary"
 	return dash.no_update
+
+@callback(
+	Output("download-store", "data"),
+	Input("download-btn", "n_clicks"),
+	State("report-content", "children"),
+	prevent_initial_call=True,
+)
+def download_report(n_clicks, report_content):
+	# html_string = _dash_html_to_string(report_content)
+	# doc = _html_to_docx(html_string)
+	# buffer = io.BytesIO()
+	# doc.save(buffer)
+	# buffer.seek(0)
+	# return dict(
+	# 	content=buffer.read(),
+	# 	filename="CFRF_Report.docx",
+	# 	type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+	# )
+
+	html_string = _dash_html_to_string(report_content)
+	# Convert HTML to plain text for RTF (or use a library for rich formatting)
+	soup = BeautifulSoup(html_string, "html.parser")
+	plain_text = soup.get_text()
+	rtf_content = r"{\rtf1\ansi " + plain_text.replace('\n', r'\par ') + "}"
+	buffer = io.BytesIO()
+	buffer.write(rtf_content.encode('utf-8'))
+	buffer.seek(0)
+	return dict(
+		content=buffer.read(),
+		filename="CFRF_Report.rtf",
+		type="application/rtf"
+	)
 
 @callback(
 	Output("report-content", "children"),
@@ -68,6 +114,9 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 		all_user_selection_df, sorted_output_structure_mapping_df, exposure_sector_product_mapping_df
 	)
 
+	# Get sort order
+	user_selection_with_yml_file_path_df = create_sort_order(user_selection_with_yml_file_path_df)
+
 	# Output structure
 	output_structure_layout = []
 	for section in sorted_output_structure_mapping_df['output_structure'].unique():
@@ -85,7 +134,7 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 				filtered_user_selection_with_yml_file_path_df = _filter_user_selection_by_section(
 					user_selection_with_yml_file_path_df, section, sub_section
 				)
-				sub_section_layout = []
+				sub_section_layout = get_sector_description_layout(filtered_user_selection_with_yml_file_path_df)
 			elif sub_section == 'sector_scenario_content_id':
 				filtered_user_selection_with_yml_file_path_df = _filter_user_selection_by_section(
 					user_selection_with_yml_file_path_df, section, sub_section
@@ -94,13 +143,18 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 					filtered_user_selection_with_yml_file_path_df, scenario_mapping_df, scenario_list
 				)
 			elif sub_section == 'product_content_id':
-				sub_section_layout = []
+				filtered_user_selection_with_yml_file_path_df = _filter_user_selection_by_section(
+					user_selection_with_yml_file_path_df, section, sub_section
+				)
+				sub_section_layout = get_product_text_layout(filtered_user_selection_with_yml_file_path_df)
 			else:
 				sub_section_layout = []
 			section_layout.append(sub_section_layout)
 		section_layout = html.Div([
 			html.H1(section, className='text-success fw-bold'),
 		] + section_layout)
+		if section == 'Sector Overview':
+			section_layout = clean_up_sector_overview(section_layout)
 		output_structure_layout.append(section_layout)
 	return html.Div(output_structure_layout)
 
@@ -159,6 +213,30 @@ def get_sector_and_product_yml_file_path(all_user_selection_df, output_structure
 	)
 	return user_selection_with_mapping_df
 
+def create_sort_order(user_selection_with_yml_file_path_df):
+	output_df = user_selection_with_yml_file_path_df.copy()
+
+	# Get sort order
+	output_df['sort_order'] = [
+		next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml')))
+		for sector_yml_file in output_df['sector_yml_file']
+	]
+	output_df['materiality'] = pd.Categorical(
+		output_df['materiality'],
+		categories=['Low', 'Medium', 'High'],
+		ordered=True
+	)
+
+	# Get sector name
+	output_df['yml_sector'] = [
+		next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml').values()))['name']
+		for sector_yml_file in output_df['sector_yml_file']
+	]
+
+	# Sort by sort order and materiality
+	output_df = output_df.sort_values(by=['sort_order', 'materiality'])
+	return output_df
+
 def get_summary_input_table_layout(all_user_selection_df):
 	summary_input_table = all_user_selection_df.copy()
 	summary_input_table = data_loader.rename_user_selection_data_columns(summary_input_table)
@@ -180,11 +258,11 @@ def get_scenario_layout(sub_section_mapping_df, scenario_mapping_df, scenario_li
 			scenario_yml_file = filtered_scenario_mapping_df['scenario_yml_file'].iloc[0]
 			scenario_yml = data_loader.load_yml_file('scenario', f'{scenario_yml_file}.yml')
 			content_value = scenario_yml.get(content_id, "")
-			desc_container = html.Div([
-				dcc.Markdown(scenario, link_target="_blank", className='h3 fw-bolder'),
-				dcc.Markdown(content_value, link_target="_blank", className='display-12', style={'textTransform': 'none'})
+			desc = html.Div([
+				dcc.Markdown(scenario, link_target="_blank", dangerously_allow_html=True, className='h3 fw-bolder'),
+				dcc.Markdown(content_value, link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'})
 			], className='mb-3')
-			all_desc.append(desc_container)
+			all_desc.append(desc)
 
 		if section == 'Executive Summary':
 			header_layout = html.Div([
@@ -227,32 +305,32 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 				content_id_list = list(sector_selection_df['content_id'].unique())
 				scenario_desc = [
 					html.Div([
-						dcc.Markdown(scenario, link_target="_blank", className='h5 fw-bold'),
+						dcc.Markdown(scenario, link_target="_blank", dangerously_allow_html=True, className='h5 fw-bold'),
 						*[
 							dcc.Markdown(
 								_filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id],
-								link_target="_blank", className='display-12', style={'textTransform': 'none'}
+								link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'}
 							) for content_id in content_id_list
 						]
 					]) for scenario in scenario_list
 				]
 				sector_name = sector_yml['name']
 				sector_div = html.Div([
-					dcc.Markdown(sector_name, link_target="_blank", className='h4 fw-bold'),
+					dcc.Markdown(sector_name, link_target="_blank", dangerously_allow_html=True, className='h4 fw-bold'),
 					*scenario_desc
 				])
 				if 'sovereign' in sector_name.lower():
-					new_children = [dcc.Markdown(sector_name, link_target="_blank", className='h5 fw-bold')] + sector_div.children[1:]
+					new_children = [dcc.Markdown(sector_name, link_target="_blank", dangerously_allow_html=True, className='h5 fw-bold')] + sector_div.children[1:]
 					high_materiality_sovereign_desc.append(html.Div(new_children))
 				else:
 					high_materiality_other_desc.append(sector_div)
 			high_materiality_layout = html.Div([
 				html.H3('High materiality exposures') if section == 'Executive Summary' else html.Div([], className='d-none'),
+				*high_materiality_other_desc,
 				html.Div([
 					html.H4('Sovereign', className='fw-bold'),
 					*high_materiality_sovereign_desc
 				]),
-				*high_materiality_other_desc
 			])
 
 		# Low and Medium materiality section
@@ -261,10 +339,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 		else:
 			if section == 'Executive Summary':
 				# Combine materiality
-				groupby_variables_list = [x for x in low_medium_materiality_df if x != 'materiality']
-				low_medium_materiality_df = low_medium_materiality_df.sort_values('materiality')
-				low_medium_materiality_df = low_medium_materiality_df.groupby(
-					groupby_variables_list, as_index=False).agg({'materiality': ', '.join})
+				low_medium_materiality_df = _convert_to_bullet_points(low_medium_materiality_df, 'materiality')
 
 				# Add scenarios
 				low_medium_materiality_df['scenario'] = [scenario_list for x in low_medium_materiality_df['sector_yml_file']]
@@ -287,7 +362,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 
 				# Create datatable
 				low_medium_materiality_table = data_loader.rename_user_selection_data_columns(low_medium_materiality_df)
-				low_medium_materiality_table = data_loader.create_data_table(low_medium_materiality_table)
+				low_medium_materiality_table = data_loader.create_data_table(low_medium_materiality_table, ['Materiality'], ['Description'])
 
 				low_medium_materiality_layout = html.Div([
 					html.H3('Other exposures'),
@@ -304,21 +379,21 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 					content_id = sector_selection_df['content_id'].iloc[0]
 					scenario_desc = [
 						html.Div([
-							dcc.Markdown(scenario, link_target="_blank", className='h5 fw-bold'),
+							dcc.Markdown(scenario, link_target="_blank", dangerously_allow_html=True, className='h5 fw-bold'),
 							dcc.Markdown(
 								_filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id],
-								link_target="_blank", className='display-12', style={'textTransform': 'none'}
+								link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'}
 							)
 						]) for scenario in scenario_list
 					]
 					sector_name = sector_yml['name']
 					sector_div = html.Div([
-						dcc.Markdown(sector_name, link_target="_blank", className='h4 fw-bold'),
+						dcc.Markdown(sector_name, link_target="_blank", dangerously_allow_html=True, className='h4 fw-bold'),
 						*scenario_desc
 					])
 
 					if 'sovereign' in sector_name.lower():
-						new_children = [dcc.Markdown(sector_name, link_target="_blank", className='h5 fw-bold')] + sector_div.children[1:]
+						new_children = [dcc.Markdown(sector_name, link_target="_blank", dangerously_allow_html=True, className='h5 fw-bold')] + sector_div.children[1:]
 						low_medium_materiality_sovereign_desc.append(html.Div(new_children))
 					else:
 						low_medium_materiality_other_desc.append(sector_div)
@@ -366,8 +441,140 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 			sector_scenario_layout = html.Div(className='d-none')
 	return sector_scenario_layout
 
-# def get_sector_description_layout(user_selection_with_yml_file_path_df):
-	
+def get_sector_description_layout(user_selection_with_yml_file_path_df):
+	# Split by sovereign and other sectors
+	sovereign_sector_selection_df = user_selection_with_yml_file_path_df[
+		user_selection_with_yml_file_path_df['exposure'] == 'Sovereign'
+	].copy()
+	other_sector_selection_df = user_selection_with_yml_file_path_df[
+		user_selection_with_yml_file_path_df['exposure'] != 'Sovereign'
+	].copy()
+
+	all_sector_desc = []
+	for sector_selection_df in [other_sector_selection_df, sovereign_sector_selection_df]:
+		exposure = sector_selection_df['exposure'].iloc[0] if len(sector_selection_df) > 0 else None
+
+		if len(sector_selection_df) == 0:
+			continue
+		else:
+			# Get unique sector yml files without materiality
+			sector_selection_df = sector_selection_df[['sector_yml_file', 'content_id']].drop_duplicates()
+
+			# Add sector yml
+			sector_selection_df['sector_yml_file'] = np.where(
+				sector_selection_df['sector_yml_file'].str.contains('sov'),
+				'sovereigns/sovereigns', sector_selection_df['sector_yml_file']
+			)
+			sector_selection_df['sector_yml'] = [
+				next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml').values()))
+				for sector_yml_file in sector_selection_df['sector_yml_file']
+			]
+			sector_selection_df['sector'] = [
+				sector_yml['name'] for sector_yml in sector_selection_df['sector_yml']
+			]
+
+			# Add description
+			sector_selection_df['description'] = [
+				sector_yml.get(content_id, "")
+				for sector_yml, content_id in sector_selection_df[['sector_yml', 'content_id']].to_numpy()
+			]
+
+			# Create layout
+			sector_selection_df = sector_selection_df[['sector', 'description']].drop_duplicates()
+			sector_desc = [
+				html.Div([
+					dcc.Markdown(sector, link_target="_blank", dangerously_allow_html=True, className='fw-bold'),
+					dcc.Markdown(description, link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'})
+				]) if description != "" else html.Div(className='d-none')
+				for sector, description in sector_selection_df[['sector', 'description']].to_numpy()
+			]
+			all_sector_desc += sector_desc
+	sector_layout = html.Div([*all_sector_desc]) if len(all_sector_desc) > 0 else html.Div(className='d-none')
+	return sector_layout
+
+def get_product_text_layout(user_selection_with_yml_file_path_df):
+	product_selection_df = user_selection_with_yml_file_path_df.copy()
+
+	if len(product_selection_df) == 0:
+		product_layout = html.Div(className='d-none')
+	else:
+		# Drop materiality
+		product_selection_df = product_selection_df.drop(columns='materiality').drop_duplicates()
+
+		# Change ptype to sector if it's Exposure
+		product_selection_df['type'] = np.where(
+			product_selection_df['type'] == 'Exposure', product_selection_df['sector'], product_selection_df['type']
+		)
+
+		# Add product yml
+		product_selection_df['product_yml'] = [
+			next(iter(data_loader.load_yml_file('product', f'{product_yml_file}.yml').values()))
+			for product_yml_file in product_selection_df['product_yml_file']
+		]
+
+		# Add product name
+		product_selection_df['product'] = [
+			product_yml['description'] for product_yml in product_selection_df['product_yml']
+		]
+
+		# Add sector yml
+		product_selection_df['sector_yml_file'] = np.where(
+			product_selection_df['sector_yml_file'].str.contains('sov'),
+			'sovereigns/sovereigns', product_selection_df['sector_yml_file']
+		)
+		product_selection_df['sector_yml'] = [
+			next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml').values()))
+			for sector_yml_file in product_selection_df['sector_yml_file']
+		]
+		product_selection_df['sector'] = [
+			sector_yml['name'] for sector_yml in product_selection_df['sector_yml']
+		]
+
+		# Add description
+		product_selection_df['description'] = [
+			product_yml[content_id]
+			for product_yml, content_id in product_selection_df[['product_yml', 'content_id']].to_numpy()
+		]
+
+		# Combine type
+		product_selection_table = product_selection_df[['sector', 'product', 'type', 'description']].drop_duplicates()
+		product_selection_table = _convert_to_bullet_points(product_selection_table, 'type')
+
+		# Create datatable
+		product_selection_table = data_loader.rename_user_selection_data_columns(product_selection_table)
+		product_selection_table = data_loader.create_data_table(product_selection_table, ['Type'], ['Description'])
+
+		product_layout = html.Div([
+			html.P('The following rows contribute:'),
+			html.Div(product_selection_table)
+		])
+	return product_layout
+
+def clean_up_sector_overview(section_layout):
+	# First child is header, second is sector description, third is product description
+	sector_desc = []
+	product_desc = section_layout.children[2].children[0]
+	product_datatable = section_layout.children[2].children[1].children.children[0]
+	product_datatable_columns = [col['name'] for col in product_datatable.columns]
+	product_selection_df = pd.DataFrame(product_datatable.data, columns=product_datatable_columns)
+	for sector_section in section_layout.children[1].children:
+		if hasattr(sector_section, 'children'):
+			sector_description_layout = sector_section.children
+
+			sector_name = sector_description_layout[0].children
+			filtered_product_selection_df = product_selection_df[product_selection_df['Sector'] == sector_name]
+			filtered_product_selection_table = data_loader.create_data_table(
+				filtered_product_selection_df, ['Type'], ['Description']
+			)
+			product_layout = [product_desc] + [filtered_product_selection_table]
+			sector_desc.append(html.Div(sector_description_layout + product_layout))
+
+	sector_overview_layout = html.Div([
+		section_layout.children[0],
+		*sector_desc,
+	])
+	return sector_overview_layout
+
 def _filter_yml_by_scenario(yml, scenario, scenario_mapping_df):
 	filtered_scenario_mapping_df = scenario_mapping_df[scenario_mapping_df['scenario_name'] == scenario]
 	scenario_risk_type = filtered_scenario_mapping_df['risk_type'].iloc[0]
@@ -381,22 +588,37 @@ def _filter_user_selection_by_section(user_selection_df, section, sub_section):
 	]
 	return filtered_user_selection_df
 
-# 	if report == 'institutional':
-# 		mask = (
-# 			(exposure_sector_product_mapping_df['institution'] == institution)
-# 			& (exposure_sector_product_mapping_df['sector'] == sector)
-# 			& (exposure_sector_product_mapping_df['sector'] == sector)
-# 			& (exposure_sector_product_mapping_df['type'] == ptype)
-# 		)
-# 	elif report == 'sector':
-# 		mask = (exposure_sector_product_mapping_df['sector'] == sector)
-# 	else:
-# 		mask = ()
-#
-# 	sector_mapping_df = exposure_sector_product_mapping_df[mask]
-# 	sector_yml_file = sector_mapping_df['sector_yml_file'].iloc[0]
-# 	sector_yml = data_loader.load_yml_file('sector_class', f'{sector_yml_file}.yml')
-# 	product_yml_file = sector_mapping_df['product_yml_file'].iloc[0]
-# 	product_yml = data_loader.load_yml_file('product', f'{product_yml_file}.yml')
-#
-# 	return sector_type, product
+def _convert_to_bullet_points(df, bullet_point_column_name):
+	groupby_variables_list = [x for x in df if x != bullet_point_column_name]
+	output_df = df.sort_values(bullet_point_column_name)
+	output_df = output_df.groupby(
+		groupby_variables_list, as_index=False).agg({bullet_point_column_name: '\n- '.join})
+	output_df[bullet_point_column_name] = '- ' + output_df[bullet_point_column_name]
+	return output_df
+
+def _dash_html_to_string(dash_component):
+	# Recursively convert Dash HTML components to HTML string
+	if isinstance(dash_component, list):
+		return ''.join([_dash_html_to_string(child) for child in dash_component])
+	if hasattr(dash_component, 'props'):
+		tag = dash_component.__class__.__name__.lower()
+		children = _dash_html_to_string(dash_component.props.get('children', ''))
+		return f"<{tag}>{children}</{tag}>"
+	return str(dash_component)
+
+def _html_to_docx(html_string):
+	doc = Document()
+	soup = BeautifulSoup(html_string, "html.parser")
+	for elem in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div', 'ul', 'ol', 'li']):
+		text = elem.get_text()
+		if elem.name.startswith('h'):
+			level = int(elem.name[1])
+			doc.add_heading(text, level=level)
+		elif elem.name in ['ul', 'ol']:
+			for li in elem.find_all('li'):
+				doc.add_paragraph(li.get_text(), style='List Bullet' if elem.name == 'ul' else 'List Number')
+		elif elem.name == 'p':
+			doc.add_paragraph(text)
+		elif elem.name == 'div':
+			doc.add_paragraph(text)
+	return doc

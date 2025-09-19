@@ -80,7 +80,7 @@
         as the increased operating costs from paying a price on carbon emissions 
         is partially passed to downstream consumers.
         
-        ![Primary Energy Price](motor_uw_delayed_price_energy.png)
+        ![Primary Energy Price](/assets/images/motor_uw_delayed_price_energy.png)
         
         **Source:**
         [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -90,7 +90,7 @@
         the portion of electric vehicles could increase in Delayed 
         transition scenarios.
         
-        ![Freight and Passenger Transportation](motor_uw_delayed_final_energy_transportation.png)
+        ![Freight and Passenger Transportation](/assets/images/motor_uw_delayed_final_energy_transportation.png)
         
         **Source:**
         [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -105,7 +105,7 @@
         due to the take up of electric vehicles, while freight emissions initially increase 
         up to 2030 to 2035 and then drop slowly afterwards.
         
-        ![Transport CO<sub>2</sub> Emissions](motor_uw_delayed_passenger_transport.png)
+        ![Transport CO<sub>2</sub> Emissions](/assets/images/motor_uw_delayed_passenger_transport.png)
         
         **Source:**
         [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -192,11 +192,11 @@
         costs from paying a price on carbon emissions is partially passed 
         to downstream consumers.
         
-        ![Primary Energy Price - Net Zero 2050](motor_uw_orderly_price_energy_net_zero_2050.png)
+        ![Primary Energy Price - Net Zero 2050](/assets/images/motor_uw_orderly_price_energy_net_zero_2050.png)
         
-        ![Primary Energy Price - Below 2&deg;C](motor_uw_orderly_price_energy_below_2c.png)
+        ![Primary Energy Price - Below 2&deg;C](/assets/images/motor_uw_orderly_price_energy_below_2c.png)
         
-        ![Primary Energy Price - Low Demand](motor_uw_orderly_price_energy_low_demand.png)
+        ![Primary Energy Price - Low Demand](/assets/images/motor_uw_orderly_price_energy_low_demand.png)
         
         **Source:**
         [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -206,11 +206,11 @@
         the portion of electric energy could increase in Orderly 
         transition scenarios.
         
-        ![Freight and Passenger Transportation - Net Zero 2050](motor_uw_orderly_final_energy_transportation_netzero2050.png)
+        ![Freight and Passenger Transportation - Net Zero 2050](/assets/images/motor_uw_orderly_final_energy_transportation_netzero2050.png)
   
-        ![Freight and Passenger Transportation - Below 2&deg;C](motor_uw_orderly_final_energy_transportation_below2c.png)
+        ![Freight and Passenger Transportation - Below 2&deg;C](/assets/images/motor_uw_orderly_final_energy_transportation_below2c.png)
   
-        ![Freight and Passenger Transportation - Low Demand](motor_uw_orderly_final_energy_transportation_lowdemand.png)
+        ![Freight and Passenger Transportation - Low Demand](/assets/images/motor_uw_orderly_final_energy_transportation_lowdemand.png)
         
         **Source:**
         [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8  model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -225,11 +225,11 @@
         the take up of electric vehicles, while freight emissions initially increase 
         up to 2030 to 2035 and then drop afterwards.
         
-        ![Transport CO<sub>2</sub> Emissions - Net Zero 2050](motor_uw_orderly_passenger_transport_netzero2050.png)
+        ![Transport CO<sub>2</sub> Emissions - Net Zero 2050](/assets/images/motor_uw_orderly_passenger_transport_netzero2050.png)
   
-        ![Transport CO<sub>2</sub> Emissions - Below 2&deg;C](motor_uw_orderly_passenger_transport_below2c.png)
+        ![Transport CO<sub>2</sub> Emissions - Below 2&deg;C](/assets/images/motor_uw_orderly_passenger_transport_below2c.png)
   
-        ![Transport CO<sub>2</sub> Emissions - Low Demand](motor_uw_orderly_passenger_transport_lowdemand.png)
+        ![Transport CO<sub>2</sub> Emissions - Low Demand](/assets/images/motor_uw_orderly_passenger_transport_lowdemand.png)
         
         **Source:**
         [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -285,9 +285,9 @@
         in the current policies. Freight emissions would increase in current 
         policies while for NDCs, emissions would plateau at 2025 levels.
         
-        ![Transport CO<sub>2</sub> Emissions - Current Policies](motor_uw_physical_current_policies.png)
+        ![Transport CO<sub>2</sub> Emissions - Current Policies](/assets/images/motor_uw_physical_current_policies.png)
   
-        ![Transport CO<sub>2</sub> Emissions - NDCs](motor_uw_physical_NDCs.png)
+        ![Transport CO<sub>2</sub> Emissions - NDCs](/assets/images/motor_uw_physical_NDCs.png)
   
         **Source:**
         [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -377,7 +377,7 @@
        operating across multiple countries, requiring them to adopt 
        differentiated approaches for different territories.
        
-        ![Transport CO<sub>2</sub> Emissions - Fragmented World](motor_uw_physical_transition_fragmented_world.png)
+        ![Transport CO<sub>2</sub> Emissions - Fragmented World](/assets/images/motor_uw_physical_transition_fragmented_world.png)
   
         **Source:**
         [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)   
@@ -398,6 +398,3 @@
     - [NAICS Code 48-49](https://www.naics.com/six-digit-naics/?code=48-49)
     
     - [SIC Code E](https://www.naics.com/sic-codes-counts-division/?div=E)
-  
-  
-

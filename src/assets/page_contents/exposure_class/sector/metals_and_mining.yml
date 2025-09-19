@@ -28,14 +28,14 @@
        
        Overall, in the Delayed Transition scenario, the mining sector is greatly impacted as renewables and biomass contribute to a shrinking role of fossil fuel energy (including coal) by 2050, albeit to a lesser extent than the orderly transition scenarios. This is seen by the growth in renewables and biomass contribution to global primary energy from ~20% in 2030, to almost 65% by 2050.
  
-       ![Primary Energy](mining_delayed_energy_mix.png)
+       ![Primary Energy](/assets/images/mining_delayed_energy_mix.png)
  
        **Source:**
        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
  
        The shrinking demand for coal is reflected in coal primary energy prices (i.e. the spot price at the global market) which remains flat at ~USD 2.3 per giga joule until 2035 due to policy inaction, before decreasing significantly to ~USD 1.5 by 2050 .
  
-       ![Coal Price](mining_delayed_price_coal.png)
+       ![Coal Price](/assets/images/mining_delayed_price_coal.png)
  
        **Source:**
        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -63,14 +63,14 @@
        
        Overall, in the Orderly transition scenarios, renewables and biomass will deliver majority of global primary energy needs by 2050. This is seen by the growth in renewables and biomass contribution to global primary energy from 25% to 35% in 2030, to almost 80% in the Net Zero 2050 and Low Demand scenario and almost 60% in the Below 2°C scenario by 2050.
  
-       ![Primary Energy](mining_orderly_energy_mix.png)
+       ![Primary Energy](/assets/images/mining_orderly_energy_mix.png)
  
        **Source:**
        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
        
        In the Orderly transition scenarios, coal primary energy prices (i.e. the spot price at the global market) decreases most significantly when compared to other scenarios, from USD 1.7 to USD 2 per giga joule of Coal in 2030 to its nadir of USD 1.2 to USD 1.5 in 2045.
  
-       ![Coal Price](mining_ordelry_price_coal.png)
+       ![Coal Price](/assets/images/mining_ordelry_price_coal.png)
  
        **Source:**
        [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -92,7 +92,7 @@
        
        -	**Water stress:** this is the key physical risk faced by the sector due to heavy reliance on water for various essential procedures; the issue could lead to greater competition between mining companies as they fight for scarce water resources. It could also likely lead to an expectation of increased environmental regulation focusing on protecting water supply and quality. This would incur hefty additional costs for water intensive industries such as mining. Around 30% to 50% of copper, gold, iron ore, and zinc productions are already concentrated in ‘water stress hot-spots’ (central Asia, Chilean coast, eastern Australia, the Middle East, southern Africa, western Australia, and a large zone in western North America). Depending on the water intensiveness of the industrial process, such changes, while seemingly minor in percentage terms, could be critical to a mine’s operations or license to operate.
  
-       ![Water Stress](mining_one.png)
+       ![Water Stress](/assets/images/mining_one.png)
        
        **Source:**
        [McKinsey & Company, Climate risk and decarbonization: What every mining CEO needs to know, January 2020](https://www.mckinsey.com/business-functions/sustainability/our-insights/climate-risk-and-decarbonization-what-every-mining-ceo-needs-to-know)
@@ -123,7 +123,7 @@
        
        -	**Water stress:** this is the key physical risk faced by the sector due to heavy reliance on water for various essential procedures; the issue could lead to greater competition between mining companies as they fight for scarce water resources. It could also likely lead to an expectation of increased environmental regulation focusing on protecting water supply and quality. This would incur hefty additional costs for water intensive industries such as mining. Around 30% to 50% of copper, gold, iron ore, and zinc productions are already concentrated in ‘water stress hot-spots’ (central Asia, Chilean coast, eastern Australia, the Middle East, southern Africa, western Australia, and a large zone in western North America). Depending on the water intensiveness of the industrial process, such changes, while seemingly minor in percentage terms, could be critical to a mine’s operations or license to operate.
        
-       ![Water Stress](mining_one.png)
+       ![Water Stress](/assets/images/mining_one.png)
        
         **Source:**
         [McKinsey & Company, Climate risk and decarbonization: What every mining CEO needs to know, January 2020](https://www.mckinsey.com/business-functions/sustainability/our-insights/climate-risk-and-decarbonization-what-every-mining-ceo-needs-to-know)
@@ -146,14 +146,14 @@
        
        In the Fragmented World scenario, fossil fuels contributions are decreasing, however still deliver majority (almost 60%) of global primary energy needs until 2050. This is evidenced by the muted growth in renewables and biomass contribution to global primary energy from ~20% in 2030 to ~40% by 2050.
        
-        ![Primary Energy](mining_too_lit_too_late_energy_mix.png)
+        ![Primary Energy](/assets/images/mining_too_lit_too_late_energy_mix.png)
        
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
        
        The maintained importance of coal in the Fragmented World scenario is further evidenced through coal primary energy prices (i.e. the spot price at the global market). The price of coal stays relatively stable until 2040 at ~USD 2.35 per giga joule, increasing slightly to USD 2.6 by 2050.
        
-       ![Coal Price](mining_too_lit_too_late_price_coal.png)
+       ![Coal Price](/assets/images/mining_too_lit_too_late_price_coal.png)
        
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

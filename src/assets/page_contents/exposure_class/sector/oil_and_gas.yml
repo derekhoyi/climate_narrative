@@ -72,11 +72,11 @@
         transportation as opposed to electricity. Oil demand does however still steadily 
         decrease, primarily due to the electrification of road transportation.
   
-        ![Electricity Capacity](oil_gas_disorderly_oil_demand.png)
+        ![Electricity Capacity](/assets/images/oil_gas_disorderly_oil_demand.png)
   
-        ![Electricity Capacity](oil_gas_disorderly_gas_demand.png)
+        ![Electricity Capacity](/assets/images/oil_gas_disorderly_gas_demand.png)
   
-        ![Electricity Capacity](oil_gas_disorderly_renewables_demand.png)
+        ![Electricity Capacity](/assets/images/oil_gas_disorderly_renewables_demand.png)
   
         **Source:**
         [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -132,7 +132,7 @@
         There is still some legacy capital investment in fossil fuel extraction to maintain 
         the existing infrastructure while phasing down the overall capacity.
   
-        ![Cumulative Energy Investment](oil_gas_disorderly_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/oil_gas_disorderly_energy_investment.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -163,9 +163,9 @@
         those who have less optionality with energy sources (such as shipping and aviation 
         for oil demand) and thus have more inelastic demand to the price increases.
   
-        ![Oil and Gas Price](oil_gas_disorderly_energy_price_oil.png)
+        ![Oil and Gas Price](/assets/images/oil_gas_disorderly_energy_price_oil.png)
   
-        ![Oil and Gas Price](oil_gas_disorderly_energy_price_gas.png)
+        ![Oil and Gas Price](/assets/images/oil_gas_disorderly_energy_price_gas.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads){target="\_blank"}
@@ -223,11 +223,11 @@
         transportation as opposed to electricity. Oil demand does however still steadily 
         decrease, primarily due to the electrification of road transportation.
   
-        ![Electricity Capacity](oil_gas_orderly_oil_demand.png)
+        ![Electricity Capacity](/assets/images/oil_gas_orderly_oil_demand.png)
   
-        ![Electricity Capacity](oil_gas_orderly_gas_demand.png)
+        ![Electricity Capacity](/assets/images/oil_gas_orderly_gas_demand.png)
   
-        ![Electricity Capacity](oil_gas_orderly_renewables_demand.png)
+        ![Electricity Capacity](/assets/images/oil_gas_orderly_renewables_demand.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -283,11 +283,11 @@
         fuel extraction will be required to maintain the existing infrastructure while 
         phasing down the overall capacity.
   
-        ![Cumulative Energy Investment](oil_gas_NZ2050_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/oil_gas_NZ2050_energy_investment.png)
   
-        ![Cumulative Energy Investment](oil_gas_below2deg_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/oil_gas_below2deg_energy_investment.png)
   
-        ![Cumulative Energy Investment](oil_gas_lowdemand_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/oil_gas_lowdemand_energy_investment.png)
   
          **Source:**
          [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -312,9 +312,9 @@
         scenario leads to an overall oversupply, and price competition between 
         Oil and Gas firms would drive the prices down.
   
-        ![Oil and Gas price](oil_gas_orderly_energy_price_oil.png)
+        ![Oil and Gas price](/assets/images/oil_gas_orderly_energy_price_oil.png)
   
-        ![Oil and Gas price](oil_gas_orderly_energy_price_gas.png)
+        ![Oil and Gas price](/assets/images/oil_gas_orderly_energy_price_gas.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -325,7 +325,7 @@
         stranding of fossil fuel assets, and cannibalisation of profitability, 
         if firms fail to adapt to the changing market.
   
-        ![Primary Energy Mix](oil_gas_orderly_energy_mix.png)
+        ![Primary Energy Mix](/assets/images/oil_gas_orderly_energy_mix.png)
   
          **Source:**
          IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -523,7 +523,7 @@
           ompanies both within the Oil and Gas industry, and those service providers with 
           Oil and Gas businesses as part of their clientele.
   
-        ![Electricity Capacity](oil_gas_tltl_fossil_demand.png)
+        ![Electricity Capacity](/assets/images/oil_gas_tltl_fossil_demand.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -572,9 +572,9 @@
         as it is replaced on purely economic grounds by renewables in power generation, 
         and electrification of demand in heating and transportation. 
   
-        ![Oil and Gas Price](oil_gas_tltl_energy_price_oil.png)
+        ![Oil and Gas Price](/assets/images/oil_gas_tltl_energy_price_oil.png)
   
-        ![Oil and Gas Price](oil_gas_tltl_energy_price_gas.png)
+        ![Oil and Gas Price](/assets/images/oil_gas_tltl_energy_price_gas.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

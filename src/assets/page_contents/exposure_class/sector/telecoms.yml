@@ -75,7 +75,7 @@
         peaking around 2035 in the Delayed Transition scenario at ~19 USD 
         (inflation adjusted to 2010 baseline) per gigajoule. 
         
-        ![Electricity Price](telecoms_disorderly_elec_price.png)
+        ![Electricity Price](/assets/images/telecoms_disorderly_elec_price.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -181,7 +181,7 @@
         per gigajoule and 2035 for the Low Demand scenario at ~22 USD 
         (inflation adjusted to 2010 baseline) per gigajoule. 
         
-        ![Electricity Price](telecoms_orderly_elec_price.png)
+        ![Electricity Price](/assets/images/telecoms_orderly_elec_price.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -383,7 +383,7 @@
         peaking around 2035 in the Fragmented World scenario at ~19 USD 
         (inflation adjusted to 2010 baseline) per gigajoule. 
   
-        ![Electricity Price](telecoms_orderly_elec_price.png)
+        ![Electricity Price](/assets/images/telecoms_orderly_elec_price.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

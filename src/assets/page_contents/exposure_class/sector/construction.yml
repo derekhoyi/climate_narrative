@@ -97,7 +97,7 @@
         for cement industry reduces from ~1.5 billion tonnes CO<sub>2</sub>/yr to just 
         above 5 million tonnes CO<sub>2</sub>/yr.  
         
-        ![Delayed transition](contruction_delayed_transition_bar_chart.png)
+        ![Delayed transition](/assets/images/contruction_delayed_transition_bar_chart.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -111,7 +111,7 @@
         intensity, among building materials, cement could incur the most impact in the face of an 
         increasing carbon price. 
         
-         ![Delayed transition](contruction_delayed_transition_line_chart.png)
+         ![Delayed transition](/assets/images/contruction_delayed_transition_line_chart.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -122,7 +122,7 @@
         investment for renewables could increase the electricity cost for the construction 
         industry in the short-to-medium term.
         
-        ![Primary Energy](primary_energy_mix_delayed_bar_chart.png)
+        ![Primary Energy](/assets/images/primary_energy_mix_delayed_bar_chart.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -204,17 +204,17 @@
         decarbonisation in building materials such as cement, chemicals
         and steel, as well as in its own operations.
         
-        ![Net zero 2050](net_zero_2050_bar.png)
+        ![Net zero 2050](/assets/images/net_zero_2050_bar.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
-        ![Below 2c](below_2c_bar.png)
+        ![Below 2c](/assets/images/below_2c_bar.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
-        ![Low demand](low_demand_bar.png)
+        ![Low demand](/assets/images/low_demand_bar.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -230,17 +230,17 @@
         this limited capacity to improve CO<sub>2</sub> intensity, among building materials, cement
         could incur the most impact in the face of an increasing carbon price. 
         
-        ![Net zero 2050](net_zero_2050_line.png)
+        ![Net zero 2050](/assets/images/net_zero_2050_line.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
-        ![Below 2c](below_2c_line.png)
+        ![Below 2c](/assets/images/below_2c_line.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
-        ![Low demand](low_demand_line.png)
+        ![Low demand](/assets/images/low_demand_line.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -252,7 +252,7 @@
         and new investment for renewables could increase the electricity cost for the 
         construction industry in the short-to-medium term.
         
-        ![Energy Mix](Primary_energy_mix_orderly.png)
+        ![Energy Mix](/assets/images/Primary_energy_mix_orderly.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -260,7 +260,7 @@
         The construction sector is also likely to be impacted by steady decarbonisation in 
         transport. The portion of electric energy used in freight transport rises from 2% 
         in 2030 to between 17% and 30% by 2050 in across the Orderly transition scenarios.
-        ![Freight Vehicles](electricity_use_in_freight_transport_orderly.png)
+        ![Freight Vehicles](/assets/images/electricity_use_in_freight_transport_orderly.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -311,12 +311,12 @@
           1.3 – 1.4&deg;c in 2030 to between 2 – 2.2&deg;c in 2050 across 
           both scenarios.
         
-          ![Current policy](current_policies_line_chart.png)
+          ![Current policy](/assets/images/current_policies_line_chart.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
         
-          ![NDCs](nationally_determined_contributions_line_chart.png)
+          ![NDCs](/assets/images/nationally_determined_contributions_line_chart.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -330,7 +330,7 @@
           expected economic damages in hot house scenario is increasing 
           from 8.9% change in 2030 to ~20% change in 2050.
         
-          ![Economic damages](ecomomic_damages_annual_expected_damage_from_tropical_cyclones_hot_house.png)
+          ![Economic damages](/assets/images/ecomomic_damages_annual_expected_damage_from_tropical_cyclones_hot_house.png)
         
         - **Heavy precipitation and flooding** can cause significant damage to
           project sites with infrastructure collapsing and exposed materials
@@ -339,7 +339,7 @@
           to increase from 2.65% change in 2030 to ~3.5%-3.6% change in 
           2050 relative to the 1986-2006 reference period. 
         
-        ![Precipitation](climate_precipitation_hot_house.png)
+        ![Precipitation](/assets/images/climate_precipitation_hot_house.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -397,7 +397,7 @@
          of the highest precipitation increases across scenarios, rising from 2.65% 
          change in 2030 to ~3.5% change in 2050 relative to the 1986-2006 reference period.
         
-         ![Precipitation](climate_precipitation_too_little_too_late.png)
+         ![Precipitation](/assets/images/climate_precipitation_too_little_too_late.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -428,12 +428,12 @@
           minimum and maximum air temperatures, are projected to increase significantly, 
           from between 1.3 – 1.4&deg;c in 2030 to ~2&deg;c in 2050 in the Fragmented World scenario.
         
-         ![Fragmented world](fragmented_world_line_chart.png)
+         ![Fragmented world](/assets/images/fragmented_world_line_chart.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
         
-         ![Precipitation](climate_precipitation_too_little_too_late_2.png)
+         ![Precipitation](/assets/images/climate_precipitation_too_little_too_late_2.png)
         
         
          Significantly slowed GDP growth could further impact demand for construction 
@@ -454,7 +454,7 @@
          emissions in the production of cement, critical to the construction 
          sector, which instead rises.       
         
-         ![Fragmented world](fragmented_world_bar_chart.png)
+         ![Fragmented world](/assets/images/fragmented_world_bar_chart.png)
         
          **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -469,7 +469,7 @@
          building materials, cement could incur the most impact in the face of 
          an increasing carbon price. 
         
-         ![Fragmented world](fragmented_world_line_chart_2.png)
+         ![Fragmented world](/assets/images/fragmented_world_line_chart_2.png)
         
          **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -480,7 +480,7 @@
          World scenario from 2% in 2030 to between 13% by 2050 and is the lowest 
          across scenarios except for the Current Policies scenario.
         
-         ![electricity](electricity_use_in_freight_transport_too_little_too_late.png)
+         ![electricity](/assets/images/electricity_use_in_freight_transport_too_little_too_late.png)
         
          **Source:**
         [IIASA NGFS Scenario Explorer.[REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

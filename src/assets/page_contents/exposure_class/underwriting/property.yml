@@ -102,7 +102,7 @@
 	     2050, while natural gas consumption decreases from between 25 to 30 EJ in 2025 
 	     to below 15 EJ in 2050.
 	     
-	      ![Final Energy - Delayed Transition](property_uw_delayed_residential_and_commercial_final_energy.png)
+	      ![Final Energy - Delayed Transition](/assets/images/property_uw_delayed_residential_and_commercial_final_energy.png)
 	
 	      **Source:**
 	      [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -112,7 +112,7 @@
 	     Transition scenario. Carbon tax paid begins to decrease thereafter as 
 	     improvements are made to buildings’ emissions intensities.
 	     
-	      ![Carbon Tax Demand](property_uw_delayed_carbon_demand.png)
+	      ![Carbon Tax Demand](/assets/images/property_uw_delayed_carbon_demand.png)
 	
 	      **Source:**
 	      [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -256,9 +256,9 @@
 	      while natural gas consumption decreases from between 28 to 31 EJ in 2025 to 15 and 
 	      below EJ in 2050. 
 	      
-	      ![Final Energy](property_uw_orderly_final_energy_netzero_lowdemand.png)
+	      ![Final Energy](/assets/images/property_uw_orderly_final_energy_netzero_lowdemand.png)
 	
-	      ![Final Energy](property_uw_orderly_final_energy_below2c.png)
+	      ![Final Energy](/assets/images/property_uw_orderly_final_energy_below2c.png)
 	
 	      **Source:**
 	      [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -270,7 +270,7 @@
 	      in both Net Zero 2050 and low demand scenarios to be below ~$100 billion, however, 
 	      it continues to increase in the below 2&deg;c scenario to be around ~$200 billion.
 	
-	      ![Carbon Tax Demand](property_uw_orderly_carbon_demand.png)
+	      ![Carbon Tax Demand](/assets/images/property_uw_orderly_carbon_demand.png)
 	
 	      **Source:**
 	      [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -417,7 +417,7 @@
 	      criteria, making it difficult for homeowners or businesses in vulnerable areas to 
 	      obtain coverage.
 	      
-	     ![Tropical Cyclones Damages](property_uw_physical_economic_damages.png)
+	     ![Tropical Cyclones Damages](/assets/images/property_uw_physical_economic_damages.png)
 	
 	      **Source:**
 	      [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/)
@@ -584,7 +584,7 @@
 	      could lead to higher premiums and stricter underwriting criteria, making it 
 	      difficult for homeowners or businesses in vulnerable areas to obtain coverage.
 	      
-	     ![Tropical Cyclones Damages](property_uw_physical_and_transition_economic_damages.png)
+	     ![Tropical Cyclones Damages](/assets/images/property_uw_physical_and_transition_economic_damages.png)
 	
 	      **Source:**
 	      [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/)
@@ -681,5 +681,3 @@
 	        rates. Rating and shareholder drivers could also influence insurance underwriting 
 	        decisions, determining limits on risk acceptance and setting of corporate risk 
 	        appetite and capital.
-	
-

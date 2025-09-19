@@ -26,8 +26,8 @@ def report_type_buttons(output_structure_mapping_dict):
     yml = data_loader.load_yml_file('section/reports', 'button_description.yml')
     for i, report_type in enumerate(output_structure_mapping_df['report_type'].unique()):
         # get markdown from yml
-        desc_title = dcc.Markdown(report_type, link_target="_blank", className='h4 fw-bolder text-white')
-        desc_yml = dcc.Markdown(yml[report_type.lower()], link_target="_blank", className='display-12', style={'textTransform': 'none'})
+        desc_title = dcc.Markdown(report_type, link_target="_blank", dangerously_allow_html=True, className='h4 fw-bolder text-white')
+        desc_yml = dcc.Markdown(yml[report_type.lower()], link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'})
         desc = html.Div([desc_title, desc_yml])
 
         button_list.append(

@@ -2,56 +2,7 @@
   name: Germany sovereign
   test_report_position: 30
   group: sovereigns
-  description: |
-    Sovereign (or government) bonds are debt securities issued by governments 
-    to support government spending. Governments agree to repay the face value of 
-    the bond at a specified maturity date and may also pay interest, in the form 
-    of coupon payments, at regular intervals throughout the term. Bonds are used 
-    to finance and raise capital for the state’s general expenditures and operations, 
-    or are earmarked for certain projects such as infrastructure and housing, or 
-    nature restoration and climate adaptation.
-    
-    The government bond sector is a broad category that includes “sovereign” debt, 
-    which is issued and generally backed by a central government. UK Gilts, US Treasuries, 
-    German Bunds, Japanese Government Bonds (JGBs), Brazilian Government Bonds and Government 
-    of Canada Bonds (GoCs) are all examples of sovereign government bonds. The US, Japan and 
-    Europe have historically been the biggest issuers in the government bond market. Several 
-    governments also issue sovereign bonds that are linked to inflation, known as inflation-linked 
-    bonds or, in the US, Treasury Inflation-Protected Securities (TIPS). 
-    
-    On an inflation-linked bond, the interest and/or principal is adjusted on a regular basis to 
-    reflect changes in the rate of inflation, thus providing a “real,” or inflation-adjusted, return. 
-    But, unlike other bonds, inflation-linked bonds could experience greater losses when real interest 
-    rates are moving faster than nominal interest rates.
-  
-    In addition to sovereign bonds, the government bond sector includes subcomponents, such as:
-  
-    - Agency and “quasi-government” bonds: Central governments pursue various goals - 
-      supporting affordable housing or the development of small businesses, for example - 
-      through agencies, a number of which issue bonds to support their operations. 
-      Some agency bonds are guaranteed by the central government while others are not. 
-      Supranational organisations, like the World Bank and the European Investment Bank, 
-      also borrow in the bond market to finance public projects and/or development.
-  
-    - Local government bonds: Local governments - whether provinces, states or cities - 
-      borrow to finance a variety of projects, from bridges to schools, as well as general 
-      operations. The market for local government bonds is well established in the US, 
-      where these bonds are known as municipal bonds. Other developed markets also 
-      issue provincial/local government  bonds.
-  
-    In this report we refer to a ‘20-notch’ sovereign bond rating scale translated 
-    from S&P’s alphabetical standardized rating scale (see Appendix), which is used to 
-    outline changes to sovereign bond ratings, as is common in surrounding literature. 
-    Impacts of climate change on sovereign bond ratings are discussed in reference to the 
-    2021 working paper titled “Rising Temperatures, Falling Ratings: The Effect of Climate 
-    Change on Sovereign Creditworthiness” from the Bennett Institute for Public Policy. 
-    This study represents one approach towards quantifying the effects of climate change 
-    on credit ratings and is illustrative based on a hypothetical model. Whilst conclusions 
-    are referred to on the impact on bond ratings, it is worth highlighting that this report 
-    focuses on the physical climate risk impacts on credit ratings, and not on the demands 
-    of transition, nor on the knock-on effects that climate change may cause or exacerbate 
-    such as resource conflicts, political volatility, or supply chain disruptions.
-  
+
   transition:
     high:
       exec_description: |
@@ -106,7 +57,7 @@
         risk stranding fossil fuel assets beyond 2030. In this scenario, disorderly policy 
         action results in increased transition risks.
   
-        ![Carbon price](sov_germany_disorderly_price_carbon.png)
+        ![Carbon price](/assets/images/sov_germany_disorderly_price_carbon.png)
         
         **Source:**
         
@@ -121,7 +72,7 @@
         to ~ 27% of total electricity generation in 2023 (2022: ~ 22%) as well as the decrease 
         in coal electricity generation.
   
-        ![Sources of Electricity Generation](sov_germany_electricity_generation.png)
+        ![Sources of Electricity Generation](/assets/images/sov_germany_electricity_generation.png)
   
         **Source:**
         [IEA 2024; Evolution of electricity generation in Germany since 2000](https://www.iea.org/countries/germany/energy-mix) License: CC By 4.0.
@@ -156,7 +107,7 @@
         on Germany’s GDP, from chronic physical and transition effects, would be significant, at 
         around -3% (relative to a baseline with no transition or physical risks) by 2030 and around -8% by 2050.
   
-        [GDP](sov_germany_disorderly_gdp.png)
+        [GDP](/assets/images/sov_germany_disorderly_gdp.png)
         
         **Source:**
         
@@ -217,7 +168,7 @@
         for Below 2&deg;C). The difference in pricing is due to the more rigorous targets of limiting global 
         warming to a maximum of 1.5&deg;C (versus 2&deg;C in the Below 2&deg;C scenario).
   
-        ![Carbon price](sov_germany_orderly_price_carbon.png)
+        ![Carbon price](/assets/images/sov_germany_orderly_price_carbon.png)
         
         **Source:**
         
@@ -232,7 +183,7 @@
         rose to ~ 27% of total electricity generation in 2023 (2022: ~ 22%) as well as 
         the decrease in coal electricity generation.
   
-        ![Sources of Electricity Generation](sov_germany_electricity_generation.png)
+        ![Sources of Electricity Generation](/assets/images/sov_germany_electricity_generation.png)
   
         **Source:**
         [IEA 2024; Evolution of electricity generation in Germany since 2000](https://www.iea.org/countries/germany/energy-mix) License: CC By 4.0.
@@ -263,7 +214,7 @@
         would be significant, ranging from around -3% (relative to a baseline with no transition or 
         physical risks) by 2030 and from -5% to -6% by 2050.
   
-        ![GDP](sov_germany_orderly_gdp.png)
+        ![GDP](/assets/images/sov_germany_orderly_gdp.png)
         
         **Source:**
         
@@ -326,7 +277,7 @@
         effects, would be significant, ranging from around -3% (relative to a baseline with no physical 
         risks) by 2030 and between -7% and -9% by 2050.
   
-        ![GDP](sov_germany_hothouse_gdp.png)
+        ![GDP](/assets/images/sov_germany_hothouse_gdp.png)
         
         **Source:**
         
@@ -408,7 +359,7 @@
         would be significant, around -3% (relative to a baseline with no transition or physical risks) by 2030 
         and around -8% by 2050.
   
-         ![GDP](sov_germany_littlelate_gdp.png)
+         ![GDP](/assets/images/sov_germany_littlelate_gdp.png)
         
         **Source:**
         
@@ -459,4 +410,4 @@
           unemployment and lower incomes, which could be worsened by uneven climate action.
           
   appendix: |
-    ![20 Notch Rating Scale](Sovereign_Rating_Scale.png)
+    ![20 Notch Rating Scale](/assets/images/Sovereign_Rating_Scale.png)

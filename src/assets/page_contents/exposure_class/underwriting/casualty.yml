@@ -34,7 +34,7 @@
         The graph below shows how consumption and energy costs may change in a transition scenario which could be considered as a starting point for the impacts on demand and costs for companies that fail to adapt to the transition. Negative impacts on GDP and consumption due to increased costs and economic disruptions, there could also be opportunities for growth through investments in resilience and sustainable practices. Insurers will need to adapt their underwriting practices to reflect these changing dynamics, which will in turn have broader implications for the economy and society.
         
         
-        ![Policy Cost](casualty_uw_delayed_policy_cost.png)
+        ![Policy Cost](/assets/images/casualty_uw_delayed_policy_cost.png)
   
         **Source:**
         [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -61,9 +61,9 @@
         The graph below shows how GDP, consumption and energy costs may change in a transition scenario, which could be considered as a starting point for the impacts on demand and costs for companies that fail to adapt to the transition. Overall, while additional energy system cost and GDP loss are likely to increase substantially, in the Low Demand scenario, given the behavioural changes and additional levers in end-use sectors (e.g. faster electrification, renewable substitutes), consumption is positively affected with an exponential increase. Negative impacts on GDP and consumption due to increased costs and economic disruptions, there could also be opportunities for growth through investments in resilience and sustainable practices. Insurers will need to adapt their underwriting practices to reflect these changing dynamics, which will in turn have broader implications for the economy and society.
         
         
-        ![Policy Cost](casualty_uw_orderly_policy_cost_netzero_ld.png)
+        ![Policy Cost](/assets/images/casualty_uw_orderly_policy_cost_netzero_ld.png)
         
-        ![Policy Cost](casualty_uw_orderly_policy_cost_below2c.png)
+        ![Policy Cost](/assets/images/casualty_uw_orderly_policy_cost_below2c.png)
   
         **Source:**
         [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -92,9 +92,9 @@
         
         Specific weather events could lead to rapid increases in insured losses. For example, while productivity may decline due to heat stress, litigation against employers for heat stress injuries could arise during extreme heat events if adequate protective measures are not implemented. As shown on the graph, in both of the hot house scenarios, labour productivity is decreasing with the annual change rate reaching -2.7% in Current Policies scenario and -2.5% in NDCs scenario by 2050. On the other hand the land fraction exposed to heatwaves would increase, the annual change rate increased from 2.7% in 2025 to 5.3% in 2050 in Current Policies scenario, and to 4.6% in NDCs scenario. 
   
-        ![Wildfire and Labour](casualty_uw_high_physical_labour_wildfires.png)
+        ![Wildfire and Labour](/assets/images/casualty_uw_high_physical_labour_wildfires.png)
         
-        ![Wildfire and Labour](casualty_uw_high_physical_labour_wildfires_2.png)
+        ![Wildfire and Labour](/assets/images/casualty_uw_high_physical_labour_wildfires_2.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -141,7 +141,7 @@
         
         For employers with significant outdoor activity exposure, the high physical risk could lead to increased claims. Weather events may result in rapid increases in insured losses, particularly as heat stress-related injuries lead to litigation against employers who fail to protect their employees adequately. As shown on the graph, land fraction exposed to heatwaves would keep increasing with the annual change rate rising from 2.7% in 2025  to 4.6% in 2050; and the labour productivity due to heat stress would reduce, with the annual reduction rate reaching -2.5% by 2050.
         
-        ![Fragmented world](casualty_uw_high_PT_fragmented_world.png)
+        ![Fragmented world](/assets/images/casualty_uw_high_PT_fragmented_world.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -155,7 +155,7 @@
         
         The graph below shows how consumption and energy costs may change in a transition scenario which could be considered as a starting point for the impacts on demand and costs for companies that fail to adapt to the transition. Negative impacts on GDP and consumption due to increased costs and economic disruptions, there could also be opportunities for growth through investments in resilience and sustainable practices. Insurers will need to adapt their underwriting practices to reflect these changing dynamics, which will in turn have broader implications for the economy and society.
   
-        ![Fragmented world](casualty_uw_high_PT_fragmented_world_2.png)
+        ![Fragmented world](/assets/images/casualty_uw_high_PT_fragmented_world_2.png)
         **Source:**
         [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
