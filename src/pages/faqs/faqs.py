@@ -104,7 +104,7 @@ def display_topic(n_clicks, yml_data):
     faqs = pydash.get(yml, topic, [])
     accordion_items = [
         dbc.AccordionItem(
-            [html.P(pydash.get(faq, "answer", ""), className="mb-0")],
+            [dcc.Markdown(pydash.get(faq, "answer", ""), className="mb-0", link_target="_self")],
             title=pydash.get(faq, "question", f"Question {idx+1}"),
             item_id=str(idx)
         )

@@ -7,7 +7,7 @@ import plotly.express as px
 dash.register_page(__name__, path='/charts/ph_chart')
 
 # Load data
-df_ph = pd.read_csv("./assets/data/physical_risk_data.csv")
+df_ph = pd.read_csv("src/assets/data/physical_risk_data.csv")
 
 # Extract year columns
 def get_years_ph(df):

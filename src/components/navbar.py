@@ -42,7 +42,7 @@ def create_navbar():
             dbc.NavItem(dbc.NavLink("FAQs", href="/faqs")),
             dbc.NavItem(dbc.NavLink("Acknowledgements", href="/acknowledge")),
         ],
-        brand=html.Img(src=Image.open("./assets/logos/cfrf_logo.png"), height="48px", alt="CFRF"),
+        brand=html.Img(src=Image.open("src/assets/logos/cfrf_logo.png"), height="48px", alt="CFRF"),
         brand_href="/",
         sticky="top",
         color="white",
