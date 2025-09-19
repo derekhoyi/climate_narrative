@@ -7,7 +7,7 @@ import plotly.express as px
 dash.register_page(__name__, path='/charts/tr_chart')
 
 # Load data
-df = pd.read_csv("src/assets/data/transition_risk_data.csv")
+df = pd.read_csv("./assets/data/transition_risk_data.csv")
 
 # Extract year columns
 def get_years(df):
@@ -280,7 +280,7 @@ def update_chart(region, variable, unit, model, scenario, year_range):
         xaxis=dict(gridcolor="#EEE"),
         yaxis=dict(gridcolor="#EEE"),
         showlegend=False,
-        yaxis_title=variable  
+        yaxis_title=variable
     )
 
     title_text = (

@@ -31,10 +31,11 @@ def layout(report_type=None, institution_type=None, **kwargs):
 	Input("generate-report-previous-btn", "n_clicks"),
 	State("report-type-store", "data"),
 	State("institution-type-store", "data"),
+	State("generate-report-url", "pathname"),
 )
-def update_url(user_selection_completed, url_search, back, report_type, institution_type):
+def update_url(user_selection_completed, url_search, back, report_type, institution_type, url_pathname):
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = len(query) == 0 and "generate-report" in url_pathname
 	report_page = query.get('report_type', [None])[0]
 
 	if start_page and user_selection_completed and not report_page:
@@ -294,6 +295,8 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 		# High materiality section
 		if len(high_materiality_df) == 0:
 			high_materiality_layout = html.Div(className='d-none')
+			high_materiality_other_desc = []
+			high_materiality_sovereign_desc = []
 		else:
 			high_materiality_sovereign_desc = []
 			high_materiality_other_desc = []
@@ -336,6 +339,8 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 		# Low and Medium materiality section
 		if len(low_medium_materiality_df) == 0:
 			low_medium_materiality_layout = html.Div([], className='d-none')
+			low_medium_materiality_other_desc = []
+			low_medium_materiality_sovereign_desc = []
 		else:
 			if section == 'Executive Summary':
 				# Combine materiality
@@ -591,6 +596,7 @@ def _filter_user_selection_by_section(user_selection_df, section, sub_section):
 def _convert_to_bullet_points(df, bullet_point_column_name):
 	groupby_variables_list = [x for x in df if x != bullet_point_column_name]
 	output_df = df.sort_values(bullet_point_column_name)
+	output_df[bullet_point_column_name] = output_df[bullet_point_column_name].astype(str)
 	output_df = output_df.groupby(
 		groupby_variables_list, as_index=False).agg({bullet_point_column_name: '\n- '.join})
 	output_df[bullet_point_column_name] = '- ' + output_df[bullet_point_column_name]
