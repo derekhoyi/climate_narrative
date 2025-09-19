@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 import dash_mantine_components as dmc
 from urllib.parse import parse_qs
 import pandas as pd
-from   utils import data_loader
+from utils import data_loader
 
 dash.register_page(__name__, path='/reports/customise-institutional-report')
 value_bg_color_mapping = {

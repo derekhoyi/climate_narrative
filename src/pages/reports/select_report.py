@@ -1,7 +1,7 @@
 import dash
 from dash import html, dcc, callback, Output, Input
 import dash_bootstrap_components as dbc
-from   utils import data_loader
+from utils import data_loader
 import pandas as pd
 
 dash.register_page(__name__, path='/reports/select-report')
