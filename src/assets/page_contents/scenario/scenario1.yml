@@ -27,7 +27,7 @@ exec_description: |
   -5% impact for physical risk compared to between -0.2% to -0.9% for transition risk), even as early as 2030 and 
   -10% by 2050. It is noted that macroeconomic impacts are not available for the Low Demand scenario.
 
-  ![NGFS scenarios Features](NGFS_scenarios_Features_Orderly.png)
+  ![NGFS scenarios Features](/assets/images/NGFS_scenarios_Features_Orderly.png)
 
   **Source:**
   [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf)
@@ -50,7 +50,7 @@ description: |
   Orderly transition scenarios assume climate policies are introduced early and become 
   gradually more stringent. Both physical and transition risks are relatively subdued. 
 
-  ![NGFS scenarios Framework](NGFS_scenarios_Framework_Orderly.png)
+  ![NGFS scenarios Framework](/assets/images/NGFS_scenarios_Framework_Orderly.png)
 
   **Source:**
   [NGFS Climate Scenarios, November 2024](https://www.ngfs.net/system/files/import/ngfs/medias/documents/ngfs_scenarios_main_presentation.pdf)
@@ -77,7 +77,7 @@ description: |
   transport and buildings, deploying bioenergy with carbon capture and storage and 
   increasing afforestation and reforestation.
 
-  ![CO2 emissions](scenarios_orderly_emissions_co2.png)
+  ![CO2 emissions](/assets/images/scenarios_orderly_emissions_co2.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -91,7 +91,7 @@ description: |
   faster electrification, and substitution through renewables) mitigate the pressure on carbon taxes to induce the transition. 
   Together, market and policy factors give rise to transition risks across the three scenarios.
 
-  ![Carbon price](scenarios_orderly_price_carbon.png)
+  ![Carbon price](/assets/images/scenarios_orderly_price_carbon.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Carbon prices are weighted global averages.
@@ -105,7 +105,7 @@ description: |
   reducing to ~775 billion USD per year by 2050. In the Below 2&deg;C scenario, revenues 
   peak at ~1.5-1.6 trillion USD per year around 2040 and remain at this level up to 2050.
   
-  ![Carbon tax revenue](scenarios_orderly_revenue.png)
+  ![Carbon tax revenue](/assets/images/scenarios_orderly_revenue.png)
   
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -123,17 +123,17 @@ description: |
   pressure created by carbon prices, as well as the increased investment demand that the 
   transition spurs on. on.
   
-  ![Inflation rate](scenarios_orderly_inflation.png)
+  ![Inflation rate](/assets/images/scenarios_orderly_inflation.png)
   
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific Absolute difference to baseline with no transition or physical risks.
   
-  ![Unemployment rate](scenarios_orderly_unemployment.png)
+  ![Unemployment rate](/assets/images/scenarios_orderly_unemployment.png)
   
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific Absolute difference to baseline with no transition or physical risks..
   
-  ![Interest rate](scenarios_orderly_interest.png)
+  ![Interest rate](/assets/images/scenarios_orderly_interest.png)
   
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined = Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
@@ -150,12 +150,12 @@ description: |
   ~3 trillion USD by 2030, rising modestly to ~2.5 trillion USD and ~3 trillion USD by 2050, peaking at ~4 
   trillion in 2035 for the Net Zero 2050 scenario. 
   
-  ![Energy Efficiency Investment](scenarios_orderly_investment_energy_efficiency.png)
+  ![Energy Efficiency Investment](/assets/images/scenarios_orderly_investment_energy_efficiency.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
-  ![Low Carbon Investment](scenarios_orderly_investment_low_carbon.png)
+  ![Low Carbon Investment](/assets/images/scenarios_orderly_investment_low_carbon.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -174,7 +174,7 @@ description: |
   for the other two scenarios, giving rise to moderately high physical risk (with 
   land warming faster than oceans and high latitudes experiencing higher warming).
 
-  ![Global mean temp rise](scenarios_orderly_temperature.png)
+  ![Global mean temp rise](/assets/images/scenarios_orderly_temperature.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -191,7 +191,7 @@ description: |
   Although the fall in productivity will vary by specific location, in the UK this 
   decrease is expected to  relatively subdued.
   
-  ![Labour Productivity](scenarios_orderly_labour.png)
+  ![Labour Productivity](/assets/images/scenarios_orderly_labour.png)
 
   **Source:** 
   [Climate Impact Explorer.](https://climate-impact-explorer.climateanalytics.org/)
@@ -201,7 +201,7 @@ description: |
   at ~16% in 2050 for the Below 2&deg;C scenario. There is no change in Low demand scenario 
   between 2030 and 2050. The Net Zero 2050 increases to ~10% in 2050.
   
-  ![Tropical Cyclone Damage](scenarios_orderly_damages_cyclones.png)
+  ![Tropical Cyclone Damage](/assets/images/scenarios_orderly_damages_cyclones.png)
 
   **Source:** 
   [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -217,7 +217,7 @@ description: |
   compared to between -0.2% to -0.9% for transition risk), even as early as 2030 and -10% by 2050. 
   It is noted that macroeconomic impacts are not available for the Low Demand scenario.
   
-  ![GDP](scenarios_orderly_gdp.png)
+  ![GDP](/assets/images/scenarios_orderly_gdp.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) NiGEM NGFS v1.24.2 is not available for Low Demand scenario; only chronic physical data available (not acute physical).

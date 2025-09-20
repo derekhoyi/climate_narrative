@@ -48,14 +48,14 @@
   
         - **Tightening energy efficiency standards for domestic and commercial buildings:** this could impact the risk in banks’ buy-to-let lending portfolios. In the Delayed Transition scenario, energy-related ‘Demand’ emissions in CO<sub>2</sub> for residential and commercial buildings is projected to be relatively stable up to in 2030 (6% increase) and reduce significantly between 2030 and 2050 (78% reduction) due to increased efficiency from tightened standards and a change in energy mix.
         
-        ![CO2 Emissions Residential and Commercial](financials_delayed_buildings_emissions.png)
+        ![CO2 Emissions Residential and Commercial](/assets/images/financials_delayed_buildings_emissions.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         As carbon prices increase and consumers switch to lower carbon/electrified alternatives for cars, heating etc, demand for fossil fuels decreases, with knock on effects for cover of carbon-intensive energy industries. In the Delayed Transition scenario, the demand for coal, oil and gas falls, from over 500 exajoules (EJ) a year in 2025 to between 100 and 200 EJ a year by 2050, with coal demand almost completely phased out between 2040 and 2045.
         
-        ![Delayed transition](financial_delayed_transition_curve.png)
+        ![Delayed transition](/assets/images/financial_delayed_transition_curve.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -93,18 +93,18 @@
   
         -	**Tightening energy efficiency standards for domestic and commercial buildings:** this could impact the risk in banks’ buy-to-let lending portfolios. In the Orderly transition scenarios, emissions from residential and commercial buildings are projected to fall over time due to increased efficiency from tightened standards and changes in energy mix (i.e., energy-related ‘Demand’ emissions in CO<sub>2</sub> for residential and commercial buildings is projected to be close to zero in the Net Zero 2050 and Low Demand scenarios and reduce significantly in the below 2oC scenario). Financial firms with significant mortgage portfolios’ exposure may face increased risks if these properties do not meet new energy efficiency standards, potentially leading to higher default rates. The shifts towards renewable energy sources could disrupt traditional energy markets.
               
-        ![CO2 Emissions Residential and Commercial](financials_orderly_buildings_emissions.png)
+        ![CO2 Emissions Residential and Commercial](/assets/images/financials_orderly_buildings_emissions.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         As carbon prices increase and consumers switch to lower carbon/electrified alternatives for cars, heating etc., demand for fossil fuels decreases, with knock on effects for cover of carbon-intensive energy industries. Financial firms with investments in fossil fuel companies may also face devaluation of assets. In the Orderly transition scenarios the demand for coal, oil and gas falls, from between 491 to 512 exajoules (EJ) a year in 2025 to between 72 and 223 EJ in 2050, with coal demand almost completely phased out by 2035 to 2045.
         
-        ![Below 2c](financials_orderly_below_2c.png)
+        ![Below 2c](/assets/images/financials_orderly_below_2c.png)
         
-        ![Net zero 2050](financials_orderly_net_zero_2050.png)
+        ![Net zero 2050](/assets/images/financials_orderly_net_zero_2050.png)
         
-        ![Low demand](financials_orderly_low_demand.png)
+        ![Low demand](/assets/images/financials_orderly_low_demand.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -151,12 +151,12 @@
         
         In a high physical risk scenario, it may be possible that certain risks become uninsurable. This could have knock on consequences for other companies in the financial system. Counterparties’ supply chains may also be vulnerable to physical impacts, affecting their sales, profit and loss, and balance sheets. For example, the annual expected damage from tropical cyclones in both Current Policies and NDCs scenarios show a steady increase over time with the % change in annual expected damage going from ~7% in 2025 to between ~19% and ~21% by 2050. The land fraction annually exposed to river floods is also expected to increase steadily over time with the % change going from 0.01% in 2025 to 0.03% by 2050.
   
-        ![Economic damages](financials_annual_expected_economic_damage_from_tropical_cyclone.png)
+        ![Economic damages](/assets/images/financials_annual_expected_economic_damage_from_tropical_cyclone.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
-        ![River flood](financials_land_fraction_annually_exposed_to_river_flood.png)
+        ![River flood](/assets/images/financials_land_fraction_annually_exposed_to_river_flood.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -182,16 +182,16 @@
         
         -	**Extreme weather events:** such as cyclones, storms or wildfires are likely to have a significant effect on many of the operations or supply chains for different types of industries. For example, Hurricane Maria in 2017 caused extensive damage to Puerto Rico's agricultural sector, leading to significant losses in crop production. The annual expected damage from tropical cyclones is expected to increase over time with the % change in annual expected damage going from ~7% in 2025 to ~19% in 2050. 
   
-        ![Economic damages](financials_annual_expected_economic_damage_too_little_too_late.png)
+        ![Economic damages](/assets/images/financials_annual_expected_economic_damage_too_little_too_late.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
             
         -	**Coastal and river flooding:** Rising sea levels and changes in precipitation patterns could pose flooding risks to many sectors with coastal areas being particularly vulnerable. Miami and New York are for example projected to experience significant declines in property values due to rising sea levels. The land fraction annually exposed to river floods is also expected to increase steadily over time with the % change going from 0.01% in 2025 to 0.03% in 2050.
   
-        ![Economic damages](financials_annual_expected_economic_damage_too_little_too_late_2.png)
+        ![Economic damages](/assets/images/financials_annual_expected_economic_damage_too_little_too_late_2.png)
         
-        ![River flood](financials_land_fraction_annually_exposed_to_river_flood_too_little_too_late.png)
+        ![River flood](/assets/images/financials_land_fraction_annually_exposed_to_river_flood_too_little_too_late.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -202,7 +202,7 @@
   
         -	**Temperature increases:** in some regions, this could be substantial and could lead to heat stress, reduced crop yields, and increased irrigation needs in the agriculture sector. Extreme heat can affect transportation infrastructure, causing road surfaces to buckle and rail tracks to expand, leading to delays and increased maintenance costs. Increased temperatures can exacerbate health issues, leading to higher demand for medical services and increased strain on healthcare systems. Heatwaves can result in more cases of heatstroke, dehydration, and other heat-related illnesses. For example, the fraction of the population annually exposed to heatwaves is expected to increase over time with the % change going from ~2.9% in 2030 to ~4.6% in 2050.
   
-        ![Extreme events](financials_fraction_of_population_annually_exposed_to_heatwaves_too_little.png)
+        ![Extreme events](/assets/images/financials_fraction_of_population_annually_exposed_to_heatwaves_too_little.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -221,12 +221,12 @@
   
         In a too-little-too-late scenario, it may be possible that certain risks become uninsurable. That could have knock on consequences for other companies in the financial system. Counterparties’ supply chains may also be vulnerable to physical impacts, affecting their sales, profit and loss, and balance sheets. 
   
-        ![Economic damages](financials_annual_expected_economic_damage_too_little_too_late.png)
+        ![Economic damages](/assets/images/financials_annual_expected_economic_damage_too_little_too_late.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
-        ![River flood](financials_land_fraction_annually_exposed_to_river_flood_too_little_too_late.png)
+        ![River flood](/assets/images/financials_land_fraction_annually_exposed_to_river_flood_too_little_too_late.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

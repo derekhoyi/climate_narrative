@@ -56,7 +56,7 @@
         Furthermore, there is likely to be significant wide economic disruption caused by delayed transition that could lead to falls in equity prices and reduced customer spending levels. In these scenarios, the consumer products sector will need to deliver longer-term carbon reduction initiatives by shifting to lower carbon-intensive supplies, reducing the carbon intensity of their physical stores or sales platforms, and using clean energy sources. The economic disruptions along with reduced customer spending levels could result in significant disruptions in consumer product sector and result in companies going out of business if they are not able to cope with the changing environment. The drive for change arises through retailers being sandwiched between a combination of shift in end-consumer preferences from the buy side and a similar shift on the sell side as manufacturers and suppliers react to a top-down policy environment that results in a rapid reduction of emissions. For example, in these scenarios, on the supply side, emissions due to energy consumption from industry fall from ~8,800 megatons of CO2 per year in 2030 to ~2,000 megatons of CO2 per year by 2050.
         
         
-        ![Industry Emissions](consumer_products_delayed_industry_emissions.png)
+        ![Industry Emissions](/assets/images/consumer_products_delayed_industry_emissions.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -94,7 +94,7 @@
       
         - **Governance and litigation costs:** For larger players in the consumer products sector there is an increasing focus on disclosure, from both a political and end-user perspective. With homogenisation of taxonomies, the comparability and accountability of disclosures could increase, with which comes reputational and litigation risk. Litigation costs may arise through having to have third-party assessments and assurance of environmental disclosures, and as a result of “greenwashing”. By following industry norms and being a market follower rather than lead in this space, this risk could be reduced.
         
-        ![Industry Emissions](consumer_products_orderly_industry_emissions.png)
+        ![Industry Emissions](/assets/images/consumer_products_orderly_industry_emissions.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -146,7 +146,7 @@
         - **Flooding events:** could also lead to the same disruption as cyclones and storms. Flash flooding can pose problems for manufacturers exposed to such geographies, leading to supply chain issues, and direct impacts for retailers based in these locations. For example, severe flooding in Thailand in 2011 lead to severe supply chain disruption.
   
   
-        ![Impact of 2011 Thai Floods](Thai_Flooding_Consumer_Products.png)
+        ![Impact of 2011 Thai Floods](/assets/images/Thai_Flooding_Consumer_Products.png)
         
         Infographic: impact of 2011 Thai floods.
   
@@ -199,7 +199,7 @@
         
         From a high physical risk perspective, in the fragmented world scenario, extreme events where land is exposed to river floods increases from 0.014% in 2030 to 0.033% in 2050. These hazards could each lead to reductions in revenue and to direct losses. Conversely, there may be opportunities to increase sales of items that help consumers mitigate against weather events and flooding (sandbags, barriers), or assist adaptation to new weather norms (such as rainwear) or extended seasonal product periods (beachwear). 
   
-        ![River flood](consumer_products_land_friction_annually_exposed_to river_floods.png)
+        ![River flood](/assets/images/consumer_products_land_friction_annually_exposed_to river_floods.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -219,7 +219,7 @@
         
         - **Flooding events:** could also lead to the same disruption as cyclones and storms. Flash flooding can pose problems for manufacturers exposed to such geographies, leading to supply chain issues, and direct impacts for retailers based in these locations. For example, severe flooding in Thailand in 2011 lead to severe supply chain disruption.
   
-        ![Impact of 2011 Thai Floods](Thai_Flooding_Consumer_Products.png)
+        ![Impact of 2011 Thai Floods](/assets/images/Thai_Flooding_Consumer_Products.png)
         
         Infographic: impact of 2011 Thai floods.
   
@@ -234,9 +234,9 @@
         
         From a high transition risk perspective, in the fragmented world scenario, the price of carbon remains very low and emissions very high compared to other scenarios. This trend encourages retailers to continue to produce more of carbon-intensive consumer products. However, any drastic change in regulatory policy and sudden change of consumer demand towards less carbon intensive product raise the risk of shortage of products and losses for the companies. The big retailers who have the capacity to address the environmental changes by taking rapid action will stay in the competition, while the small retailers will suffer the major losses.
   
-        ![Carbon price](consumer_products_carbon_price.png)
+        ![Carbon price](/assets/images/consumer_products_carbon_price.png)
         
-        ![Carbon price industry](consumer_products_carbon_price_industry.png)
+        ![Carbon price industry](/assets/images/consumer_products_carbon_price_industry.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

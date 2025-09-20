@@ -43,7 +43,7 @@
         oil and natural gas prices accelerating after 2040, where oil prices more than double by 2050. Electricity 
         prices are maintained until 2040 where they slowly start decreasing and intersect with natural gas prices. 
         
-        ![Residential and Commercial Price](unsecured_retail_lending_disorderly_price_final_energy.png)
+        ![Residential and Commercial Price](/assets/images/unsecured_retail_lending_disorderly_price_final_energy.png)
   
         **Source:**
         [IIASA NGFS Climate Scenario Explorer. REMIND-MAgPIE 3.3-4.8 model](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -96,9 +96,9 @@
         in all Orderly scenarios, increasing the most significantly (almost tripling) in the Net Zero 2050 scenario due 
         to high carbon prices. 
   
-        ![Residential and Commercial Price](unsecured_retail_lending_orderly_price_final_energy.png)
+        ![Residential and Commercial Price](/assets/images/unsecured_retail_lending_orderly_price_final_energy.png)
   
-        ![Residential and Commercial Price](unsecured_retail_lending_orderly_price_final_energy2.png)
+        ![Residential and Commercial Price](/assets/images/unsecured_retail_lending_orderly_price_final_energy2.png)
         **Source:**
         [IIASA NGFS Climate Scenario Explorer. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
@@ -144,7 +144,7 @@
         properties become uninsurable, or as customers elect not to prioritise premiums, the risk of one-off events 
         occurring that would severely impact on customers’ abilities to service outstanding debt will increase.
         
-        ![Residential and Commercial Price](unsecured_retail_lending_hot_house_price_final_energy.png)
+        ![Residential and Commercial Price](/assets/images/unsecured_retail_lending_hot_house_price_final_energy.png)
   
         **Source:**
         [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/)
@@ -174,7 +174,7 @@
         Cards and PCA which increases indebtedness on the book and, over time, will likely result in an increase 
         in defaults.
   
-        ![Residential and Commercial Price](unsecured_retail_lending_littlelate_price_final_energy.png)
+        ![Residential and Commercial Price](/assets/images/unsecured_retail_lending_littlelate_price_final_energy.png)
   
         **Source:**
         [IIASA NGFS Climate Scenario Explorer. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -192,7 +192,7 @@
         properties become uninsurable, or as customers elect not to prioritise premiums, the risk of one-off events occurring 
         that would severely impact on customers’ abilities to service outstanding debt will increase.
   
-        ![Land fraction annual exposure](unsecured_retail_lending_littlelate_land_fraction_exposure)
+        ![Land fraction annual exposure](/assets/images/unsecured_retail_lending_littlelate_land_fraction_exposure)
   
         **Source:**
         [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/)

@@ -82,7 +82,7 @@
         are emission intensive. In the Delayed transition, agriculture sector’s GHG emissions are projected to fall, 
         especially after 2030 (c. 62% by 2050 vs 2030).
         
-        ![Delayed transition](delayed_transition_line_chart.png)
+        ![Delayed transition](/assets/images/delayed_transition_line_chart.png)
         
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -90,11 +90,11 @@
         The total demand could continue to increase in the Delayed transition scenario, however growth in demand 
         for food production is limited
   
-        ![Total Agriculture Demand](agricultural_demand_delayed.png)
+        ![Total Agriculture Demand](/assets/images/agricultural_demand_delayed.png)
   
-        ![Food Agriculture Production](agricultural_production_delayed.png)
+        ![Food Agriculture Production](/assets/images/agricultural_production_delayed.png)
         
-        ![Food Agriculture Demand](agricultural_demand_crops_food_delayed.png)
+        ![Food Agriculture Demand](/assets/images/agricultural_demand_crops_food_delayed.png)
   
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -102,7 +102,7 @@
         As the use of bioenergy increases, by 2050, approx. 23% of total agricultural production in the Delayed 
         transition scenario, is consumed for energy generation.
   
-        ![Total Agriculture Production](agricultural_production_energy_delayed.png)
+        ![Total Agriculture Production](/assets/images/agricultural_production_energy_delayed.png)
   
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -114,9 +114,9 @@
         decrease by around 72 million hectares in the Delayed transition scenario. Forest cover could increase by around 
         210 million hectares.
   
-        ![Agriculture Land Cover](land_cover_cropland_delayed.png)
+        ![Agriculture Land Cover](/assets/images/land_cover_cropland_delayed.png)
   
-        ![Forest Land Cover](land_cover_forest_delayed.png)
+        ![Forest Land Cover](/assets/images/land_cover_forest_delayed.png)
   
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -214,7 +214,7 @@
         emitting sector by 2050. Although AFOLU GHG emissions decrease by c. 67% by 2050 vs 2025 levels, share of AFOLU 
         in total GHG emissions increase from 21% in 2025 to c. 62% in 2050 in NZ scenario
         
-        ![Sectoral emissions](sectoral_GHG_emission_net_zero.png)
+        ![Sectoral emissions](/assets/images/sectoral_GHG_emission_net_zero.png)
         
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -224,9 +224,9 @@
         is limited. Significantly higher agricultural demand in Net Zero scenario is primarily driven by the demand 
         for bioenergy.
   
-        ![Total Agriculture Demand](agricultural_demand.png)
+        ![Total Agriculture Demand](/assets/images/agricultural_demand.png)
         
-        ![Food Agriculture Demand](Agricultural_demand_crops_food.png)
+        ![Food Agriculture Demand](/assets/images/Agricultural_demand_crops_food.png)
   
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -234,9 +234,9 @@
         As the use of bioenergy increases, by 2050, approx. 34%, 24% and 18% of total agricultural production in 
         the Net Zero 2050, Low Demand, and Below 2oC scenarios could be consumed for energy generation respectively. 
   
-        ![Total Agriculture Production](Agricultural_production.png)
+        ![Total Agriculture Production](/assets/images/Agricultural_production.png)
   
-        ![Energy Agriculture Production](Agricultural_production_energy.png)
+        ![Energy Agriculture Production](/assets/images/Agricultural_production_energy.png)
   
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -248,9 +248,9 @@
         by 2050, cropland could decrease by around 10 to 30 million hectares and forest cover could increase by around 
         150 to 200 million hectares.
   
-        ![Agriculture Land Cover](land_cover_cropland_orderly.png)
+        ![Agriculture Land Cover](/assets/images/land_cover_cropland_orderly.png)
   
-        ![Forest Land Cover](land_cover_forest_orderly.png)
+        ![Forest Land Cover](/assets/images/land_cover_forest_orderly.png)
   
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -324,9 +324,9 @@
         of land for agriculture purposes. In this scenario, cropland increases by 112 million ha while the forest cover reduces 
         by c. 74 million ha by 2050 vs 2020 levels.
   
-        ![Forest Land Cover](land_cover_cropland_hot_house_world.png)
+        ![Forest Land Cover](/assets/images/land_cover_cropland_hot_house_world.png)
         
-        ![Forest Land Cover](land_cover_forest_hot_house_world.png)
+        ![Forest Land Cover](/assets/images/land_cover_forest_hot_house_world.png)
         
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -430,7 +430,7 @@
         In the Fragmented world scenario, although the agriculture sector’s GHG emissions are projected to fall, it is 
         to a lesser extent than other sectors (c. 40% by 2050 vs 2020).
         
-        ![Emission](sectoral_GHG_emission.png)
+        ![Emission](/assets/images/sectoral_GHG_emission.png)
         
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -438,11 +438,11 @@
         The total demand could continue to increase in the Fragmented world scenario, however growth in demand for food 
         production is limited.
   
-        ![Demand](agricultural_demand_too_little_too_late.png)
+        ![Demand](/assets/images/agricultural_demand_too_little_too_late.png)
         
-        ![Production](agricultural_production_too_little_too_late.png)
+        ![Production](/assets/images/agricultural_production_too_little_too_late.png)
         
-        ![Demand crops](agricultural_demand_crops_food_too_little_too_late.png)
+        ![Demand crops](/assets/images/agricultural_demand_crops_food_too_little_too_late.png)
         
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -450,7 +450,7 @@
         As the use of bioenergy increases, by 2050, approx. 17% of total agricultural production in the Fragmented 
         world scenario is consumed for energy generation.
   
-        ![Production energy](agricultural_production_energy_too_little_too_late.png)
+        ![Production energy](/assets/images/agricultural_production_energy_too_little_too_late.png)
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
@@ -461,9 +461,9 @@
         increase by around 71 million hectares in the Fragmented world scenario. Forest cover could increase by around 46 
         million hectares.
   
-        ![Land cover fragmented cropland](land_cover_cropland_fragmented_world.png)
+        ![Land cover fragmented cropland](/assets/images/land_cover_cropland_fragmented_world.png)
         
-        ![Land cover fragmented forest](land_cover_forest_fragmented_world.png)
+        ![Land cover fragmented forest](/assets/images/land_cover_forest_fragmented_world.png)
         
         "**"Source:"**"
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

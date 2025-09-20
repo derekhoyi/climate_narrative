@@ -2,7 +2,7 @@
     name: Long-term Scenario Limitations
     description: |
         # limitations
-        ## Long-term Scenarios
+        ### Long-term Scenarios
         
         This tool may be useful for climate reporting and risk assessments. However, a limitation for those seeking to embed 
         climate-related risks and opportunities into their risk management framework and investment decision making is that it does 
@@ -65,4 +65,3 @@
         - The climate scenarios focus on a plausible range of outcomes for given emissions or temperature pathways 
         rather than the tail events or extreme outcomes such as tipping points. For further information please see the paper produced by the Institute of Actuaries 
         [Climate Scorpion – the sting is in the tail Introducing planetary solvency](https://actuaries.org.uk/media/g1qevrfa/climate-scorpion.pdf).
-

@@ -1,8 +1,8 @@
 1:
-    name: purpose overview
+    name: overview
     description: |
-
-        # overview
+        # purpose
+        ### overview
 
         This online climate scenario analysis tool is designed to support firms in assessing their climate-related risks and 
         opportunities. The tool is designed to be fully open source, and the purpose of this document is to record the contents to be 

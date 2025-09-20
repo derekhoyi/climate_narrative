@@ -29,19 +29,7 @@ def create_navbar():
                     dbc.DropdownMenuItem("Sovereigns", href='/sectors/sovereigns',class_name="box-style"),
                 ],
             ),
-            dbc.DropdownMenu(
-                nav=True,
-                in_navbar=True,
-                label="Reports",
-                children=[
-                    dbc.DropdownMenuItem("Overview", href='/reports/report-overview',class_name="box-style"),
-                    dbc.DropdownMenuItem("Generate report", href='/reports/generate-report',class_name="box-style"),
-                    dbc.DropdownMenuItem("Institutional report", href='/reports/institutional-report',class_name="box-style"),
-                    dbc.DropdownMenuItem("Sector report", href='/reports/sector-report',class_name="box-style"),
-                    dbc.DropdownMenuItem("Scenario report", href='/reports/scenario-report',class_name="box-style"),
-                    dbc.DropdownMenuItem("Full report", href='/reports/full-report',class_name="box-style"),
-                ],
-            ),
+            dbc.NavItem(dbc.NavLink("Reports", href="/reports/overview")),
             dbc.DropdownMenu(
                 nav=True,
                 in_navbar=True,

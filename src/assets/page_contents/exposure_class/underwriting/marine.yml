@@ -64,14 +64,14 @@
         
         - **Repricing of assets:** asset valuation of marine company reserves could be re-priced based on the re-adjusted expectations of the use of low-carbon products and energy efficient technologies in the future.
   
-        ![Current policies](marine_delayed_current_policies.png)
+        ![Current policies](/assets/images/marine_delayed_current_policies.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         In the Delayed transition scenario, these innovations could contribute to an overall decrease in CO<sub>2</sub> emissions in the transportation sector in the long term.
   
-        ![Delayed transition](marine_delayed_transition_curve.png)
+        ![Delayed transition](/assets/images/marine_delayed_transition_curve.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -123,18 +123,18 @@
   
         - **Changing consumer preferences:** these could lead to changes in sales due to lower customer demand as a result of change in environmental expectations that could impact this underwriting class. Consumer’s acceptance of firms’ products can also affect sales (e.g. ‘planetary diets’ reducing demand for animal-based products, including fish).
         
-          ![Transportation Liquid Price](marine_orderly_net_zero_2050_1.png)
-          ![Transportation Liquid Price](marine_orderly_below_2c_1.png)
-          ![Transportation Liquid Price](marine_orderly_low_demand_1.png)
+          ![Transportation Liquid Price](/assets/images/marine_orderly_net_zero_2050_1.png)
+          ![Transportation Liquid Price](/assets/images/marine_orderly_below_2c_1.png)
+          ![Transportation Liquid Price](/assets/images/marine_orderly_low_demand_1.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         In Orderly transition scenarios, these innovations could contribute to an overall decrease in CO<sub>2</sub> emissions in the transportation sector overall, however, the impact to marine transportation is not necessarily following the same pattern (e.g. hydrogen having a small contribution to the overall fuel mix).
   
-          ![Transportation Liquid Price](marine_orderly_net_zero_2050_2.png)
-          ![Transportation Liquid Price](marine_orderly_below_2c_2.png)
-          ![Transportation Liquid Price](marine_orderly_low_demand_2.png)
+          ![Transportation Liquid Price](/assets/images/marine_orderly_net_zero_2050_2.png)
+          ![Transportation Liquid Price](/assets/images/marine_orderly_below_2c_2.png)
+          ![Transportation Liquid Price](/assets/images/marine_orderly_low_demand_2.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -159,8 +159,8 @@
         
         Acute physical risks—including increased storm intensity, flooding, and extreme weather events—will become far more frequent and severe. The Panama Canal has already experienced significant disruptions due to droughts, with water levels falling, affecting shipping lanes and increasing the risk of delays and cargo damage. Such risks are expected to intensify in the high physical risk scenario, creating additional claims exposure for underwriters. Similarly, extreme weather events will increase the frequency and severity of storm-related claims, as hurricane damage, flooding, and wind-related incidents become more common. Underwriters may need to increase reserves to address the anticipated rise in claims and adjust pricing accordingly to manage exposure.
   
-        ![Current policies](marine_physical_current_policies.png)
-        ![NDCs](marine_physical_NDCs.png)
+        ![Current policies](/assets/images/marine_physical_current_policies.png)
+        ![NDCs](/assets/images/marine_physical_NDCs.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -203,7 +203,7 @@
   
         **Regional Differences and Tipping Points**
         
-         ![Fragmented world](marine_physical_and_transition_fragmented_world.png)
+         ![Fragmented world](/assets/images/marine_physical_and_transition_fragmented_world.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)

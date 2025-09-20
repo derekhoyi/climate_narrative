@@ -18,7 +18,7 @@
         
           In the Delayed Transition scenario, the price per gigajoule of liquid final energy (liquid fuels from all energy sources; incl. oil products, synthetic fossil fuels from gas and coal, biofuels) for use in transportation increases from ~27 USD in 2025 (inflation adjusted to 2010 baseline) to ~46 USD in the Delayed Transition scenario, by 2050. This price increase highlights the impact increasing carbon prices has on the final liquid energy price which the aviation sector is dependent on. 
         
-        ![Transportation Liquid Price](aviation_delayed_price_liquids.png)
+        ![Transportation Liquid Price](/assets/images/aviation_delayed_price_liquids.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -29,7 +29,7 @@
   
         - **Changing consumer preferences:** these could lead to changes in revenue due to lower customers numbers as a result of change in environmental expectations that could impact this underwriting class. ‘Flight shame’ could also increase along with a modal shift to (high speed) rail, reducing demand for aviation. Slowed GDP growth could further impact demand for aviation through its effect on individuals’ disposable income.
         
-        ![Delayed transition](aviation_delayed_transition_curve.png)
+        ![Delayed transition](/assets/images/aviation_delayed_transition_curve.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -44,7 +44,7 @@
           Intelligent routing and smart technologies – which support climate-optimised flying – could contribute to an overall decrease in CO<sub>2</sub> emissions in the aviation sector, however in the Delayed transition scenario, aviation remains a significantly more carbon-intensive mode of transport compared to alternatives such as road or rail after 2030 due to the lack of policy driven investment of and uptake of low-carbon technologies early in the scenario. In the Delayed Transition scenario, emissions of CO<sub>2</sub> per billion passenger kilometres from aviation passenger transport falls from ~0.08 megatons in 2025 to ~0.06 megatons in 2050 in the Delayed Transition scenario. 
         
         
-        ![Transportation Final Energy](aviation_delayed_transition_curve_2.png)
+        ![Transportation Final Energy](/assets/images/aviation_delayed_transition_curve_2.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -64,7 +64,7 @@
   
         - **Increased operating costs:** of underlying aviation companies to be insured could impact their demand for insurance, as lower-performing companies reduce spending on insurance, as a means to cut costs. The significant rise in carbon and energy prices could potentially result in financial impacts, as aviation firms’ carbon emissions face a rising price in the form a carbon tax or cap & trade clearing price, especially for airlines reliant on fossil-based aviation fuels. Orderly transition scenarios, the price per gigajoule of liquid final energy (liquid fuels from all energy sources; incl. oil products, synthetic fossil fuels from gas and coal, biofuels) for use in transportation increases from around 21 USD and 27 USD (inflation adjusted to 2010 baseline) to between ~40 USD and ~67 USD by 2050. This price increase highlights the impact increasing carbon prices has on the final liquid energy price which the aviation sector is dependent on. 
         
-        ![Transportation Liquid Price](aviation_orderly_price_liquids.png)
+        ![Transportation Liquid Price](/assets/images/aviation_orderly_price_liquids.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -81,9 +81,9 @@
           further impact demand for aviation through its effect on individuals'
           disposable income.
         
-        ![Net zero 2050 and below 2c](aviation_net_zero_and_below_2c.png)
+        ![Net zero 2050 and below 2c](/assets/images/aviation_net_zero_and_below_2c.png)
         
-        ![Low demand](aviation_low_demand_curve.png)
+        ![Low demand](/assets/images/aviation_low_demand_curve.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -97,9 +97,9 @@
         
         Alongside SAF, in the short-term intelligent routing and smart technologies which support climate-optimised flying- could contribute to an overall decrease in CO<sub>2</sub> emissions in the aviation sector, however aviation will likely remain a more carbon-intensive mode of transport compared to alternatives such as road or rail. This could result in changing consumer behaviour, with lower carbon transport such as rail being favoured over short-haul flights, reducing volume and potentially forcing airlines, manufacturers, leasers and airports to adapt their business model potentially leading to a change in level and type of insurance coverage required. In Orderly transition scenarios, emissions of t CO<sub>2</sub> per billion passenger kilometres from aviation passenger transport falls from ~0.09 megatons in 2025 to between ~0.03 and ~0.05 megatons in 2050. 
         
-        ![Transportation Final Energy](aviation_net_zero_and_below_2c_2.png)
+        ![Transportation Final Energy](/assets/images/aviation_net_zero_and_below_2c_2.png)
         
-        ![Transportation Final Energy](aviation_low_demand_curve_2.png)
+        ![Transportation Final Energy](/assets/images/aviation_low_demand_curve_2.png)
         
         
         **Source:**
@@ -127,7 +127,7 @@
   
         - **Tropical cyclones:** in both NDCs, and Current Policies scenarios, the expected annual damage from tropical cyclones is projected to increase at an accelerating rate and by 2050 be between 19% and 21% higher compared to 2015 reference period. Coupled with an increased frequency of atmospheric turbulences, storms and heatwaves can increase flight times, affect passenger comfort and safety, damage aircrafts, and induce large scale rerouting or flight cancellations reducing reliability and leading to higher number of claims filed by airlines related to both – crew personnel accident cover caused by increased flight times and increased fatigue from extreme weather, and liability insurance arising from any situations impacting passenger safety.
         
-        ![Economic damage](aviation_ecomonic_damages_annual_expected_damage_from_tropical_cyclone.png)
+        ![Economic damage](/assets/images/aviation_ecomonic_damages_annual_expected_damage_from_tropical_cyclone.png)
         
         **Source:**
         [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -151,7 +151,7 @@
         
          - **Tropical cyclones:** in the Fragmented World scenario, the expected annual damage from tropical cyclones is projected to increase at an accelerating rate and by 2050 be  about 19% higher compared to 2015 reference period. Coupled with an increased frequency of atmospheric turbulences, storms and heatwaves can increase flight times, affect passenger comfort and safety, damage aircraft, and induce large scale rerouting or flight cancellations reducing reliability and leading to a higher number of business interruption claims filed by airlines related to both – crew personnel accident cover caused by increased flight times and increased fatigue from extreme weather, and liability insurance arising from any situations impacting passenger safety.
         
-            ![Economic damage](aviation_ecomonic_damages_annual_expected_damage_from_tropical_cyclone_too_little.png)
+            ![Economic damage](/assets/images/aviation_ecomonic_damages_annual_expected_damage_from_tropical_cyclone_too_little.png)
         
          **Source:**
          [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
@@ -164,7 +164,7 @@
         
          - **Increased operating costs:** of the underlying companies to be insured could impact their demand for insurance with some lower-performing companies reducing spending on insurance as a means to cut costs. The rise in carbon and energy prices could potentially result in financial impacts, as aviation firms’ carbon emissions face a rising price in the form a carbon tax or cap & trade clearing price, especially for airlines reliant on fossil-based aviation fuels that need to remain compliant with the climate policy response in countries with net zero targets. In the Fragmented World scenario, the price per gigajoule of liquid final energy (liquid fuels from all energy sources; incl. oil products, synthetic fossil fuels from gas and coal, biofuels) for use in transportation increases from ~27 USD/GJ in 2025(inflation adjusted to 2010 baseline) to ~35 USD/GJ by 2050. This price increase highlights the impact increasing carbon price has on the final liquid energy price which the aviation sector is dependent on.
         
-            ![Energy price](aviation_final_transportation_energy_price_transportation_too_little.png)
+            ![Energy price](/assets/images/aviation_final_transportation_energy_price_transportation_too_little.png)
         
          **Source:**
          [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -181,7 +181,7 @@
         
          As next generation propulsion technologies are adopted, the value of claims associated with repairs and maintenance may increase for both aircraft assets and airport infrastructure, as well as unknown impacts to claim frequency due to the lack of historic data for modelling. These changes necessitate a revision of underwriting models, as liability coverage may need to be adjusted due to the hazardous nature of hydrogen during storage and transport.
         
-            ![Fragmented world](aviation_fragmented_world.png)
+            ![Fragmented world](/assets/images/aviation_fragmented_world.png)
         
          **Source:**
          [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -189,7 +189,7 @@
         
          Intelligent routing and smart technologies which support climate-optimised flying  could contribute to an overall decrease in CO<sub>2</sub> emissions in the aviation sector, however aviation will likely remain a more carbon-intensive mode of transport compared to alternatives such as road or rail. In the Fragmented World  scenario, emissions of CO<sub>2</sub> per billion passenger kilometres from aviation passenger transport falls from ~0.08 megatons in 2025 to ~0.06 megatons in 2050 in the Fragmented World Scenario.
         
-            ![Fragmented world](aviation_fragmented_world_2.png)
+            ![Fragmented world](/assets/images/aviation_fragmented_world_2.png)
         
          **Source:**
          [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

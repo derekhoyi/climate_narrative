@@ -63,7 +63,7 @@
         be amplified, either because of policy divergences across sectors, or because 
         delayed decarbonisation requires greater decarbonisation later.
         
-        ![Final Energy Electricity](utilities_disorderly_energy_elec.png)
+        ![Final Energy Electricity](/assets/images/utilities_disorderly_energy_elec.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -71,7 +71,7 @@
         In the Delayed Transition scenario, electricity-use increases by c.20% by 2030 and 
         more than doubles by 2050, from ~100 exajoules to ~200 exajoules.
         
-        ![Secondary Energy](utilities_disorderly_elec_sources.png)
+        ![Secondary Energy](/assets/images/utilities_disorderly_elec_sources.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -94,7 +94,7 @@
         for carbon, capture and storage technologies to keep fossil fuel usage viable over 
         the longer term.
         
-        ![Cumulative Energy Investment](utilities_disorderly_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/utilities_disorderly_energy_investment.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -182,7 +182,7 @@
           than doubles by 2050, from ~100 exajoules to ~220 exajoules, except in the Low Demand 
           scenario where demand remains lowest of any scenarios.
         
-        ![Final Energy Electricity](utilities_orderly_energy_elec.png)
+        ![Final Energy Electricity](/assets/images/utilities_orderly_energy_elec.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -212,11 +212,11 @@
         than in a Net Zero 2050 scenario, demonstrating action needs to be significantly 
         accelerated to keep temperature rise to just above 1.5&deg;C relative to below 2&deg;C.
   
-        ![Cumulative Energy Investment](utilities_NZ2050_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/utilities_NZ2050_energy_investment.png)
         
-        ![Cumulative Energy Investment](utilities_below2deg_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/utilities_below2deg_energy_investment.png)
         
-        ![Cumulative Energy Investment](utilities_lowdemand_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/utilities_lowdemand_energy_investment.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -235,11 +235,11 @@
         oil and natural gas is much poorer, though gas continues to have a significant 
         role in the short and medium term, especially in the Below 2&deg;C scenario.
   
-        ![Secondary Energy](utilities_NZ2050_elec_sources.png)
+        ![Secondary Energy](/assets/images/utilities_NZ2050_elec_sources.png)
   
-        ![Secondary Energy](utilities_below2deg_elec_sources.png)
+        ![Secondary Energy](/assets/images/utilities_below2deg_elec_sources.png)
   
-        ![Secondary Energy](utilities_lowdemand_elec_sources.png)
+        ![Secondary Energy](/assets/images/utilities_lowdemand_elec_sources.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -383,13 +383,13 @@
         Despite this, solar and wind are still expected to become the dominant energy sources 
         globally with much of the existing growth momentum already baked into forecasts.
   
-        ![Secondary Energy](utilities_currpol_elec_sources.png)
+        ![Secondary Energy](/assets/images/utilities_currpol_elec_sources.png)
   
-        ![Secondary Energy](utilities_ndc_elec_sources.png)
+        ![Secondary Energy](/assets/images/utilities_ndc_elec_sources.png)
   
-        ![Cumulative Energy Investment](utilities_currpol_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/utilities_currpol_energy_investment.png)
         
-        ![Cumulative Energy Investment](utilities_ndc_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/utilities_ndc_energy_investment.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -427,7 +427,7 @@
         locational characteristics of the underlying assets.
   
       high_materiality: |
-        ![Carbon Price](utilities_tltl_carbon_price.png)
+        ![Carbon Price](/assets/images/utilities_tltl_carbon_price.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -439,7 +439,7 @@
         misaligned efforts across regions and sectors leads to higher transition risk 
         than in the Delayed Transition scenario. 
   
-        ![Secondary Energy](utilities_tltl_elec_sources.png)
+        ![Secondary Energy](/assets/images/utilities_tltl_elec_sources.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -455,7 +455,7 @@
         become the dominant technologies, displacing coal and gas but not uniformly across 
         jurisdictions.
   
-        ![Cumulative Energy Investment](utilities_tltl_energy_investment.png)
+        ![Cumulative Energy Investment](/assets/images/utilities_tltl_energy_investment.png)
   
         **Source:**
         [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

@@ -94,7 +94,7 @@
   
         In the Delayed transition scenario, CCS utilisation is projected to increase dramatically, rising from ~67 megatons in 2030 to around ~2200 megatons of CO<sub>2</sub> being stored annually by 2050.      
         
-        ![Carbon Sequestration](manufac_delayed_ccs.png)
+        ![Carbon Sequestration](/assets/images/manufac_delayed_ccs.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -149,7 +149,7 @@
         
           In Orderly Transition scenarios, CCS utilisation is projected to increase dramatically, with ~1800 megatons of CO<sub>2</sub> being stored annually by 2050 in the Below 2°C scenario, and ~4500 megatons in the Net Zero 2050 scenario which are significant increases from the respective 2030 values of ~150 megatons and ~ 350 megatons.
         
-        ![Carbon Sequestration](manufac_orderly_ccs.png)
+        ![Carbon Sequestration](/assets/images/manufac_orderly_ccs.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -260,7 +260,7 @@
   
         - **Increased revenue:** this can occur for industries that can support the global transition to Net Zero such as carbon capture storage (CCS) manufacturing
   
-        ![Carbon Sequestration](manufac_too_little_too_late_ccs.png)
+        ![Carbon Sequestration](/assets/images/manufac_too_little_too_late_ccs.png)
         
         **Source:**
         [IIASA NGFS Scenario Explorer.[ REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)

@@ -57,7 +57,7 @@ def layout():
                 "Generate Report",
                 id="open",
                 n_clicks=0,
-                href='/reports/generate-report',
+                href='/reports/overview',
                 style={"backgroundColor": "#51C876", "color": "white", "borderRadius": "8px", "border": "none"}
             ),
             className="text-center",

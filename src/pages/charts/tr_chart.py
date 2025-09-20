@@ -15,8 +15,7 @@ def get_years(df):
 
 def layout():
     return html.Div([
-        html.H1("Climate Variable Charting", className="container"),
-        html.H3("Transition Risk", className="container"),
+        html.H1("Transition Risk Charting", className="container"),
         html.Div([
             html.Div([
                 html.Label("Select Region"),
@@ -280,7 +279,7 @@ def update_chart(region, variable, unit, model, scenario, year_range):
         xaxis=dict(gridcolor="#EEE"),
         yaxis=dict(gridcolor="#EEE"),
         showlegend=False,
-        yaxis_title=variable  
+        yaxis_title=variable
     )
 
     title_text = (

@@ -2,12 +2,12 @@ sector and scenario coverage:
   - question: What sectors are covered by the tool?
     answer: |
         The tool covers a total of 33 sectors, 11 of which are individual sovereign exposures. For more information, please refer to 
-        [Sectors](sectors). 
+        [Sectors](/sectors/sector) [Underwriting](/sectors/underwriting) [Sovereign](/sectors/sovereign). 
     
   - question: What scenarios are covered by the tool?
     answer: |
         The tool covers 7 long-term scenarios based on NGFS fifth vintage (Phase V), published in November 2024. For more information, 
-        please refer to [Scenarios: Long-term scenarios](scenarios/long-term-scenarios)
+        please refer to [Scenarios: Long-term scenarios](/scenarios/long-term-scenarios)
 
         In addition, the tool signposts to 4 NGFS short-term scenarios that captures five years of transition or physical risk 
-        dynamics, published in May 2025. For more information, please refer to [Scenarios: Short-term scenarios](scenarios/short-term-scenarios)
+        dynamics, published in May 2025. For more information, please refer to [Scenarios: Short-term scenarios](/scenarios/short-term-scenarios)
