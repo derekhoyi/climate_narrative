@@ -1,9 +1,8 @@
 20:
-  name: Transport Sector
+  name: Transport 
   test_report_position: 11
   description: |
-    # Transport
-    
+
     The **transport** sector refers to the movement of people and cargo, either as a service or 
     via consumer activity, as well as the construction, maintenance, and use of transportation 
     infrastructure. The transport sector includes subsectors for each mode 

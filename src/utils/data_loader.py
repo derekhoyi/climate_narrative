@@ -34,7 +34,7 @@ def convert_config_excel_to_json():
 	output_file_path = CONFIG_PATH.joinpath('./config.json').resolve()
 
 	xls = pd.ExcelFile(input_file_path)
-	converted_json = {'exported_at': timestamp, 'sheets': {}}
+	converted_json = {'sheets': {}}
 	for sheet_name in xls.sheet_names:
 		df = pd.read_excel(input_file_path, sheet_name=sheet_name)
 		cleaned_df = clean_df_columns(df)
@@ -111,7 +111,6 @@ def create_data_table(df, bullet_point_columns_list=None, left_align_columns_lis
 		for col in df.columns
 	] if bullet_point_columns_list else [{"name": i, "id": i} for i in df.columns]
 	table_styling = {
-		# "border": "none",
 		"textAlign": "center",
         "verticalAlign": "middle",
         "width": "auto",

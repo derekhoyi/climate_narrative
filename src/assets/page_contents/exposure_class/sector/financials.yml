@@ -1,8 +1,7 @@
 4:
-  name: Financial Services Sector
+  name: Financial Services 
   test_report_position: 7
   description: |
-    # Financial Services
     
     The **financial services** sector plays a crucial role in facilitating economic activities and covers a broad range of businesses, encompassing services such as investing, managing and lending money, insurance and capital and debt markets. Central banking, also part of this sector, is outside the scope of this tool. 
     

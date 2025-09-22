@@ -1,4 +1,4 @@
-variable charting:  
+charts:  
   - question: How are the indicators split for charting? 
     answer: |
         The indicators for charting are split by the physical risk and the transition risk categories. E.g., economic damages from 

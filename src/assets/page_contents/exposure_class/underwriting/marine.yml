@@ -1,8 +1,7 @@
 5:
-  name: Marine Underwriting Class
+  name: Marine Underwriting 
   test_report_position: 13
   description: |
-    # Marine Underwriting
     
     The **marine** underwriting class is a long-established segment of the re/insurance industry, covering a diverse range of sub-classes that protect against various maritime risks. These include hull and liability insurance, marine cargo coverage, charterer’s insurance, and policies for vessels under construction, mortgages, and financial loss. Other key areas include kidnap and ransom coverage, carrier’s liability, and personal accident insurance for ship crews, however those areas have different climate transmission mechanisms and are not explored as part of this analysis.
     

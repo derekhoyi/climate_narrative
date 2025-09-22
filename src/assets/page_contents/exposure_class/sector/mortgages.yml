@@ -1,8 +1,7 @@
 8:
- name: Mortgage Lending Exposure
+ name: Mortgages
  test_report_position: 21
  description: |
-   # Mortgages 
    
    **Mortgages** are a lending exposure type based upon a legal agreement by which a bank, building society or other regulated organisation lends money at interest in exchange for taking title of the customer’s property, with the condition that the conveyance of title becomes void upon the payment of the debt. Thus, it is a secured loan against the title of a residential property
    

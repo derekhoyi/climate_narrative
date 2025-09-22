@@ -60,12 +60,13 @@ def layout():
                     dbc.Col(
                         dbc.ButtonGroup(button_list, vertical=True),
                         md=3,
-                        class_name="mb-3"
+                        class_name="sidebar-btn-group"
                     ),
                     dbc.Col(
                         html.Div(
                             [
-                                html.H2(default_topic),
+                                html.H1("Frequently Asked Questions"),
+                                html.H3(default_topic),
                                 dbc.Accordion(
                                     accordion_items,
                                     id="faq-accordion",
@@ -112,7 +113,8 @@ def display_topic(n_clicks, yml_data):
     ]
 
     content = [
-        html.H2(topic),
+        html.H1("Frequently Asked Questions"),
+        html.H3(topic),
         dbc.Accordion(
             accordion_items,
             id="faq-accordion",

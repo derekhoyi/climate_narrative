@@ -1,14 +1,14 @@
 1:
-  name: Agriculture Sector
+  name: Agriculture
   test_report_position: 2
   description: |
-    # Agriculture
     
     The **agriculture** sector can be split into Crop Production and Animal Production. Industries in the Crop Production 
     subsector grow crops mainly for food and fibre. This subsector comprises establishments such as farms, orchards, 
     groves, greenhouses, and nurseries, primarily engaged in growing crops, plants, vines, or trees and their seeds. 
     The industries in this subsector are grouped by similarity of production activity, the length of growing season, 
     degree of crop rotation, extent of input specialization, labour requirements and capital demands.
+
     The production process is typically completed when the raw product or commodity grown reaches the “farm gate” for 
     market, that is, at the point of first sale or price determination. Within the subsector, the NAICS classifies 
     establishments to a specific industry when a product or industry family of products (i.e., oilseed and grain farming, 
@@ -22,6 +22,7 @@
     the products they produce or for eventual sale. The industries in this subsector are grouped by important factors, 
     such as suitable grazing or pastureland, specialised buildings, type of equipment and the amount and types of labour 
     required.
+    
     Establishments are classified to the Animal Production, Fishing and Aquaculture subsector when animal production 
     (i.e., value of animals for market) accounts for one-half or more of the establishment’s total agricultural production.
   

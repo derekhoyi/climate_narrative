@@ -1,10 +1,10 @@
 6:
-  name: Manufacturing Sector
+  name: Manufacturing 
   test_report_position: 3
   description: |
-    # Manufacturing
     
     The **manufacturing** sector involves the transformation of (mainly) raw materials or substances into new products by way of mechanical, physical, or chemical processes. Manufactured products derived from the assembly of component parts also comprise the manufacturing sector - unless otherwise specified. Manufacturing establishments are typically referred to as mills, factories or plants and tend to use power-driven machinery or handling equipment in the manufacturing process, however it is not unusual for some manufacturing activities to occur in a domestic setting.
+    
     Although, the distinction between the manufacturing sector and others can be ambiguous, hence, the inclusion of miscellaneous manufacturing as a sub-sector. The North American Industrial Code (NAIC) categorises the manufacturing sector into the following sub-sectors: 
       
     - Pharmaceutical and medicine manufacturing

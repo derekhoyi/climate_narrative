@@ -1,8 +1,7 @@
 7:
- name: Mining Sector
+ name: Mining 
  test_report_position: 10
  description: |
-   # Mining
    
    **Mining** relates to companies in the mining sector (except Oil and Gas) primarily engage in mining, mine site development, and beneficiating (i.e. preparing - crushing, screening, washing, sizing, concentrating, and flotation) metallic minerals and non-metallic minerals, including coal. The term “mining” is used in the broad sense to include ore extraction, quarrying, and beneficiating, customarily done at the mine site.
    

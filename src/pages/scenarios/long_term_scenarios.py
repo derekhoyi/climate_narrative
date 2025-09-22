@@ -55,7 +55,7 @@ def layout():
                     dbc.Col(
                         dbc.ButtonGroup(button_list, vertical=True),
                         md=3,
-                        class_name="mb-3"
+                        class_name="sidebar-btn-group"
                     ),
                     dbc.Col(
                         html.Div(

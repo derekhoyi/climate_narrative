@@ -6,7 +6,7 @@ from urllib.parse import parse_qs
 import pandas as pd
 from utils import data_loader
 
-dash.register_page(__name__, path='/reports/customise-institutional-report')
+dash.register_page(__name__, path='/reports/customise-report')
 value_bg_color_mapping = {
 	"N/A": "white",
 	"Low": "#BFEBCE",
@@ -43,29 +43,28 @@ def layout(institution_type=None, **kwargs):
 	Input("institutional-next-btn", "n_clicks"),
 	Input("institutional-restart-btn", "n_clicks"),
 	Input("generate-report-btn", "n_clicks"),
+	State("report-type-store", "data"),
 	State("institution-type-store", "data"),
 	State("customise-institutional-report-url", "search"),
 	State("all-user-selection-store", "data"),
 	prevent_initial_call=True
 )
-def update_url(user_selection_completed, back, _next, restart, generate_report, institution_type, current_search, all_stored_data):
+def update_url(user_selection_completed, back, _next, restart, generate_report, report_type, institution_type, current_search, all_stored_data):
 	query = parse_qs(current_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 	institution_type = query.get("institution-type", [None])[0] if institution_type is None else institution_type
 	review_summary = query.get("review", [None])[0]
 
 	if start_page or (review_summary and back):
 		user_selection_completed = None
-	if start_page and _next and not user_selection_completed:
-		return f"/reports/customise-institutional-report?institution-type={institution_type}"
+	if (start_page and _next and not user_selection_completed) or (review_summary and back):
+		return f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}"
 	elif start_page and restart:
-		return f"/reports/select-report"
+		return f"/reports"
 	elif not start_page and restart:
-		return f"/reports/customise-institutional-report"
+		return f"/reports/customise-report?report-type={report_type}"
 	elif user_selection_completed and not review_summary:
-		return f"/reports/customise-institutional-report?institution-type={institution_type}&review=summary"
-	elif review_summary and back:
-		return f"/reports/customise-institutional-report?institution-type={institution_type}"
+		return f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}&review=summary"
 	elif generate_report and all_stored_data:
 		return f"/reports/generate-report"
 	return dash.no_update
@@ -77,7 +76,7 @@ def update_url(user_selection_completed, back, _next, restart, generate_report, 
 )
 def institution_type_radio(exposure_sector_product_mapping_dict, url_search):
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 
 	if start_page:
 		exposure_sector_product_mapping_df = pd.DataFrame(exposure_sector_product_mapping_dict)
@@ -114,7 +113,7 @@ def store_institution_type(value):
 )
 def initiate_exposure_stepper(exposure_sector_product_mapping_dict, user_selection_completed, url_search):
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 	institution_type = query.get("institution-type", [None])[0]
 
 	# Only run this callback if not on start page
@@ -159,7 +158,7 @@ def initiate_exposure_stepper(exposure_sector_product_mapping_dict, user_selecti
 def update_stepper(exposure_sector_product_mapping_dict, back, _next, user_selection_completed, stepper_active, stepper_children, url_search):
 	# Parse institution type from URL
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 	institution_type = query.get("institution-type", [None])[0]
 
 	# Only run this callback if not on start page
@@ -203,7 +202,7 @@ def update_stepper(exposure_sector_product_mapping_dict, back, _next, user_selec
 )
 def initiate_exposure_selection_dropdown(exposure_sector_product_mapping_dict, exposure_type, user_selection_completed, stored_data, url_search):
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 	institution_type = query.get("institution-type", [None])[0]
 
 	# Only run this callback if not on start page
@@ -264,7 +263,7 @@ def initiate_exposure_selection_dropdown(exposure_sector_product_mapping_dict, e
 )
 def update_dropdown_color(user_selection_completed, values, current_styles, url_search, exposure_type):
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 
 	# Only run this callback if not on start page
 	if exposure_type == "Scenario" or start_page or user_selection_completed:
@@ -288,7 +287,7 @@ def update_dropdown_color(user_selection_completed, values, current_styles, url_
 )
 def initiate_scenario_checklist(scenario_mapping_dict, exposure_type, user_selection_completed, url_search, stored_data):
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 
 	# Only run this callback if not on start page
 	if exposure_type != "Scenario" or start_page or user_selection_completed:
@@ -369,7 +368,7 @@ def scenario_checklist_select_or_clear_all(select_all, clear_all, options):
 def store_user_selection(back, _next, restart, generate_report, user_selection_completed, url_path, exposure_type,
 					all_stored_data, exposure_selection_values, scenario_selection_values, url_search):
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 	institution_type = query.get("institution-type", [None])[0]
 	button_id = ctx.triggered_id
 	updated = False
@@ -405,25 +404,22 @@ def store_user_selection(back, _next, restart, generate_report, user_selection_c
 				stored_data = []
 				for x in exposure_selection_values:
 					parts = x.split('|')
-					if len(parts) == 5 and parts[4] != 'N/A':
-						stored_data.append({
-							'report': 'Institutional',
-							'id': '|'.join(parts[:4]),
-							'institution': institution_type,
-							'exposure': parts[1],
-							'sector': parts[2],
-							'ptype': parts[3],
-							'label': parts[4],
-							'value': x,
-						})
-				if stored_data:
-					all_stored_data = all_stored_data or {}
-					all_stored_data[exposure_type] = stored_data
-					updated = True
+					stored_data.append({
+						'report': 'Institutional',
+						'id': '|'.join(parts[:4]),
+						'institution': institution_type,
+						'exposure': parts[1],
+						'sector': parts[2],
+						'ptype': parts[3],
+						'label': parts[4],
+						'value': x,
+					})
+				all_stored_data = all_stored_data or {}
+				all_stored_data[exposure_type] = stored_data
+				updated = True
 
 	if not updated:
 		raise dash.exceptions.PreventUpdate
-	print(f'stored data: {all_stored_data}')
 	return all_stored_data
 
 
@@ -437,7 +433,7 @@ def store_user_selection(back, _next, restart, generate_report, user_selection_c
 def exposure_selection_layout(user_selection_completed, stepper_active, stepper_children, url_search):
 	# Parse institution type from URL
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 	institution_type = query.get("institution-type", [None])[0]
 
 	# Only run this callback if not on start page or not created stepper yet
@@ -490,7 +486,7 @@ def exposure_selection_layout(user_selection_completed, stepper_active, stepper_
 def navigation_buttons(stepper_active, user_selection_completed, url_search):
 	# Parse from URL
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 
 	# Define buttons and their visibility
 	button_styling = 'w-100 h-100 d-flex align-items-center justify-content-center text-center'
@@ -565,8 +561,9 @@ def no_customisation_error_message(generate_report, all_stored_data):
 def toggle_modal(n_click, is_open, url_search):
 	if n_click:
 		query = parse_qs(url_search.lstrip('?'))
+		report_type = query['report_type'][0]
 		institution_type = query.get("institution-type", [None])[0]
-		return not is_open, f"/reports/customise-institutional-report?institution-type={institution_type}"
+		return not is_open, f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}"
 	return is_open, dash.no_update
 
 @callback(
@@ -580,7 +577,7 @@ def toggle_modal(n_click, is_open, url_search):
 )
 def store_user_selection_completed(_next, back, url_search, stepper_children, stepper_active):
 	query = parse_qs(url_search.lstrip('?'))
-	start_page = len(query) == 0
+	start_page = query.get("report-type", [None])[0] and len(query) == 1
 	review_summary = query.get("review", [None])[0]
 
 	if start_page or (back and review_summary):
@@ -601,9 +598,12 @@ def store_user_selection_completed(_next, back, url_search, stepper_children, st
 	Input("all-user-selection-store", "data"),
 	Input('user-selection-completed-store', 'data'),
 	State("customise-institutional-report-url", "search"),
+	State("exposure-sector-product-mapping-store", "data"),
+	State("institution-type-store", "data"),
 	prevent_initial_call=True
 )
-def review_summary_page(_next, all_stored_data, user_selection_completed, url_search):
+def review_summary_page(_next, all_stored_data, user_selection_completed, url_search,
+						exposure_sector_product_mapping_dict, institution_type):
 	query = parse_qs(url_search.lstrip('?'))
 	institution_type = query.get("institution-type", [None])[0]
 	review_summary = query.get("review", [None])[0]
@@ -611,7 +611,22 @@ def review_summary_page(_next, all_stored_data, user_selection_completed, url_se
 	if not (user_selection_completed and review_summary):
 		raise dash.exceptions.PreventUpdate
 
+	# Only keep user selections that are not 'N/A'
 	all_user_selection_df = data_loader.get_user_selection_from_store(all_stored_data)
+	all_user_selection_df = all_user_selection_df[all_user_selection_df['label'] != 'N/A']
+
+	# Reorder rows
+	scenario_user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] == 'Scenario']
+	exposure_sector_product_mapping_df = pd.DataFrame(exposure_sector_product_mapping_dict)
+	exposure_sector_product_mapping_df = exposure_sector_product_mapping_df[
+		exposure_sector_product_mapping_df['institution'].isin([institution_type, 'All'])
+	]
+	sort_order_df = exposure_sector_product_mapping_df[['exposure', 'sector', 'type']].drop_duplicates().rename(columns={'type': 'ptype'})
+	all_user_selection_df = pd.merge(sort_order_df, all_user_selection_df, on=['exposure', 'sector', 'ptype'], how='left')
+	all_user_selection_df = all_user_selection_df.dropna(subset='label')
+	all_user_selection_df = pd.concat([all_user_selection_df, scenario_user_selection_df], ignore_index=True)
+
+	# Rename columns for better presentation
 	all_user_selection_df = data_loader.rename_user_selection_data_columns(all_user_selection_df)
 
 	review_summary_layout = html.Div([

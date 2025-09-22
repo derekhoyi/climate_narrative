@@ -1,8 +1,7 @@
 14:
-  name: Motor Underwriting Class
+  name: Motor Underwriting 
   test_report_position: 17
   description: |
-    # Motor Underwriting 
     
     The **motor** underwriting class involves insuring cars, trucks, motorcycles,
     and other road vehicles. Motor insurance typically covers drivers for third

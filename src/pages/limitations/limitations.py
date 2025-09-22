@@ -59,7 +59,7 @@ def layout():
                         dbc.ButtonGroup(button_list, vertical=True),
                         style={'height': '600px', 'overflowY': 'auto'},
                         md=3,
-                        class_name="mb-3"
+                        class_name="sidebar-btn-group"
                     ),
                     dbc.Col(
                         html.Div(

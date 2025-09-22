@@ -29,16 +29,8 @@ def create_navbar():
                     dbc.DropdownMenuItem("Sovereigns", href='/sectors/sovereigns',class_name="box-style"),
                 ],
             ),
-            dbc.NavItem(dbc.NavLink("Reports", href="/reports/overview")),
-            dbc.DropdownMenu(
-                nav=True,
-                in_navbar=True,
-                label="Charts",
-                children=[
-                    dbc.DropdownMenuItem("Physical Risk", href='/charts/ph_chart',class_name="box-style"),
-                    dbc.DropdownMenuItem("Transition Risk", href='/charts/tr_chart',class_name="box-style"),
-                ],
-            ),
+            dbc.NavItem(dbc.NavLink("Reports", href="/reports")),
+            dbc.NavItem(dbc.NavLink("Charts", href="/charts")),
             dbc.NavItem(dbc.NavLink("FAQs", href="/faqs")),
             dbc.NavItem(dbc.NavLink("Acknowledgements", href="/acknowledge")),
         ],

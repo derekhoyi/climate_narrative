@@ -2,7 +2,6 @@
   name: Unsecured Retail Lending
   test_report_position: 22
   description: |
-    # Unsecured Retail Lending 
     
     **Unsecured retail lending** refers to a segment of the financial services that provides finance to individuals 
     without requiring collateral. The amount borrowed is based upon the borrower’s creditworthiness, income and 
@@ -13,6 +12,8 @@
     - Unsecured Personal Loans (UPL)
     
     - Personal Current Accounts in the form of Overdrafts (PCA)
+
+    Since these loans are not backed by any physical asset, they typically carry higher interest rates compared to secured loans, which are backed by collateral.
   
   transition:
     high:
