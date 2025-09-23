@@ -4,7 +4,7 @@ transition: low
 physical: low
 exec_short: transition
 exec_description: |
-  The NGFS Orderly transition risk scenarios result in a gradual reduction in CO<sub>2</sub> emissions 
+  The NGFS Orderly transition risk scenarios result in a gradual reduction in CO2 emissions 
   and an increase in the carbon price. Investments in energy efficiency and low-carbon technologies 
   are projected to significantly increase. For example, annual investment in low carbon technologies 
   increases from ~1 billion and 1.5 trillion USD in 2025 to between ~2 trillion and ~3 trillion USD by 
@@ -58,7 +58,7 @@ description: |
   The NGFS have defined three orderly scenarios:
 
   - **Net Zero 2050** limits global warming to 1.5&deg;C through stringent climate
-    policies and innovation, reaching global Net Zero CO<sub>2</sub> emissions
+    policies and innovation, reaching global Net Zero CO2 emissions
     around 2050.
 
   - **Below 2&deg;C** gradually increases the stringency of climate policies, giving
@@ -66,11 +66,11 @@ description: |
 
   - **Low Demand** assumes that significant behavioural changes – reducing energy demand – 
   in addition to (shadow) carbon price and technology induced e¬fforts, would mitigate pressure 
-  on the economy to reach global Net Zero CO<sub>2</sub> emissions around 2050.
+  on the economy to reach global Net Zero CO2 emissions around 2050.
 
   ### Key assumptions and parameters
 
-  In these scenarios the reduction in CO<sub>2</sub> emissions occurs gradually 
+  In these scenarios the reduction in CO2 emissions occurs gradually 
   (i.e., between a ~20 – 40% reduction in 2030, and ~75 – 105% reduction by 2050). 
   This is achieved by an immediate and/or smooth policy reaction decarbonising the 
   energy supply, accelerating electrification and switching to low-carbon fuels in industry, 
