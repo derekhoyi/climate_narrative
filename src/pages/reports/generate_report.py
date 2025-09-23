@@ -14,15 +14,62 @@ dash.register_page(__name__, path='/reports/generate-report')
 def layout(report_type=None, institution_type=None, **kwargs):
 	layout = html.Div([
 		dcc.Location(id='generate-report-url'),
-		dbc.ButtonGroup([
-			dbc.Button("Return to Selection", id="generate-report-previous-btn", color="primary", style={'maxWidth': 250}),
-			dbc.Button(className="d-none w-auto"),
-			dbc.Button("Download Report", id="download-btn", color="success", style={'maxWidth': 250}),
-		], className="d-flex justify-content-between mb-3 w-100 gap-5"),
-		html.Div(id='report-content'),
+		html.Div(
+			[
+				dbc.Collapse(
+					dbc.Card(
+						dbc.CardBody([
+							dbc.Button("Return to Selection", id="generate-report-previous-btn", color="light",
+									   className="w-100"),
+							dbc.Button("Download Report", id="download-btn", color="success", className="w-100"),
+						], className="d-grid gap-3"),
+						className="mb-2 shadow"
+					),
+					id="report-fab-collapse",
+					is_open=False
+				),
+				dbc.Button(
+					"⋮",
+					id="report-fab-toggle",
+					color="primary",
+					className="rounded-circle fw-bold",
+					style={
+						"width": "56px",
+						"height": "56px",
+						"fontSize": "1.5rem",
+						"boxShadow": "0 4px 12px rgba(0,0,0,0.3)"
+					}
+				),
+			],
+			className="position-fixed d-flex flex-column align-items-end",
+			style={"bottom": "2rem", "right": "2rem", "zIndex": 1050}
+		),
+		dbc.Row([
+			dbc.Col(
+				html.Div(id='report-sidebar'),
+				style={
+					'height': 'calc(100vh - 70px)',
+					'overflowY': 'auto',
+					'position': 'sticky',
+					'top': '120px'
+				},
+				md=3,
+				className="sidebar-btn-group mb-3 bg-light border-0"
+			),
+			dbc.Col(html.Div(id='report-content'), className="ms-22 pt-80"),
+		]),
 		dcc.Download(id="download-store"),
 	], className="container")
 	return layout
+
+@callback(
+	Output("report-fab-collapse", "is_open"),
+	Input("report-fab-toggle", "n_clicks"),
+	State("report-fab-collapse", "is_open"),
+	prevent_initial_call=True
+)
+def toggle_report_fab(n, is_open):
+	return not is_open if n else is_open
 
 @callback(
 	Output("generate-report-url", "href"),
@@ -45,6 +92,39 @@ def update_url(user_selection_completed, url_search, back, report_type, institut
 	return dash.no_update
 
 @callback(
+	Output("download-store", "data"),
+	Input("download-btn", "n_clicks"),
+	State("report-content", "children"),
+	prevent_initial_call=True,
+)
+def download_report(n_clicks, report_content):
+	# html_string = _dash_html_to_string(report_content)
+	# doc = _html_to_docx(html_string)
+	# buffer = io.BytesIO()
+	# doc.save(buffer)
+	# buffer.seek(0)
+	# return dict(
+	# 	content=buffer.read(),
+	# 	filename="CFRF_Report.docx",
+	# 	type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+	# )
+
+	html_string = _dash_html_to_string(report_content)
+	# Convert HTML to plain text for RTF (or use a library for rich formatting)
+	soup = BeautifulSoup(html_string, "html.parser")
+	plain_text = soup.get_text()
+	rtf_content = r"{\rtf1\ansi " + plain_text.replace('\n', r'\par ') + "}"
+	buffer = io.BytesIO()
+	buffer.write(rtf_content.encode('utf-8'))
+	buffer.seek(0)
+	return dict(
+		content=buffer.read(),
+		filename="CFRF_Report.rtf",
+		type="application/rtf"
+	)
+
+@callback(
+	Output("report-sidebar", "children"),
 	Output("report-content", "children"),
 	Input("generate-report-url", "search"),
 	Input("all-user-selection-store", "data"),
@@ -123,13 +203,14 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 				sub_section_layout = []
 			section_layout.append(sub_section_layout)
 		section_layout = html.Div([
-			html.H1(section, id=section.replace(' ', ''), className='text-success fw-bold'),
+			html.H1(section, id=section.replace(' ', '')),
 		] + section_layout)
 		if section == 'Sector Overview':
 			section_layout = clean_up_sector_overview(section_layout)
 		output_structure_layout.append(section_layout)
 	output_structure_layout = remove_parents_with_empty_children(output_structure_layout)
-	return html.Div(output_structure_layout)
+	output_structure_layout, sidebar_layout = create_sidebar_layout(output_structure_layout)
+	return html.Div(sidebar_layout), html.Div(output_structure_layout)
 
 def prepare_output_structure_mapping(output_structure_mapping_df, report_type):
 	exploded_output_structure_mapping_df = output_structure_mapping_df.copy()
@@ -570,6 +651,77 @@ def remove_parents_with_empty_children(report_content):
 				updated_children = []
 	return updated_children
 
+def create_sidebar_layout(report_content):
+	report_content, nav_groups = _extract_navigation_groups(report_content)
+	accordion_items = [
+		dbc.AccordionItem(
+			dbc.Nav(group['links'], vertical=True, pills=True, className="ms-2"),
+			title=group['title'],
+			item_id=group['id']
+		)
+		for group in nav_groups
+	]
+	sidebar_layout = [
+		html.H4("Table of Contents", className='text-center p-0 mt-3'),
+		dbc.Accordion(accordion_items, start_collapsed=True, always_open=True, flush=True, id="toc-accordion")
+	]
+	return report_content, sidebar_layout
+
+def _extract_navigation_groups(report_content, current_h1=None, groups=None):
+	if groups is None:
+		groups = []
+	if not isinstance(report_content, (list, tuple)):
+		return report_content, groups
+
+	updated_children = []
+	for node in report_content:
+		if hasattr(node, 'children'):
+			child_content = node.children
+
+			if node.__class__.__name__ in {'H1', 'H2'}:
+				base_id = str(node.children).replace(' ', '')
+				if node.__class__.__name__ == 'H1':
+					full_id = base_id
+					current_h1 = full_id
+					groups.append({'id': full_id, 'title': str(node.children), 'links': []})
+					groups[-1]['links'].append(
+						dbc.NavLink(str(node.children), href=f"#{full_id}", external_link=True, className="level-1 fw-bold")
+					)
+				else:
+					if current_h1:
+						full_id = f"{current_h1}-{base_id}"
+					else:
+						full_id = base_id
+						current_h1 = full_id
+						groups.append({'id': full_id, 'title': str(node.children), 'links': []})
+						groups[-1]['links'].append(
+							dbc.NavLink(str(node.children), href=f"#{full_id}", external_link=True, className="level-1")
+						)
+					for g in groups:
+						if g['id'] == current_h1:
+							g['links'].append(
+								dbc.NavLink(str(node.children), href=f"#{full_id}", external_link=True, className="level-2")
+							)
+							break
+				params = {k: v for k, v in node.__dict__.items() if k in ['className', 'style']}
+				style = (params.get('style') or {}) | {'scrollMarginTop': '120px'}
+				params['style'] = style
+				updated_node = node.__class__(child_content, id=full_id, **params)
+				updated_children.append(updated_node)
+			else:
+				new_children, groups = _extract_navigation_groups(
+					child_content if isinstance(child_content, (list, tuple)) else [child_content],
+					current_h1, groups
+				)
+				if not isinstance(new_children, (list, tuple)):
+					new_children = [new_children]
+				params = {k: v for k, v in node.__dict__.items() if k in ['className', 'style', 'id']}
+				updated_children.append(node.__class__(new_children, **params))
+		else:
+			updated_children.append(node)
+
+	return updated_children, groups
+
 def _filter_yml_by_scenario(yml, scenario, scenario_mapping_df):
 	filtered_scenario_mapping_df = scenario_mapping_df[scenario_mapping_df['scenario_name'] == scenario]
 	scenario_risk_type = filtered_scenario_mapping_df['risk_type'].iloc[0]
@@ -591,3 +743,43 @@ def _convert_to_bullet_points(df, bullet_point_column_name):
 		groupby_variables_list, as_index=False).agg({bullet_point_column_name: '\n- '.join})
 	output_df[bullet_point_column_name] = '- ' + output_df[bullet_point_column_name]
 	return output_df
+
+def _check_headers_in_markdown(node, headers_list):
+	return len([x.lower() for x in headers_list if x.lower() in node.__dict__['className']]) > 0
+
+def _dash_html_to_string(output_structure_layout):
+	# Recursively convert Dash HTML components to HTML string
+	if isinstance(output_structure_layout, list):
+		return ''.join([_dash_html_to_string(child) for child in output_structure_layout])
+	if hasattr(output_structure_layout, 'children'):
+		tag = output_structure_layout.__class__.__name__.lower()
+		children = _dash_html_to_string(output_structure_layout.children)
+		return f"<{tag}>{children}</{tag}>"
+	return str(output_structure_layout)
+
+# def _dash_html_to_string(dash_component):
+# 	# Recursively convert Dash HTML components to HTML string
+# 	if isinstance(dash_component, list):
+# 		return ''.join([_dash_html_to_string(child) for child in dash_component])
+# 	if hasattr(dash_component, 'props'):
+# 		tag = dash_component.__class__.__name__.lower()
+# 		children = _dash_html_to_string(dash_component.props.get('children', ''))
+# 		return f"<{tag}>{children}</{tag}>"
+# 	return str(dash_component)
+#
+# def _html_to_docx(html_string):
+# 	doc = Document()
+# 	soup = BeautifulSoup(html_string, "html.parser")
+# 	for elem in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div', 'ul', 'ol', 'li']):
+# 		text = elem.get_text()
+# 		if elem.name.startswith('h'):
+# 			level = int(elem.name[1])
+# 			doc.add_heading(text, level=level)
+# 		elif elem.name in ['ul', 'ol']:
+# 			for li in elem.find_all('li'):
+# 				doc.add_paragraph(li.get_text(), style='List Bullet' if elem.name == 'ul' else 'List Number')
+# 		elif elem.name == 'p':
+# 			doc.add_paragraph(text)
+# 		elif elem.name == 'div':
+# 			doc.add_paragraph(text)
+# 	return doc
