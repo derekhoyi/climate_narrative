@@ -4,7 +4,9 @@ import dash_bootstrap_components as dbc
 from PIL import Image
 from pathlib import Path
 import yaml
+
 dash.register_page(__name__, path='/')
+
 
 def _load_disclaimer_text():
     # Use the exact path you provided
@@ -12,21 +14,20 @@ def _load_disclaimer_text():
     if yml_path.exists():
         with yml_path.open(encoding="utf-8") as f:
             yml = yaml.safe_load(f) or {}
-        return yml['description']
+            return yml['description']
     return ["Disclaimer text is not available."]
+
 
 def layout():
     paragraphs = _load_disclaimer_text()
-    # --- AMENDED SECTION STARTS HERE ---
+
     # Ensure paragraphs is a list of strings, each representing a paragraph or line
     if isinstance(paragraphs, str):
         # Split by line breaks if it's a single string
         modal_body_content = [html.P(line) for line in paragraphs.split('\n') if line.strip()]
-
     else:
         # If already a list, wrap each in html.P
         modal_body_content = [html.P(p) for p in paragraphs if p.strip()]
-    # --- AMENDED SECTION ENDS HERE ---
 
     layout = html.Div([
         # Header
@@ -42,6 +43,7 @@ def layout():
                 "boxSizing": "border-box"
             }
         ),
+
         # Hero image
         html.Div(
             html.Img(
@@ -51,6 +53,7 @@ def layout():
             ),
             style={"backgroundColor": "#000000", "width": "60%", "padding": "5px 0", "marginLeft": "auto", "marginRight": "auto"}
         ),
+
         # CTA
         html.Div(
             dbc.Button(
@@ -64,11 +67,13 @@ def layout():
             style={"backgroundColor": "#000000", "width": "60%", "padding": "5px 0",
                    "marginLeft": "auto", "marginRight": "auto", "textAlign": "center"}
         ),
-        # Disclaimer modal
+
+        # Disclaimer modal (now non-dismissable except via Acknowledge)
         dbc.Modal(
             [
                 dbc.ModalHeader(
                     dbc.ModalTitle("Disclaimer", style={"color": "white"}),
+                    close_button=False,  # <- prevent closing via the “×” button
                     style={"backgroundColor": "#51C876"}
                 ),
                 dbc.ModalBody(
@@ -92,10 +97,14 @@ def layout():
             ],
             id="modal",
             size="lg",
-            is_open=True  # Always open when the page loads
+            is_open=True,           # Always open when the page loads
+            backdrop="static",      # <- do not close on outside click
+            keyboard=False,         # <- do not close on Esc
+            centered=True
         ),
     ], style={"marginTop": "0px", "paddingTop": "0px"})
     return layout
+
 
 @callback(
     Output("modal", "is_open"),
@@ -103,5 +112,5 @@ def layout():
     prevent_initial_call=False
 )
 def handle_modal(n_ack):
-    # Open by default; close after first click
+    # Open by default; close only after Acknowledge is clicked
     return not bool(n_ack)

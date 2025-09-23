@@ -13,18 +13,33 @@ def layout():
     YML_FOLDER = "../../assets/page_contents/exposure_class/sector"
     FILE_PATH = Path(__file__).parent
     YML_DIR = FILE_PATH.joinpath(YML_FOLDER).resolve()
-    # define default index
-    DEFAULT_INDEX = 1
+
     # Load all YML files in the folder
     yml = {}
     for yml_file in YML_DIR.glob("*.yml"):
         with open(yml_file, encoding="utf-8") as f:
             data = yaml.safe_load(f)
-            # Merge or append sectors; assumes each file is a dict of sectors
             yml.update(data)
-    # create buttons
+
+    # --- SORT KEYS BY SECTOR NAME ---
+    # Create a list of (key, value) tuples sorted by the 'name' field (case-insensitive)
+    sorted_items = sorted(
+        yml.items(),
+        key=lambda item: item[1]['name'].lower()
+    )
+
+    # Use the first sorted item as default
+    default_key, default_val = sorted_items[0]
+    default_name = default_val['name']
+    default_desc = default_val['description']
+    default_content = html.Div([
+        html.H1(default_name, className="mt-3 mb-2"),
+        dcc.Markdown(default_desc, link_target="_blank")
+    ])
+
+    # create buttons (in sorted order)
     button_list = []
-    for k, v in yml.items():
+    for k, v in sorted_items:
         clean_name = re.sub(r'class\nsector', '', v['name'], flags=re.IGNORECASE).strip()
         button_list.append(
             dbc.Button(
@@ -32,17 +47,10 @@ def layout():
                 id={'type': 'sector1-btn', 'index': k},
                 class_name="btn-light text-start",
                 n_clicks=0,
-                active=(k == DEFAULT_INDEX)  # set default active button
+                active=(k == default_key)  # set default active button
             ),
         )
-    # default description and title
-    default_name = yml[DEFAULT_INDEX]['name']
-    default_desc = yml[DEFAULT_INDEX]['description']
-    default_content = html.Div([
-        html.H1(default_name, className="mt-3 mb-2"),
-        dcc.Markdown(default_desc, link_target="_blank")
-    ])
-    
+
     # layout
     layout = html.Div(
         [
@@ -74,8 +82,10 @@ def layout():
 
 # display sector
 @callback(
-    [Output('sector1-description', 'children'),
-     Output({'type': 'sector1-btn', 'index': ALL}, 'active')],
+    [
+        Output('sector1-description', 'children'),
+        Output({'type': 'sector1-btn', 'index': ALL}, 'active')
+    ],
     Input({'type': 'sector1-btn', 'index': ALL}, 'n_clicks'),
     State('yml-store', 'data'),
     prevent_initial_call=True
@@ -95,6 +105,10 @@ def display_sector1(n_clicks, yml_data):
         html.H1(name_yml, className="mt-3 mb-2"),
         dcc.Markdown(desc_yml, link_target="_blank")
     ])
-    # set active button
-    active = [i == str(index) for i in yml.keys()]
+    # set active button (order must match the sorted order)
+    # To ensure correct highlighting, get the sorted keys
+    sorted_keys = [k for k, v in sorted(
+        yml.items(), key=lambda item: item[1]['name'].lower()
+    )]
+    active = [k == index for k in sorted_keys]
     return content, active

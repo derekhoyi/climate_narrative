@@ -24,8 +24,8 @@ def create_navbar():
                 in_navbar=True,
                 label="Sectors",
                 children=[
-                    dbc.DropdownMenuItem("Sector", href='/sectors/sector',class_name="box-style"),
-                    dbc.DropdownMenuItem("Underwriting", href='/sectors/underwriting',class_name="box-style"),
+                    dbc.DropdownMenuItem("Sectors", href='/sectors/sector',class_name="box-style"),
+                    dbc.DropdownMenuItem("Underwriting Classes", href='/sectors/underwriting',class_name="box-style"),
                     dbc.DropdownMenuItem("Sovereigns", href='/sectors/sovereigns',class_name="box-style"),
                 ],
             ),

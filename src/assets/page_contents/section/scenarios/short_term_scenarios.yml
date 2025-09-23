@@ -23,7 +23,7 @@
          the climate impacts and those are used as an input to the macroeconomic model GEM-E3. To model the financial impact of the
          physical risks, EIRIN model produced outputs at sectoral level considering floods, storms, heatwave, wildfire and drought. 
 
-      The NGFS short-term scenarios are summarised below. Full NGFS 2025 narratives and data used for the scenarios can be found in the [here](https://www.ngfs.net/en/publications-and-statistics/publications/ngfs-short-term-climate-scenarios-central-banks-and-supervisors)
+      For further details select the relevant short-term scenarios or examples on the left menu of this page. Full NGFS 2025 narratives and data used for the scenarios can be found in the [here](https://www.ngfs.net/en/publications-and-statistics/publications/ngfs-short-term-climate-scenarios-central-banks-and-supervisors)
 
 2:  
    name: Baseline scenario
@@ -52,7 +52,7 @@
       | Inflation      | Higher inflation, varies by geography      | Short-term increase driven by energy transition and infrastructure build-out; raises cost base. Global inflation is 0.93       percentage points (pp) higher in 2027 relative to baseline scenario.      |
       | Interest Rates | Higher interest rates, varies by geography      | Central banks respond to rising inflation, where world interest rates in 2027Q4 are 0.61pp higher compared to baseline scenario.    |
       | GDP Growth     | Volatile    | Economic activity slows due to adjustment costs and investment reallocation with a reduction of 0.3% of the World GDP impact at 2027 relative to the baseline scenario.     |
-      | Carbon Prices  | Rapid and material increase    | In 2027, carbon prices are $45 per tonne CO2 (at 2017 prices) higher compared to baseline scenario. Improves risk-adjusted return outlook for green assets; Credit risk increases for high-emission companies / sectors.      |
+      | Carbon Prices  | Rapid and material increase    | In 2027, carbon prices are $45 per tonne CO₂ (at 2017 prices) higher compared to baseline scenario. Improves risk-adjusted return outlook for green assets; Credit risk increases for high-emission companies / sectors.      |
 
 4:  
    name: Sudden Wake-Up Call (Transition Risk Scenario)
@@ -71,7 +71,7 @@
       | Inflation      | Significant inflation spikes, varies by geography      | Short-term spike (2027) in inflation driven by sudden energy transition and infrastructure build-out; raises cost base. Global inflation is 3.54pp higher in 2027 relative to baseline scenario.      |
       | Interest Rates | Higher interest rates, varies by geography      | Central banks respond to rising inflation, where world interest rates in 2027Q4 are 0.81pp higher compared to baseline scenario.    |
       | GDP Growth     | Negative impact, varies by geography    | GDP is impacted negatively across all regions, but with comparatively milder impacts in countries with ambitious climate policies in place. The global GDP contraction is estimated approximately to 1.2% at 2027 relative to the baseline scenario.     |
-      | Carbon Prices  | Sudden and material increase    | Carbon price increases significantly in 2027, where world carbon price is $75 per tonne CO2 (at 2017 prices) higher compared to baseline scenario; improves risk-adjusted return outlook for green assets; credit risk increases for high-emission companies / sectors.      |
+      | Carbon Prices  | Sudden and material increase    | Carbon price increases significantly in 2027, where world carbon price is $75 per tonne CO₂ (at 2017 prices) higher compared to baseline scenario; improves risk-adjusted return outlook for green assets; credit risk increases for high-emission companies / sectors.      |
 
 5:  
    name: Disaster and Policy Stagnation (Physical Risk Scenario)
@@ -91,7 +91,7 @@
       | Inflation      | Higher inflation, varies by geography      | Driven by supply chain shocks, food and energy volatility, and post-disaster reconstruction; Increases cost base. World inflation rates are not available, however European inflation rates is noted to be 0.26pp higher in 2027 relative to baseline scenario.       |
       | Interest Rates | Varies by region      | Central banks’ responses range from tightening to accommodative or neutral, driven in part by the significant GDP gap created by this set of events. World interest rates are not available, however Europe interest rates in 2027Q4 are 0.06pp higher compared to baseline scenario.    |
       | GDP Growth     | Significantly lower, varies by geography    | Economic activity slows due to recurring physical damage and uncertainty. Reduced consumer spending. For example, GDP in the EU contracts by 3.3% in 2027 (deviation from baseline scenario) based on ‘own’ shocks.     |
-      | Carbon Prices  | Flat or marginal increase    | Lack of strong carbon pricing weakens investment signals for green assets and raises long-term transition costs. For example, much of the world regions are not materially different to baseline carbon prices, and even Advanced Economies have lower carbon prices, i.e. in 2027, European carbon price is estimated to be $2.6 per tonne CO2 (at 2017 prices) lower compared to the global baseline scenario.      |
+      | Carbon Prices  | Flat or marginal increase    | Lack of strong carbon pricing weakens investment signals for green assets and raises long-term transition costs. For example, much of the world regions are not materially different to baseline carbon prices, and even Advanced Economies have lower carbon prices, i.e. in 2027, European carbon price is estimated to be $2.6 per tonne CO₂ (at 2017 prices) lower compared to the global baseline scenario.      |
 
 6:  
    name: Diverging Realities (Transition and Physical Risk Scenario)
@@ -109,7 +109,7 @@
       | Inflation      | Higher inflation, varies by geography      | Regions affected by extreme dry events are initially subject to inflationary pressures stemming from higher production costs. Advanced economies implement transition policies and are affected by global supply constraints, which also leads to inflationary pressure. Global inflation is 0.52pp higher in 2027 relative to baseline scenario.      |
       | Interest Rates | Higher interest rates, varies by geography      | Central banks respond to rising inflation, where world interest rates in 2027Q4 are 0.54pp higher compared to baseline scenario.    |
       | GDP Growth     | Severe impact, varies by geography    | Global GDP is severely hit and does not recover within the scenario horizon, due to ongoing physical disasters. For example, world GDP contracts by 2.3% relative to baseline scenario at 2027.    |
-      | Carbon Prices  | More gradual increase, varies by geography    | Transition risk remains unpriced in many markets, particularly those in emerging markets; Difficult to assess fair value of carbon-intensive assets. Globally, carbon prices at 2027 are $29 per tonne CO2 (at 2017 prices) higher compared to baseline scenario.      |
+      | Carbon Prices  | More gradual increase, varies by geography    | Transition risk remains unpriced in many markets, particularly those in emerging markets; Difficult to assess fair value of carbon-intensive assets. Globally, carbon prices at 2027 are $29 per tonne CO₂ (at 2017 prices) higher compared to baseline scenario.      |
 
 7:  
    name: Crosswalk between NGFS short- and long-term scenarios
