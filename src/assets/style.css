@@ -2,11 +2,7 @@
    Font Settings
    ========================= */
 html, body {
-    font-family: Arial, Verdana, sans-serif;
-}
-
-*, *::before, *::after {
-    font-family: inherit !important;
+    font-family: "Nunito Sans";
 }
 
 /* =========================
@@ -29,16 +25,19 @@ h2 {
   letter-spacing: 2px;
 }
 table {
+  font-family: "Nunito Sans";
   border-collapse: collapse;
   width: 100%;
 }
 td, th {
+  font-family: "Nunito Sans";
   border: 1px solid #ddd;
   padding: 8px;
 }
-tr:nth-child(even){background-color: #f2f2f2;}
-tr:hover {background-color: #ddd;}
+tr:nth-child(even){background-color: #f2f2f2; font-family: "Nunito Sans";}
+tr:hover {background-color: #ddd; font-family: "Nunito Sans";}
 th {
+  font-family: "Nunito Sans";
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -106,3 +105,4 @@ img {
     flex-direction: column;
     justify-content: flex-start;
 }
+

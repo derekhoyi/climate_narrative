@@ -110,35 +110,12 @@ def create_data_table(df, bullet_point_columns_list=None, left_align_columns_lis
 		{"name": col, "id": col, "presentation": "markdown" if col in bullet_point_columns_list else "input"}
 		for col in df.columns
 	] if bullet_point_columns_list else [{"name": i, "id": i} for i in df.columns]
-	table_styling = {
-		"textAlign": "center",
-        "verticalAlign": "middle",
-        "width": "auto",
-        "whiteSpace": "normal",
-        "wordWrap": "break-word"
-    }
-	header_styling = {
-		'backgroundColor': 'rgb(210, 210, 210)',
-		'color': 'black',
-		'fontWeight': 'bold'
-	}
-	left_aligned_styling = [{
-        'if': {'column_id': c},
-        'textAlign': 'left'
-        } for c in left_align_columns_list
-    ] if left_align_columns_list else []
-	striped_rows_styling = [{
-		'if': {'row_index': 'odd'},
-		'backgroundColor': 'rgb(240, 240, 240)',
-	}]
+	
+	
 	return html.Div([dash_table.DataTable(
         data=df.to_dict('records'),
         columns=updated_columns_presentation_list,
-	    style_data=table_styling,
-	    style_header=table_styling | header_styling,
-		style_data_conditional=left_aligned_styling + striped_rows_styling
-	)], className="d-block table-responsive w-100 m-1 border border-1 border-solid border-black",
-		style={"minWidth": "100%", "tableLayout": "auto", "overflow-x": "auto"}
+	)], className="table"
 	)
 
 def plural_add_s(plural_flag):

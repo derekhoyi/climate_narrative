@@ -150,7 +150,7 @@
         **Source:**
         [Climate Impact Explorer](https://climate-impact-explorer.climateanalytics.org/)
   
-  transition and physical:
+  transition_physical:
     high:
       exec_description: |
         In High physical and transition risk scenarios, unsecured retail lenders are likely to be impacted through 

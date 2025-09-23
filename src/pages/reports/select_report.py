@@ -9,7 +9,8 @@ dash.register_page(__name__, path='/reports/select-report')
 def layout():
     layout = html.Div([
         dcc.Location(id='select-report-url'),
-        html.H3('Select report', className="text-success fw-bold"),
+        html.H1('Reports'),
+        html.H3('Select report'),
         html.P('The tool can generate four types of reports:'),
         dbc.Container(dbc.Row(id="report-type-buttons", class_name="d-flex g-4 align-items-stretch"), fluid=True),
     ], className="container")
@@ -26,7 +27,7 @@ def report_type_buttons(output_structure_mapping_dict):
     yml = data_loader.load_yml_file('section/reports', 'button_description.yml')
     for i, report_type in enumerate(output_structure_mapping_df['report_type'].unique()):
         # get markdown from yml
-        desc_title = dcc.Markdown(report_type, link_target="_blank", dangerously_allow_html=True, className='h4 fw-bolder text-white')
+        desc_title = dcc.Markdown(report_type, link_target="_blank", dangerously_allow_html=True, className='h3 fw-bolder text-white')
         desc_yml = dcc.Markdown(yml[report_type.lower()], link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'})
         desc = html.Div([desc_title, desc_yml])
 
