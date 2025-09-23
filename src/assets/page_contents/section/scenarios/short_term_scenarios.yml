@@ -9,7 +9,7 @@
 
          - **Macro-economic model** (GEM-E3), which projects how climate policies and physical risks impact the global economy. Key 
          outputs are carbon prices, emissions, and sectoral and regional macroeconomic projections (e.g. GDP, production, investment, 
-         imports / exports, unemployment, electricity mix)
+         imports / exports, unemployment, electricity mix).
 
          - **Macro-financial model** (EIRIN) which takes carbon price projections and sectoral / regional economic impacts from GEM-E3 
          and physical risk impacts, and models how these shocks propagate through the financial system and broader economy. Examples of 
@@ -23,7 +23,7 @@
          the climate impacts and those are used as an input to the macroeconomic model GEM-E3. To model the financial impact of the
          physical risks, EIRIN model produced outputs at sectoral level considering floods, storms, heatwave, wildfire and drought. 
 
-      For further details select the relevant short-term scenarios or examples on the left menu of this page. Full NGFS 2025 narratives and data used for the scenarios can be found in the [here](https://www.ngfs.net/en/publications-and-statistics/publications/ngfs-short-term-climate-scenarios-central-banks-and-supervisors)
+      For further details, select the relevant short-term scenarios section or examples on the side bar. Full NGFS 2025 narratives and data used for the scenarios can be found [here](https://www.ngfs.net/en/publications-and-statistics/publications/ngfs-short-term-climate-scenarios-central-banks-and-supervisors)
 
 2:  
    name: Baseline scenario

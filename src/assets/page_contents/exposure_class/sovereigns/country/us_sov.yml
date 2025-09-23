@@ -58,16 +58,14 @@
         In the Delayed transition scenario, late policy means that a ‘Business-as-Usual’ approach 
         to decarbonisation occurs between now and 2030, followed by a sharp increase in policy 
         aggression, equivalent to an implicit/proxy carbon price increase to ~1,430 USD per tonne 
-        CO2 by 2035 and ~7,496 USD per tonne CO<sub>2</sub> by 2050 based on the IIASA NGFS Scenario Explorer 
+        CO2 by 2035 and ~7,496 USD per tonne CO2 by 2050 based on the IIASA NGFS Scenario Explorer 
         NiGEM model (REMIND inputs). The delayed policy ambition reduces the initial disincentivisation 
         against fossil fuels, only to more aggressively penalise and thus risk stranding fossil fuel 
         assets beyond 2030. In this scenario, disorderly policy action results in increased transition risks.
   
         ![Carbon price](/assets/images/sov_us_disorderly_price_carbon.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         Total GHG emissions in the US in 2021 were 15% below 2005 levels. By 2023 this decline had improved 
         to 18%. This trend was primarily driven due to the power sector, driven by a shift from coal to 
@@ -90,8 +88,7 @@
   
         ![Sources of Electricity Generation](/assets/images/sov_us_electricity_generation.png)
   
-        **Source:**
-        [IEA 2024; Evolution of electricity generation in the US since 2000](https://www.iea.org/countries/united-states/energy-mix) License: CC By 4.0.
+        **Source:** [IEA 2024; Evolution of electricity generation in the US since 2000](https://www.iea.org/countries/united-states/energy-mix) License: CC By 4.0.
   
         **GDP growth effect**
   
@@ -107,11 +104,9 @@
         on the US GDP, from chronic physical and transition effects, would be significant, at around 
         -4% by 2030 and around -8% by 2050.
         
-        [GDP](/assets/images/sov_us_disorderly_gdp.png)
+        ![GDP](/assets/images/sov_us_disorderly_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         **Downgrading of credit ratings effect**
   
@@ -173,16 +168,14 @@
         
         Based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs), the implicit/proxy 
         carbon pricing in USD$ per tonnes absolute difference is highest in the Net Zero 2050 scenario 
-        compared to Below 2&deg;C (at 2030, ~1,598 USD per tonne CO<sub>2</sub> absolute difference for Net Zero 2050, 
+        compared to Below 2&deg;C (at 2030, ~1,598 USD per tonne CO2 absolute difference for Net Zero 2050, 
         compared to ~163 USD for Below 2&deg;C; and for 2050, ~7,718 USD for Net Zero 2050, compared to ~1,064 USD 
         for Below 2&deg;C). The implicit carbon pricing is a proxy for the difference in policy ambition required 
         to limit warming to a maximum of 1.5&deg;C (versus 2&deg;C in the Below 2&deg;C scenario).
   
         ![Carbon price](/assets/images/sov_us_orderly_price_carbon.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         Total GHG emissions in the US in 2021 were 15% below 2005 levels. By 2023 this decline 
         had improved to 18%. This trend was primarily driven due to the power sector, driven by 
@@ -211,8 +204,7 @@
   
         ![Sources of Electricity Generation](/assets/images/sov_us_electricity_generation.png)
   
-        **Source:**
-        [IEA 2024; Evolution of electricity generation in the US since 2000](https://www.iea.org/countries/united-states/energy-mix) License: CC By 4.0. 
+        **Source:** [IEA 2024; Evolution of electricity generation in the US since 2000](https://www.iea.org/countries/united-states/energy-mix) License: CC By 4.0. 
   
         **GDP growth effect**
   
@@ -224,9 +216,7 @@
   
         ![GDP](/assets/images/sov_us_orderly_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         **Downgrading of credit ratings**
   
@@ -292,9 +282,7 @@
   
         ![GDP](/assets/images/sov_us_hothouse_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) For NGFS “Current Policies”, there are no estimated GDP loses from transition risk, so a combined is not available. Physical damages have been plotted but this causes an underestimate of the true damages to the GDP for the “Nationally Determined Contributions (NDCs)” scenario and for the existing transition risks facing the economy in a “Current Policies” scenario.
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) For NGFS “Current Policies”, there are no estimated GDP loses from transition risk, so a combined is not available. Physical damages have been plotted but this causes an underestimate of the true damages to the GDP for the “Nationally Determined Contributions (NDCs)” scenario and for the existing transition risks facing the economy in a “Current Policies” scenario.
         
         Small and least diversified economies with lower resilience and adaptive capacity could 
         count among the most vulnerable countries. For example, in the US, certain states (e.g. Florida) 
@@ -383,9 +371,7 @@
         
         ![Carbon price](/assets/images/sov_us_littlelate_price_carbon.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         **GDP growth effect**
   
@@ -412,9 +398,7 @@
   
          ![GDP](/assets/images/sov_us_littlelate_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         Small and least diversified economies with lower resilience and adaptive capacity could count among 
         the most vulnerable countries. For example, in the US, certain states (e.g. Florida) and cities 

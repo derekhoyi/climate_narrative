@@ -57,9 +57,7 @@
   
         ![Carbon price](/assets/images/sov_uk_disorderly_price_carbon.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         The UK electricity sector has been rapidly decarbonising in recent years, as policy has 
         supported renewables deployment and driven coal out of the electricity mix. Coal provided 
@@ -81,8 +79,7 @@
   
         ![Sources of Electricity Generation](/assets/images/sov_uk_electricity_generation.png)
   
-        **Source:**
-        [IEA 2024; Evolution of electricity generation in the UK since 2000](https://www.iea.org/countries/united-kingdom/energy-mix) License: CC By 4.0.
+        **Source:** [IEA 2024; Evolution of electricity generation in the UK since 2000](https://www.iea.org/countries/united-kingdom/energy-mix) License: CC By 4.0.
         
         In 2019, the UK committed to reach net zero greenhouse gas emissions by 2050. Since then, 
         it has increased the ambition of its 2035 NDC to align with this long-term target, aiming 
@@ -108,11 +105,9 @@
         on the UK GDP, from chronic physical and transition effects, would be significant, at around 
         -2.5% by 2030 and around -5% by 2050.
   
-        [GDP](/assets/images/sov_uk_disorderly_gdp.png)
+        ![GDP](/assets/images/sov_uk_disorderly_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         **Downgrading of credit ratings effect**
   
@@ -170,16 +165,14 @@
         
         Based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs), the implicit/proxy carbon 
         pricing in USD$ per tonnes absolute difference is highest in the Net Zero 2050 scenario compared 
-        to Below 2&deg;C (at 2030, ~1,563 USD per tonne CO<sub>2</sub> absolute difference for Net Zero 2050, compared 
+        to Below 2&deg;C (at 2030, ~1,563 USD per tonne CO2 absolute difference for Net Zero 2050, compared 
         to ~128 USD for Below 2&deg;C; and for 2050, ~9,833 USD for Net Zero 2050, compared to ~1,145 USD for 
         Below 2&deg;C). The implicit carbon pricing is a proxy for the difference in policy ambition required 
         to limit warming to a maximum of 1.5&deg;C (versus 2&deg;C in the Below 2&deg;C scenario).
   
         ![Carbon price](/assets/images/sov_uk_orderly_price_carbon.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         The UK electricity sector has been rapidly decarbonising in recent years, as policy 
         has supported renewables deployment and driven coal out of the electricity mix. Coal 
@@ -201,8 +194,7 @@
   
         ![Sources of Electricity Generation](/assets/images/sov_uk_electricity_generation.png)
   
-        **Source:**
-        [IEA 2024; Evolution of electricity generation in the UK since 2000](https://www.iea.org/countries/united-kingdom/energy-mix) License: CC By 4.0.
+        **Source:** [IEA 2024; Evolution of electricity generation in the UK since 2000](https://www.iea.org/countries/united-kingdom/energy-mix) License: CC By 4.0.
   
         In 2019, the UK committed to reach net zero greenhouse gas emissions by 2050. Since then, 
         it has increased the ambition of its 2035 NDC to align with this long-term target, aiming to 
@@ -225,9 +217,7 @@
   
         ![GDP](/assets/images/sov_uk_orderly_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         **Downgrading of credit ratings**
   
@@ -295,9 +285,7 @@
   
         ![GDP](/assets/images/sov_uk_hothouse_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) For NGFS “Current Policies”, there are no estimated GDP loses from transition risk, so a combined is not available. Physical damages have been plotted but this causes an underestimate of the true damages to the GDP for the “Nationally Determined Contributions (NDCs)” scenario and for the existing transition risks facing the economy in a “Current Policies” scenario.
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) For NGFS “Current Policies”, there are no estimated GDP loses from transition risk, so a combined is not available. Physical damages have been plotted but this causes an underestimate of the true damages to the GDP for the “Nationally Determined Contributions (NDCs)” scenario and for the existing transition risks facing the economy in a “Current Policies” scenario.
         
         Opportunities could arise from mitigation actions, including climate resilience 
         investments (e.g. to cope with flooding risks that would propel the growth of economic 
@@ -372,9 +360,7 @@
         
         ![Carbon price](/assets/images/sov_uk_littlelate_price_carbon.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         **GDP growth effect**
   
@@ -402,9 +388,7 @@
   
          ![GDP](/assets/images/sov_uk_littlelate_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         Opportunities could arise from mitigation actions, including climate resilience investments 
         (e.g. to cope with flooding risks that would propel the growth of economic sectors providing 

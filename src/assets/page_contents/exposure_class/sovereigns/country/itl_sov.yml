@@ -49,7 +49,7 @@
   
         In the Delayed transition scenario, late policy means that a ‘Business-as-Usual’ approach to 
         decarbonisation occurs between now and 2030, followed by a sharp increase in policy aggression, 
-        equivalent to an implicit/proxy carbon price increase to ~1,255 USD per tonne CO<sub>2</sub> by 2035 and 
+        equivalent to an implicit/proxy carbon price increase to ~1,255 USD per tonne CO2 by 2035 and 
         ~6,624 USD per tonne CO2 by 2050 based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs). 
         The delayed policy ambition reduces the initial disincentivisation against fossil fuels, only to more 
         aggressively penalise and thus risk stranding fossil fuel assets beyond 2030. In this scenario, 
@@ -57,9 +57,7 @@
   
         ![Carbon price](/assets/images/sov_italy_disorderly_price_carbon.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         Based on data from IEA (see below graph), in 2023, the share of renewables 
         (hydro, solar PV, wind, geothermal and tide) in Italy’s power sector increased 
@@ -73,8 +71,7 @@
   
         ![Sources of Electricity Generation](/assets/images/sov_italy_electricity_generation.png)
   
-        **Source:**
-        [IEA 2024; Evolution of electricity generation in Italy since 2000](https://www.iea.org/countries/italy/energy-mix) License: CC By 4.0.
+        **Source:** [IEA 2024; Evolution of electricity generation in Italy since 2000](https://www.iea.org/countries/italy/energy-mix) License: CC By 4.0.
   
         In July 2021, the European Commission presented its “Fit for 55” package of policy proposals 
         to achieve a reduction of EU emissions by at least 55% by 2030. The package also includes 
@@ -97,11 +94,9 @@
         would be significant, ranging from around -5% (relative to a baseline with no transition 
         or physical risk) by 2030 and around -10% by 2050.
   
-        [GDP](/assets/images/sov_italy_disorderly_gdp.png)
+        ![GDP](/assets/images/sov_italy_disorderly_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) 
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) 
   
         **Downgrading of credit ratings effect**
   
@@ -153,16 +148,14 @@
   
         Based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs), the implicit/proxy 
         carbon pricing in $ per tonne absolute difference is highest in the Net Zero 2050 scenario 
-        compared to Below 2&deg;C (at 2030, ~1,563 USD per tonne CO<sub>2</sub> absolute difference for Net Zero 2050, 
+        compared to Below 2&deg;C (at 2030, ~1,563 USD per tonne CO2 absolute difference for Net Zero 2050, 
         compared to ~128 USD for Below 2&deg;C; and for 2050, ~9,833 USD for Net Zero 2050, compared to ~1,145 USD 
         for Below 2&deg;C). The difference in pricing is due to the more rigorous targets of limiting global warming 
         to a maximum of 1.5°C (versus 2&deg;C in the Below 2&deg;C scenario).
   
         ![Carbon price](/assets/images/sov_italy_orderly_price_carbon.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         Based on data from IEA (see below graph), in 2022, the share of renewables 
         (hydro, solar PV, wind, geothermal and tide) in Italy’s power sector increased to 
@@ -175,8 +168,7 @@
   
         ![Sources of Electricity Generation](/assets/images/sov_italy_electricity_generation.png)
   
-        **Source:**
-        [IEA 2024; Evolution of electricity generation in Italy since 2000](https://www.iea.org/countries/italy/energy-mix) License: CC By 4.0.
+        **Source:** [IEA 2024; Evolution of electricity generation in Italy since 2000](https://www.iea.org/countries/italy/energy-mix) License: CC By 4.0.
   
         **GDP growth effect**
   
@@ -189,9 +181,7 @@
   
         ![GDP](/assets/images/sov_italy_orderly_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         **Downgrading of credit ratings**
   
@@ -258,9 +248,7 @@
   
         ![GDP](/assets/images/sov_italy_hothouse_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) For NGFS “Current Policies”, there are no estimated GDP loses from transition risk, so a combined is not available. Physical damages have been plotted but this causes an underestimate of the true damages to the GDP for the “Nationally Determined Contributions (NDCs)” scenario and for the existing transition risks facing the economy in a “Current Policies” scenario.
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) For NGFS “Current Policies”, there are no estimated GDP loses from transition risk, so a combined is not available. Physical damages have been plotted but this causes an underestimate of the true damages to the GDP for the “Nationally Determined Contributions (NDCs)” scenario and for the existing transition risks facing the economy in a “Current Policies” scenario.
         
         Opportunities could arise from mitigation actions, including climate resilience 
         investments (e.g. to cope with flooding risks that would propel the growth of economic 
@@ -341,9 +329,7 @@
   
          ![GDP](/assets/images/sov_italy_littlelate_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         Opportunities could arise from mitigation actions, including climate resilience investments 
         (e.g. to cope with flooding risks that would propel the growth of economic sectors providing 
