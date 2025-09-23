@@ -59,9 +59,7 @@
   
         ![Carbon price](/assets/images/sov_germany_disorderly_price_carbon.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         Germany’s electricity mix is still dependent on fossil fuels with ~ 45% of the total 
         electricity generation in 2023 driven by fossil fuels, primarily coal which makes 
@@ -74,12 +72,11 @@
   
         ![Sources of Electricity Generation](/assets/images/sov_germany_electricity_generation.png)
   
-        **Source:**
-        [IEA 2024; Evolution of electricity generation in Germany since 2000](https://www.iea.org/countries/germany/energy-mix) License: CC By 4.0.
+        **Source:** [IEA 2024; Evolution of electricity generation in Germany since 2000](https://www.iea.org/countries/germany/energy-mix) License: CC By 4.0.
   
-        CO<sub>2</sub> emissions from fuel combustion in Germany decreased to 612 Mt CO<sub>2</sub> in 2022 
-        (2021: 618 Mt CO<sub>2</sub>) based on [Greenhouse Gas Emissions from Energy](https://www.iea.org/data-and-statistics/data-product/co2-emissions-from-fuel-combustion) (License: CC BY 4.0). 
-        Overall, the CO<sub>2</sub> emissions from fuel combustion in Germany has decreased by 25% from 
+        CO2 emissions from fuel combustion in Germany decreased to 612 Mt CO2 in 2022 
+        (2021: 618 Mt CO2) based on [Greenhouse Gas Emissions from Energy](https://www.iea.org/data-and-statistics/data-product/co2-emissions-from-fuel-combustion) (License: CC BY 4.0). 
+        Overall, the CO2 emissions from fuel combustion in Germany has decreased by 25% from 
         2000 to 2022, though Germany remains the largest emitter from fuel combustion in 
         Europe with 17% of the total.
         
@@ -107,11 +104,9 @@
         on Germany’s GDP, from chronic physical and transition effects, would be significant, at 
         around -3% (relative to a baseline with no transition or physical risks) by 2030 and around -8% by 2050.
   
-        [GDP](/assets/images/sov_germany_disorderly_gdp.png)
+        ![GDP](/assets/images/sov_germany_disorderly_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
         **Downgrading of credit ratings effect**
   
@@ -170,9 +165,7 @@
   
         ![Carbon price](/assets/images/sov_germany_orderly_price_carbon.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         Germany’s electricity mix is still dependent on fossil fuels with ~ 45% of the total 
         electricity generation in 2023 driven by fossil fuels, primarily coal which makes 
@@ -185,12 +178,11 @@
   
         ![Sources of Electricity Generation](/assets/images/sov_germany_electricity_generation.png)
   
-        **Source:**
-        [IEA 2024; Evolution of electricity generation in Germany since 2000](https://www.iea.org/countries/germany/energy-mix) License: CC By 4.0.
+        **Source:** [IEA 2024; Evolution of electricity generation in Germany since 2000](https://www.iea.org/countries/germany/energy-mix) License: CC By 4.0.
   
-        CO<sub>2</sub> emissions from fuel combustion in Germany decreased to 612 Mt CO<sub>2</sub> in 2022 
-        (2021: 618 Mt CO<sub>2</sub>) based on [Greenhouse Gas Emissions from Energy](https://www.iea.org/data-and-statistics/data-product/co2-emissions-from-fuel-combustion) (License: CC BY 4.0). 
-        Overall, the CO<sub>2</sub> emissions from fuel combustion in Germany has decreased by 25% from 
+        CO2 emissions from fuel combustion in Germany decreased to 612 Mt CO2 in 2022 
+        (2021: 618 Mt CO2) based on [Greenhouse Gas Emissions from Energy](https://www.iea.org/data-and-statistics/data-product/co2-emissions-from-fuel-combustion) (License: CC BY 4.0). 
+        Overall, the CO2 emissions from fuel combustion in Germany has decreased by 25% from 
         2000 to 2022, though Germany remains the largest emitter from fuel combustion in 
         Europe with 17% of the total.
         
@@ -216,9 +208,7 @@
   
         ![GDP](/assets/images/sov_germany_orderly_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         **Downgrading of credit ratings**
   
@@ -279,9 +269,7 @@
   
         ![GDP](/assets/images/sov_germany_hothouse_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) For NGFS “Current Policies”, there are no estimated GDP loses from transition risk, so a combined is not available. Physical damages have been plotted but this causes an underestimate of the true damages to the GDP for the “Nationally Determined Contributions (NDCs)” scenario and for the existing transition risks facing the economy in a “Current Policies” scenario.
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) For NGFS “Current Policies”, there are no estimated GDP loses from transition risk, so a combined is not available. Physical damages have been plotted but this causes an underestimate of the true damages to the GDP for the “Nationally Determined Contributions (NDCs)” scenario and for the existing transition risks facing the economy in a “Current Policies” scenario.
         
         Opportunities could arise from mitigation actions, including climate resilience 
         investments (e.g. to cope with flooding risks that would propel the growth of economic 
@@ -361,9 +349,7 @@
   
          ![GDP](/assets/images/sov_germany_littlelate_gdp.png)
         
-        **Source:**
-        
-        [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
+        **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
         Opportunities could arise from mitigation actions, including climate resilience investments 
         (e.g. to cope with flooding risks that would propel the growth of economic sectors providing 
