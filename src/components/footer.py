@@ -1,16 +1,15 @@
 import dash_bootstrap_components as dbc
 from dash import html, get_asset_url
-
+from urllib.parse import quote
 
 def create_footer():
-    # Build the correct assets URL (respects base path / proxies)
-    data_zip_href = get_asset_url("src/assets/data/chart_data.zip")
+    # Build correct asset URLs (paths are relative to the /assets folder)
+    zip_href = get_asset_url("data/chart_data.zip")
 
-    mailto_link = (
-        "mailto:climate.forum@fca.org.uk"
-        "?subject=Feedback for Online Climate Scenario Analysis Narrative Tool"
-        "&body=Please%20enter%20your%20feedback%20here..."
-    )
+    # Safely URL-encode the mailto subject and body
+    subject = quote("Feedback for Online Climate Scenario Analysis Narrative Tool")
+    body = quote("Please enter your feedback here...")
+    mailto_link = f"mailto:climate.forum@fca.org.uk?subject={subject}&body={body}"
 
     footer = dbc.Container(
         html.Footer(
@@ -37,10 +36,10 @@ def create_footer():
                             rel="noopener noreferrer",
                         ),
                         html.A(
-                            "Data used in Charts",
-                            href="/src/assets/data/chart_data.zip",
+                            "Chart Data (.zip)",
+                            href=zip_href,
                             className="me-4 text-muted",
-                            download="chart_data.zip",     # Triggers browser download
+                            download="chart_data.zip",
                         ),
                     ],
                     className="mb-3",
@@ -64,8 +63,8 @@ def create_footer():
                             "border": "none",
                             "marginTop": "5px",
                         },
-                        href=mailto_link,       # Open mail client
-                        external_link=True,     # Ensure button behaves like a link
+                        href=mailto_link,        # Open mail client
+                        external_link=True,      # Open in a new tab/window
                     ),
                     className="mb-3",
                 ),
@@ -73,4 +72,5 @@ def create_footer():
         ),
         className="container small mt-auto",
     )
+
     return footer

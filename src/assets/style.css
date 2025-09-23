@@ -1,4 +1,15 @@
 /* =========================
+   Font Settings
+   ========================= */
+html, body {
+    font-family: Arial, Verdana, sans-serif;
+}
+
+*, *::before, *::after {
+    font-family: inherit !important;
+}
+
+/* =========================
    Headings and Markdown
    ========================= */
 h1 {
