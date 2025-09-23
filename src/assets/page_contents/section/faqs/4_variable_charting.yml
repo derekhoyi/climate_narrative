@@ -18,10 +18,14 @@ charts:
   - question: Where can I find GDP impacts? 
     answer: |
         GDP impacts are captured under ‘transition risk’ and can be further broken down into: 
+
         a) combined – combined transition and physical risk impacts (including business confidence shocks for the Disorderly scenario)
+
         b) combined (no bus) – combined transition and physical risk impacts, not including business confidence shocks, available for 
         the Disorderly scenario only
+
         c) transition – transition risk impacts only
+        
         d) physical – physical (chronic) risk impacts only  
 
         GDP impacts is not available for the Low Demand scenario, and GDP transition risk impacts are not available for the Current 
@@ -29,10 +33,13 @@ charts:
 
   - question: Where can I find other macroeconomic outputs?
     answer: |
-        Other macroeconomic indicators such as inflation are also available under ‘transition risk’ and are is similarly broken down 
-        into:   
+        Other macroeconomic indicators such as inflation are similarly available under the ‘transition risk’ and are broken down into:   
+
         a) combined – combined transition and physical risk impacts (including business confidence shocks for the Disorderly scenario)
+
         b) combined (no bus) – combined transition and physical risk impacts, not including business confidence shocks, available for 
         the Disorderly scenario only
+
         c) transition – transition risk impacts only
+
         d) physical – physical (chronic) risk impacts only  
