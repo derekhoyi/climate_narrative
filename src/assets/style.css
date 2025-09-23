@@ -53,11 +53,7 @@ b, strong {
   border: 1px solid #BFEBCE;
   margin-top: 5px;
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+
 
 /* =========================
    Tabs (if used)
@@ -99,7 +95,7 @@ img {
    Button Group
    ========================= */
 .sidebar-btn-group {
-    width: 300px;      /* Set desired width */
+    width: 250px;      /* Set desired width */
     min-height: 400px; /* Set desired height */
     display: flex;
     flex-direction: column;
