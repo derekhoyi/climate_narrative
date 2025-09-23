@@ -54,7 +54,7 @@ def layout():
         # CTA
         html.Div(
             dbc.Button(
-                "Generate Report",
+                "Select Report",
                 id="open",
                 n_clicks=0,
                 href='/reports',

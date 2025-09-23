@@ -202,13 +202,10 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 			else:
 				sub_section_layout = []
 			section_layout.append(sub_section_layout)
-		section_layout = html.Div([
-			html.H1(section, id=section.replace(' ', '')),
-		] + section_layout)
-		if section == 'Sector Overview':
-			section_layout = clean_up_sector_overview(section_layout)
+		section_layout = html.Div([html.H1(section)] + section_layout)
 		output_structure_layout.append(section_layout)
 	output_structure_layout = remove_parents_with_empty_children(output_structure_layout)
+	output_structure_layout = clean_up_sector_overview_and_detail(output_structure_layout)
 	output_structure_layout, sidebar_layout = create_sidebar_layout(output_structure_layout)
 	return html.Div(sidebar_layout), html.Div(output_structure_layout)
 
@@ -362,19 +359,30 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 				sector_yml_file = sector_selection_df['sector_yml_file'].iloc[0]
 				sector_yml = data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml')
 				sector_yml = next(iter(sector_yml.values()))
-				content_id_list = list(sector_selection_df['content_id'].unique())
-				scenario_desc = [
-					html.Div([
-						html.H5(scenario),
-						*[
-							dcc.Markdown(
-								_filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id],
-								link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'}
-							) for content_id in content_id_list
-						]
-					]) for scenario in scenario_list
-				]
 				sector_name = sector_yml['name']
+				content_id_list = list(sector_selection_df['content_id'].unique())
+				content_id_list = sorted(content_id_list, key=lambda x: ['always', 'high_materiality'].index(x))
+				scenario_desc = []
+				for scenario in scenario_list:
+					if 'sovereign' in sector_name.lower():
+						header = [html.H6(scenario)]
+					else:
+						header = [html.H5(scenario)]
+					content_desc = []
+					for content_id in content_id_list:
+						if section == 'Sector Detail':
+							if content_id == 'always':
+								sub_header = [dcc.Markdown('**Summary**')]
+							else:
+								sub_header = [dcc.Markdown('**Detail**')]
+						else:
+							sub_header = []
+						content = [dcc.Markdown(
+							_filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id],
+							link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'}
+						)]
+						content_desc.append(html.Div(sub_header + content))
+					scenario_desc.append(html.Div(header + content_desc, className='mb-3'))
 				if 'sovereign' in sector_name.lower():
 					sector_div = html.Div([html.H5(sector_name), *scenario_desc])
 					high_materiality_sovereign_desc.append(sector_div)
@@ -490,9 +498,11 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 
 			sector_scenario_layout = html.Div([
 				*other_desc,
-				html.H4('Sovereign', className='fw-bold'),
-				*high_materiality_sovereign_desc,
-				*low_medium_materiality_sovereign_desc,
+				html.Div([
+					html.H4('Sovereign', className='fw-bold'),
+					*high_materiality_sovereign_desc,
+					*low_medium_materiality_sovereign_desc,
+				])
 			])
 		else:
 			sector_scenario_layout = html.Div(className='d-none')
@@ -538,7 +548,7 @@ def get_sector_description_layout(user_selection_with_yml_file_path_df):
 			sector_selection_df = sector_selection_df[['sector', 'description']].drop_duplicates()
 			sector_desc = [
 				html.Div([
-					dcc.Markdown(sector, link_target="_blank", dangerously_allow_html=True, className='fw-bold'),
+					html.H5(sector),
 					dcc.Markdown(description, link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'})
 				]) if description != "" else html.Div(className='d-none')
 				for sector, description in sector_selection_df[['sector', 'description']].to_numpy()
@@ -605,31 +615,6 @@ def get_product_text_layout(user_selection_with_yml_file_path_df):
 		])
 	return product_layout
 
-def clean_up_sector_overview(section_layout):
-	# First child is header, second is sector description, third is product description
-	sector_desc = []
-	product_desc = section_layout.children[2].children[0]
-	product_datatable = section_layout.children[2].children[1].children.children[0]
-	product_datatable_columns = [col['name'] for col in product_datatable.columns]
-	product_selection_df = pd.DataFrame(product_datatable.data, columns=product_datatable_columns)
-	for sector_section in section_layout.children[1].children:
-		if hasattr(sector_section, 'children'):
-			sector_description_layout = sector_section.children
-
-			sector_name = sector_description_layout[0].children
-			filtered_product_selection_df = product_selection_df[product_selection_df['Sector'] == sector_name]
-			filtered_product_selection_table = data_loader.create_data_table(
-				filtered_product_selection_df, ['Type'], ['Description']
-			)
-			product_layout = [product_desc] + [filtered_product_selection_table]
-			sector_desc.append(html.Div(sector_description_layout + product_layout))
-
-	sector_overview_layout = html.Div([
-		section_layout.children[0],
-		*sector_desc,
-	])
-	return sector_overview_layout
-
 def remove_parents_with_empty_children(report_content):
 	if not isinstance(report_content, (list, tuple)):
 		return report_content
@@ -650,6 +635,60 @@ def remove_parents_with_empty_children(report_content):
 					and updated_children[0].__class__.__name__ in {'H1', 'H2', 'H3', 'H4', 'H5', 'H6'}):
 				updated_children = []
 	return updated_children
+
+def clean_up_sector_overview_and_detail(report_content):
+	# Get sector overview and detail layout and its index
+	sector_overview_mapping = {i: x for i, x in enumerate(report_content) if x.children[0].children == 'Sector Overview'}
+	sector_overview_index = next(iter(sector_overview_mapping.keys()))
+	sector_overview_layout = next(iter(sector_overview_mapping.values()))
+	sector_detail_mapping = {i: x for i, x in enumerate(report_content) if x.children[0].children == 'Sector Detail'}
+	sector_detail_index = next(iter(sector_detail_mapping.keys()))
+	sector_detail_layout = next(iter(sector_detail_mapping.values()))
+
+	# Extract product table
+	sector_desc = []
+	product_desc = sector_overview_layout.children[2].children[0]
+	product_datatable = sector_overview_layout.children[2].children[1].children.children[0]
+	product_datatable_columns = [col['name'] for col in product_datatable.columns]
+	product_selection_df = pd.DataFrame(product_datatable.data, columns=product_datatable_columns)
+
+	# Clean up sector layout
+	for sector_section in sector_overview_layout.children[1].children:
+		if hasattr(sector_section, 'children'):
+			sector_description_layout = sector_section.children
+			sector_name = sector_description_layout[0].children
+
+			# Filter product selection for this sector
+			filtered_product_selection_df = product_selection_df[product_selection_df['Sector'] == sector_name]
+			filtered_product_selection_table = data_loader.create_data_table(
+				filtered_product_selection_df, ['Type'], ['Description']
+			)
+			product_layout = [product_desc] + [filtered_product_selection_table]
+
+			# Get sector-scenario for this sector
+			sector_scenario_layout = [
+				x for x in sector_detail_layout.children[1].children if x.children[0].children == sector_name
+			][0].children[1:]
+			sector_scenario_layout = [
+				y for x in sector_scenario_layout for y in [html.H3(x.children[0].children), *x.children[1:]]
+			]
+
+			# Define sector layout
+			sector_layout = html.Div([
+				html.H2(sector_name),
+				*sector_description_layout[1:],
+				*product_layout,
+				*sector_scenario_layout,
+			])
+			sector_desc.append(sector_layout)
+
+	all_sectors_layout = html.Div([
+		html.H1('Sector Detail'),
+		*sector_desc,
+	])
+	report_content[sector_overview_index] = all_sectors_layout
+	report_content.pop(sector_detail_index)
+	return report_content
 
 def create_sidebar_layout(report_content):
 	report_content, nav_groups = _extract_navigation_groups(report_content)
