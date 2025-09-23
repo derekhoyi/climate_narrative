@@ -51,7 +51,7 @@
         In the Delayed transition scenario, late policy reaction means that a ‘Business-as-Usual’ 
         approach to decarbonisation occurs between now and 2030, followed by a sharp increase in 
         policy aggression, equivalent to an implicit/proxy carbon price increase to ~294 USD per 
-        tonne CO2 by 2035 and ~1,302 USD by 2050 based on the IIASA NGFS Scenario Explorer NiGEM model 
+        tonne CO₂ by 2035 and ~1,302 USD by 2050 based on the IIASA NGFS Scenario Explorer NiGEM model 
         (REMIND inputs). The delayed policy ambition reduces the initial disincentivisation against 
         fossil fuels, only begin penalising emissions and thus risk stranding fossil fuel assets 
         beyond 2030. In this scenario, disorderly policy action results in increased transition risks.
@@ -189,7 +189,7 @@
         implicit carbon pricing is a proxy for the difference in policy ambition required to limit warming to a 
         maximum of 1.5&deg;C (versus 2&deg;C in the Below 2&deg;C scenario).
   
-        ![Carbon price](/assets/images/sov_brasil_orderly_price_carbon.png)
+        ![Carbon price](/assets/images/sov_brasil_ordCO₂y_price_carbon.png)
         
         **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
         
@@ -341,18 +341,18 @@
         dependent on economic output. Adaptation costs would cause further strain to fiscal expenditures. 
         Assuming taxation rates remain unchanged, a decrease in GDP could lead to a reduction in fiscal revenue. 
         Based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs), the expected impact of a 
-        high physical risk scenarios (i.e. Hot house world) on Brazil’s GDP, from chronic physical effects, 
+        high physical risk scenarios (i.e. Hot House World) on Brazil’s GDP, from chronic physical effects, 
         would be significant, ranging from -16.3% to -20.3 % (relative to a baseline with no physical risks) by 2050.
   
         This declining productivity would affect GDP and government income, as tax revenues are
         dependent on economic output. Adaptation costs would cause further strain to fiscal expenditures.
         Assuming taxation rates remain unchanged, a decrease in GDP could lead to a reduction in fiscal
-        revenue. According to estimates from the NGFS, a Hot house world scenario with high physical risk
-        could result in significant GDP losses. In a Hot house world scenario, world  GDP losses from chronic
+        revenue. According to estimates from the NGFS, a Hot House World scenario with high physical risk
+        could result in significant GDP losses. In a Hot House World scenario, world  GDP losses from chronic
         physical and transition effects are estimated to be between -5.7 and -6% (relative to a baseline with
         no transition or physical risks) by 2050. World GDP losses from physical risks vary in line with different
         temperatures projected for each scenario. Based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs), 
-        the expected impact of a Hot house world scenario on Brazil's GDP from chronic physical and transition effects
+        the expected impact of a Hot House World scenario on Brazil's GDP from chronic physical and transition effects
         would be significant, ranging from -6.1% to -6.8% (relative to a baseline with no transition or physical risks)
         by 2050.
   

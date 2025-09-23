@@ -51,7 +51,7 @@
         In the Delayed transition scenario, late policy means that a ‘Business-as-Usual’ 
         approach to decarbonisation occurs between now and 2030, followed by a sharp increase 
         in policy aggression, equivalent to an implicit/proxy carbon price increase to ~1,255 USD 
-        per tonne CO2 by 2035 and ~6,624 USD per tonne CO2 by 2050 based on the IIASA NGFS Scenario 
+        per tonne CO₂ by 2035 and ~6,624 USD per tonne CO₂ by 2050 based on the IIASA NGFS Scenario 
         Explorer NiGEM model (REMIND inputs). The delayed policy ambition reduces the initial 
         disincentivisation against fossil fuels, only to more aggressively penalise and thus 
         risk stranding fossil fuel assets beyond 2030. In this scenario, disorderly policy 
@@ -78,7 +78,7 @@
         (2021: 618 Mt CO2) based on [Greenhouse Gas Emissions from Energy](https://www.iea.org/data-and-statistics/data-product/co2-emissions-from-fuel-combustion) (License: CC BY 4.0). 
         Overall, the CO2 emissions from fuel combustion in Germany has decreased by 25% from 
         2000 to 2022, though Germany remains the largest emitter from fuel combustion in 
-        Europe with 17% of the total.
+        Europe with 17% of the total.CO₂
         
         In July 2021, the European Commission presented its “Fit for 55” package of policy 
         proposals to achieve a reduction of EU emissions by at least 55% by 2030. The package 
@@ -163,7 +163,7 @@
         for Below 2&deg;C). The difference in pricing is due to the more rigorous targets of limiting global 
         warming to a maximum of 1.5&deg;C (versus 2&deg;C in the Below 2&deg;C scenario).
   
-        ![Carbon price](/assets/images/sov_germany_orderly_price_carbon.png)
+        ![Carbon price](/assets/images/sov_germany_orderCO₂price_carbon.png)
         
         **Source:** [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
   
@@ -189,7 +189,7 @@
         In July 2021, the European Commission presented its “Fit for 55” package of policy 
         proposals to achieve a reduction of EU emissions by at least 55% by 2030. The package 
         also includes proposals for a higher share of renewables in the overall energy mix (40% by 2030) 
-        and increased energy efficiency. As of 2025, the package includes extending the EU emissions 
+        and increased energy efficiency. As of 2025, the package includes extending the EU emissions CO₂
         trading system to maritime transport, faster reduction of emissions allowances, and phasing 
         out free allowances for some sectors. The European Climate Law makes this goal a legal obligation.
   
@@ -263,7 +263,7 @@
         dependent on economic output. Adaptation costs would cause further strain to fiscal expenditures. 
         Assuming taxation rates remain unchanged, a decrease in GDP could lead to a reduction in fiscal 
         revenue. Based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs), the expected impact 
-        of an high physical risk scenarios (i.e. Hot house world) on Germany’s GDP, from chronic physical 
+        of an high physical risk scenarios (i.e. Hot House World) on Germany’s GDP, from chronic physical 
         effects, would be significant, ranging from around -3% (relative to a baseline with no physical 
         risks) by 2030 and between -7% and -9% by 2050.
   

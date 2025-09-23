@@ -5,7 +5,7 @@ physical: high
 exec_short: transition and physical
 exec_description: |
   In the NGFS Fragmented World scenario, policy changes are introduced however 
-  carbon prices do not increase and CO2 emissions do not decrease sufficiently 
+  carbon prices do not increase and CO₂ emissions do not decrease sufficiently 
   to prevent significant temperature rises. This results in both high impacts from 
   a physical and transition risk perspective, where global mean temperature is 
   projected to increase across the world by 1.5°C by 2030 and 1.9°C by 2050, 
@@ -71,16 +71,16 @@ description: |
 
   ### Key assumptions and parameters
   
-  In this scenario, CO2 emission decrease is muted (i.e., rising in 2030 by ~0.5%, and dropping 
+  In this scenario, CO₂ emission decrease is muted (i.e., rising in 2030 by ~0.5%, and dropping 
   by ~39% in 2050) and is not sufficient to prevent significant temperature rises resulting in 
   high physical risk.
 
-  ![CO2 emissions](/assets/images/scenarios_littlelate_emissions_co2.png)
+  ![CO₂ emissions](/assets/images/scenarios_littlelate_emissions_CO₂.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
 
-  In line with delayed policy changes, carbon prices remain at 11 USD per tonne CO2 and are only 
+  In line with delayed policy changes, carbon prices remain at 11 USD per tonne CO₂ and are only 
   increased after 2030, however to a limited extent (i.e. only to ~57 USD baselined to 2010 prices 
   at 2050, which is less than those under the NDC scenario). Transition risks are therefore still 
   present however are less significant in than Orderly or Disorderly scenarios.

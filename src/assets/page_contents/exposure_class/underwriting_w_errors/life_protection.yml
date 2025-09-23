@@ -34,7 +34,7 @@
 	      decarbonisation occurs between now and 2030, followed by a sharp increase in policy aggression, resulting in 
 	      carbon prices increasing. 
 	      
-	      This could lead to a significant reduction in CO2 emissions by 2050, probably associated with a drive towards 
+	      This could lead to a significant reduction in CO₂ emissions by 2050, probably associated with a drive towards 
 	      cleaner air (due to for example, an increase in electric vehicles replacing vehicles with internal combustion 
 	      engines). This would cause a reduction in pollution which could in turn result into a reduction in cancer (especially lung), 
 	      respiratory diseases, heart attack and stroke. These scenarios could also lead to a limited reduction in GDP growth. 
@@ -45,7 +45,7 @@
 	
 	      It seems reasonable to assume that a general drive towards reducing greenhouse gases could probably be associated with a 
 	      drive towards cleaner air, and therefore positive outcomes for health. However, it is important to differentiate between 
-	      the production of greenhouse gases (such as CO2 and CH4) that lead to warming but do not directly impact health, and the 
+	      the production of greenhouse gases (such as CO₂ and CH4) that lead to warming but do not directly impact health, and the 
 	      production of pollutants (such as particulate matter and oxides of nitrogen (NOx)) that are more directly harmful to health.
 	      
 	      In these scenarios, emissions of hazardous pollutants, for example black carbon, volatile organic compounds, and oxides of 
@@ -139,7 +139,7 @@
 	    always: |
 	     Life protection underwriting exposures could be impacted by the transition effects related to changes in pollution levels. In 
 	     Orderly scenarios, immediate policy reaction, societal change, national energy strategies, and carbon legislation could lead to an 
-	     immediate and smooth reduction in CO2 emissions by 2050. This would probably be associated with a drive towards cleaner air (due to 
+	     immediate and smooth reduction in CO₂ emissions by 2050. This would probably be associated with a drive towards cleaner air (due to 
 	     for example, an increase in electric vehicles replacing vehicles with internal combustion engines).
 	     
 	     This would cause a reduction in pollution which could in turn result into a reduction in cancer (especially lung), respiratory 
@@ -153,7 +153,7 @@
 	      
 	      It seems reasonable to assume that a general drive towards reducing greenhouse gases could probably be associated with a drive towards 
 	      cleaner air, and therefore positive outcomes for health. However, it is important to differentiate between the production of greenhouse 
-	      gases (such as CO2 and CH4) that lead to warming but do not directly impact health, and the production of pollutants (such as particulate 
+	      gases (such as CO₂ and CH4) that lead to warming but do not directly impact health, and the production of pollutants (such as particulate 
 	      matter and oxides of nitrogen) that are more directly harmful to health.
 	      
 		  ![NOx Emissions](life_protection_orderly_emissions_nox.png)

@@ -49,8 +49,8 @@
         high-speed rail and remote working.
         
         In the Delayed transition risk scenario, there is a sudden increase in the effective price of carbon 
-        for transport demand, with the price growing tenfold in the span of just five years, from ~$10/tCO2e in 
-        2030 up to ~$99/tCO2e in 2035, and ~$320/tCO2e in 2050.
+        for transport demand, with the price growing tenfold in the span of just five years, from ~$10/tCO₂e in 
+        2030 up to ~$99/tCO₂e in 2035, and ~$320/tCO₂e in 2050.
         
         
         ![Carbon demand](/assets/images/transport_delayed_carbon_demand.png)
@@ -132,7 +132,7 @@
         steep decline in shipping demand by 15% in the next decade of 2035-2045, and effectively no recovery after that. 
         
         
-        ![Transportation CO2 Emissions](/assets/images/transport_delayed_emissions.png)
+        ![Transportation CO₂ Emissions](/assets/images/transport_delayed_emissions.png)
         
         **Source:**
         [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -239,7 +239,7 @@
         -	Energy Efficiency may reduce the emissions intensity of travel, either by streamlining the vehicle, or intelligent and 
         efficient operations can help to optimise routes and thus minimise emissions. For example, smart-logistics software 
         could be used to reduce the total miles travelled for freight. In the Delayed transition scenario, these innovations 
-        could contribute to an overall decrease in CO2 emissions in the transportation sector. These scenarios also present 
+        could contribute to an overall decrease in CO₂ emissions in the transportation sector. These scenarios also present 
         opportunities for the transport sector. Proactively investing in the above innovations could lead to positive gains 
         in commercial reputation and therefore magnify demand and overall revenue as consumers could proactively seek out 
         businesses with an incorporated green strategy. In a delayed transition risk scenario, early action helps to insulate 
@@ -271,9 +271,9 @@
         
         In Orderly scenarios, this leads to an increase in the effective price of carbon for transport demand. 
         The effective carbon price is very sensitive to the nature of the scenario, with the lowest ambition 
-        of the Orderly scenarios (Below 2&deg;c) having an effective cost of $32/t CO2e in 2030, increasing to 
-        $135/t CO2e in 2050. Meanwhile the highest policy ambition scenario, Net Zero 2050, has an effective 
-        cost of $183/tCO2e in 2030, increasing to $749/t CO2e in 2050.
+        of the Orderly scenarios (Below 2&deg;c) having an effective cost of $32/t CO₂e in 2030, increasing to 
+        $135/t CO₂e in 2050. Meanwhile the highest policy ambition scenario, Net Zero 2050, has an effective 
+        cost of $183/tCO₂e in 2030, increasing to $749/t CO₂e in 2050.
         
         
         ![Transport energy sevice](/assets/images/transport_orderly_energy_service_passenger_bicycling_walking.png)
@@ -487,7 +487,7 @@
           miles travelled for freight
         
         In Orderly scenarios, these innovations could contribute to an overall decrease 
-        in CO2 emissions in the transportation sector. These scenarios also present opportunities 
+        in CO₂ emissions in the transportation sector. These scenarios also present opportunities 
         for the transport sector. Proactively investing in the above innovations could lead to 
         positive gains in commercial reputation and therefore magnify demand and overall 
         revenue as consumers could proactively seek out businesses with an incorporated 
@@ -662,8 +662,8 @@
         
         In High physical and transition risk (Too-little-too-late) scenarios, the 
         increase in the effective price of carbon for transport demand, globally, 
-        is relatively small, with the price growing steadily between ~$11/t CO2e in 
-        2025, to ~$58/t CO2e in 2050. Whilst this appears globally as a steady 
+        is relatively small, with the price growing steadily between ~$11/t CO₂e in 
+        2025, to ~$58/t CO₂e in 2050. Whilst this appears globally as a steady 
         increase, the fractured nature of the scenario means that within individual 
         jurisdictions, the changes may be more or less severe depending on their ambition, 
         with sudden increases as political willpower suddenly shifts within individual 
@@ -923,7 +923,7 @@
           routes and thus minimise emissions. For example, smart-logistics software 
           could be used to reduce the total miles travelled for freight.eIn High 
           physical and transition risk scenarios, these innovations could contribute 
-          to an overall decrease in CO2 emissions in the transportation sector, 
+          to an overall decrease in CO₂ emissions in the transportation sector, 
           albeit the speed and scale of their deployment comes too late for 
           Paris-aligned decarbonisation.
         

@@ -5,7 +5,7 @@ physical: low
 exec_short: transition
 exec_description: |
   The NGFS Disorderly transition scenarios assume the introduction of effective policy change 
-  is delayed across countries and sectors. In the Delayed transition scenario, CO2 emissions do 
+  is delayed across countries and sectors. In the Delayed transition scenario, CO₂ emissions do 
   not decrease until 2030, and a steep increase in the carbon price is required thereafter to 
   compensate for this inaction. 
   
@@ -73,17 +73,17 @@ description: |
   ### Key assumptions and parameters
 
   In the Delayed transition scenario, late policy action results in higher emissions 
-  (by ~0.5%) until 2030. Policies drive a sharp decrease in CO2 emissions after 2030 
+  (by ~0.5%) until 2030. Policies drive a sharp decrease in CO₂ emissions after 2030 
   to compensate for the inaction beforehand causing a drop in emissions by ~84% by 2050.
 
-  ![CO2 emissions](/assets/images/scenarios_disorderly_emissions_co2.png)
+  ![CO₂ emissions](/assets/images/scenarios_disorderly_emissions_CO₂.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. REMIND-MAgPIE 3.3-4.8](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
 
   In the Delayed transition scenario, late policy reaction means that a ‘Business-as-Usual’ 
   approach to decarbonisation occurs between now and 2030, followed by a sharp increase in 
-  policy aggression, resulting in the carbon price increase to 320 USD per tonne CO2 by 2050 
+  policy aggression, resulting in the carbon price increase to 320 USD per tonne CO₂ by 2050 
   based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs). The delayed policy 
   ambition reduces the initial dis-incentivisation against fossil fuels, only to more 
   aggressively penalise and thus risk stranding fossil fuel assets beyond 2030. In this 

@@ -36,7 +36,7 @@ def create_footer():
                             rel="noopener noreferrer",
                         ),
                         html.A(
-                            "Chart Data (.zip)",
+                            "Data used in Charts",
                             href=zip_href,
                             className="me-4 text-muted",
                             download="chart_data.zip",

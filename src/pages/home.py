@@ -57,10 +57,10 @@ def layout():
         # CTA
         html.Div(
             dbc.Button(
-                "Generate Report",
+                "Select Report",
                 id="open",
                 n_clicks=0,
-                href='/reports/overview',
+                href='/reports',
                 style={"backgroundColor": "#51C876", "color": "white", "borderRadius": "8px", "border": "none"}
             ),
             className="text-center",
