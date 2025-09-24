@@ -10,3 +10,5 @@ openpyxl==3.1.5
 numpy==2.3.2
 python-docx==1.2.0
 beautifulsoup4==4.13.5
+markdown==3.9
+pdfkit==1.0.0
