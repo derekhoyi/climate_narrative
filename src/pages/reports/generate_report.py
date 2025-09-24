@@ -508,17 +508,14 @@ def get_sector_description_layout(user_selection_with_yml_file_path_df):
 			sector_selection_df = sector_selection_df[['sector_yml_file', 'content_id']].drop_duplicates()
 
 			# Add sector yml
-			sector_selection_df['sector_yml_file'] = np.where(
-				sector_selection_df['sector_yml_file'].str.contains('sov'),
-				'sovereigns/sovereigns', sector_selection_df['sector_yml_file']
-			)
 			sector_selection_df['sector_yml'] = [
 				next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml').values()))
 				for sector_yml_file in sector_selection_df['sector_yml_file']
 			]
 			sector_selection_df['sector'] = [
-				sector_yml['name'] for sector_yml in sector_selection_df['sector_yml']
-			]
+                'Sovereigns' if 'sovereign' in sector_yml['name'].lower() else sector_yml['name']
+                for sector_yml in sector_selection_df['sector_yml']
+            ]
 
 			# Add description
 			sector_selection_df['description'] = [
@@ -565,16 +562,13 @@ def get_product_text_layout(user_selection_with_yml_file_path_df):
 		]
 
 		# Add sector yml
-		product_selection_df['sector_yml_file'] = np.where(
-			product_selection_df['sector_yml_file'].str.contains('sov'),
-			'sovereigns/sovereigns', product_selection_df['sector_yml_file']
-		)
 		product_selection_df['sector_yml'] = [
 			next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml').values()))
 			for sector_yml_file in product_selection_df['sector_yml_file']
 		]
 		product_selection_df['sector'] = [
-			sector_yml['name'] for sector_yml in product_selection_df['sector_yml']
+			'Sovereigns' if 'sovereign' in sector_yml['name'].lower() else sector_yml['name']
+			for sector_yml in product_selection_df['sector_yml']
 		]
 
 		# Add description
