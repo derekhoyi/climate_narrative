@@ -1,23 +1,11 @@
 import dash
-from dash import html, dcc, callback, Output, Input, State,dash_table
-from utils import data_loader, css_loader
+from dash import html, dcc, callback, Output, Input, State
+from utils import data_loader
+from utils import reports as reports_utils
 import pandas as pd
 import numpy as np
 from urllib.parse import parse_qs
 import dash_bootstrap_components as dbc
-import pdfkit
-from html import escape as _html_escape
-from markdown import markdown as _md
-import os
-import base64
-import mimetypes
-import tempfile
-
-WKHTMLTOPDF_PATH = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'
-_BOOTSTRAP_CSS = css_loader._load_bootstrap_css()
-_EXTERNAL_CSS = css_loader._load_external_css()
-# Cache for already serialized components (avoid duplicates with shared refs)
-_SERIALIZATION_CACHE = {}
 
 dash.register_page(__name__, path='/reports/generate-report')
 
@@ -31,7 +19,7 @@ def layout(report_type=None, institution_type=None, **kwargs):
 						dbc.CardBody([
 							dbc.Button("Return to Selection", id="generate-report-previous-btn", color="light",
 									   className="w-100"),
-							dbc.Button("Download Report", id="download-btn", color="success", className="w-100"),
+							dbc.Button("Download Report (HTML)", id="download-btn", color="success", className="w-100"),
 						], className="d-grid gap-3"),
 						className="mb-2 shadow"
 					),
@@ -113,57 +101,7 @@ def download_report(n_clicks, html_output):
 		raise dash.exceptions.PreventUpdate
 	if not html_output:
 		raise dash.exceptions.PreventUpdate
-
-	# Debug: write raw HTML so it can be inspected if PDF is blank
-	debug_html_path = os.path.join(tempfile.gettempdir(), "report_debug.html")
-	try:
-		with open(debug_html_path, "w", encoding="utf-8") as dbg:
-			dbg.write(html_output)
-	except Exception:
-		pass  # ignore debug write errors
-
-	if not html_output.strip():
-		raise dash.exceptions.PreventUpdate
-
-	# Write HTML to temp file
-	with tempfile.NamedTemporaryFile(delete=False, suffix=".html", mode="w", encoding="utf-8") as tmp_html:
-		tmp_html.write(html_output)
-		html_path = tmp_html.name
-
-	pdf_path = os.path.join(tempfile.gettempdir(), "report.pdf")
-	config = pdfkit.configuration(wkhtmltopdf=WKHTMLTOPDF_PATH)
-
-	options = {
-		"enable-local-file-access": "",
-		"encoding": "utf-8",
-		"quiet": "",
-		"load-error-handling": "ignore",
-		"load-media-error-handling": "ignore",
-		"page-size": "A4",
-		"margin-top": "15mm",
-		"margin-bottom": "18mm",
-		"margin-left": "12mm",
-		"margin-right": "12mm",
-		"print-media-type": "",
-		# "disable-smart-shrinking": "",  # uncomment if layout still breaks
-		# "javascript-delay": "500",      # uncomment if later JS content needed
-	}
-
-	try:
-		pdfkit.from_file(html_path, pdf_path, configuration=config, options=options)
-	except Exception as e:
-		# Fallback: deliver HTML instead of blank PDF
-		return dcc.send_string(html_output, "report.html")
-
-	# Basic validation: non-empty PDF
-	try:
-		if os.path.getsize(pdf_path) < 1000:
-			# Too small: send HTML for inspection
-			return dcc.send_string(html_output, "report.html")
-	except Exception:
-		return dcc.send_string(html_output, "report.html")
-
-	return dcc.send_file(pdf_path)
+	return dict(content=html_output, filename="report.html")
 
 @callback(
 	Output("report-sidebar", "children"),
@@ -226,19 +164,19 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 			elif sub_section == 'scenario_content_id':
 				sub_section_layout = get_scenario_layout(sub_section_mapping_df, scenario_mapping_df, scenario_list)
 			elif sub_section == 'sector_description_content_id':
-				filtered_user_selection_with_yml_file_path_df = _filter_user_selection_by_section(
+				filtered_user_selection_with_yml_file_path_df = reports_utils.filter_user_selection_by_section(
 					user_selection_with_yml_file_path_df, section, sub_section
 				)
 				sub_section_layout = get_sector_description_layout(filtered_user_selection_with_yml_file_path_df)
 			elif sub_section == 'sector_scenario_content_id':
-				filtered_user_selection_with_yml_file_path_df = _filter_user_selection_by_section(
+				filtered_user_selection_with_yml_file_path_df = reports_utils.filter_user_selection_by_section(
 					user_selection_with_yml_file_path_df, section, sub_section
 				)
 				sub_section_layout = get_sector_scenario_layout(
 					filtered_user_selection_with_yml_file_path_df, scenario_mapping_df, scenario_list
 				)
 			elif sub_section == 'product_content_id':
-				filtered_user_selection_with_yml_file_path_df = _filter_user_selection_by_section(
+				filtered_user_selection_with_yml_file_path_df = reports_utils.filter_user_selection_by_section(
 					user_selection_with_yml_file_path_df, section, sub_section
 				)
 				sub_section_layout = get_product_text_layout(filtered_user_selection_with_yml_file_path_df)
@@ -250,7 +188,7 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 	output_structure_layout = remove_parents_with_empty_children(output_structure_layout)
 	output_structure_layout = clean_up_sector_overview_and_detail(output_structure_layout)
 	output_structure_layout, sidebar_layout = create_sidebar_layout(output_structure_layout)
-	html_content = generate_static_html_from_report(output_structure_layout)
+	html_content = generate_html_from_report(output_structure_layout)
 	return html.Div(sidebar_layout), html.Div(output_structure_layout), html_content
 
 def prepare_output_structure_mapping(output_structure_mapping_df, report_type):
@@ -291,12 +229,12 @@ def get_sector_and_product_yml_file_path(all_user_selection_df, output_structure
 	user_selection_df = user_selection_df.drop(columns=['id', 'value'])
 
 	# Merge in exposure-sector-product mapping to get yml file
-	sovereign_user_selection_df = user_selection_df[user_selection_df['exposure'] == 'Sovereign']
+	sovereign_user_selection_df = user_selection_df[user_selection_df['exposure'] == 'Sovereigns']
 	sovereign_user_selection_with_mapping_df = pd.merge(
 		sovereign_user_selection_df, exposure_sector_product_mapping_df.drop(columns=['institution', 'type']),
 		on=['exposure', 'sector'], how='left'
 	)
-	other_user_selection_df = user_selection_df[user_selection_df['exposure'] != 'Sovereign']
+	other_user_selection_df = user_selection_df[user_selection_df['exposure'] != 'Sovereigns']
 	other_user_selection_with_mapping_df = pd.merge(
 		other_user_selection_df, exposure_sector_product_mapping_df, on=['institution', 'exposure', 'sector', 'type'], how='left'
 	)
@@ -422,7 +360,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 						else:
 							sub_header = []
 						content = [dcc.Markdown(
-							_filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id],
+							reports_utils.filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id],
 							link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'}
 						)]
 						content_desc.append(html.Div(sub_header + content))
@@ -437,7 +375,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 				html.H3('High materiality exposures') if section == 'Executive Summary' else html.Div([], className='d-none'),
 				*high_materiality_other_desc,
 				html.Div([
-					html.H4('Sovereign'),
+					html.H4('Sovereigns'),
 					*high_materiality_sovereign_desc
 				]),
 			])
@@ -452,7 +390,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 			low_medium_materiality_other_desc = []
 			if section == 'Executive Summary':
 				# Combine materiality
-				low_medium_materiality_df = _convert_to_bullet_points(low_medium_materiality_df, 'materiality')
+				low_medium_materiality_df = reports_utils.convert_to_bullet_points(low_medium_materiality_df, 'materiality')
 
 				# Add scenarios
 				low_medium_materiality_df['scenario'] = [scenario_list for x in low_medium_materiality_df['sector_yml_file']]
@@ -469,7 +407,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 
 				# Add description
 				low_medium_materiality_df['description'] = [
-					_filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id]
+					reports_utils.filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id]
 					for sector_yml, scenario, content_id in low_medium_materiality_df[['sector_yml', 'scenario', 'content_id']].to_numpy()
 				]
 
@@ -494,7 +432,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 						html.Div([
 							html.H5(scenario),
 							dcc.Markdown(
-								_filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id],
+								reports_utils.filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id],
 								link_target="_blank", dangerously_allow_html=True, className='display-12', style={'textTransform': 'none'}
 							)
 						]) for scenario in scenario_list
@@ -509,7 +447,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 				low_medium_materiality_layout = html.Div([
 					*low_medium_materiality_other_desc,
 					html.Div([
-						html.H4('Sovereign') if len(low_medium_materiality_sovereign_desc) > 0 else [],
+						html.H4('Sovereigns') if len(low_medium_materiality_sovereign_desc) > 0 else [],
 						*low_medium_materiality_sovereign_desc
 					]),
 				])
@@ -543,7 +481,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 			sector_scenario_layout = html.Div([
 				*other_desc,
 				html.Div([
-					html.H4('Sovereign', className='fw-bold'),
+					html.H4('Sovereigns', className='fw-bold'),
 					*high_materiality_sovereign_desc,
 					*low_medium_materiality_sovereign_desc,
 				])
@@ -555,10 +493,10 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 def get_sector_description_layout(user_selection_with_yml_file_path_df):
 	# Split by sovereign and other sectors
 	sovereign_sector_selection_df = user_selection_with_yml_file_path_df[
-		user_selection_with_yml_file_path_df['exposure'] == 'Sovereign'
+		user_selection_with_yml_file_path_df['exposure'] == 'Sovereigns'
 	].copy()
 	other_sector_selection_df = user_selection_with_yml_file_path_df[
-		user_selection_with_yml_file_path_df['exposure'] != 'Sovereign'
+		user_selection_with_yml_file_path_df['exposure'] != 'Sovereigns'
 	].copy()
 
 	all_sector_desc = []
@@ -647,7 +585,7 @@ def get_product_text_layout(user_selection_with_yml_file_path_df):
 
 		# Combine type
 		product_selection_table = product_selection_df[['sector', 'product', 'type', 'description']].drop_duplicates()
-		product_selection_table = _convert_to_bullet_points(product_selection_table, 'type')
+		product_selection_table = reports_utils.convert_to_bullet_points(product_selection_table, 'type')
 
 		# Create datatable
 		product_selection_table = data_loader.rename_user_selection_data_columns(product_selection_table)
@@ -716,6 +654,27 @@ def clean_up_sector_overview_and_detail(report_content):
 			sector_scenario_layout = [
 				y for x in sector_scenario_layout for y in [html.H3(x.children[0].children), *x.children[1:]]
 			]
+			updated_sector_scenario_layout = []
+			for c1 in sector_scenario_layout:
+				if hasattr(c1, 'children') and c1.__class__.__name__ != 'H3' and len(c1) > 1:
+					sub_layout = [
+						c2 for c2 in [html.H4(c1.children[0].children.replace('**', '')), *c1.children[1:]]
+					]
+					if sector_name == 'Sovereigns':
+						updated_sub_layout = []
+						for c2 in sub_layout:
+							if hasattr(c2, 'children') and c2.__class__.__name__ != 'H4' and len(c2) > 1:
+								sub_sub_layout = [
+									c3 for c3 in [html.H5(c2.children[0].children.replace('**', '')), *c2.children[1:]]
+								]
+								updated_sub_layout += sub_sub_layout
+							else:
+								updated_sub_layout.append(c2)
+						sub_layout = updated_sub_layout
+				else:
+					sub_layout = [c1]
+				updated_sector_scenario_layout += sub_layout
+			sector_scenario_layout = updated_sector_scenario_layout
 
 			# Define sector layout
 			sector_layout = html.Div([
@@ -805,212 +764,20 @@ def _extract_navigation_groups(report_content, current_h1=None, groups=None):
 
 	return updated_children, groups
 
-def _filter_yml_by_scenario(yml, scenario, scenario_mapping_df):
-	filtered_scenario_mapping_df = scenario_mapping_df[scenario_mapping_df['scenario_name'] == scenario]
-	scenario_risk_type = filtered_scenario_mapping_df['risk_type'].iloc[0]
-	scenario_risk_level = filtered_scenario_mapping_df['risk_level'].iloc[0]
-	return yml[scenario_risk_type][scenario_risk_level]
-
-def _filter_user_selection_by_section(user_selection_df, section, sub_section):
-	filtered_user_selection_df = user_selection_df[
-		(user_selection_df['output_structure'] == section)
-		& (user_selection_df['sub_section'] == sub_section)
-	]
-	return filtered_user_selection_df
-
-def _convert_to_bullet_points(df, bullet_point_column_name):
-	groupby_variables_list = [x for x in df if x != bullet_point_column_name]
-	output_df = df.sort_values(bullet_point_column_name)
-	output_df[bullet_point_column_name] = output_df[bullet_point_column_name].astype(str)
-	output_df = output_df.groupby(
-		groupby_variables_list, as_index=False).agg({bullet_point_column_name: '\n- '.join})
-	output_df[bullet_point_column_name] = '- ' + output_df[bullet_point_column_name]
-	return output_df
-
-def _style_dict_to_css(style):
-	if not style:
-		return ''
-	return '; '.join(f'{str(k).replace("_", "-")}:{v}' for k, v in style.items())
-
-def _inline_image_src(src):
-	src = 'src/' + src
-	if not src:
-		return ''
-	if src.startswith(('http://', 'https://', 'data:')):
-		return src
-	if os.path.exists(src):
-		mime, _ = mimetypes.guess_type(src)
-		if not mime:
-			mime = 'application/octet-stream'
-		with open(src, 'rb') as f:
-			b64 = base64.b64encode(f.read()).decode('utf-8')
-		return f'data:{mime};base64,{b64}'
-	return src
-
-def _serialize_datatable(dt: dash_table.DataTable):
-	cols = getattr(dt, 'columns', []) or []
-	data = getattr(dt, 'data', []) or []
-	col_ids = [c.get('id') for c in cols]
-	header_html = '<tr>' + ''.join(
-		f'<th>{_html_escape(str(c.get("name", c.get("id", ""))))}</th>' for c in cols
-	) + '</tr>'
-	body_rows = []
-	for row in data:
-		body_rows.append(
-			'<tr>' + ''.join(
-				f'<td>{_html_escape("" if row.get(cid) is None else str(row.get(cid)))}</td>'
-				for cid in col_ids
-			) + '</tr>'
-		)
-	return f'<table class="datatable"><thead>{header_html}</thead><tbody>{"".join(body_rows)}</tbody></table>'
-
-def _markdown_to_html(text):
-	if text is None:
-		return ''
-	if not _md:
-		return f'<p>{_html_escape(str(text))}</p>'
-	import re
-	html = _md(str(text))
-
-	# Inline <img> tags (produced by markdown from ![]()) and local paths -> data URIs
-	def _inline_img(match):
-		pre_attrs, src, post_attrs = match.group(1), match.group(2), match.group(3)
-		# Preserve existing alt if present
-		alt_match = re.search(r'alt="([^"]*)"', pre_attrs + post_attrs)
-		alt = alt_match.group(1) if alt_match else ''
-		inlined_src = _html_escape(_inline_image_src(src))
-		return f'<img src="{inlined_src}" alt="{_html_escape(alt)}" />'
-	html = re.sub(r'<img\s+([^>]*?)src="([^"]+)"([^>]*)>', _inline_img, html, flags=re.IGNORECASE)
-
-	# Normalize links: ensure target + rel, keep inner HTML (do not escape inner)
-	def _inline_link(match):
-		pre_attrs, href, post_attrs, inner = match.group(1), match.group(2), match.group(3), match.group(4)
-		escaped_href = _html_escape(href)
-		return f'<a href="{escaped_href}" target="_blank" rel="noopener noreferrer">{inner}</a>'
-	html = re.sub(r'<a\s+([^>]*?)href="([^"]+)"([^>]*)>(.*?)</a>', _inline_link, html, flags=re.IGNORECASE | re.DOTALL)
-
-	return html
-
-def _serialize_component(component):
-	if component is None:
-		return ''
-	# Primitive
-	if isinstance(component, (str, int, float)):
-		return _html_escape(str(component)).replace('\n', ' ')
-	# List / tuple
-	if isinstance(component, (list, tuple)):
-		return ''.join(_serialize_component(c) for c in component)
-	# Avoid re-serializing same object (by id())
-	cid = id(component)
-	if cid in _SERIALIZATION_CACHE:
-		return _SERIALIZATION_CACHE[cid]
-
-	# DataTable
-	if isinstance(component, dash_table.DataTable):
-		html_str = _serialize_datatable(component)
-		_SERIALIZATION_CACHE[cid] = html_str
-		return html_str
-
-	cls_name = component.__class__.__name__
-
-	# dcc.Markdown
-	if cls_name == 'Markdown':
-		html_str = _markdown_to_html(getattr(component, 'children', '')[0])
-		_SERIALIZATION_CACHE[cid] = html_str
-		return html_str
-
-	# Map Dash HTML component class names to tag
-	tag = cls_name.lower()
-
-	children = getattr(component, 'children', None)
-	inner_html = ''
-	if isinstance(children, (list, tuple)):
-		inner_html = ''.join(_serialize_component(c) for c in children)
-	else:
-		inner_html = _serialize_component(children)
-
-	attrs = []
-	comp_id = getattr(component, 'id', None)
-	if comp_id:
-		attrs.append(f'id="{_html_escape(str(comp_id))}"')
-	class_name = getattr(component, 'className', None)
-	if class_name:
-		attrs.append(f'class="{_html_escape(str(class_name))}"')
-	style = getattr(component, 'style', None)
-	style_css = _style_dict_to_css(style)
-	if style_css:
-		attrs.append(f'style="{_html_escape(style_css)}"')
-
-	# Anchor specific
-	if tag == 'a':
-		href = getattr(component, 'href', None)
-		if href:
-			attrs.append(f'href="{_html_escape(str(href))}"')
-		target = getattr(component, 'target', None)
-		if target:
-			attrs.append(f'target="{_html_escape(str(target))}"')
-
-	# Image specific
-	if tag == 'img':
-		src = getattr(component, 'src', None)
-		if src:
-			attrs.append(f'src="{_html_escape(_inline_image_src(src))}"')
-		alt = getattr(component, 'alt', '') or ''
-		attrs.append(f'alt="{_html_escape(str(alt))}"')
-
-	void_tags = {'img', 'br', 'hr', 'meta', 'link', 'input'}
-	attr_str = (' ' + ' '.join(attrs)) if attrs else ''
-	if tag in void_tags:
-		html_str = f'<{tag}{attr_str} />'
-		_SERIALIZATION_CACHE[cid] = html_str
-		return html_str
-
-	html_str = f'<{tag}{attr_str}>{inner_html}</{tag}>'
-	_SERIALIZATION_CACHE[cid] = html_str
-	return html_str
-
-def _wrap_full_html(body_html: str) -> str:
-	base_styles = ""
-	# base_styles = """
-	# @page { size: A4; margin:15mm 12mm 18mm 12mm; }
-	# html, body { font-family: Nunito Sans; font-size:14px; line-height:1.4; }
-	# body { margin:0; }
-	# h1,h2,h3,h4,h5,h6 {
-	#   font-family: Nunito Sans;
-	#   page-break-inside: avoid;
-	#   break-inside: avoid;
-	#   page-break-after: avoid;
-	#   break-after: avoid;
-	#   orphans:3;
-	#   widows:3;
-	# }
-	# h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
-	#   page-break-before: avoid;
-	# }
-	# .section-block, .keep-with-next, .no-split-heading {
-	#   page-break-inside: avoid;
-	#   break-inside: avoid;
-	# }
-	# table { border-collapse: collapse; width:100%; margin:1em 0; font-size:12px; }
-	# th, td { border:1px solid #555; padding:4px 6px; vertical-align:top; }
-	# th { background:#f5f5f5; }
-	# img { max-width:100%; height:auto; }
-	# .datatable { page-break-inside:auto; }
-	# tr { page-break-inside:avoid; page-break-after:auto; }
-	# h1 { page-break-before:always; }
-	# h1:first-of-type { page-break-before:auto; }
-	# """
-	full_css = (_BOOTSTRAP_CSS or "") + base_styles + (_EXTERNAL_CSS or "")
-	return (
-		'<!DOCTYPE html><html><head><meta charset="utf-8">'
-		'<title>Report</title>'
-		f'<style>{full_css}</style>'
-		'</head><body>'
-		f'{body_html}'
-		'</body></html>'
-	)
-
-def generate_static_html_from_report(report_content):
-	_SERIALIZATION_CACHE.clear()
-	serialized = _serialize_component(report_content)
-	return _wrap_full_html(f'<div id="report-root">{serialized}</div>')
+def generate_html_from_report(report_content):
+	# Cache for already serialized components (avoid duplicates with shared refs)
+	SERIALIZATION_CACHE = {}
+	SERIALIZATION_CACHE.clear()
+	serialized = reports_utils.serialize_component(report_content)
+	return f"""
+		<div id="report-root">
+			<!DOCTYPE html>
+			<html>
+				<head><meta charset="utf-8">
+					<title>Report</title>
+					<style>{reports_utils.load_external_css() or ""}</style>
+				</head>
+				<body>{serialized}</body>
+			</html>
+		</div>
+	"""
