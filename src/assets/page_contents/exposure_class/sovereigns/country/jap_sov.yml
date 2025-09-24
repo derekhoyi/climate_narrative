@@ -57,7 +57,7 @@
     focuses on the physical climate risk impacts on credit ratings, and not on the demands 
     of transition, nor on the knock-on effects that climate change may cause or exacerbate 
     such as resource conflicts, political volatility, or supply chain disruptions.
-    
+
   transition:
     high:
       exec_description: |
@@ -206,7 +206,7 @@
         
         Based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs), the implicit/proxy carbon pricing 
         in USD per tonne absolute difference is highest in the Net Zero 2050 scenario compared to Below 2&deg;C 
-        (at 2030, approximately 197.5 USD per tonne CO<sub>2</sub> for Below 2&deg;C, compared to roughly 1,632.5 USD for 
+        (at 2030, approximately 197.5 USD per tonne CO₂ for Below 2&deg;C, compared to roughly 1,632.5 USD for 
         Net Zero 2050; and for 2050, about 1,111.6 USD for Below 2&deg;C versus around 6,725.4 USD for Net Zero 2050). 
         The proxy carbon price shows for the difference in policy ambition required to limit warming to a 
         maximum of 1.5&deg;C (versus 2&deg;C in the Below 2&deg;C scenario).
