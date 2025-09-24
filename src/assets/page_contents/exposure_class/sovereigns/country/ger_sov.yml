@@ -3,6 +3,61 @@
   test_report_position: 30
   group: sovereigns
 
+  description: |
+    
+    **Sovereign** (or government) bonds are debt securities issued by governments to 
+    support government spending. Governments agree to repay the face value of the 
+    bond at a specified maturity date and may also pay interest, in the form of 
+    coupon payments, at regular intervals throughout the term. Bonds are used to 
+    finance and raise capital for the state’s general expenditures and operations, 
+    or are earmarked for certain projects such as infrastructure and housing, or nature 
+    restoration and climate adaptation.
+    
+    The government bond sector is a broad category that includes “sovereign” debt, 
+    which is issued and generally backed by a central government. UK Gilts, US Treasuries, 
+    German Bunds, Japanese Government Bonds (JGBs), Brazilian Government Bonds and Government 
+    of Canada Bonds (GoCs) are all examples of sovereign government bonds. The US, Japan and 
+    Europe have historically been the biggest issuers in the government bond market. 
+    Several governments also issue sovereign bonds that are linked to inflation, known as 
+    inflation-linked bonds or, in the US, Treasury Inflation-Protected Securities (TIPS). 
+  
+    On an inflation-linked bond, the interest and/or principal is adjusted on a regular basis 
+    to reflect changes in the rate of inflation, thus providing a “real,” or inflation-adjusted, 
+    return. But, unlike other bonds, inflation-linked bonds could experience greater losses when 
+    real interest rates are moving faster than nominal interest rates.
+  
+    In addition to sovereign bonds, the government bond sector includes
+    subcomponents, such as:
+  
+    - Agency and "quasi-government" bonds: Central governments pursue various
+      goals - supporting affordable housing or the development of small
+      businesses, for example - through agencies, a number of which issue bonds to
+      support their operations. Some agency bonds are guaranteed by the central
+      government while others are not. Supranational organisations, like the World
+      Bank and the European Investment Bank, also borrow in the bond market to
+      finance public projects and/or development. Supranational organisations, like 
+      the World Bank and the European Investment Bank, also borrow in the bond market to
+      finance public projects and/or development.
+  
+    - Local government bonds: Local governments - whether provinces, states or
+      cities - borrow to finance a variety of projects, from bridges to schools,
+      as well as general operations. The market for local government bonds is well
+      established in the US, where these bonds are known as municipal bonds. Other
+      developed markets also issue provincial/local government bonds.
+  
+    In this report we refer to a ‘20-notch’ sovereign bond rating scale translated 
+    from S&P’s alphabetical standardized rating scale (see Appendix), which is used 
+    to outline changes to sovereign bond ratings, as is common in surrounding literature. 
+    Impacts of climate change on sovereign bond ratings are discussed in reference to the 
+    2021 working paper titled “Rising Temperatures, Falling Ratings: The Effect of Climate 
+    Change on Sovereign Creditworthiness” from the Bennett Institute for Public Policy. 
+    This study represents one approach towards quantifying the effects of climate change 
+    on credit ratings and is illustrative based on a hypothetical model. Whilst conclusions 
+    are referred to on the impact on bond ratings, it is worth highlighting that this paper 
+    focuses on the physical climate risk impacts on credit ratings, and not on the demands 
+    of transition, nor on the knock-on effects that climate change may cause or exacerbate 
+    such as resource conflicts, political volatility, or supply chain disruptions.
+    
   transition:
     high:
       exec_description: |
@@ -397,3 +452,20 @@
           
   appendix: |
     ![20 Notch Rating Scale](/assets/images/Sovereign_Rating_Scale.png)
+
+  references: |
+    - [The risks from climate change to sovereign debt in Europe - Bruegel, September 2021](https://euagenda.eu/upload/publications/pc-2021-16-070721-1.pdf)
+
+    - [How could climate change impact sovereign risk - FTSE Russell, November 2019](https://www.climateaction.org/images/uploads/documents/How_could_climate_change_impact_sovereign_risk_FINAL.pdf)
+
+    - [Rising Climate Falling Ratings Working Paper: The Effect of Climate Change on Sovereign Creditworthiness - Bennett Institute, March 2021](https://www.bennettinstitute.cam.ac.uk/media/uploads/files/Rising_Climate_Falling_Ratings_Working_Paper.pdf)
+
+    - [Helping countries and cities counter the risks of a changing climate - Notre Dame Global Adaptation Initiative](https://gain.nd.edu/)
+
+    - [Climate Action Tracker](https://climateactiontracker.org/)
+
+    - [Global non-linear effect of temperature on economic production - Semantic Scholar, November 2015](https://www.semanticscholar.org/paper/Global-non-linear-effect-of-temperature-on-economic-Burke-Hsiang/e6d91e300701bf9cb952a6ba0766252c42664127)
+
+    - [Migration as adaptation - Nature, October 2011](https://www.nature.com/articles/478477a)
+
+    - [Climate change-induced migration and violent conflict - ScienceDirect, July 2007](https://www.sciencedirect.com/science/article/abs/pii/S0962629807000601)
