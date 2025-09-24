@@ -57,7 +57,7 @@
     focuses on the physical climate risk impacts on credit ratings, and not on the demands 
     of transition, nor on the knock-on effects that climate change may cause or exacerbate 
     such as resource conflicts, political volatility, or supply chain disruptions.
-    
+
   transition:
     high:
       exec_description: |
@@ -105,7 +105,7 @@
         In the Delayed transition scenario, late policy reaction means that a 
         ‘Business as Usual’ approach to decarbonisation occurs between now and 
         2030, followed by a sharp increase in policy aggression, equivalent to an 
-        implicit/proxy carbon price increase to ~1,294 USD per tonne CO<sub>2</sub> by 2035 
+        implicit/proxy carbon price increase to ~1,294 USD per tonne CO₂ by 2035 
         and ~6,698 USD by 2050 based on the IIASA NGFS Scenario Explorer NiGEM 
         model (REMIND inputs). The delayed policy ambition reduces the initial 
         disincentivisation against fossil fuels, only to more aggressively 
