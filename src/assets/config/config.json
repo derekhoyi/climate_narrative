@@ -697,7 +697,7 @@
         "exposure": "Life and Health Lines of Business",
         "sector": "Life Protection",
         "type": "Exposure",
-        "sector_yml_file": "underwritng/life_protection",
+        "sector_yml_file": "underwriting/life_protection",
         "product_yml_file": "insurance_life",
         "original_csv_file": "insurance_life"
       },
@@ -706,7 +706,7 @@
         "exposure": "Life and Health Lines of Business",
         "sector": "Savings and Retirement",
         "type": "Exposure",
-        "sector_yml_file": "underwritng/savings_and_retirement",
+        "sector_yml_file": "underwriting/savings_and_retirement",
         "product_yml_file": "insurance_life",
         "original_csv_file": "insurance_life"
       },
@@ -715,7 +715,7 @@
         "exposure": "Life and Health Lines of Business",
         "sector": "Health",
         "type": "Exposure",
-        "sector_yml_file": "underwritng/health",
+        "sector_yml_file": "underwriting/health",
         "product_yml_file": "insurance_life",
         "original_csv_file": "insurance_life"
       },
@@ -724,7 +724,7 @@
         "exposure": "Property and Casualty Lines of Business",
         "sector": "Aviation",
         "type": "Exposure",
-        "sector_yml_file": "underwritng/aviation",
+        "sector_yml_file": "underwriting/aviation",
         "product_yml_file": "insurance_nonlife",
         "original_csv_file": "insurance_nonlife"
       },
@@ -733,7 +733,7 @@
         "exposure": "Property and Casualty Lines of Business",
         "sector": "Casualty",
         "type": "Exposure",
-        "sector_yml_file": "underwritng/casualty",
+        "sector_yml_file": "underwriting/casualty",
         "product_yml_file": "insurance_nonlife",
         "original_csv_file": "insurance_nonlife"
       },
@@ -742,7 +742,7 @@
         "exposure": "Property and Casualty Lines of Business",
         "sector": "Energy",
         "type": "Exposure",
-        "sector_yml_file": "underwritng/energy",
+        "sector_yml_file": "underwriting/energy",
         "product_yml_file": "insurance_nonlife",
         "original_csv_file": "insurance_nonlife"
       },
@@ -751,7 +751,7 @@
         "exposure": "Property and Casualty Lines of Business",
         "sector": "Marine",
         "type": "Exposure",
-        "sector_yml_file": "underwritng/marine",
+        "sector_yml_file": "underwriting/marine",
         "product_yml_file": "insurance_nonlife",
         "original_csv_file": "insurance_nonlife"
       },
@@ -760,7 +760,7 @@
         "exposure": "Property and Casualty Lines of Business",
         "sector": "Motor",
         "type": "Exposure",
-        "sector_yml_file": "underwritng/motor",
+        "sector_yml_file": "underwriting/motor",
         "product_yml_file": "insurance_nonlife",
         "original_csv_file": "insurance_nonlife"
       },
@@ -769,7 +769,7 @@
         "exposure": "Property and Casualty Lines of Business",
         "sector": "Property",
         "type": "Exposure",
-        "sector_yml_file": "underwritng/property",
+        "sector_yml_file": "underwriting/property",
         "product_yml_file": "insurance_nonlife",
         "original_csv_file": "insurance_nonlife"
       },
