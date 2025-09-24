@@ -12,7 +12,6 @@ import os
 import base64
 import mimetypes
 import tempfile
-from pathlib import Path
 
 WKHTMLTOPDF_PATH = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'
 _BOOTSTRAP_CSS = css_loader._load_bootstrap_css()
@@ -90,16 +89,17 @@ def toggle_report_fab(n, is_open):
 	State("report-type-store", "data"),
 	State("institution-type-store", "data"),
 	State("generate-report-url", "pathname"),
+	prevent_initial_call=True
 )
 def update_url(user_selection_completed, url_search, back, report_type, institution_type, url_pathname):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0 and "generate-report" in url_pathname
-	report_page = query.get('report_type', [None])[0]
+	report_page = False if query.get('report-type', [None])[0] is None or query.get('institution-type', [None])[0] is None else True
 
 	if start_page and user_selection_completed and not report_page:
 		return f"/reports/generate-report?report-type={report_type}&institution-type={institution_type}"
 	if back:
-		return f"/reports/customise-report?report_type={report_type}&institution-type={institution_type}&review=summary"
+		return f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}&review=summary"
 	return dash.no_update
 
 @callback(
@@ -437,7 +437,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 				html.H3('High materiality exposures') if section == 'Executive Summary' else html.Div([], className='d-none'),
 				*high_materiality_other_desc,
 				html.Div([
-					html.H4('Sovereign', className='fw-bold'),
+					html.H4('Sovereign'),
 					*high_materiality_sovereign_desc
 				]),
 			])
@@ -509,7 +509,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 				low_medium_materiality_layout = html.Div([
 					*low_medium_materiality_other_desc,
 					html.Div([
-						html.H4('Sovereign', className='fw-bold') if len(low_medium_materiality_sovereign_desc) > 0 else [],
+						html.H4('Sovereign') if len(low_medium_materiality_sovereign_desc) > 0 else [],
 						*low_medium_materiality_sovereign_desc
 					]),
 				])

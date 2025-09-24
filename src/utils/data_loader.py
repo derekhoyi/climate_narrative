@@ -112,13 +112,25 @@ def create_data_table(df, bullet_point_columns_list=None, left_align_columns_lis
 		{"name": col, "id": col, "presentation": "markdown" if col in bullet_point_columns_list else "input"}
 		for col in df.columns
 	] if bullet_point_columns_list else [{"name": i, "id": i} for i in df.columns]
-	
-	
+	table_styling = {
+		"textAlign": "center",
+        "verticalAlign": "middle",
+        "width": "auto",
+        "whiteSpace": "normal",
+        "wordWrap": "break-word"
+    }
+	left_aligned_styling = [{
+        'if': {'column_id': c},
+        'textAlign': 'left'
+        } for c in left_align_columns_list
+    ] if left_align_columns_list else []
 	return html.Div([dash_table.DataTable(
         data=df.to_dict('records'),
         columns=updated_columns_presentation_list,
-	)], className="table"
-	)
+		style_data=table_styling,
+		style_header=table_styling,
+		style_data_conditional=left_aligned_styling
+	)], className="table")
 
 def plural_add_s(plural_flag):
 	return "s" if plural_flag else ""

@@ -34,8 +34,14 @@ td, th {
   border: 1px solid #ddd;
   padding: 8px;
 }
-tr:nth-child(even){background-color: #f2f2f2; font-family: "Nunito Sans";}
-tr:hover {background-color: #ddd; font-family: "Nunito Sans";}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+  font-family: "Nunito Sans";
+}
+tr:hover {
+  background-color: #ddd;
+  font-family: "Nunito Sans";
+}
 th {
   font-family: "Nunito Sans";
   padding-top: 12px;
@@ -43,6 +49,13 @@ th {
   text-align: left;
   background-color: rgb(210, 210, 210);
 }
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .dash-cell-value.cell-markdown,
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td .dash-cell-value.cell-markdown,
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th .dash-cell-value.cell-markdown {
+    font-family: "Nunito Sans", sans-serif !important;
+}
+
 b, strong {
   color: #00B050;
 }
@@ -53,7 +66,12 @@ b, strong {
   border: 1px solid #BFEBCE;
   margin-top: 5px;
 }
-
+img:not(#logo-img) {
+  max-width: 500px;
+  max-height: 350px;
+  height: auto;
+  display: block;
+}
 
 /* =========================
    Tabs (if used)
@@ -101,4 +119,3 @@ b, strong {
     flex-direction: column;
     justify-content: flex-start;
 }
-
