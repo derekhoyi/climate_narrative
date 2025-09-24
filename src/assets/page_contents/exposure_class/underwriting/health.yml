@@ -19,7 +19,7 @@
       always: |
         Health underwriting exposures could be impacted by the transition effects related to changes in pollution levels. In the Delayed transition scenario, late policy reaction means that a ‘Business-as-Usual’ approach to decarbonisation occurs between now and 2030, followed by a sharp increase in policy aggression, resulting in carbon prices increasing. In this scenario, disorderly policy action results in increased transition risks.
       high_materiality: |
-        It seems reasonable to assume that a general drive towards reducing greenhouse gases could probably be associated with a drive towards cleaner air, and therefore positive outcomes for health. However, it is important to differentiate between the production of greenhouse gases (such as CO<sub>2</sub> and CH4) that lead to warming but do not directly impact health, with the production of pollutants (such as particulate matter and oxides of nitrogen) that are more directly harmful to health. 
+        It seems reasonable to assume that a general drive towards reducing greenhouse gases could probably be associated with a drive towards cleaner air, and therefore positive outcomes for health. However, it is important to differentiate between the production of greenhouse gases (such as CO₂ and CH4) that lead to warming but do not directly impact health, with the production of pollutants (such as particulate matter and oxides of nitrogen) that are more directly harmful to health. 
         
         In the Delayed Transition scenario, emissions of hazardous pollutants, for example black carbon, volatile organic compounds, and oxides of nitrogen, are projected to decrease. Emission trajectories for oxides of nitrogen (NOx) as can be seen below are also projected to decrease from ~121 Megatons (Mt) of NO2/yr in 2025 to ~39 Mt NO2/yr in 2050.
         
@@ -69,7 +69,7 @@
       exec_description: |
         Health underwriting exposures could be significantly impacted in the Orderly transition scenarios, as a reduction in pollution could result in a reduction for example in cancer (especially lung), respiratory diseases, heart attack and stroke. However, higher claims costs could arise due to an increased carbon price on the supply chain.
       always: |
-        Health underwriting exposures could be impacted by the transition effects related to changes in pollution levels. In Orderly transition scenarios, immediate policy reaction, societal change, national energy strategies, and carbon legislation could lead to an immediate and smooth reduction in CO<sub>2</sub> emissions by 2050. This would probably be associated with a drive towards cleaner air due to for example, an increase in electric vehicles replacing vehicles with internal combustion engines.
+        Health underwriting exposures could be impacted by the transition effects related to changes in pollution levels. In Orderly transition scenarios, immediate policy reaction, societal change, national energy strategies, and carbon legislation could lead to an immediate and smooth reduction in CO₂ emissions by 2050. This would probably be associated with a drive towards cleaner air due to for example, an increase in electric vehicles replacing vehicles with internal combustion engines.
         
         This would cause a reduction in pollution which could in turn result in a reduction in cancer (especially lung), respiratory diseases, heart attack and stroke. These scenarios could also lead to a limited relative reduction in GDP growth. This could result in changes in the rate of growth in healthcare spending. These are likely to have an impact on health insurance products’ pricing, terms and conditions and coverage.
   
@@ -78,7 +78,7 @@
         
         **Pollution effect**
         
-        It seems reasonable to assume that a general drive towards reducing greenhouse gases could be associated with a drive towards cleaner air, leading to positive health outcomes. However, it is important to differentiate between the production of greenhouse gases (such as CO<sub>2</sub> and CH4) that lead to global warming but do not directly impact health, and pollutants (such as particulate matter and oxides of nitrogen) that are more directly harmful to health. For example: 
+        It seems reasonable to assume that a general drive towards reducing greenhouse gases could be associated with a drive towards cleaner air, leading to positive health outcomes. However, it is important to differentiate between the production of greenhouse gases (such as CO₂ and CH4) that lead to global warming but do not directly impact health, and pollutants (such as particulate matter and oxides of nitrogen) that are more directly harmful to health. For example: 
         
         -	In Orderly scenarios, emissions of hazardous pollutants, for example black carbon, volatile organic compounds, and oxides of nitrogen, are projected to decrease. 
    

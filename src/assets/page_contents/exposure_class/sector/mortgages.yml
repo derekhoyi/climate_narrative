@@ -187,13 +187,13 @@
       exec_description: |
         In high physical risk scenarios, lending may shift towards properties less prone to physical risks and could result in certain segments/regions in the property market being blighted given their risk profile.
       always: |
-        The mortgage market has the potential to be one of the most exposed sectors to physical impacts of climate change due to changes to frequency and severity of coastal erosion, subsidence, and weather events such as cyclones and flooding.
+        The mortgage market has the potential to be one of the most exposed sectors to physical impacts of climate change due to changes to frequency and severity of acute physical risk events such as flooding (surface and river) and storms as well as other chronic physical risk impacts such as coastal erosion and subsidence.
 
         The mortgage market doesn’t have the experience of responding to and managing changing weather conditions (as this is often covered by if a property is insurable), in the high physical risk scenario, climate change and global warming could increase weather variations.
 
-        As the industry’s awareness of, and ability to assess physical risks increases, lending may shift towards properties less prone to physical risks. The increasing frequency of weather events could lead to higher default rates or changes in certain property values, and lenders’ risk assessment, but it is expected the number of impacted properties to be relatively few. 
+        As the industry’s awareness of, and ability to assess and quantify physical risks increases, lending may shift towards properties less prone to physical risks and hence we are also likely to see more homes become uninsurable - which will render them unmortgage-able, which could significantly impact their value.
 
-        There could exist opportunities for those best able to assess this risk, and hence willing to lend to segments of the markets that others are not.
+        There may be scope for institutions who have strong risk assessment capabilities to lend to segments of the markets that others are not.
       high_materiality: |
         The following examples illustrate how the mortgage sector could be impacted in a high physical risk scenario and potential considerations at mortgage origination that firms might not review today:
 
@@ -227,13 +227,13 @@
 
         **Reputational risk**
 
-        -	 impact of lending on a property which subsequently requires retrofitting/flooded/subsided/eroded and whether there is the perception that as a lender, they should protect the borrower from this risk
+        -	Impact of lending on a property which subsequently requires retrofitting/flooded/subsided/eroded and whether there is the perception that as a lender, they should protect the borrower from this risk
         -	The potential conduct risk where scenario modelling indicated the potential risk but this was not conveyed to the borrower and what products/services/advice should be given
         -	Does the lender have the internal expertise to be able to understand the physical risks and set appropriate polices and risk tolerances
 
         **Opportunities**
 
-        -	There could exist opportunities for those best able to assess this risk, and hence willing to lend to segments of the markets that others are not.
+        -	There may be scope for institutions who have strong risk assessment capabilities to lend to segments of the markets that others are not.
         -	Opportunities may also exist to offer adaption loans (similar to retrofit loans) and specialist services for properties with higher physical risk.
 
   transition_physical:
@@ -243,11 +243,11 @@
         always: |
           Lending on residential property remains a key focus and the UK housing market is a strategic cornerstone to continue to support the UK economy, with it being expected that demand could outstrip supply for the foreseeable future. The quality of residential stock could be the key challenge on the mortgage lending sector.
 
-          In the Too-little-too-late (fragmented world) scenario mortgage lending will be exposed to the higher physical risks of climate change due to changes in the frequency and severity of coastal erosion, subsidence, and weather events such as cyclones and flooding which will materialise in the long term. In addition, mortgage lending will be exposed to transition risk through changes in energy prices, which will impact every property, and the significant cost of retrofitting (if not Government funded) which will impact lower energy efficient properties. 
+          In the Too-little-too-late (fragmented world) scenario mortgage lending will be exposed to the higher physical risks of climate change. These include changes in the frequency and severity of acute physical risk events such as flooding (surface and river) and storms as well as other chronic physical risk impacts such as coastal erosion and subsidence. In addition, mortgage lending will be exposed to transition risk through changes in energy prices, which will impact every property, and the significant cost of retrofitting (if not Government funded) which will impact lower energy efficient properties. 
 
-          There may be instances of properties prone to higher physical risk such as flooding or those that are unable to meet the minimum Efficiency Performance Certificate (EPC) standards and hence are classified as unmarketable (and un-mortgageable). These properties are likely to experience the highest risk from climate change.
+          In addition, properties which were prone to higher physical risk such as flooding or those that are unable to meet the minimum Efficiency Performance Certificate (EPC) standards could be classified as unmarketable (and hence un-mortgageable). These properties are likely to experience the highest risk from climate change.
 
-          There would be opportunities for those best able to assess both or either transition or physical risks, and hence be more willing to lend to segments of the markets that others are not, albeit at higher rates to account for the risk.
+          There may be scope for institutions who are best able to assess both or either transition or physical risks to lend to segments of the markets that others are not, albeit at higher rates to account for the risk.
 
         high_materiality: |
           The following examples illustrate how the mortgage sector could be impacted in a higher physical risk and high transition risk scenario and potential considerations at mortgage origination that firms might not review today.
@@ -343,6 +343,6 @@
           -	**Product (primarily mortgage) pricing:** linked to the energy efficiency or physical risk rating of the property.
           -	**Products aimed at supporting the transition:** of the Housing Association sector (e.g., Sustainable Linked Loans)
           -	**Products aimed at supporting the adaption:** of the housing to manage physical risks e.g. flood barriers or French drains.
-          -	There could exist opportunities for those best able to assess this risk, and hence willing to lend to segments of the markets that others are not.
+          -	There may be scope for institutions who are best able to assess both or either transition or physical risks to lend to segments of the markets that others are not, albeit at higher rates to account for the risk.
 
           In the fragmented world scenario, lenders with exposures to mortgage books should also look to assess the strategic risk caused by the emissions of their mortgage lending. This could be driven from targets and commitments previously set or imposed by regulators. Lenders could use the Partnership Carbon Accounting Financials (PCAF) to model the emissions across their mortgage portfolio. Lenders could also assess their ability to decarbonise their lending portfolio in line with the sector’s decarbonisation pathway. This analysis begins the feedback loop of climate scenario analysis into future strategy.

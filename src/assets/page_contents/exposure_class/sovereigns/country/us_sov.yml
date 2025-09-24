@@ -57,7 +57,7 @@
     focuses on the physical climate risk impacts on credit ratings, and not on the demands 
     of transition, nor on the knock-on effects that climate change may cause or exacerbate 
     such as resource conflicts, political volatility, or supply chain disruptions.
-    
+
   transition:
     high:
       exec_description: |
@@ -418,7 +418,7 @@
         In the High physical and transition risk (Too-little-too-late) scenario, late and 
         uncoordinated policy reaction means that a ‘Business as Usual’ approach to decarbonisation 
         occurs between now and 2030, followed by a somewhat subdued increase in policy aggression, 
-        equivalent to a carbon price increase to ~227 USD per tonne CO<sub>2</sub> by 2035 and ~1,343 USD by 
+        equivalent to a carbon price increase to ~227 USD per tonne CO₂ by 2035 and ~1,343 USD by 
         2050 based on the IIASA NGFS Scenario Explorer NiGEM model (REMIND inputs). The delayed 
         policy ambition reduces the initial disincentivisation against fossil fuels, only to penalise 
         and thus risk stranding fossil fuel assets beyond 2030. In this scenario, disorderly policy 

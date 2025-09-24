@@ -99,12 +99,12 @@
         automotive companies proactively investing in innovation and new technology. 
         For example, expansion of affordable low-carbon products and services, and 
         electric vehicle charging networks. These innovations could contribute to an 
-        overall decrease in CO<sub>2</sub> emissions from road transport. In the Delayed transition 
-        scenario, emissions in Mt CO<sub>2</sub> per year falls significantly in passenger vehicles 
+        overall decrease in CO₂ emissions from road transport. In the Delayed transition 
+        scenario, emissions in Mt CO₂ per year falls significantly in passenger vehicles 
         due to the take up of electric vehicles, while freight emissions initially increase 
         up to 2030 to 2035 and then drop slowly afterwards.
         
-        ![Transport CO<sub>2</sub> Emissions](/assets/images/motor_uw_delayed_passenger_transport.png)
+        ![Transport CO₂ Emissions](/assets/images/motor_uw_delayed_passenger_transport.png)
         
         **Source:**
         [[IIASA NGFS Scenario Explorer.] REMIND-MAgPIE 3.3-4.8.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -128,7 +128,7 @@
         demand for the coming years, the changing patterns in energy generation in 
         Orderly transition risk scenarios, driven by immediate policy reaction, societal 
         change, national energy strategies, and carbon legislation, could lead to an 
-        immediate and smooth reduction in CO<sub>2</sub> emissions by 2050. This would, in turn, 
+        immediate and smooth reduction in CO₂ emissions by 2050. This would, in turn, 
         leads to an increase in the carbon price and/or policies punishing Internal 
         Combustion Engine vehicles and/or rewarding electric vehicles. The result 
         is a smooth transition away from Internal Combustion Engine vehicles towards 
@@ -219,16 +219,16 @@
         companies proactively investing in innovation and new technology. For example, 
         expansion of affordable low-carbon products and services, and electric vehicle 
         charging networks. These innovations could contribute to an overall decrease 
-        in CO<sub>2</sub> emissions from road transport. In Orderly transition scenarios, 
-        emissions in Mt CO<sub>2</sub> per year falls significantly in passenger vehicles due to 
+        in CO₂ emissions from road transport. In Orderly transition scenarios, 
+        emissions in Mt CO₂ per year falls significantly in passenger vehicles due to 
         the take up of electric vehicles, while freight emissions initially increase 
         up to 2030 to 2035 and then drop afterwards.
         
-        ![Transport CO<sub>2</sub> Emissions - Net Zero 2050](/assets/images/motor_uw_orderly_passenger_transport_netzero2050.png)
+        ![Transport CO₂ Emissions - Net Zero 2050](/assets/images/motor_uw_orderly_passenger_transport_netzero2050.png)
         
-        ![Transport CO<sub>2</sub> Emissions - Below 2&deg;C](/assets/images/motor_uw_orderly_passenger_transport_below2c.png)
+        ![Transport CO₂ Emissions - Below 2&deg;C](/assets/images/motor_uw_orderly_passenger_transport_below2c.png)
         
-        ![Transport CO<sub>2</sub> Emissions - Low Demand](/assets/images/motor_uw_orderly_passenger_transport_lowdemand.png)
+        ![Transport CO₂ Emissions - Low Demand](/assets/images/motor_uw_orderly_passenger_transport_lowdemand.png)
         
         **Source:**
         [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -284,9 +284,9 @@
         in the current policies. Freight emissions would increase in current 
         policies while for NDCs, emissions would plateau at 2025 levels.
         
-        ![Transport CO<sub>2</sub> Emissions - Current Policies](/assets/images/motor_uw_physical_current_policies.png)
+        ![Transport CO₂ Emissions - Current Policies](/assets/images/motor_uw_physical_current_policies.png)
         
-        ![Transport CO<sub>2</sub> Emissions - NDCs](/assets/images/motor_uw_physical_NDCs.png)
+        ![Transport CO₂ Emissions - NDCs](/assets/images/motor_uw_physical_NDCs.png)
         
         **Source:**
         [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
@@ -376,7 +376,7 @@
         operating across multiple countries, requiring them to adopt 
         differentiated approaches for different territories.
         
-        ![Transport CO<sub>2</sub> Emissions - Fragmented World](/assets/images/motor_uw_physical_transition_fragmented_world.png)
+        ![Transport CO₂ Emissions - Fragmented World](/assets/images/motor_uw_physical_transition_fragmented_world.png)
         
         **Source:**
         [IIASA NGFS Climate Scenarios Database. REMIND-MAgPIE 3.3-4.8 model.](https://data.ece.iiasa.ac.at/ngfs/#/downloads)   
