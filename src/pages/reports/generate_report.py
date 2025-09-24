@@ -1,13 +1,24 @@
 import dash
-from dash import html, callback, Output, Input, State, ctx, dcc
-from utils import data_loader
+from dash import html, dcc, callback, Output, Input, State,dash_table
+from utils import data_loader, css_loader
 import pandas as pd
-from urllib.parse import parse_qs
 import numpy as np
+from urllib.parse import parse_qs
 import dash_bootstrap_components as dbc
-import io
-from docx import Document
-from bs4 import BeautifulSoup
+import pdfkit
+from html import escape as _html_escape
+from markdown import markdown as _md
+import os
+import base64
+import mimetypes
+import tempfile
+from pathlib import Path
+
+WKHTMLTOPDF_PATH = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'
+_BOOTSTRAP_CSS = css_loader._load_bootstrap_css()
+_EXTERNAL_CSS = css_loader._load_external_css()
+# Cache for already serialized components (avoid duplicates with shared refs)
+_SERIALIZATION_CACHE = {}
 
 dash.register_page(__name__, path='/reports/generate-report')
 
@@ -94,38 +105,70 @@ def update_url(user_selection_completed, url_search, back, report_type, institut
 @callback(
 	Output("download-store", "data"),
 	Input("download-btn", "n_clicks"),
-	State("report-content", "children"),
-	prevent_initial_call=True,
+	State("html-output", "data"),
+	prevent_initial_call=True
 )
-def download_report(n_clicks, report_content):
-	# html_string = _dash_html_to_string(report_content)
-	# doc = _html_to_docx(html_string)
-	# buffer = io.BytesIO()
-	# doc.save(buffer)
-	# buffer.seek(0)
-	# return dict(
-	# 	content=buffer.read(),
-	# 	filename="CFRF_Report.docx",
-	# 	type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-	# )
+def download_report(n_clicks, html_output):
+	if not n_clicks:
+		raise dash.exceptions.PreventUpdate
+	if not html_output:
+		raise dash.exceptions.PreventUpdate
 
-	html_string = _dash_html_to_string(report_content)
-	# Convert HTML to plain text for RTF (or use a library for rich formatting)
-	soup = BeautifulSoup(html_string, "html.parser")
-	plain_text = soup.get_text()
-	rtf_content = r"{\rtf1\ansi " + plain_text.replace('\n', r'\par ') + "}"
-	buffer = io.BytesIO()
-	buffer.write(rtf_content.encode('utf-8'))
-	buffer.seek(0)
-	return dict(
-		content=buffer.read(),
-		filename="CFRF_Report.rtf",
-		type="application/rtf"
-	)
+	# Debug: write raw HTML so it can be inspected if PDF is blank
+	debug_html_path = os.path.join(tempfile.gettempdir(), "report_debug.html")
+	try:
+		with open(debug_html_path, "w", encoding="utf-8") as dbg:
+			dbg.write(html_output)
+	except Exception:
+		pass  # ignore debug write errors
+
+	if not html_output.strip():
+		raise dash.exceptions.PreventUpdate
+
+	# Write HTML to temp file
+	with tempfile.NamedTemporaryFile(delete=False, suffix=".html", mode="w", encoding="utf-8") as tmp_html:
+		tmp_html.write(html_output)
+		html_path = tmp_html.name
+
+	pdf_path = os.path.join(tempfile.gettempdir(), "report.pdf")
+	config = pdfkit.configuration(wkhtmltopdf=WKHTMLTOPDF_PATH)
+
+	options = {
+		"enable-local-file-access": "",
+		"encoding": "utf-8",
+		"quiet": "",
+		"load-error-handling": "ignore",
+		"load-media-error-handling": "ignore",
+		"page-size": "A4",
+		"margin-top": "15mm",
+		"margin-bottom": "18mm",
+		"margin-left": "12mm",
+		"margin-right": "12mm",
+		"print-media-type": "",
+		# "disable-smart-shrinking": "",  # uncomment if layout still breaks
+		# "javascript-delay": "500",      # uncomment if later JS content needed
+	}
+
+	try:
+		pdfkit.from_file(html_path, pdf_path, configuration=config, options=options)
+	except Exception as e:
+		# Fallback: deliver HTML instead of blank PDF
+		return dcc.send_string(html_output, "report.html")
+
+	# Basic validation: non-empty PDF
+	try:
+		if os.path.getsize(pdf_path) < 1000:
+			# Too small: send HTML for inspection
+			return dcc.send_string(html_output, "report.html")
+	except Exception:
+		return dcc.send_string(html_output, "report.html")
+
+	return dcc.send_file(pdf_path)
 
 @callback(
 	Output("report-sidebar", "children"),
 	Output("report-content", "children"),
+	Output("html-output", "data"),
 	Input("generate-report-url", "search"),
 	Input("all-user-selection-store", "data"),
 	State("output-structure-mapping-store", "data"),
@@ -207,7 +250,8 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 	output_structure_layout = remove_parents_with_empty_children(output_structure_layout)
 	output_structure_layout = clean_up_sector_overview_and_detail(output_structure_layout)
 	output_structure_layout, sidebar_layout = create_sidebar_layout(output_structure_layout)
-	return html.Div(sidebar_layout), html.Div(output_structure_layout)
+	html_content = generate_static_html_from_report(output_structure_layout)
+	return html.Div(sidebar_layout), html.Div(output_structure_layout), html_content
 
 def prepare_output_structure_mapping(output_structure_mapping_df, report_type):
 	exploded_output_structure_mapping_df = output_structure_mapping_df.copy()
@@ -783,42 +827,190 @@ def _convert_to_bullet_points(df, bullet_point_column_name):
 	output_df[bullet_point_column_name] = '- ' + output_df[bullet_point_column_name]
 	return output_df
 
-def _check_headers_in_markdown(node, headers_list):
-	return len([x.lower() for x in headers_list if x.lower() in node.__dict__['className']]) > 0
+def _style_dict_to_css(style):
+	if not style:
+		return ''
+	return '; '.join(f'{str(k).replace("_", "-")}:{v}' for k, v in style.items())
 
-def _dash_html_to_string(output_structure_layout):
-	# Recursively convert Dash HTML components to HTML string
-	if isinstance(output_structure_layout, list):
-		return ''.join([_dash_html_to_string(child) for child in output_structure_layout])
-	if hasattr(output_structure_layout, 'children'):
-		tag = output_structure_layout.__class__.__name__.lower()
-		children = _dash_html_to_string(output_structure_layout.children)
-		return f"<{tag}>{children}</{tag}>"
-	return str(output_structure_layout)
+def _inline_image_src(src):
+	src = 'src/' + src
+	if not src:
+		return ''
+	if src.startswith(('http://', 'https://', 'data:')):
+		return src
+	if os.path.exists(src):
+		mime, _ = mimetypes.guess_type(src)
+		if not mime:
+			mime = 'application/octet-stream'
+		with open(src, 'rb') as f:
+			b64 = base64.b64encode(f.read()).decode('utf-8')
+		return f'data:{mime};base64,{b64}'
+	return src
 
-# def _dash_html_to_string(dash_component):
-# 	# Recursively convert Dash HTML components to HTML string
-# 	if isinstance(dash_component, list):
-# 		return ''.join([_dash_html_to_string(child) for child in dash_component])
-# 	if hasattr(dash_component, 'props'):
-# 		tag = dash_component.__class__.__name__.lower()
-# 		children = _dash_html_to_string(dash_component.props.get('children', ''))
-# 		return f"<{tag}>{children}</{tag}>"
-# 	return str(dash_component)
-#
-# def _html_to_docx(html_string):
-# 	doc = Document()
-# 	soup = BeautifulSoup(html_string, "html.parser")
-# 	for elem in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div', 'ul', 'ol', 'li']):
-# 		text = elem.get_text()
-# 		if elem.name.startswith('h'):
-# 			level = int(elem.name[1])
-# 			doc.add_heading(text, level=level)
-# 		elif elem.name in ['ul', 'ol']:
-# 			for li in elem.find_all('li'):
-# 				doc.add_paragraph(li.get_text(), style='List Bullet' if elem.name == 'ul' else 'List Number')
-# 		elif elem.name == 'p':
-# 			doc.add_paragraph(text)
-# 		elif elem.name == 'div':
-# 			doc.add_paragraph(text)
-# 	return doc
+def _serialize_datatable(dt: dash_table.DataTable):
+	cols = getattr(dt, 'columns', []) or []
+	data = getattr(dt, 'data', []) or []
+	col_ids = [c.get('id') for c in cols]
+	header_html = '<tr>' + ''.join(
+		f'<th>{_html_escape(str(c.get("name", c.get("id", ""))))}</th>' for c in cols
+	) + '</tr>'
+	body_rows = []
+	for row in data:
+		body_rows.append(
+			'<tr>' + ''.join(
+				f'<td>{_html_escape("" if row.get(cid) is None else str(row.get(cid)))}</td>'
+				for cid in col_ids
+			) + '</tr>'
+		)
+	return f'<table class="datatable"><thead>{header_html}</thead><tbody>{"".join(body_rows)}</tbody></table>'
+
+def _markdown_to_html(text):
+	if text is None:
+		return ''
+	if not _md:
+		return f'<p>{_html_escape(str(text))}</p>'
+	import re
+	html = _md(str(text))
+
+	# Inline <img> tags (produced by markdown from ![]()) and local paths -> data URIs
+	def _inline_img(match):
+		pre_attrs, src, post_attrs = match.group(1), match.group(2), match.group(3)
+		# Preserve existing alt if present
+		alt_match = re.search(r'alt="([^"]*)"', pre_attrs + post_attrs)
+		alt = alt_match.group(1) if alt_match else ''
+		inlined_src = _html_escape(_inline_image_src(src))
+		return f'<img src="{inlined_src}" alt="{_html_escape(alt)}" />'
+	html = re.sub(r'<img\s+([^>]*?)src="([^"]+)"([^>]*)>', _inline_img, html, flags=re.IGNORECASE)
+
+	# Normalize links: ensure target + rel, keep inner HTML (do not escape inner)
+	def _inline_link(match):
+		pre_attrs, href, post_attrs, inner = match.group(1), match.group(2), match.group(3), match.group(4)
+		escaped_href = _html_escape(href)
+		return f'<a href="{escaped_href}" target="_blank" rel="noopener noreferrer">{inner}</a>'
+	html = re.sub(r'<a\s+([^>]*?)href="([^"]+)"([^>]*)>(.*?)</a>', _inline_link, html, flags=re.IGNORECASE | re.DOTALL)
+
+	return html
+
+def _serialize_component(component):
+	if component is None:
+		return ''
+	# Primitive
+	if isinstance(component, (str, int, float)):
+		return _html_escape(str(component)).replace('\n', ' ')
+	# List / tuple
+	if isinstance(component, (list, tuple)):
+		return ''.join(_serialize_component(c) for c in component)
+	# Avoid re-serializing same object (by id())
+	cid = id(component)
+	if cid in _SERIALIZATION_CACHE:
+		return _SERIALIZATION_CACHE[cid]
+
+	# DataTable
+	if isinstance(component, dash_table.DataTable):
+		html_str = _serialize_datatable(component)
+		_SERIALIZATION_CACHE[cid] = html_str
+		return html_str
+
+	cls_name = component.__class__.__name__
+
+	# dcc.Markdown
+	if cls_name == 'Markdown':
+		html_str = _markdown_to_html(getattr(component, 'children', '')[0])
+		_SERIALIZATION_CACHE[cid] = html_str
+		return html_str
+
+	# Map Dash HTML component class names to tag
+	tag = cls_name.lower()
+
+	children = getattr(component, 'children', None)
+	inner_html = ''
+	if isinstance(children, (list, tuple)):
+		inner_html = ''.join(_serialize_component(c) for c in children)
+	else:
+		inner_html = _serialize_component(children)
+
+	attrs = []
+	comp_id = getattr(component, 'id', None)
+	if comp_id:
+		attrs.append(f'id="{_html_escape(str(comp_id))}"')
+	class_name = getattr(component, 'className', None)
+	if class_name:
+		attrs.append(f'class="{_html_escape(str(class_name))}"')
+	style = getattr(component, 'style', None)
+	style_css = _style_dict_to_css(style)
+	if style_css:
+		attrs.append(f'style="{_html_escape(style_css)}"')
+
+	# Anchor specific
+	if tag == 'a':
+		href = getattr(component, 'href', None)
+		if href:
+			attrs.append(f'href="{_html_escape(str(href))}"')
+		target = getattr(component, 'target', None)
+		if target:
+			attrs.append(f'target="{_html_escape(str(target))}"')
+
+	# Image specific
+	if tag == 'img':
+		src = getattr(component, 'src', None)
+		if src:
+			attrs.append(f'src="{_html_escape(_inline_image_src(src))}"')
+		alt = getattr(component, 'alt', '') or ''
+		attrs.append(f'alt="{_html_escape(str(alt))}"')
+
+	void_tags = {'img', 'br', 'hr', 'meta', 'link', 'input'}
+	attr_str = (' ' + ' '.join(attrs)) if attrs else ''
+	if tag in void_tags:
+		html_str = f'<{tag}{attr_str} />'
+		_SERIALIZATION_CACHE[cid] = html_str
+		return html_str
+
+	html_str = f'<{tag}{attr_str}>{inner_html}</{tag}>'
+	_SERIALIZATION_CACHE[cid] = html_str
+	return html_str
+
+def _wrap_full_html(body_html: str) -> str:
+	base_styles = ""
+	# base_styles = """
+	# @page { size: A4; margin:15mm 12mm 18mm 12mm; }
+	# html, body { font-family: Nunito Sans; font-size:14px; line-height:1.4; }
+	# body { margin:0; }
+	# h1,h2,h3,h4,h5,h6 {
+	#   font-family: Nunito Sans;
+	#   page-break-inside: avoid;
+	#   break-inside: avoid;
+	#   page-break-after: avoid;
+	#   break-after: avoid;
+	#   orphans:3;
+	#   widows:3;
+	# }
+	# h1 + *, h2 + *, h3 + *, h4 + *, h5 + *, h6 + * {
+	#   page-break-before: avoid;
+	# }
+	# .section-block, .keep-with-next, .no-split-heading {
+	#   page-break-inside: avoid;
+	#   break-inside: avoid;
+	# }
+	# table { border-collapse: collapse; width:100%; margin:1em 0; font-size:12px; }
+	# th, td { border:1px solid #555; padding:4px 6px; vertical-align:top; }
+	# th { background:#f5f5f5; }
+	# img { max-width:100%; height:auto; }
+	# .datatable { page-break-inside:auto; }
+	# tr { page-break-inside:avoid; page-break-after:auto; }
+	# h1 { page-break-before:always; }
+	# h1:first-of-type { page-break-before:auto; }
+	# """
+	full_css = (_BOOTSTRAP_CSS or "") + base_styles + (_EXTERNAL_CSS or "")
+	return (
+		'<!DOCTYPE html><html><head><meta charset="utf-8">'
+		'<title>Report</title>'
+		f'<style>{full_css}</style>'
+		'</head><body>'
+		f'{body_html}'
+		'</body></html>'
+	)
+
+def generate_static_html_from_report(report_content):
+	_SERIALIZATION_CACHE.clear()
+	serialized = _serialize_component(report_content)
+	return _wrap_full_html(f'<div id="report-root">{serialized}</div>')

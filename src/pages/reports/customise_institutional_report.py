@@ -395,10 +395,9 @@ def store_user_selection(back, _next, restart, generate_report, user_selection_c
 				'label': s,
 				'value': s,
 			} for s in scenario_selection_values[0]]
-			if stored_data:
-				all_stored_data = all_stored_data or {}
-				all_stored_data[exposure_type] = stored_data
-				updated = True
+			all_stored_data = all_stored_data or {}
+			all_stored_data[exposure_type] = stored_data
+			updated = True
 		else:
 			if exposure_selection_values:
 				stored_data = []
@@ -561,7 +560,7 @@ def no_customisation_error_message(generate_report, all_stored_data):
 def toggle_modal(n_click, is_open, url_search):
 	if n_click:
 		query = parse_qs(url_search.lstrip('?'))
-		report_type = query['report_type'][0]
+		report_type = query.get("report-type", [None])[0]
 		institution_type = query.get("institution-type", [None])[0]
 		return not is_open, f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}"
 	return is_open, dash.no_update
