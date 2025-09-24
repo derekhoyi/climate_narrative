@@ -12,7 +12,6 @@ import os
 import base64
 import mimetypes
 import tempfile
-from pathlib import Path
 
 WKHTMLTOPDF_PATH = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'
 _BOOTSTRAP_CSS = css_loader._load_bootstrap_css()
@@ -85,21 +84,22 @@ def toggle_report_fab(n, is_open):
 @callback(
 	Output("generate-report-url", "href"),
 	Input("user-selection-completed-store", "data"),
-	Input("generate-report-url", "search"),
+	State("generate-report-url", "search"),
 	Input("generate-report-previous-btn", "n_clicks"),
 	State("report-type-store", "data"),
 	State("institution-type-store", "data"),
 	State("generate-report-url", "pathname"),
+	prevent_initial_call=True
 )
 def update_url(user_selection_completed, url_search, back, report_type, institution_type, url_pathname):
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0 and "generate-report" in url_pathname
-	report_page = query.get('report_type', [None])[0]
+	report_page = query.get('report-type', [None])[0]
 
 	if start_page and user_selection_completed and not report_page:
 		return f"/reports/generate-report?report-type={report_type}&institution-type={institution_type}"
 	if back:
-		return f"/reports/customise-report?report_type={report_type}&institution-type={institution_type}&review=summary"
+		return f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}&review=summary"
 	return dash.no_update
 
 @callback(
