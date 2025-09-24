@@ -80,14 +80,24 @@ def toggle_report_fab(n, is_open):
 	prevent_initial_call=True
 )
 def update_url(user_selection_completed, url_search, back, report_type, institution_type, url_pathname):
+	if not url_pathname:
+		raise dash.exceptions.PreventUpdate
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0 and "generate-report" in url_pathname
 	report_page = False if query.get('report-type', [None])[0] is None or query.get('institution-type', [None])[0] is None else True
 
+	if report_type == 'Institutional':
+		additional_string = f'&institution-type={institution_type}'
+	else:
+		additional_string = ''
+
 	if start_page and user_selection_completed and not report_page:
-		return f"/reports/generate-report?report-type={report_type}&institution-type={institution_type}"
+		return f"/reports/generate-report?report-type={report_type}{additional_string}"
 	if back:
-		return f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}&review=summary"
+		if report_type == 'Full':
+			return f"/reports"
+		else:
+			return f"/reports/customise-report?report-type={report_type}{additional_string}&review=summary"
 	return dash.no_update
 
 @callback(
@@ -108,7 +118,7 @@ def download_report(n_clicks, html_output):
 	Output("report-content", "children"),
 	Output("html-output", "data"),
 	Input("generate-report-url", "search"),
-	Input("all-user-selection-store", "data"),
+	State("all-user-selection-store", "data"),
 	State("output-structure-mapping-store", "data"),
 	State("exposure-sector-product-mapping-store", "data"),
 	State("scenario-mapping-store", "data"),
@@ -118,6 +128,9 @@ def download_report(n_clicks, html_output):
 )
 def generate_all_reports(url_search, all_stored_data, output_structure_mapping_dict,
 						 exposure_sector_product_mapping_dict, scenario_mapping_dict, report_type, url_pathname):
+	if not url_pathname:
+		raise dash.exceptions.PreventUpdate
+
 	query = parse_qs(url_search.lstrip('?'))
 	start_page = len(query) == 0 and "generate-report" in url_pathname
 
@@ -135,7 +148,7 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 	output_structure_mapping_df = pd.DataFrame(output_structure_mapping_dict)
 
 	# Extract scenario list if any
-	scenario_list = list(all_user_selection_df[all_user_selection_df['exposure'] == 'Scenario']['label'].unique())
+	scenario_list = list(all_user_selection_df[all_user_selection_df['exposure'] == 'Scenarios']['label'].unique())
 
 	# Prepare output structure mapping
 	sorted_output_structure_mapping_df = prepare_output_structure_mapping(output_structure_mapping_df, report_type)
@@ -220,7 +233,7 @@ def prepare_output_structure_mapping(output_structure_mapping_df, report_type):
 	return sorted_output_structure_mapping_df
 
 def get_sector_and_product_yml_file_path(all_user_selection_df, output_structure_mapping_df, exposure_sector_product_mapping_df):
-	user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] != 'Scenario'].copy()
+	user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] != 'Scenarios'].copy()
 	user_selection_df = user_selection_df.rename(columns={
 		'report': 'report_type',
 		'label': 'materiality',
@@ -272,7 +285,7 @@ def create_sort_order(user_selection_with_yml_file_path_df):
 	return output_df
 
 def get_summary_input_table_layout(all_user_selection_df, user_selection_with_yml_file_path_df):
-	scenario_user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] == 'Scenario'].copy()
+	scenario_user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] == 'Scenarios'].copy()
 	scenario_user_selection_df = scenario_user_selection_df.rename(columns={
 		'report': 'report_type',
 		'label': 'materiality',
@@ -296,7 +309,7 @@ def get_scenario_layout(sub_section_mapping_df, scenario_mapping_df, scenario_li
 		for scenario in scenario_list:
 			filtered_scenario_mapping_df = scenario_mapping_df[scenario_mapping_df['scenario_name'] == scenario]
 			scenario_yml_file = filtered_scenario_mapping_df['scenario_yml_file'].iloc[0]
-			scenario_yml = data_loader.load_yml_file('scenario', f'{scenario_yml_file}.yml')
+			scenario_yml = data_loader.load_yml_file('Scenarios', f'{scenario_yml_file}.yml')
 			content_value = scenario_yml.get(content_id, "")
 			desc = html.Div([
 				html.H2(scenario) if section == 'Scenario Detail' else html.H3(scenario),
@@ -393,8 +406,8 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 				low_medium_materiality_df = reports_utils.convert_to_bullet_points(low_medium_materiality_df, 'materiality')
 
 				# Add scenarios
-				low_medium_materiality_df['scenario'] = [scenario_list for x in low_medium_materiality_df['sector_yml_file']]
-				low_medium_materiality_df = low_medium_materiality_df.explode('scenario')
+				low_medium_materiality_df['Scenarios'] = [scenario_list for x in low_medium_materiality_df['sector_yml_file']]
+				low_medium_materiality_df = low_medium_materiality_df.explode('Scenarios')
 
 				# Add sector yml
 				low_medium_materiality_df['sector_yml'] = [
@@ -408,7 +421,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 				# Add description
 				low_medium_materiality_df['description'] = [
 					reports_utils.filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id]
-					for sector_yml, scenario, content_id in low_medium_materiality_df[['sector_yml', 'scenario', 'content_id']].to_numpy()
+					for sector_yml, scenario, content_id in low_medium_materiality_df[['sector_yml', 'Scenarios', 'content_id']].to_numpy()
 				]
 
 				# Create datatable

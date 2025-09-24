@@ -35,11 +35,37 @@ def report_type_buttons(output_structure_mapping_dict):
             dbc.Col(
                 dbc.Button(
                     desc,
-                    id=f'{report_type.lower()}-btn',
+                    id={"type": "report-type-btn", "index": report_type},
                     color='success',
                     class_name='rounded-4 w-100 h-100 align-items-start justify-content-center d-flex pt-4',
-                    href=f'/reports/customise-report?report-type={report_type}',
                 ), md=6
             )
         )
     return button_list
+
+@callback(
+    Output("report-type-store", "data"),
+    Output('user-selection-completed-store', 'data', allow_duplicate=True),
+    Output({"type": "report-type-btn", "index": dash.ALL}, "href"),
+    Output("select-report-url", "href"),
+    Input({"type": "report-type-btn", "index": dash.ALL}, "n_clicks"),
+    prevent_initial_call=True
+)
+def store_report_type(btn_clicks):
+    triggered_list = dash.callback_context.triggered
+    button_clicked = [x for x in triggered_list if x['value']]
+    if button_clicked:
+        button_clicked_report_type = eval(button_clicked[0]['prop_id'].split('.')[0])['index']
+        button_clicked_href = f'/reports/customise-report?report-type={button_clicked_report_type}' \
+            if button_clicked_report_type != 'Full' else f'/reports/generate-report?report-type={button_clicked_report_type}'
+        href_list = []
+        for x in dash.callback_context.inputs:
+            report_type = eval(x.split('.')[0])['index']
+            url_pathname = f'/reports/customise-report?report-type={report_type}' if report_type != 'Full' \
+                else f'/reports/generate-report?report-type={report_type}'
+            if report_type == button_clicked_report_type:
+                href_list.append(url_pathname)
+            else:
+                href_list.append(dash.no_update)
+        return button_clicked_report_type, None, href_list, button_clicked_href
+    return dash.no_update, dash.no_update, [dash.no_update] * len(btn_clicks), dash.no_update

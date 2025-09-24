@@ -558,94 +558,6 @@
         "product_yml_file": "loans"
       },
       {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "UK",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/uk_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "Europe",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/eu_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "US",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/us_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "Canada",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/can_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "France",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/fra_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "Japan",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/jap_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "Germany",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/ger_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "Italy",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/itl_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "China",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/chi_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "India",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/ind_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
-        "institution": "All",
-        "exposure": "Sovereigns",
-        "sector": "Brazil",
-        "type": "Exposure",
-        "sector_yml_file": "sovereigns/country/bra_sov",
-        "product_yml_file": "sovereigns"
-      },
-      {
         "institution": "Insurance",
         "exposure": "Life and Health Lines of Business",
         "sector": "Life Protection",
@@ -1132,6 +1044,94 @@
         "type": "Non revenue generating",
         "sector_yml_file": "sector/real_estate",
         "product_yml_file": "mortgages"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "UK",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/uk_sov",
+        "product_yml_file": "sovereigns"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "Europe",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/eu_sov",
+        "product_yml_file": "sovereigns"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "US",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/us_sov",
+        "product_yml_file": "sovereigns"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "Canada",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/can_sov",
+        "product_yml_file": "sovereigns"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "France",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/fra_sov",
+        "product_yml_file": "sovereigns"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "Japan",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/jap_sov",
+        "product_yml_file": "sovereigns"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "Germany",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/ger_sov",
+        "product_yml_file": "sovereigns"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "Italy",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/itl_sov",
+        "product_yml_file": "sovereigns"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "China",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/chi_sov",
+        "product_yml_file": "sovereigns"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "India",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/ind_sov",
+        "product_yml_file": "sovereigns"
+      },
+      {
+        "institution": "All",
+        "exposure": "Sovereigns",
+        "sector": "Brazil",
+        "type": "Exposure",
+        "sector_yml_file": "sovereigns/country/bra_sov",
+        "product_yml_file": "sovereigns"
       }
     ]
   }

@@ -61,8 +61,10 @@ def load_config_json_and_store():
 
 	# Create stores
 	stores = [
+		dcc.Store(id='report-section-index', storage_type='session', data=2),
 		dcc.Store(id='report-type-store', storage_type='session'),
 		dcc.Store(id='institution-type-store', storage_type='session'),
+		dcc.Store(id='exposure-type-store', storage_type='session'),
 		dcc.Store(id='all-user-selection-store', storage_type='session'),
 		dcc.Store(id='user-selection-completed-store', storage_type='session', data=False),
 		dcc.Store(id='trigger-error-store', storage_type='memory', data=False),
@@ -81,11 +83,16 @@ def get_selected_institution_type_mapping(exposure_product_mapping_dict, institu
 	exposure_product_mapping_df = exposure_product_mapping_df[exposure_product_mapping_df['institution'].isin([institution_type, 'All'])]
 	return exposure_product_mapping_df
 
-def get_user_selection_from_store(all_stored_data):
+def get_user_selection_from_store(all_stored_data, report_type):
 	all_user_selection_df = pd.DataFrame()
 	for k, v in all_stored_data.items():
 		user_selection_df = pd.DataFrame(all_stored_data[k])
 		all_user_selection_df = pd.concat([all_user_selection_df, user_selection_df])
+
+	if len(all_user_selection_df) == 0:
+		all_user_selection_df = pd.DataFrame([], columns=[
+			'report', 'id', 'institution', 'exposure', 'sector', 'ptype', 'label', 'value'
+		])
 	return all_user_selection_df
 
 def rename_user_selection_data_columns(all_user_selection_df):
