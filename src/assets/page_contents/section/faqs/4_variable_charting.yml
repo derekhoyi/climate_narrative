@@ -33,7 +33,7 @@ charts:
 
   - question: Where can I find other macroeconomic outputs?
     answer: |
-        Other macroeconomic indicators such as inflation are similarly available under the ‘transition risk’ and are broken down into:   
+        Other macroeconomic indicators such as inflation are similarly available under the ‘transition risk’ header and are broken down into:   
 
         a) combined – combined transition and physical risk impacts (including business confidence shocks for the Disorderly scenario)
 
