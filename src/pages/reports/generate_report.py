@@ -169,9 +169,7 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 		for sub_section in section_mapping_df['sub_section'].unique():
 			sub_section_mapping_df = section_mapping_df[section_mapping_df['sub_section'] == sub_section]
 			if sub_section == 'summary_input_table_flag':
-				sub_section_layout = get_summary_input_table_layout(
-					all_user_selection_df, prepped_user_selection_df, report_type
-				)
+				sub_section_layout = get_summary_input_table_layout(all_user_selection_df, prepped_user_selection_df)
 			elif sub_section == 'scenario_content_id':
 				sub_section_layout = get_scenario_layout(sub_section_mapping_df, scenario_mapping_df, scenario_list)
 			elif sub_section == 'sector_description_content_id':
@@ -205,21 +203,25 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 	return html.Div(sidebar_layout), html.Div(output_structure_layout), html_content
 
 def prepare_output_structure_mapping(output_structure_mapping_df, report_type):
-	exploded_df = output_structure_mapping_df.copy()
+	exploded_df = output_structure_mapping_df[output_structure_mapping_df['report_type'] == report_type].copy()
+
 	if report_type != 'Scenario':
 		exploded_df['materiality'] = [
-			['Low', 'Medium', 'High'] if x == 'All' else [x] for x in exploded_df['materiality']
+			['High', 'Medium', 'Low'] if x == 'All' else [x] for x in exploded_df['materiality']
 		]
 		exploded_df = exploded_df.explode(['materiality'])
 		exploded_df['materiality'] = pd.Categorical(
-			exploded_df['materiality'], categories=['Low', 'Medium', 'High'], ordered=True
+			exploded_df['materiality'], categories=['High', 'Medium', 'Low'], ordered=True
 		)
+	exploded_df['output_structure'] = pd.Categorical(
+		exploded_df['output_structure'], categories=exploded_df['output_structure'].drop_duplicates(), ordered=True
+	)
 
-	id_list = ['report_type', 'output_structure', 'materiality']
-	sort_order_df = exploded_df[id_list].drop_duplicates()
+	id_list = ['output_structure', 'materiality']
+	sort_order_df = exploded_df[id_list].drop_duplicates().sort_values(by=id_list)
 
 	melted_df = pd.melt(exploded_df, id_vars=id_list, var_name='sub_section', value_name='content_id')
-	melted_df = melted_df[~(melted_df['content_id'].isnull())  & (melted_df['report_type'] == report_type)]
+	melted_df = melted_df[~melted_df['content_id'].isnull()]
 	sorted_df = pd.merge(sort_order_df, melted_df, on=id_list, how='left')
 	sorted_df = sorted_df.dropna(subset=['content_id']).reset_index(drop=True).reset_index(names='sort_order')
 	return sorted_df
@@ -228,7 +230,6 @@ def get_sector_and_product_yml_file_path(all_user_selection_df, output_structure
 	user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] != 'Scenarios'].copy()
 	if report_type == 'Institutional':
 		user_selection_df = user_selection_df.rename(columns={
-			'report': 'report_type',
 			'label': 'materiality',
 			'ptype': 'type',
 		})
@@ -251,34 +252,22 @@ def get_sector_and_product_yml_file_path(all_user_selection_df, output_structure
 			next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml').values()))['name']
 			for sector_yml_file in exposure_sector_product_mapping_df['sector_yml_file']
 		]
-		user_selection_df = user_selection_df[['report', 'exposure', 'sector', 'label']].rename(columns={'sector': 'yml_sector'})
+		user_selection_df = user_selection_df[['exposure', 'sector', 'label']].rename(columns={'sector': 'yml_sector'})
 		exposure_sector_product_mapping_df = exposure_sector_product_mapping_df[['yml_sector', 'sector_yml_file']].drop_duplicates()
 		user_selection_with_mapping_df = pd.merge(user_selection_df, exposure_sector_product_mapping_df, on=['yml_sector'], how='inner')
 		user_selection_with_mapping_df = user_selection_with_mapping_df.drop(columns=['yml_sector'])
-		user_selection_with_mapping_df = user_selection_with_mapping_df.rename(columns={'report': 'report_type', 'label': 'materiality'})
+		user_selection_with_mapping_df = user_selection_with_mapping_df.rename(columns={'label': 'materiality'})
 
 	# Merge in output structure mapping to get content_id
 	output_df = pd.merge(
-		user_selection_with_mapping_df, output_structure_mapping_df, on=['report_type', 'materiality'], how='left'
+		user_selection_with_mapping_df, output_structure_mapping_df, on=['materiality'], how='left'
 	)
 	return output_df
 
 def sort_user_selections(all_user_selection_df, output_structure_mapping_df, report_type):
 	output_df = all_user_selection_df.copy()
 
-	if report_type != 'Scenario':
-		# Get sector name
-		output_df['yml_sector'] = [
-			next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml').values()))['name']
-			for sector_yml_file in output_df['sector_yml_file']
-		]
-
-		# Get sort order
-		output_df['sector_sort_order'] = [
-			next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml')))
-			for sector_yml_file in output_df['sector_yml_file']
-		]
-	else:
+	if report_type == 'Scenario':
 		output_df = output_df.rename(columns={
 			'report': 'report_type',
 			'label': 'scenario',
@@ -286,22 +275,43 @@ def sort_user_selections(all_user_selection_df, output_structure_mapping_df, rep
 		output_df = output_df[['report_type', 'scenario']]
 		output_df = pd.merge(output_structure_mapping_df, output_df, on=['report_type'], how='left')
 
+		# Get sort order
+		sort_variables_list = ['sort_order']
+	else:
+		# Get sector name
+		output_df['yml_sector'] = [
+			next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml').values()))['name']
+			for sector_yml_file in output_df['sector_yml_file']
+		]
+		output_df['yml_sector'] = np.where(
+			output_df['yml_sector'].str.lower().str.contains('sovereign'), 'Sovereigns', output_df['yml_sector']
+		)
+
+		# Get sort order
+		if report_type == 'Institutional':
+			output_df['sector_sort_order'] = [
+				next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml')))
+				for sector_yml_file in output_df['sector_yml_file']
+			]
+			sort_variables_list = ['sort_order', 'sector_sort_order', 'materiality']
+		else:
+			sort_order_df = output_df[['yml_sector']].drop_duplicates().sort_values(by='yml_sector')
+			sort_order_df = sort_order_df.reset_index(drop=True).reset_index(names='sector_sort_order')
+			output_df = pd.merge(sort_order_df, output_df, on='yml_sector', how='left')
+			sort_variables_list = ['sector_sort_order']
+
 	# Sort by key variables
-	sort_variables_list = [x for x in ['sort_order', 'sector_sort_order', 'materiality'] if x in output_df.columns]
 	sorted_df = output_df.sort_values(by=sort_variables_list)
 	return sorted_df
 
-def get_summary_input_table_layout(all_user_selection_df, prepped_user_selection_df, report_type):
-	if report_type != 'Scenario':
-		scenario_user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] == 'Scenarios'].copy()
-		scenario_user_selection_df = scenario_user_selection_df.rename(columns={
-			'report': 'report_type',
-			'label': 'materiality',
-			'ptype': 'type',
-		})
-		summary_input_df = pd.concat([prepped_user_selection_df, scenario_user_selection_df])
-	else:
-		summary_input_df = prepped_user_selection_df.copy()
+def get_summary_input_table_layout(all_user_selection_df, prepped_user_selection_df):
+	scenario_user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] == 'Scenarios'].copy()
+	scenario_user_selection_df = scenario_user_selection_df.rename(columns={
+		'report': 'report_type',
+		'label': 'materiality',
+		'ptype': 'type',
+	})
+	summary_input_df = pd.concat([prepped_user_selection_df, scenario_user_selection_df])
 
 	summary_input_table = data_loader.rename_user_selection_data_columns(summary_input_df).drop_duplicates()
 	summary_input_table_layout = html.Div([
@@ -418,8 +428,8 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 				low_medium_materiality_df = reports_utils.convert_to_bullet_points(low_medium_materiality_df, 'materiality')
 
 				# Add scenarios
-				low_medium_materiality_df['Scenarios'] = [scenario_list for x in low_medium_materiality_df['sector_yml_file']]
-				low_medium_materiality_df = low_medium_materiality_df.explode('Scenarios')
+				low_medium_materiality_df['scenario'] = [scenario_list for x in low_medium_materiality_df['sector_yml_file']]
+				low_medium_materiality_df = low_medium_materiality_df.explode('scenario')
 
 				# Add sector yml
 				low_medium_materiality_df['sector_yml'] = [
@@ -433,7 +443,7 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 				# Add description
 				low_medium_materiality_df['description'] = [
 					reports_utils.filter_yml_by_scenario(sector_yml, scenario, scenario_mapping_df)[content_id]
-					for sector_yml, scenario, content_id in low_medium_materiality_df[['sector_yml', 'Scenarios', 'content_id']].to_numpy()
+					for sector_yml, scenario, content_id in low_medium_materiality_df[['sector_yml', 'scenario', 'content_id']].to_numpy()
 				]
 
 				# Create datatable
@@ -655,7 +665,7 @@ def clean_up_sector_overview_and_detail(report_content, output_structure_df):
 		product_selection_df = pd.DataFrame(product_datatable.data, columns=product_datatable_columns)
 	else:
 		product_desc = html.Div(className='d-none')
-		product_selection_df = pd.DataFrame(columns=['Sector', 'Type', 'Scenario', 'Description'])
+		product_selection_df = pd.DataFrame(columns=['Sector', 'Product', 'Type', 'Scenario', 'Description'])
 
 	# Clean up sector layout
 	sector_desc = []

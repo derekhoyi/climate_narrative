@@ -353,6 +353,7 @@ def initiate_sectors_checklist(exposure_sector_product_mapping_dict, exposure_ty
 		unique_sector_groups_and_sectors_df = exposure_sector_product_mapping_df[['sector_group', 'sector']].drop_duplicates()
 
 		sectors_selection_checklists = []
+		sectors_selection_buttons = []
 		for sector_group in unique_sector_groups_and_sectors_df['sector_group'].unique():
 			sectors_df = unique_sector_groups_and_sectors_df[unique_sector_groups_and_sectors_df['sector_group'] == sector_group]
 			sectors_selection_checklists.append(
@@ -365,7 +366,30 @@ def initiate_sectors_checklist(exposure_sector_product_mapping_dict, exposure_ty
 							id={"type": 'sector-selection-store', "sector_group": sector_group},
 							persistence=True,
 							persistence_type='memory'
-						)
+						),
+						html.Br()
+					])
+				)
+			)
+			sectors_selection_buttons.append(
+				dbc.Col(
+					html.Div([
+						dbc.ButtonGroup([
+							dbc.Button(
+								"Select All",
+								id={"type": "sector-selection-select-all", "sector_group": sector_group},
+								color="success",
+								outline=True,
+								className="flex-fill"
+							),
+							dbc.Button(
+								"Clear All",
+								id={"type": "sector-selection-clear-all", "sector_group": sector_group},
+								color="success",
+								outline=True,
+								className="flex-fill"
+							)
+						], className="gap-2"),
 					])
 				)
 			)
@@ -374,23 +398,7 @@ def initiate_sectors_checklist(exposure_sector_product_mapping_dict, exposure_ty
 			dbc.Label("Select the sectors applicable: "),
 			html.Br(),
 			html.Div(dbc.Row(sectors_selection_checklists)),
-			html.Br(),
-			dbc.ButtonGroup([
-				dbc.Button(
-					"Select All",
-					id="sector-selection-select-all",
-					color="success",
-					outline=True,
-					className="flex-fill"
-				),
-				dbc.Button(
-					"Clear All",
-					id="sector-selection-clear-all",
-					color="success",
-					outline=True,
-					className="flex-fill"
-				)
-			], className="gap-2"),
+			html.Div(dbc.Row(sectors_selection_buttons))
 		])
 	else:
 		sectors_selection_layout = html.Div([])
@@ -398,20 +406,25 @@ def initiate_sectors_checklist(exposure_sector_product_mapping_dict, exposure_ty
 
 @callback(
 	Output({"type": 'sector-selection-store', "sector_group": dash.ALL}, "value"),
-	Input("sector-selection-select-all", "n_clicks"),
-	Input("sector-selection-clear-all", "n_clicks"),
+	Input({"type": "sector-selection-select-all", "sector_group": dash.ALL}, "n_clicks"),
+	Input({"type": "sector-selection-clear-all", "sector_group": dash.ALL}, "n_clicks"),
+	State({"type": 'sector-selection-store', "sector_group": dash.ALL}, "id"),
+	State({"type": 'sector-selection-store', "sector_group": dash.ALL}, "value"),
 	State({"type": 'sector-selection-store', "sector_group": dash.ALL}, "options"),
 )
-def sectors_checklist_select_or_clear_all(select_all, clear_all, options):
+def sectors_checklist_select_or_clear_all(select_all, clear_all, ids, values, options):
 	trigger = ctx.triggered_id
-	if trigger == "sector-selection-select-all" and select_all:
-		option_list = options[0] if options else []
-		selection = [opt["value"] for opt in option_list]
-	elif trigger == "sector-selection-clear-all" and clear_all:
-		selection = []
+	if trigger:
+		id_index_clicked = next((i for i, d in enumerate(ids) if d.get('sector_group') == trigger.get('sector_group')), None)
+
+		if trigger['type'] == "sector-selection-select-all" and any(select_all):
+			return [[x['value'] for x in options[i]] if i == id_index_clicked else values[i] for i in range(len(options))]
+		elif trigger['type'] == "sector-selection-clear-all" and any(clear_all):
+			return [[] if i == id_index_clicked else values[i] for i in range(len(options))]
+		else:
+			raise dash.exceptions.PreventUpdate
 	else:
 		raise dash.exceptions.PreventUpdate
-	return [selection]
 
 @callback(
 	Output("scenario-selection-checklist", "children"),
@@ -435,7 +448,7 @@ def initiate_scenarios_checklist(scenario_mapping_dict, exposure_type, user_sele
 		filtered_stored_data = stored_data.get("Scenarios", [])
 
 		scenario_mapping_df = pd.DataFrame(scenario_mapping_dict)
-		scenarios = sorted(scenario_mapping_df['scenario_name'].unique())
+		scenarios = scenario_mapping_df['scenario_name'].unique()
 
 		default_value = [x['value'] for x in filtered_stored_data] if filtered_stored_data else []
 		scenario_selection_layout = html.Div([
