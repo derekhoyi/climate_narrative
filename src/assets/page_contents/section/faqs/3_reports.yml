@@ -18,5 +18,5 @@ reports:
   - question: What reports are available from the tool? 
     answer: |
         There are three types of reports that the tool can generate: Institutional Reports, Sector Reports, and Scenario Reports. All sectors and all 
-        scenarios can be selected within the 'Scenario Report' to generate all the narratives available. Please refer to [Reports](/reports) and follow the 
+        scenarios can be selected within the 'Scenario Report' to generate all the narratives available (please allow for a 3-5 minute loading time). Please refer to [Reports](/reports) and follow the 
         links to understand the contents under each type of report.
