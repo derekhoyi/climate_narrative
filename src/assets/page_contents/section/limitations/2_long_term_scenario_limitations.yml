@@ -53,8 +53,7 @@
         namely the UK Physical Risk Benchmarking Exercise and the 2025 CFRF Adaptation paper for more information. 
 
         - The tool incorporates physical risk estimates based on recent academic research, some of which has been subject to post-publication critique 
-        and is undergoing further peer review. Users remain responsible for checking the latest NGFS updates ([NGFS Scenarios Portal](https://www.ngfs.net/ngfs-scenarios-portal/data-resources/)) and applying 
-        their own judgment when interpreting results.
+        and is undergoing further peer review - [NGFS Scenarios Portal](https://www.ngfs.net/ngfs-scenarios-portal/data-resources/).
 
         - The societal impacts, such as climate-induced migration, are not thoroughly considered and are assumed to be the same across
         these scenarios.
