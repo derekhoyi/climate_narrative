@@ -54,7 +54,7 @@ def layout(report_type=None, institution_type=None, **kwargs):
 				md=3,
 				className="sidebar-btn-group mb-3 bg-light border-0"
 			),
-			dcc.Loading(dbc.Col(html.Div(id='report-content'), className="ms-22 pt-80"), color="#00B050"),
+			dbc.Col(dcc.Loading(html.Div(id='report-content'), color="#00B050"), className="ms-22 pt-80"),
 		]),
 		dcc.Download(id="download-store"),
 	], className="container")
@@ -94,10 +94,7 @@ def update_url(user_selection_completed, url_search, back, report_type, institut
 	if start_page and user_selection_completed and not report_page:
 		return f"/reports/generate-report?report-type={report_type}{additional_string}"
 	if back:
-		if report_type == 'Full':
-			return f"/reports"
-		else:
-			return f"/reports/customise-report?report-type={report_type}{additional_string}&review=summary"
+		return f"/reports/customise-report?report-type={report_type}{additional_string}&review=summary"
 	return dash.no_update
 
 @callback(
@@ -156,7 +153,7 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 	if report_type != 'Scenario':
 		# Get user selection with sector and product yml file path
 		prepped_user_selection_df = get_sector_and_product_yml_file_path(
-			all_user_selection_df, prepped_output_structure_df, exposure_sector_product_mapping_df
+			all_user_selection_df, prepped_output_structure_df, exposure_sector_product_mapping_df, report_type
 		)
 	else:
 		prepped_user_selection_df = all_user_selection_df.copy()
@@ -201,7 +198,7 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 		output_structure_layout.append(section_layout)
 	output_structure_layout = remove_parents_with_empty_children(output_structure_layout)
 	if report_type != 'Scenario':
-		output_structure_layout = clean_up_sector_overview_and_detail(output_structure_layout)
+		output_structure_layout = clean_up_sector_overview_and_detail(output_structure_layout, prepped_output_structure_df)
 
 	output_structure_layout, sidebar_layout = create_sidebar_layout(output_structure_layout)
 	html_content = generate_html_from_report(output_structure_layout)
@@ -227,33 +224,44 @@ def prepare_output_structure_mapping(output_structure_mapping_df, report_type):
 	sorted_df = sorted_df.dropna(subset=['content_id']).reset_index(drop=True).reset_index(names='sort_order')
 	return sorted_df
 
-def get_sector_and_product_yml_file_path(all_user_selection_df, output_structure_mapping_df, exposure_sector_product_mapping_df):
+def get_sector_and_product_yml_file_path(all_user_selection_df, output_structure_mapping_df, exposure_sector_product_mapping_df, report_type):
 	user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] != 'Scenarios'].copy()
-	user_selection_df = user_selection_df.rename(columns={
-		'report': 'report_type',
-		'label': 'materiality',
-		'ptype': 'type',
-	})
-	user_selection_df = user_selection_df.drop(columns=['id', 'value'])
+	if report_type == 'Institutional':
+		user_selection_df = user_selection_df.rename(columns={
+			'report': 'report_type',
+			'label': 'materiality',
+			'ptype': 'type',
+		})
+		user_selection_df = user_selection_df.drop(columns=['id', 'value'])
 
-	# Merge in exposure-sector-product mapping to get yml file
-	sovereign_user_selection_df = user_selection_df[user_selection_df['exposure'] == 'Sovereigns']
-	sovereign_user_selection_with_mapping_df = pd.merge(
-		sovereign_user_selection_df, exposure_sector_product_mapping_df.drop(columns=['institution', 'type']),
-		on=['exposure', 'sector'], how='left'
-	)
-	other_user_selection_df = user_selection_df[user_selection_df['exposure'] != 'Sovereigns']
-	other_user_selection_with_mapping_df = pd.merge(
-		other_user_selection_df, exposure_sector_product_mapping_df, on=['institution', 'exposure', 'sector', 'type'], how='left'
-	)
-	user_selection_with_mapping_df = pd.concat([sovereign_user_selection_with_mapping_df, other_user_selection_with_mapping_df])
-	user_selection_with_mapping_df = user_selection_with_mapping_df[user_selection_with_mapping_df['materiality'] != 'N/A']
+		# Merge in exposure-sector-product mapping to get yml file
+		sovereign_user_selection_df = user_selection_df[user_selection_df['exposure'] == 'Sovereigns']
+		sovereign_user_selection_with_mapping_df = pd.merge(
+			sovereign_user_selection_df, exposure_sector_product_mapping_df.drop(columns=['institution', 'type']),
+			on=['exposure', 'sector'], how='left'
+		)
+		other_user_selection_df = user_selection_df[user_selection_df['exposure'] != 'Sovereigns']
+		other_user_selection_with_mapping_df = pd.merge(
+			other_user_selection_df, exposure_sector_product_mapping_df, on=['institution', 'exposure', 'sector', 'type'], how='left'
+		)
+		user_selection_with_mapping_df = pd.concat([sovereign_user_selection_with_mapping_df, other_user_selection_with_mapping_df])
+		user_selection_with_mapping_df = user_selection_with_mapping_df[user_selection_with_mapping_df['materiality'] != 'N/A']
+	else:
+		exposure_sector_product_mapping_df['yml_sector'] = [
+			next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml').values()))['name']
+			for sector_yml_file in exposure_sector_product_mapping_df['sector_yml_file']
+		]
+		user_selection_df = user_selection_df[['report', 'exposure', 'sector', 'label']].rename(columns={'sector': 'yml_sector'})
+		exposure_sector_product_mapping_df = exposure_sector_product_mapping_df[['yml_sector', 'sector_yml_file']].drop_duplicates()
+		user_selection_with_mapping_df = pd.merge(user_selection_df, exposure_sector_product_mapping_df, on=['yml_sector'], how='inner')
+		user_selection_with_mapping_df = user_selection_with_mapping_df.drop(columns=['yml_sector'])
+		user_selection_with_mapping_df = user_selection_with_mapping_df.rename(columns={'report': 'report_type', 'label': 'materiality'})
 
 	# Merge in output structure mapping to get content_id
-	user_selection_with_mapping_df = pd.merge(
+	output_df = pd.merge(
 		user_selection_with_mapping_df, output_structure_mapping_df, on=['report_type', 'materiality'], how='left'
 	)
-	return user_selection_with_mapping_df
+	return output_df
 
 def sort_user_selections(all_user_selection_df, output_structure_mapping_df, report_type):
 	output_df = all_user_selection_df.copy()
@@ -628,7 +636,7 @@ def remove_parents_with_empty_children(report_content):
 				updated_children = []
 	return updated_children
 
-def clean_up_sector_overview_and_detail(report_content):
+def clean_up_sector_overview_and_detail(report_content, output_structure_df):
 	# Get sector overview and detail layout and its index
 	sector_overview_mapping = {i: x for i, x in enumerate(report_content) if x.children[0].children == 'Sector Overview'}
 	sector_overview_index = next(iter(sector_overview_mapping.keys()))
@@ -638,24 +646,32 @@ def clean_up_sector_overview_and_detail(report_content):
 	sector_detail_layout = next(iter(sector_detail_mapping.values()))
 
 	# Extract product table
-	sector_desc = []
-	product_desc = sector_overview_layout.children[2].children[0]
-	product_datatable = sector_overview_layout.children[2].children[1].children.children[0]
-	product_datatable_columns = [col['name'] for col in product_datatable.columns]
-	product_selection_df = pd.DataFrame(product_datatable.data, columns=product_datatable_columns)
+	product_flag = len([x for x in output_structure_df['sub_section'].unique() if 'product_content_id' in x]) > 0
+	if product_flag:
+		product_desc = sector_overview_layout.children[2].children[0]
+		product_datatable = sector_overview_layout.children[2].children[1].children.children[0]
+		product_datatable_columns = [col['name'] for col in product_datatable.columns]
+		product_selection_df = pd.DataFrame(product_datatable.data, columns=product_datatable_columns)
+	else:
+		product_desc = html.Div(className='d-none')
+		product_selection_df = pd.DataFrame(columns=['Sector', 'Type', 'Description'])
 
 	# Clean up sector layout
+	sector_desc = []
 	for sector_section in sector_overview_layout.children[1].children:
 		if hasattr(sector_section, 'children'):
 			sector_description_layout = sector_section.children
 			sector_name = sector_description_layout[0].children
 
 			# Filter product selection for this sector
-			filtered_product_selection_df = product_selection_df[product_selection_df['Sector'] == sector_name]
-			filtered_product_selection_table = data_loader.create_data_table(
-				filtered_product_selection_df, ['Type'], ['Description']
-			)
-			product_layout = [product_desc] + [filtered_product_selection_table]
+			if product_flag:
+				filtered_product_selection_df = product_selection_df[product_selection_df['Sector'] == sector_name]
+				filtered_product_selection_table = data_loader.create_data_table(
+					filtered_product_selection_df, ['Type'], ['Description']
+				)
+				product_layout = [product_desc] + [filtered_product_selection_table]
+			else:
+				product_layout = []
 
 			# Get sector-scenario for this sector
 			sector_scenario_layout = [
