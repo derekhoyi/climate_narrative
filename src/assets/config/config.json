@@ -180,66 +180,6 @@
         "sector_description_content_id": NaN,
         "sector_scenario_content_id": NaN,
         "product_content_id": NaN
-      },
-      {
-        "report_type": "Full",
-        "output_structure": "Scenario Detail",
-        "materiality": "All",
-        "summary_input_table_flag": NaN,
-        "scenario_content_id": "description",
-        "sector_description_content_id": NaN,
-        "sector_scenario_content_id": NaN,
-        "product_content_id": NaN
-      },
-      {
-        "report_type": "Full",
-        "output_structure": "Sector Overview",
-        "materiality": "All",
-        "summary_input_table_flag": NaN,
-        "scenario_content_id": NaN,
-        "sector_description_content_id": "description",
-        "sector_scenario_content_id": NaN,
-        "product_content_id": NaN
-      },
-      {
-        "report_type": "Full",
-        "output_structure": "Sector Detail",
-        "materiality": "All",
-        "summary_input_table_flag": NaN,
-        "scenario_content_id": NaN,
-        "sector_description_content_id": NaN,
-        "sector_scenario_content_id": "always",
-        "product_content_id": NaN
-      },
-      {
-        "report_type": "Full",
-        "output_structure": "Sector Detail",
-        "materiality": "All",
-        "summary_input_table_flag": NaN,
-        "scenario_content_id": NaN,
-        "sector_description_content_id": NaN,
-        "sector_scenario_content_id": "high_materiality",
-        "product_content_id": NaN
-      },
-      {
-        "report_type": "Full",
-        "output_structure": "Appendices",
-        "materiality": "All",
-        "summary_input_table_flag": NaN,
-        "scenario_content_id": NaN,
-        "sector_description_content_id": "appendix",
-        "sector_scenario_content_id": NaN,
-        "product_content_id": NaN
-      },
-      {
-        "report_type": "Full",
-        "output_structure": "References",
-        "materiality": "All",
-        "summary_input_table_flag": NaN,
-        "scenario_content_id": NaN,
-        "sector_description_content_id": "references",
-        "sector_scenario_content_id": NaN,
-        "product_content_id": NaN
       }
     ],
     "scenario_mapping": [

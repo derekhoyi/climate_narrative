@@ -9,7 +9,3 @@ sector: |
 scenario: |
 
     A report which allows users to see the content for a selected scenario or scenarios
-
-full: |
-
-    A report which allows users to see content for all sectors and scenarios
