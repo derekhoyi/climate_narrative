@@ -107,6 +107,8 @@ def rename_user_selection_data_columns(all_user_selection_df):
 		'label': 'Materiality / Scenario',
 		'materiality': 'Materiality',
 		'scenario': 'Scenario',
+		'sector_group': 'Sector Group',
+		'sector_scenario': 'Sector / Scenario',
 		'description': 'Description'
 	}
 	columns_to_keep_and_rename_dict = {k: v for k, v in columns_to_keep_and_rename_dict.items() if k in output_df.columns}

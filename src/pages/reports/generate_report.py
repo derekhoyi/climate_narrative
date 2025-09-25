@@ -184,7 +184,7 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 					prepped_user_selection_df, section, sub_section
 				)
 				sub_section_layout = get_sector_scenario_layout(
-					filtered_user_selection_with_yml_file_path_df, scenario_mapping_df, scenario_list
+					filtered_user_selection_with_yml_file_path_df, scenario_mapping_df, scenario_list, report_type
 				)
 			elif sub_section == 'product_content_id':
 				filtered_user_selection_with_yml_file_path_df = reports_utils.filter_user_selection_by_section(
@@ -340,7 +340,7 @@ def get_scenario_layout(sub_section_mapping_df, scenario_mapping_df, scenario_li
 		scenario_layout = html.Div([*header_layout, *all_desc])
 	return scenario_layout
 
-def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_mapping_df, scenario_list):
+def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_mapping_df, scenario_list, report_type):
 	section = user_selection_with_yml_file_path_df['output_structure'].iloc[0]
 
 	# Split by materiality
@@ -396,7 +396,8 @@ def get_sector_scenario_layout(user_selection_with_yml_file_path_df, scenario_ma
 					sector_div = html.Div([html.H4(sector_name), *scenario_desc])
 					high_materiality_other_desc.append(sector_div)
 			high_materiality_layout = html.Div([
-				html.H3('High materiality exposures') if section == 'Executive Summary' else html.Div([], className='d-none'),
+				html.H3('High materiality exposures') if section == 'Executive Summary' and report_type != 'Sector'
+					else html.Div([], className='d-none'),
 				*high_materiality_other_desc,
 				html.Div([
 					html.H4('Sovereigns'),
@@ -654,7 +655,7 @@ def clean_up_sector_overview_and_detail(report_content, output_structure_df):
 		product_selection_df = pd.DataFrame(product_datatable.data, columns=product_datatable_columns)
 	else:
 		product_desc = html.Div(className='d-none')
-		product_selection_df = pd.DataFrame(columns=['Sector', 'Type', 'Description'])
+		product_selection_df = pd.DataFrame(columns=['Sector', 'Type', 'Scenario', 'Description'])
 
 	# Clean up sector layout
 	sector_desc = []

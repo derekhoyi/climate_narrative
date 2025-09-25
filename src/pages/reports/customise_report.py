@@ -349,9 +349,7 @@ def initiate_sectors_checklist(exposure_sector_product_mapping_dict, exposure_ty
 		]
 		choices_list = ['Sectors', 'Underwriting Classes', 'Sovereigns']
 		exposure_sector_product_mapping_df['sector_group'] = np.select(conditions_list, choices_list, default='Other')
-		exposure_sector_product_mapping_df['sector_group'] = pd.Categorical(
-			exposure_sector_product_mapping_df['sector_group'], categories=choices_list, ordered=True
-		)
+		exposure_sector_product_mapping_df = exposure_sector_product_mapping_df.sort_values(by=['sector'])
 		unique_sector_groups_and_sectors_df = exposure_sector_product_mapping_df[['sector_group', 'sector']].drop_duplicates()
 
 		sectors_selection_checklists = []
@@ -437,7 +435,7 @@ def initiate_scenarios_checklist(scenario_mapping_dict, exposure_type, user_sele
 		filtered_stored_data = stored_data.get("Scenarios", [])
 
 		scenario_mapping_df = pd.DataFrame(scenario_mapping_dict)
-		scenarios = scenario_mapping_df['scenario_name'].unique()
+		scenarios = sorted(scenario_mapping_df['scenario_name'].unique())
 
 		default_value = [x['value'] for x in filtered_stored_data] if filtered_stored_data else []
 		scenario_selection_layout = html.Div([
@@ -810,8 +808,13 @@ def review_summary_page(_next, all_stored_data, user_selection_completed, url_se
 		all_user_selection_df['label'] = np.where(
 			all_user_selection_df['exposure'] == 'Sectors', all_user_selection_df['sector'], all_user_selection_df['label']
 		)
-		all_user_selection_df = all_user_selection_df[['exposure', 'label']]
-
+		all_user_selection_df['sector_group'] = np.where(
+			all_user_selection_df['exposure'] == 'Scenarios',
+			'N/A', all_user_selection_df['value'].str.split('|', expand=True)[0]
+		)
+		all_user_selection_df = all_user_selection_df[['exposure', 'sector_group', 'label']].rename(columns={
+			'exposure': 'type', 'label': 'sector_scenario'
+		})
 
 	# Rename columns for better presentation
 	all_user_selection_df = data_loader.rename_user_selection_data_columns(all_user_selection_df)
