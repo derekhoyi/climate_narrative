@@ -54,7 +54,7 @@ def layout(report_type=None, institution_type=None, **kwargs):
 				md=3,
 				className="sidebar-btn-group mb-3 bg-light border-0"
 			),
-			dbc.Col(html.Div(id='report-content'), className="ms-22 pt-80"),
+			dcc.Loading(dbc.Col(html.Div(id='report-content'), className="ms-22 pt-80"), color="#00B050"),
 		]),
 		dcc.Download(id="download-store"),
 	], className="container")

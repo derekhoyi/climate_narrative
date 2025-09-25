@@ -50,7 +50,7 @@ def load_yml_file(yml_folder_path, yml_file_name):
 	"""
 	yml_file_path = PAGE_CONTENTS_PATH.joinpath(yml_folder_path).joinpath(yml_file_name).resolve()
 	with open(yml_file_path, encoding="utf-8") as f:
-		yml = yaml.safe_load(f)
+		yml = yaml.load(f, Loader=getattr(yaml, 'CLoader', yaml.SafeLoader))
 	return yml
 
 def load_config_json_and_store():
@@ -141,3 +141,14 @@ def create_data_table(df, bullet_point_columns_list=None, left_align_columns_lis
 
 def plural_add_s(plural_flag):
 	return "s" if plural_flag else ""
+
+def create_error_flag(all_stored_data, report_type):
+	all_user_selection_df = get_user_selection_from_store(all_stored_data, report_type)
+	all_user_selection_df = all_user_selection_df[all_user_selection_df['label'] != 'N/A']
+	if report_type == 'Scenario':
+		error_flag = len(all_user_selection_df) == 0
+	else:
+		scenario_user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] == 'Scenarios']
+		exposure_user_selection_df = all_user_selection_df[all_user_selection_df['exposure'] != 'Scenarios']
+		error_flag = len(scenario_user_selection_df) == 0 or len(exposure_user_selection_df) == 0
+	return error_flag

@@ -4,6 +4,7 @@ import dash_bootstrap_components as dbc
 import dash_mantine_components as dmc
 from urllib.parse import parse_qs
 import pandas as pd
+import numpy as np
 from utils import data_loader
 
 dash.register_page(__name__, path='/reports/customise-report')
@@ -54,29 +55,23 @@ def layout(report_type=None, institution_type=None, **kwargs):
 	State("all-user-selection-store", "data"),
 	prevent_initial_call=True
 )
-def update_url(user_selection_completed, back, _next, restart, generate_report, report_type, institution_type, url_search, all_stored_data):
+def update_url(user_selection_completed, back, _next, restart, generate_report, report_type, institution_type,
+			   url_search, all_stored_data):
 	query = parse_qs(url_search.lstrip('?'))
 	institutional_start_page = report_type == 'Institutional' and len(query) == 1
 	institution_type = query.get("institution-type", [None])[0] if institution_type is None else institution_type
 	review_summary = query.get("review", [None])[0]
 	triggered_id = ctx.triggered_id
+	error_flag = data_loader.create_error_flag(all_stored_data, report_type)
 
-	if institutional_start_page or (review_summary and back):
+	if institutional_start_page or (review_summary and back) or (generate_report and error_flag):
 		user_selection_completed = None
 
-	if report_type != 'Institutional':
-		if review_summary and back:
-			return f"/reports/customise-report?report-type={report_type}"
-		elif triggered_id == "report-restart-btn" and restart:
-			return "/reports"
-		elif triggered_id == "report-next-btn" and _next and not review_summary:
-			return f"/reports/customise-report?report-type={report_type}&review=summary"
-		elif triggered_id == "report-generate-btn" and generate_report and all_stored_data:
-			return "/reports/generate-report"
-		else:
-			raise dash.exceptions.PreventUpdate
-	else:
-		if (institutional_start_page and _next and not user_selection_completed) or (review_summary and back):
+	if generate_report and error_flag:
+		raise dash.exceptions.PreventUpdate
+
+	if report_type == 'Institutional':
+		if (institutional_start_page and _next and not user_selection_completed) or (review_summary and back) or (generate_report and error_flag):
 			return f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}"
 		elif institutional_start_page and restart:
 			return f"/reports"
@@ -86,6 +81,18 @@ def update_url(user_selection_completed, back, _next, restart, generate_report, 
 			return f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}&review=summary"
 		elif generate_report and all_stored_data:
 			return f"/reports/generate-report"
+		else:
+			raise dash.exceptions.PreventUpdate
+	else:
+		if ((triggered_id == "report-previous-btn" and back and review_summary)
+				or (triggered_id == "report-generate-btn" and generate_report and error_flag)):
+			return f"/reports/customise-report?report-type={report_type}"
+		elif triggered_id == "report-restart-btn" and restart:
+			return "/reports"
+		elif user_selection_completed and not review_summary:
+			return f"/reports/customise-report?report-type={report_type}&review=summary"
+		elif triggered_id == "report-generate-btn" and generate_report and all_stored_data:
+			return "/reports/generate-report"
 		else:
 			raise dash.exceptions.PreventUpdate
 
@@ -157,9 +164,11 @@ def initiate_stepper(url_search, exposure_sector_product_mapping_dict, user_sele
 			dmc.StepperStep(label=f"Step {len(exposures) + 1}", description=f"Scenarios", style=stepper_children_styling)
 		]
 	elif report_type == 'Sector':
-		# @TODO: to be implemented
-		stepper_children = []
-		exposure_type = None
+		stepper_children = [
+			dmc.StepperStep(label="Step 1", description="Sectors", style=stepper_children_styling),
+			dmc.StepperStep(label="Step 2", description="Scenarios", style=stepper_children_styling),
+		]
+		exposure_type = 'Sectors'
 	elif report_type == 'Scenario':
 		stepper_children = [dmc.StepperStep(label="Step 1", description="Scenarios", style=stepper_children_styling)]
 		exposure_type = 'Scenarios'
@@ -235,7 +244,7 @@ def initiate_exposure_selection_dropdown(exposure_sector_product_mapping_dict, e
 	institutional_start_page = report_type == 'Institutional' and len(query) == 1
 
 	# Only run this callback if not on start page
-	if exposure_type == "Scenarios" or report_type == 'Scenario' or institutional_start_page or user_selection_completed:
+	if exposure_type == "Scenarios" or report_type != 'Institutional' or institutional_start_page or user_selection_completed:
 		raise dash.exceptions.PreventUpdate
 
 	stored_data = stored_data or {}
@@ -296,7 +305,7 @@ def update_dropdown_color(user_selection_completed, values, current_styles, url_
 	institutional_start_page = report_type == 'Institutional' and len(query) == 1
 
 	# Only run this callback if not on start page
-	if exposure_type == "Scenarios" or report_type == 'Scenario' or institutional_start_page or user_selection_completed:
+	if exposure_type == "Scenarios" or report_type != 'Institutional' or institutional_start_page or user_selection_completed:
 		raise dash.exceptions.PreventUpdate
 
 	# Merge color with existing style
@@ -308,6 +317,105 @@ def update_dropdown_color(user_selection_completed, values, current_styles, url_
 	return updated_style
 
 @callback(
+	Output("sector-selection-checklist", "children"),
+	Input("exposure-sector-product-mapping-store", "data"),
+	Input("exposure-type-store", "data"),
+	State('user-selection-completed-store', 'data'),
+	State("customise-report-url", "search"),
+	State("all-user-selection-store", "data")
+)
+def initiate_sectors_checklist(exposure_sector_product_mapping_dict, exposure_type, user_selection_completed, url_search, stored_data):
+	query = parse_qs(url_search.lstrip('?'))
+	report_type = query.get("report-type", [None])[0]
+
+	# Only run this callback if not on start page
+	if exposure_type != "Sectors" or report_type != 'Sector' or user_selection_completed:
+		raise dash.exceptions.PreventUpdate
+
+	if exposure_type == "Sectors":
+		stored_data = stored_data or {}
+		filtered_stored_data = stored_data.get("Sectors", [])
+
+		exposure_sector_product_mapping_df = pd.DataFrame(exposure_sector_product_mapping_dict)
+		exposure_sector_product_mapping_df['sector'] = [
+			next(iter(data_loader.load_yml_file('exposure_class', f'{sector_yml_file}.yml').values()))['name']
+			for sector_yml_file in exposure_sector_product_mapping_df['sector_yml_file']
+		]
+		exposure_sector_product_mapping_df['sector_group'] = exposure_sector_product_mapping_df['sector_yml_file'].str.split('/', expand=True)[0]
+		conditions_list = [
+			exposure_sector_product_mapping_df['sector_group'] == 'sector',
+			exposure_sector_product_mapping_df['sector_group'] == 'underwriting',
+			exposure_sector_product_mapping_df['sector_group'] == 'sovereigns'
+		]
+		choices_list = ['Sectors', 'Underwriting Classes', 'Sovereigns']
+		exposure_sector_product_mapping_df['sector_group'] = np.select(conditions_list, choices_list, default='Other')
+		exposure_sector_product_mapping_df['sector_group'] = pd.Categorical(
+			exposure_sector_product_mapping_df['sector_group'], categories=choices_list, ordered=True
+		)
+		unique_sector_groups_and_sectors_df = exposure_sector_product_mapping_df[['sector_group', 'sector']].drop_duplicates()
+
+		sectors_selection_checklists = []
+		for sector_group in unique_sector_groups_and_sectors_df['sector_group'].unique():
+			sectors_df = unique_sector_groups_and_sectors_df[unique_sector_groups_and_sectors_df['sector_group'] == sector_group]
+			sectors_selection_checklists.append(
+				dbc.Col(
+					html.Div([
+						html.P(sector_group, className='fw-bold'),
+						dbc.Checklist(
+							options=[{"label": x, "value": f'{sector_group}|{x}'} for x in sectors_df['sector'].unique()],
+							value=[x['value'] for x in filtered_stored_data if x['value'].split('|')[0] == sector_group],
+							id={"type": 'sector-selection-store', "sector_group": sector_group},
+							persistence=True,
+							persistence_type='memory'
+						)
+					])
+				)
+			)
+
+		sectors_selection_layout = html.Div([
+			dbc.Label("Select the sectors applicable: "),
+			html.Br(),
+			html.Div(dbc.Row(sectors_selection_checklists)),
+			html.Br(),
+			dbc.ButtonGroup([
+				dbc.Button(
+					"Select All",
+					id="sector-selection-select-all",
+					color="success",
+					outline=True,
+					className="flex-fill"
+				),
+				dbc.Button(
+					"Clear All",
+					id="sector-selection-clear-all",
+					color="success",
+					outline=True,
+					className="flex-fill"
+				)
+			], className="gap-2"),
+		])
+	else:
+		sectors_selection_layout = html.Div([])
+	return sectors_selection_layout
+
+@callback(
+	Output({"type": 'sector-selection-store', "sector_group": dash.ALL}, "value"),
+	Input("sector-selection-select-all", "n_clicks"),
+	Input("sector-selection-clear-all", "n_clicks"),
+	State({"type": 'sector-selection-store', "sector_group": dash.ALL}, "options"),
+)
+def sectors_checklist_select_or_clear_all(select_all, clear_all, options):
+	trigger = ctx.triggered_id
+	if trigger == "sector-selection-select-all" and select_all:
+		option_list = options[0] if options else []
+		selection = [opt["value"] for opt in option_list]
+	elif trigger == "sector-selection-clear-all" and clear_all:
+		selection = []
+	else:
+		raise dash.exceptions.PreventUpdate
+	return [selection]
+
+@callback(
 	Output("scenario-selection-checklist", "children"),
 	Input("scenario-mapping-store", "data"),
 	Input("exposure-type-store", "data"),
@@ -315,7 +423,7 @@ def update_dropdown_color(user_selection_completed, values, current_styles, url_
 	State("customise-report-url", "search"),
 	State("all-user-selection-store", "data")
 )
-def initiate_scenario_checklist(scenario_mapping_dict, exposure_type, user_selection_completed, url_search, stored_data):
+def initiate_scenarios_checklist(scenario_mapping_dict, exposure_type, user_selection_completed, url_search, stored_data):
 	query = parse_qs(url_search.lstrip('?'))
 	report_type = query.get("report-type", [None])[0]
 	institutional_start_page = report_type == 'Institutional' and len(query) == 1
@@ -332,13 +440,13 @@ def initiate_scenario_checklist(scenario_mapping_dict, exposure_type, user_selec
 		scenarios = scenario_mapping_df['scenario_name'].unique()
 
 		default_value = [x['value'] for x in filtered_stored_data] if filtered_stored_data else []
-		scenario_selection = html.Div([
-			dbc.Label("Select the scenarios applicable to your institution: "),
+		scenario_selection_layout = html.Div([
+			dbc.Label("Select the scenarios applicable: "),
 			html.Br(),
 			dbc.Checklist(
 				options=[{"label": x, "value": x} for x in scenarios],
 				value=default_value,
-				id={"type": 'scenario-selection-store', "Scenarios": ""},
+				id={"type": 'scenario-selection-store', "scenario": ""},
 				persistence=True,
 				persistence_type='memory'
 			),
@@ -361,16 +469,16 @@ def initiate_scenario_checklist(scenario_mapping_dict, exposure_type, user_selec
 			], className="gap-2"),
 		])
 	else:
-		scenario_selection = html.Div([])
-	return scenario_selection
+		scenario_selection_layout = html.Div([])
+	return scenario_selection_layout
 
 @callback(
-	Output({"type": 'scenario-selection-store', "Scenarios": dash.ALL}, "value"),
+	Output({"type": 'scenario-selection-store', "scenario": dash.ALL}, "value"),
 	Input("scenario-selection-select-all", "n_clicks"),
 	Input("scenario-selection-clear-all", "n_clicks"),
-	State({"type": 'scenario-selection-store', "Scenarios": dash.ALL}, "options"),
+	State({"type": 'scenario-selection-store', "scenario": dash.ALL}, "options"),
 )
-def scenario_checklist_select_or_clear_all(select_all, clear_all, options):
+def scenarios_checklist_select_or_clear_all(select_all, clear_all, options):
 	trigger = ctx.triggered_id
 	if trigger == "scenario-selection-select-all" and select_all:
 		option_list = options[0] if options else []
@@ -380,80 +488,6 @@ def scenario_checklist_select_or_clear_all(select_all, clear_all, options):
 	else:
 		raise dash.exceptions.PreventUpdate
 	return [selection]
-
-
-@callback(
-	Output("all-user-selection-store", "data"),
-	Input("report-previous-btn", "n_clicks"),
-	Input("report-next-btn", "n_clicks"),
-	Input("report-restart-btn", "n_clicks"),
-	Input("report-generate-btn", "n_clicks"),
-	State('user-selection-completed-store', 'data'),
-	State("customise-report-url", "href"),
-	State("exposure-type-store", "data"),
-	State("all-user-selection-store", "data"),
-	State({"type": "exposure-selection-store", "exposure": dash.ALL, "sector": dash.ALL, "ptype": dash.ALL}, "value"),
-	State({"type": 'scenario-selection-store', "Scenarios": dash.ALL}, "value"),
-	Input("customise-report-url", "search"),
-)
-def store_user_selection(back, _next, restart, generate_report, user_selection_completed, url_path, exposure_type,
-						 all_stored_data, exposure_selection_values, scenario_selection_values, url_search):
-	query = parse_qs(url_search.lstrip('?'))
-	report_type = query.get("report-type", [None])[0]
-	institution_type = query.get("institution-type", [None])[0]
-	institutional_start_page = report_type == 'Institutional' and len(query) == 1
-
-	button_id = ctx.triggered_id
-	updated = False
-
-	# Create empty dictionary if empty or restart triggered
-	if (all_stored_data is None) or (button_id == "report-restart-btn" and restart) or institutional_start_page:
-		return {}
-
-	# Allow update on review summary arrival both on the Next click and the subsequent URL change
-	if institutional_start_page or button_id is None or user_selection_completed:
-		raise dash.exceptions.PreventUpdate
-
-	# Only act on navigation / generate buttons
-	if button_id in ["report-previous-btn", "report-next-btn", "report-generate-btn", "customise-report-url"]:
-		if exposure_type == "Scenarios":
-			if scenario_selection_values[0]:
-				stored_data = [{
-					'report': report_type,
-					'id': s,
-					'institution': institution_type if institution_type else "N/A",
-					'exposure': 'Scenarios',
-					'sector': "N/A",
-					'ptype': "N/A",
-					'label': s,
-					'value': s,
-				} for s in scenario_selection_values[0]]
-				all_stored_data = all_stored_data or {}
-				all_stored_data[exposure_type] = stored_data
-				updated = True
-		else:
-			if exposure_selection_values:
-				stored_data = []
-				for x in exposure_selection_values:
-					parts = x.split('|')
-					stored_data.append({
-						'report': report_type,
-						'id': '|'.join(parts[:4]),
-						'institution': institution_type,
-						'exposure': parts[1],
-						'sector': parts[2],
-						'ptype': parts[3],
-						'label': parts[4],
-						'value': x,
-					})
-				all_stored_data = all_stored_data or {}
-				all_stored_data[exposure_type] = stored_data
-				updated = True
-
-	if not updated:
-		raise dash.exceptions.PreventUpdate
-	return all_stored_data
-
 
 @callback(
 	Output("selection-content", "children"),
@@ -495,6 +529,13 @@ def selection_layout(exposure_type, user_selection_completed, url_search):
 			html.Div([
 				title,
 				html.Div(id='scenario-selection-checklist'),
+			], className="rounded-4 p-4 border border-1 border-gray-4"),
+		])
+	elif exposure_type == "Sectors":
+		layout = html.Div([
+			html.Div([
+				title,
+				dcc.Loading(html.Div(id='sector-selection-checklist'), color='#00B050'),
 			], className="rounded-4 p-4 border border-1 border-gray-4"),
 		])
 	else:
@@ -562,13 +603,13 @@ def navigation_buttons(stepper_active, user_selection_completed, url_search):
 	prevent_initial_call=True
 )
 def no_customisation_error_message(generate_report, all_stored_data, report_type):
-	if generate_report and not all_stored_data:
-		if report_type == 'Scenario':
-			error_message = "one scenario"
-		elif report_type == 'Sector':
-			error_message = "one exposure's materiality"
-		else:
-			error_message = "one exposure's materiality and scenario"
+	if report_type == 'Scenario':
+		error_message = "one scenario"
+	else:
+		error_message = "one exposure's materiality and scenario"
+	error_flag = data_loader.create_error_flag(all_stored_data, report_type)
+
+	if generate_report and error_flag:
 		error_message = f"Please select at least {error_message} before generating the report " \
 						f"and ensure you click the Next/Previous button to register your selection. "
 		msg = dbc.Modal(
@@ -601,8 +642,102 @@ def toggle_modal(n_click, is_open, url_search):
 		query = parse_qs(url_search.lstrip('?'))
 		report_type = query.get("report-type", [None])[0]
 		institution_type = query.get("institution-type", [None])[0]
-		return not is_open, None, f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}"
+		if institution_type:
+			url_pathname = f"/reports/customise-report?report-type={report_type}&institution-type={institution_type}"
+		else:
+			url_pathname = f"/reports/customise-report?report-type={report_type}"
+		return not is_open, None, url_pathname
 	return is_open, dash.no_update, dash.no_update
+
+@callback(
+	Output("all-user-selection-store", "data", allow_duplicate=True),
+	Input("report-previous-btn", "n_clicks"),
+	Input("report-next-btn", "n_clicks"),
+	Input("report-restart-btn", "n_clicks"),
+	Input("report-generate-btn", "n_clicks"),
+	State('user-selection-completed-store', 'data'),
+	State("exposure-type-store", "data"),
+	State("all-user-selection-store", "data"),
+	Input("customise-report-url", "search"),
+	State({"type": "exposure-selection-store", "exposure": dash.ALL, "sector": dash.ALL, "ptype": dash.ALL}, "value"),
+	State({"type": 'scenario-selection-store', "scenario": dash.ALL}, "value"),
+	State({"type": 'sector-selection-store', "sector_group": dash.ALL}, "value"),
+	prevent_initial_call=True
+)
+def store_user_selection(
+		back, _next, restart, generate_report, user_selection_completed, exposure_type, all_stored_data, url_search,
+		exposure_selection_values, scenario_selection_values, sector_selection_values):
+	query = parse_qs(url_search.lstrip('?'))
+	report_type = query.get("report-type", [None])[0]
+	institution_type = query.get("institution-type", [None])[0]
+	institutional_start_page = report_type == 'Institutional' and len(query) == 1
+
+	button_id = ctx.triggered_id
+	updated = False
+
+	# Create empty dictionary if empty or restart triggered
+	if (all_stored_data is None) or (button_id == "report-restart-btn" and restart) or institutional_start_page:
+		return {}
+
+	# Allow update on review summary arrival both on the Next click and the subsequent URL change
+	if institutional_start_page or button_id is None or user_selection_completed:
+		raise dash.exceptions.PreventUpdate
+
+	# Only act on navigation / generate buttons
+	if button_id in ["report-previous-btn", "report-next-btn", "report-generate-btn"]:
+		if exposure_type == "Scenarios":
+			if scenario_selection_values[0]:
+				stored_data = [{
+					'report': report_type,
+					'id': s,
+					'institution': institution_type if institution_type else "N/A",
+					'exposure': exposure_type,
+					'sector': "N/A",
+					'ptype': "N/A",
+					'label': s,
+					'value': s,
+				} for s in scenario_selection_values[0]]
+				all_stored_data = all_stored_data or {}
+				all_stored_data[exposure_type] = stored_data
+				updated = True
+		elif exposure_type == "Sectors":
+			if any([len(x) > 0 for x in sector_selection_values]):
+				stored_data = [{
+					'report': report_type,
+					'id': f'{sector}',
+					'institution': institution_type if institution_type else "N/A",
+					'exposure': exposure_type,
+					'sector': sector.split('|')[1],
+					'ptype': "N/A",
+					'label': 'High',
+					'value': f'{sector}',
+					} for sector_group in sector_selection_values for sector in sector_group
+				]
+				all_stored_data = all_stored_data or {}
+				all_stored_data[exposure_type] = stored_data
+				updated = True
+		else:
+			if exposure_selection_values:
+				stored_data = []
+				for x in exposure_selection_values:
+					parts = x.split('|')
+					stored_data.append({
+						'report': report_type,
+						'id': '|'.join(parts[:4]),
+						'institution': institution_type,
+						'exposure': parts[1],
+						'sector': parts[2],
+						'ptype': parts[3],
+						'label': parts[4],
+						'value': x,
+					})
+				all_stored_data = all_stored_data or {}
+				all_stored_data[exposure_type] = stored_data
+				updated = True
+
+	if not updated:
+		raise dash.exceptions.PreventUpdate
+	return all_stored_data
 
 @callback(
 	Output('user-selection-completed-store', 'data', allow_duplicate=True),
@@ -671,6 +806,12 @@ def review_summary_page(_next, all_stored_data, user_selection_completed, url_se
 		all_user_selection_df = pd.concat([all_user_selection_df, scenario_user_selection_df], ignore_index=True)
 	elif report_type == 'Scenario':
 		all_user_selection_df = all_user_selection_df[['label']].rename(columns={'label': 'scenario'})
+	elif report_type == 'Sector':
+		all_user_selection_df['label'] = np.where(
+			all_user_selection_df['exposure'] == 'Sectors', all_user_selection_df['sector'], all_user_selection_df['label']
+		)
+		all_user_selection_df = all_user_selection_df[['exposure', 'label']]
+
 
 	# Rename columns for better presentation
 	all_user_selection_df = data_loader.rename_user_selection_data_columns(all_user_selection_df)
