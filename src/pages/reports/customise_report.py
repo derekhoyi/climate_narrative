@@ -397,7 +397,7 @@ def scenario_checklist_select_or_clear_all(select_all, clear_all, options):
 	Input("customise-report-url", "search"),
 )
 def store_user_selection(back, _next, restart, generate_report, user_selection_completed, url_path, exposure_type,
-					all_stored_data, exposure_selection_values, scenario_selection_values, url_search):
+						 all_stored_data, exposure_selection_values, scenario_selection_values, url_search):
 	query = parse_qs(url_search.lstrip('?'))
 	report_type = query.get("report-type", [None])[0]
 	institution_type = query.get("institution-type", [None])[0]
@@ -419,10 +419,10 @@ def store_user_selection(back, _next, restart, generate_report, user_selection_c
 		if exposure_type == "Scenarios":
 			if scenario_selection_values[0]:
 				stored_data = [{
-					'report': 'Institutional',
+					'report': report_type,
 					'id': s,
-					'institution': institution_type,
-					'exposure': 'Scenario',
+					'institution': institution_type if institution_type else "N/A",
+					'exposure': 'Scenarios',
 					'sector': "N/A",
 					'ptype': "N/A",
 					'label': s,
@@ -437,7 +437,7 @@ def store_user_selection(back, _next, restart, generate_report, user_selection_c
 				for x in exposure_selection_values:
 					parts = x.split('|')
 					stored_data.append({
-						'report': 'Institutional',
+						'report': report_type,
 						'id': '|'.join(parts[:4]),
 						'institution': institution_type,
 						'exposure': parts[1],
@@ -688,7 +688,6 @@ def review_summary_page(_next, all_stored_data, user_selection_completed, url_se
 			"Please review your selections below. You can go back to previous steps to make any changes if needed before generating the report.",
 			className="rounded-4 p-3 border border-1 border-gray-4 bg-light text-transform-none"
 		),
-		html.Br(),
 		data_loader.create_data_table(all_user_selection_df)
 	], className="rounded-4 p-4 border border-1 border-gray-4")
 	return review_summary_layout
