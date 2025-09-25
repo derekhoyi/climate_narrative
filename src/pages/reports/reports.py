@@ -33,6 +33,7 @@ def layout():
 
 	# layout
 	layout = html.Div([
+		dcc.Location(id='reports-url'),
 		dbc.Button(id="select-report-btn", className='d-none'),
 		dbc.Row([
 			dbc.Col(
@@ -47,8 +48,8 @@ def layout():
 	return layout
 
 @callback(
-    Output('report-section-index', 'data', allow_duplicate=True),
-    Input({'type': 'sidebar-report-section-btn', 'index': ALL}, 'n_clicks'),
+	Output('report-section-index', 'data', allow_duplicate=True),
+	Input({'type': 'sidebar-report-section-btn', 'index': ALL}, 'n_clicks'),
 	prevent_initial_call=True
 )
 def update_report_section(n_clicks):
@@ -59,8 +60,8 @@ def update_report_section(n_clicks):
 	return dash.no_update
 
 @callback(
-    Output('report-section-index', 'data', allow_duplicate=True),
-    Input('select-report-btn', 'n_clicks'),
+	Output('report-section-index', 'data', allow_duplicate=True),
+	Input('select-report-btn', 'n_clicks'),
 	prevent_initial_call=True
 )
 def select_report_navigation(n_clicks):
@@ -74,10 +75,19 @@ def select_report_navigation(n_clicks):
 )
 def render_report_section(index):
 	if index == 1:
-		content = dcc.Loading(type="circle", children=dash.page_registry['pages.reports.overview']['layout']())
+		content = dash.page_registry['pages.reports.overview']['layout']()
 	elif index == 2:
-		content = dcc.Loading(type="circle", children=dash.page_registry['pages.reports.select_report']['layout']())
+		content = dash.page_registry['pages.reports.select_report']['layout']()
 	else:
 		content = html.Div("Select a section to see content.")
 	active = [i == index for i in range(1, 3)]
 	return content, active
+
+@callback(
+	Output('user-selection-completed-store', 'data', allow_duplicate=True),
+	Output("all-user-selection-store", "data", allow_duplicate=True),
+	Input("reports-url", "pathname"),
+	prevent_initial_call=True
+)
+def empty_user_selection_store(url_pathname):
+	return None, {}
