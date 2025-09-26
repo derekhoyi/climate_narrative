@@ -19,7 +19,6 @@ def layout(report_type=None, institution_type=None, **kwargs):
 						dbc.CardBody([
 							dbc.Button("Return to Selection", id="generate-report-previous-btn", color="light",
 									   className="w-100"),
-							dbc.Button("Download Report (HTML)", id="download-btn", color="success", className="w-100"),
 						], className="d-grid gap-3"),
 						className="mb-2 shadow"
 					),
@@ -98,22 +97,8 @@ def update_url(user_selection_completed, url_search, back, report_type, institut
 	return dash.no_update
 
 @callback(
-	Output("download-store", "data"),
-	Input("download-btn", "n_clicks"),
-	State("html-output", "data"),
-	prevent_initial_call=True
-)
-def download_report(n_clicks, html_output):
-	if not n_clicks:
-		raise dash.exceptions.PreventUpdate
-	if not html_output:
-		raise dash.exceptions.PreventUpdate
-	return dict(content=html_output, filename="report.html")
-
-@callback(
 	Output("report-sidebar", "children"),
 	Output("report-content", "children"),
-	Output("html-output", "data"),
 	Input("generate-report-url", "search"),
 	State("all-user-selection-store", "data"),
 	State("output-structure-mapping-store", "data"),
@@ -199,8 +184,7 @@ def generate_all_reports(url_search, all_stored_data, output_structure_mapping_d
 		output_structure_layout = clean_up_sector_overview_and_detail(output_structure_layout, prepped_output_structure_df)
 
 	output_structure_layout, sidebar_layout = create_sidebar_layout(output_structure_layout)
-	html_content = generate_html_from_report(output_structure_layout)
-	return html.Div(sidebar_layout), html.Div(output_structure_layout), html_content
+	return html.Div(sidebar_layout), html.Div(output_structure_layout)
 
 def prepare_output_structure_mapping(output_structure_mapping_df, report_type):
 	exploded_df = output_structure_mapping_df[output_structure_mapping_df['report_type'] == report_type].copy()
@@ -217,7 +201,7 @@ def prepare_output_structure_mapping(output_structure_mapping_df, report_type):
 		exploded_df['output_structure'], categories=exploded_df['output_structure'].drop_duplicates(), ordered=True
 	)
 
-	id_list = ['output_structure', 'materiality']
+	id_list = ['report_type', 'output_structure', 'materiality']
 	sort_order_df = exploded_df[id_list].drop_duplicates().sort_values(by=id_list)
 
 	melted_df = pd.melt(exploded_df, id_vars=id_list, var_name='sub_section', value_name='content_id')
@@ -800,21 +784,3 @@ def _extract_navigation_groups(report_content, current_h1=None, groups=None):
 			updated_children.append(node)
 
 	return updated_children, groups
-
-def generate_html_from_report(report_content):
-	# Cache for already serialized components (avoid duplicates with shared refs)
-	SERIALIZATION_CACHE = {}
-	SERIALIZATION_CACHE.clear()
-	serialized = reports_utils.serialize_component(report_content)
-	return f"""
-		<div id="report-root">
-			<!DOCTYPE html>
-			<html>
-				<head><meta charset="utf-8">
-					<title>Report</title>
-					<style>{reports_utils.load_external_css() or ""}</style>
-				</head>
-				<body>{serialized}</body>
-			</html>
-		</div>
-	"""

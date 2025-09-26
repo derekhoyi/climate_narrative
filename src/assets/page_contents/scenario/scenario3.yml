@@ -115,19 +115,19 @@ description: |
 
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
-  Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
+  Combined = Chronic physical and transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
 
   ![Unemployment rate](/assets/images/scenarios_hothouse_unemployment.png)
 
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
-  Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
+  Combined = Chronic physical and transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
 
   ![Interest rate](/assets/images/scenarios_hothouse_interest.png)
   
   **Source:**
   [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8]](https://data.ece.iiasa.ac.at/ngfs/#/downloads)
-  Combined Chronic physical and Transition effects. UK specific. Absolute difference relative to baseline with no transition or physical risks
+  Combined = Chronic physical and transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
 
   The investments in energy efficiency and low carbon technologies are projected 
   to increase in Hot House World scenarios. Annual investment in energy efficiency 
@@ -173,18 +173,18 @@ description: |
   due to the reduced capacity of the human body to perform physical labour 
   under hot and humid climate conditions.
 
-  ![Labour Productivity](/assets/images/scenarios_hothouse_labour.png)
+    ![Labour Productivity](/assets/images/scenarios_hothouse_labour.png)
 
-  **Source:** 
-  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
+    **Source:** 
+    [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
   
   * Annual economic damages from cyclones are also projected to increase above reference period levels, 
   to ~8% by 2030 and ~20% by 2050.
   
-  ![Tropical Cyclone Damage](/assets/images/scenarios_hothouse_damages_cyclones.png)
+    ![Tropical Cyclone Damage](/assets/images/scenarios_hothouse_damages_cyclones.png)
 
-  **Source:** 
-  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
+    **Source:** 
+    [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
   
   In these scenarios the total GDP impact from chronic physical and transition effects 
   relative to a baseline (with no transition or physical risks) is estimated to be around 

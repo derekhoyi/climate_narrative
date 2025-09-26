@@ -38,9 +38,9 @@ def layout():
         if 'overview' in lower:
             return 'Overview'
         if 'long' in lower:
-            return 'Long-term scenario'
+            return 'Long-term scenarios'
         if 'short' in lower:
-            return 'Short-term scenario'
+            return 'Short-term scenarios'
         # fallback (shouldn't be needed here)
         return base
     # create buttons in the exact deterministic order

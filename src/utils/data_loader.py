@@ -61,14 +61,13 @@ def load_config_json_and_store():
 
 	# Create stores
 	stores = [
-		dcc.Store(id='report-section-index', storage_type='session', data=2),
+		dcc.Store(id='report-section-index-store', storage_type='session', data=2),
 		dcc.Store(id='report-type-store', storage_type='session'),
 		dcc.Store(id='institution-type-store', storage_type='session'),
 		dcc.Store(id='exposure-type-store', storage_type='session'),
 		dcc.Store(id='all-user-selection-store', storage_type='session'),
 		dcc.Store(id='user-selection-completed-store', storage_type='session', data=False),
 		dcc.Store(id='trigger-error-store', storage_type='memory', data=False),
-		dcc.Store(id='html-output', storage_type='memory'),
 	] + [
 		dcc.Store(
 			id=f'{sheet_name.replace("_", "-")}-store',

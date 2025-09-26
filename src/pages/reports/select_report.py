@@ -56,13 +56,11 @@ def store_report_type(btn_clicks):
     button_clicked = [x for x in triggered_list if x['value']]
     if button_clicked:
         button_clicked_report_type = eval(button_clicked[0]['prop_id'].split('.')[0])['index']
-        button_clicked_href = f'/reports/customise-report?report-type={button_clicked_report_type}' \
-            if button_clicked_report_type != 'Full' else f'/reports/generate-report?report-type={button_clicked_report_type}'
+        button_clicked_href = f'/reports/customise-report?report-type={button_clicked_report_type}'
         href_list = []
         for x in dash.callback_context.inputs:
             report_type = eval(x.split('.')[0])['index']
-            url_pathname = f'/reports/customise-report?report-type={report_type}' if report_type != 'Full' \
-                else f'/reports/generate-report?report-type={report_type}'
+            url_pathname = f'/reports/customise-report?report-type={report_type}'
             if report_type == button_clicked_report_type:
                 href_list.append(url_pathname)
             else:

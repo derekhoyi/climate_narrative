@@ -1,15 +1,11 @@
 import dash
 from dash import html, dcc, callback, Output, Input, State, ALL
-import json
 import dash_bootstrap_components as dbc
 
 dash.register_page(__name__, path='/reports')
 
 
 def layout():
-	# define default index
-	DEFAULT_INDEX = 2
-
 	# create buttons
 	sidebar_buttons = dbc.ButtonGroup([
 		dbc.Button(
@@ -17,19 +13,14 @@ def layout():
 			id={'type': 'sidebar-report-section-btn', 'index': 1},
 			class_name="btn-light text-start",
 			n_clicks=0,
-			active=(1 == DEFAULT_INDEX)  # set default active button
 		),
 		dbc.Button(
 			"Select report",
 			id={'type': 'sidebar-report-section-btn', 'index': 2},
 			class_name="btn-light text-start",
 			n_clicks=0,
-			active=(2 == DEFAULT_INDEX)
 		),
 	], vertical=True)
-
-	# default content
-	default_content = dcc.Loading(type="circle", children=dash.page_registry['pages.reports.overview']['layout']())
 
 	# layout
 	layout = html.Div([
@@ -42,13 +33,13 @@ def layout():
 				md=3,
 				class_name="mb-3 sidebar-btn-group"
 			),
-			dbc.Col(html.Div(default_content, id='selected-report-section-content')),
+			dbc.Col(html.Div(id='selected-report-section-content')),
 		]),
 	], className="container")
 	return layout
 
 @callback(
-	Output('report-section-index', 'data', allow_duplicate=True),
+	Output('report-section-index-store', 'data', allow_duplicate=True),
 	Input({'type': 'sidebar-report-section-btn', 'index': ALL}, 'n_clicks'),
 	prevent_initial_call=True
 )
@@ -60,7 +51,7 @@ def update_report_section(n_clicks):
 	return dash.no_update
 
 @callback(
-	Output('report-section-index', 'data', allow_duplicate=True),
+	Output('report-section-index-store', 'data', allow_duplicate=True),
 	Input('select-report-btn', 'n_clicks'),
 	prevent_initial_call=True
 )
@@ -70,7 +61,7 @@ def select_report_navigation(n_clicks):
 @callback(
 	Output('selected-report-section-content', 'children'),
 	Output({'type': 'sidebar-report-section-btn', 'index': ALL}, 'active'),
-	Input('report-section-index', 'data'),
+	Input('report-section-index-store', 'data'),
 	prevent_initial_call=False
 )
 def render_report_section(index):

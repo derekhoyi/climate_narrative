@@ -65,7 +65,7 @@ description: |
     a 67% chance of limiting global warming to below 2&deg;C.
 
   - **Low Demand** assumes that significant behavioural changes – reducing energy demand – 
-  in addition to (shadow) carbon price and technology induced e¬fforts, would mitigate pressure 
+  in addition to (shadow) carbon price and technology induced efforts, would mitigate pressure 
   on the economy to reach global Net Zero CO₂ emissions around 2050.
 
   ### Key assumptions and parameters
@@ -126,17 +126,17 @@ description: |
   ![Inflation rate](/assets/images/scenarios_orderly_inflation.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific Absolute difference to baseline with no transition or physical risks.
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.]](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined = Chronic physical and transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
   
   ![Unemployment rate](/assets/images/scenarios_orderly_unemployment.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined Chronic physical and Transition effects. UK specific Absolute difference to baseline with no transition or physical risks..
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.]](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined = Chronic physical and transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
   
   ![Interest rate](/assets/images/scenarios_orderly_interest.png)
   
   **Source:**
-  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.].](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined = Chronic physical and Transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
+  [IIASA NGFS Scenario Explorer. NiGEM NGFS v1.24.2 [REMIND-MAgPIE 3.3-4.8.]](https://data.ece.iiasa.ac.at/ngfs/#/downloads) Combined = Chronic physical and transition effects. UK specific. Absolute difference to baseline with no transition or physical risks.
   
   The investments in energy efficiency and low carbon technologies are projected to increase, 
   where the Low Demand and Net Zero 2050 scenarios are expected to be higher than the Below 2&deg;C 
@@ -191,20 +191,20 @@ description: |
   Although the fall in productivity will vary by specific location, in the UK this 
   decrease is expected to  relatively subdued.
   
-  ![Labour Productivity](/assets/images/scenarios_orderly_labour.png)
+    ![Labour Productivity](/assets/images/scenarios_orderly_labour.png)
 
-  **Source:** 
-  [Climate Impact Explorer.](https://climate-impact-explorer.climateanalytics.org/)
+    **Source:** 
+    [Climate Impact Explorer.](https://climate-impact-explorer.climateanalytics.org/)
   
   * Annual economic damages from cyclones are also projected to increase, peaking 
   at ~8% above reference period levels in 2030 for the three scenarios, and peaking 
   at ~16% in 2050 for the Below 2&deg;C scenario. There is no change in Low demand scenario 
   between 2030 and 2050. The Net Zero 2050 increases to ~10% in 2050.
   
-  ![Tropical Cyclone Damage](/assets/images/scenarios_orderly_damages_cyclones.png)
+    ![Tropical Cyclone Damage](/assets/images/scenarios_orderly_damages_cyclones.png)
 
-  **Source:** 
-  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
+    **Source:** 
+    [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
   
   In these scenarios, the total cumulative GDP impact from chronic physical 
   and transition effects relative to a baseline (with no transition or physical 

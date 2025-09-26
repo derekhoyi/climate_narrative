@@ -1,6 +1,6 @@
 import dash_bootstrap_components as dbc
 import dash
-from dash import html
+from dash import html, callback, Output, Input
 from PIL import Image
 
 
@@ -29,7 +29,7 @@ def create_navbar():
                     dbc.DropdownMenuItem("Sovereigns", href='/sectors/sovereigns',class_name="box-style"),
                 ],
             ),
-            dbc.NavItem(dbc.NavLink("Reports", href="/reports")),
+            dbc.NavItem(dbc.NavLink("Reports", id='navbar-reports-btn', href='/reports')),
             dbc.NavItem(dbc.NavLink("Charts", href="/charts")),
             dbc.NavItem(dbc.NavLink("FAQs", href="/faqs")),
             dbc.NavItem(dbc.NavLink("Acknowledgements", href="/acknowledge")),
@@ -46,3 +46,15 @@ def create_navbar():
     )
 
     return navbar
+
+@callback(
+    Output('report-section-index-store', 'data', allow_duplicate=True),
+	Output('user-selection-completed-store', 'data', allow_duplicate=True),
+	Output("all-user-selection-store", "data", allow_duplicate=True),
+    Input('navbar-reports-btn', 'n_clicks'),
+    prevent_initial_call=True
+)
+def navigate_to_reports(n_clicks):
+    if n_clicks:
+        return 1, None, {}
+    return dash.no_update, dash.no_update, dash.no_update

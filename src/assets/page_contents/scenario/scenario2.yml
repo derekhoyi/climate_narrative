@@ -47,10 +47,10 @@ exec_description: |
    
    - Incomplete capture of financial sector dynamics and responses.
 
-   NGFS risk assessments may require complementary assessments to align with users’ specific objectives. 
-   Understanding these limitations is important to better manage and mitigate climate-related risks. 
-   Despite these limitations, the NGFS Delayed transition scenario provide valuable insights into the 
-   potential risks and challenges of a delayed or inconsistent approach to climate policy.
+  NGFS risk assessments may require complementary assessments to align with users’ specific objectives. 
+  Understanding these limitations is important to better manage and mitigate climate-related risks. 
+  Despite these limitations, the NGFS Delayed transition scenario provide valuable insights into the 
+  potential risks and challenges of a delayed or inconsistent approach to climate policy.
 
 
 
@@ -180,19 +180,19 @@ description: |
   and humid climate conditions. Although this will depend on location, and in the UK 
   this decrease may be relatively subdued.
   
-  ![Labour Productivity](/assets/images/scenarios_disorderly_labour.png)
+    ![Labour Productivity](/assets/images/scenarios_disorderly_labour.png)
 
-  **Source:** 
-  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
+    **Source:** 
+    [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
   
   * The annual economic damages from cyclones are also projected to increase, 
   but to a lesser extent; peaking at ~8% in 2030 and ~16% in 2050 which is 
   above reference period levels of 1986-2006.
   
-  ![Tropical Cyclone Damage](/assets/images/scenarios_disorderly_damages_cyclones.png)
+    ![Tropical Cyclone Damage](/assets/images/scenarios_disorderly_damages_cyclones.png)
 
-  **Source:** 
-  [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
+    **Source:** 
+    [Climate Impact Explorer.](http://climate-impact-explorer.climateanalytics.org/)
   
   In this scenario the total cumulative GDP impact from chronic physical and 
   transition effects relative to a baseline with no transition or physical risks 

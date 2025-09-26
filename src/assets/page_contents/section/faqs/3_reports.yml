@@ -12,11 +12,15 @@ reports:
 
   - question: Am I able to produce reports for all sectors and all scenarios?
     answer: |
-        Yes, navigating to the ‘Sector Report’ and selecting all sectors and all scenarios will enable you to generate the report containing all sectors and scenarios. For more 
+        Yes, navigating to the ‘Sector Report’ and selecting all sectors and all scenarios will enable you to generate the report containing all sectors and scenarios (please allow for a 3-5 minute loading time). For more 
         information, please refer to [Reports](/reports) 
 
   - question: What reports are available from the tool? 
     answer: |
-        There are three types of reports that the tool can generate: Institutional Reports, Sector Reports, and Scenario Reports. All sectors and all 
-        scenarios can be selected within the 'Scenario Report' to generate all the narratives available (please allow for a 3-5 minute loading time). Please refer to [Reports](/reports) and follow the 
+        There are three types of reports that the tool can generate: Institutional Report, Sector Report, and Scenario Report. All sectors and all 
+        scenarios can be selected within the 'Sector Report' to generate all the narratives available (please allow for a 3-5 minute loading time). Please refer to [Reports](/reports) and follow the 
         links to understand the contents under each type of report.
+
+  - question: How can I download the report from the tool?
+    answer: |
+        The report can be printed using the Print function (Ctrl + P or Command + P) on your browser.  
